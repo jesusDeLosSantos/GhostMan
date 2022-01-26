@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {}
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\ppastor\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\GhostMan\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppastor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
