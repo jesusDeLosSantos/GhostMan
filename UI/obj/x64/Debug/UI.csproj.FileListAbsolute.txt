@@ -1,0 +1,11 @@
+D:\GitHub\GhostMan\UI\obj\x64\Debug\UI.csproj.AssemblyReference.cache
+D:\GitHub\GhostMan\UI\obj\x64\Debug\App.g.i.cs
+D:\GitHub\GhostMan\UI\obj\x64\Debug\App.g.cs
+D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.g.i.cs
+D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.g.cs
+D:\GitHub\GhostMan\UI\obj\x64\Debug\XamlTypeInfo.g.cs
+D:\GitHub\GhostMan\UI\obj\x64\Debug\App.xaml
+D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xaml
+D:\GitHub\GhostMan\UI\obj\x64\Debug\App.xbf
+D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xbf
+D:\GitHub\GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
