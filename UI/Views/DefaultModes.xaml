@@ -74,7 +74,7 @@
 
     <RelativePanel>
         <TextBlock Name="txtChooseDifficulty" Text="CHOOSE DIFFICULTY" FontSize="36" Foreground="#ff6361" HorizontalAlignment="Center" Margin="0,15,0,0" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" />
-        <Grid VerticalAlignment="Center" RelativePanel.Below="txtChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+        <Grid Background="Aquamarine" Margin="10,0,10,0" Padding="15,30,15,30" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Center" RelativePanel.Below="txtChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
