@@ -1,0 +1,1 @@
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\UI.csproj;x64

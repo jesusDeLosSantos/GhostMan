@@ -1,0 +1,17 @@
+WinMetadata\Windows.winmd
+Assets\Image\Easy_Mode.png
+Assets\Image\Hard_Mode.png
+Assets\Image\mapaPrueba.png
+Assets\Image\Medium_Mode.png
+Assets\LockScreenLogo.scale-200.png
+Assets\SplashScreen.scale-200.png
+Assets\Square150x150Logo.scale-200.png
+Assets\Square44x44Logo.scale-200.png
+Assets\Square44x44Logo.targetsize-24_altform-unplated.png
+Assets\StoreLogo.png
+Assets\Wide310x150Logo.scale-200.png
+UI.xr.xml
+Views\App.xbf
+Views\CustomModes.xbf
+Views\MainPage.xbf
+Properties\Default.rd.xml

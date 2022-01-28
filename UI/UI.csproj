@@ -116,6 +116,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
+    <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -137,6 +139,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Image\Easy_Mode.png" />
+    <Content Include="Assets\Image\Hard_Mode.png" />
+    <Content Include="Assets\Image\mapaPrueba.png" />
+    <Content Include="Assets\Image\Medium_Mode.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
