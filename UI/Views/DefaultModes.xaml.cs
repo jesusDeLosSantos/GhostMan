@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UI.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,28 +22,26 @@ namespace UI.Views
     /// </summary>
     public sealed partial class VistaJugar : Page
     {
-        DefaultModesVM myViewModel;
         public VistaJugar()
         {
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void NavigateToPlay(object sender, RoutedEventArgs e)
         {
-            myViewModel = this.DataContext as DefaultModesVM;
-            myViewModel.IsEasyButtonPressed = true;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            myViewModel = this.DataContext as DefaultModesVM;
-            myViewModel.IsMediumButtonPressed = true;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            myViewModel = this.DataContext as DefaultModesVM;
-            myViewModel.IsHardButtonPressed = true;
+            var clickedItem = sender as Button;
+            switch (clickedItem.Name)
+            {
+                case "btnEasy":
+                    Frame.Navigate(typeof(Prueba));
+                    break;
+                case "btnMedium":
+                    Frame.Navigate(typeof(PruebaMedio));
+                    break;
+                case "btnHard":
+                    Frame.Navigate(typeof(PruebaDificil));
+                    break;
+            }
         }
     }
 }

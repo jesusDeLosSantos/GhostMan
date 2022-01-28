@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T11:24:08.276</Modified>
+      <Modified>2022-01-28T11:44:58.408</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-01-28T11:24:07.863</Modified>
+      <Modified>2022-01-28T11:44:58.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -74,9 +74,17 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-01-28T09:26:33.735</Modified>
+    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Easy_Mode.png">
+      <PackagePath>Assets\Images\DefaultModesSprites\Easy_Mode.png</PackagePath>
+      <Modified>2022-01-28T11:28:43.963</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Hard_Mode.png">
+      <PackagePath>Assets\Images\DefaultModesSprites\Hard_Mode.png</PackagePath>
+      <Modified>2022-01-28T11:28:43.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
+      <PackagePath>Assets\Images\DefaultModesSprites\Medium_Mode.png</PackagePath>
+      <Modified>2022-01-28T11:28:43.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -112,29 +120,33 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-28T09:26:33.733</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2022-01-28T09:26:33.735</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-01-28T11:19:32.919</Modified>
+      <Modified>2022-01-28T11:39:01.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-28T11:24:07.811</Modified>
+      <Modified>2022-01-28T11:44:57.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf">
       <PackagePath>Views\Prueba.xbf</PackagePath>
-      <Modified>2022-01-28T11:24:07.811</Modified>
+      <Modified>2022-01-28T11:44:57.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf">
       <PackagePath>Views\PruebaDificil.xbf</PackagePath>
-      <Modified>2022-01-28T11:24:07.811</Modified>
+      <Modified>2022-01-28T11:44:57.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf">
       <PackagePath>Views\PruebaMedio.xbf</PackagePath>
-      <Modified>2022-01-28T11:24:07.811</Modified>
+      <Modified>2022-01-28T11:44:57.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-01-28T11:24:07.811</Modified>
+      <Modified>2022-01-28T11:44:57.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -142,11 +154,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-28T11:24:07.975</Modified>
+      <Modified>2022-01-28T11:44:58.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-01-28T11:24:08.274</Modified>
+      <Modified>2022-01-28T11:44:58.407</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

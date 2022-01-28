@@ -5,13 +5,9 @@
     xmlns:local="using:UI.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm ="using:UI.ViewModels"
     mc:Ignorable="d"
     Background="#003f5c">
 
-    <Page.DataContext>
-        <vm:DefaultModesVM />
-    </Page.DataContext>
     <!-- This Page Resource below, just changes the colors of the button when hovering and when pressed -->
     <Page.Resources>
         <Style x:Key="ButtonHover" TargetType="Button">
@@ -84,21 +80,21 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button MaxHeight="500" Click="Button_Click" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Command="{Binding Navigate}" Grid.Column="0" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnEasy" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="0" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Assets/LockScreenLogo.scale-200.png" />
+                    <Image Source="/Assets/Images/DefaultModesSprites/Easy_Mode.png" />
                     <TextBlock Text="EASY" FontSize="26" HorizontalAlignment="Center" />
                 </StackPanel>
             </Button>
-            <Button MaxHeight="500" Click="Button_Click_1" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Command="{Binding Navigate}" Grid.Column="1" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnMedium" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="1" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Assets/LockScreenLogo.scale-200.png" />
+                    <Image Source="/Assets/Images/DefaultModesSprites/Medium_Mode.png" />
                     <TextBlock Text="MEDIUM" FontSize="26" HorizontalAlignment="Center" />
                 </StackPanel>
             </Button>
-            <Button MaxHeight="500" Click="Button_Click_2" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Command="{Binding Navigate}" Grid.Column="2" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnHard" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="2" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Assets/LockScreenLogo.scale-200.png" />
+                    <Image Source="/Assets/Images/DefaultModesSprites/Hard_Mode.png" />
                     <TextBlock Text="HARD" FontSize="26" HorizontalAlignment="Center" />
                 </StackPanel>
             </Button>
