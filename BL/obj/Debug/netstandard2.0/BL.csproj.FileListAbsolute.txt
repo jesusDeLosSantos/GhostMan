@@ -1,0 +1,15 @@
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
