@@ -94,6 +94,9 @@
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Fonts\ARCADECLASSIC.TTF">
+      <PackagePath>Assets\Fonts\ARCADECLASSIC.TTF</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
     </AppxPackagedFile>
