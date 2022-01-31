@@ -9176,7 +9176,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aruiz\\.nuget\\packages\\": {},
+    "C:\\Users\\amachio\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
@@ -9184,11 +9184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\obj\\",
+      "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+      "outputPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9197,7 +9197,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -9212,11 +9212,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj"
+            "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\BL\\BL.csproj": {
+              "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\BL\\BL.csproj"
             },
-            "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+            "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj"
             }
           }
         }
