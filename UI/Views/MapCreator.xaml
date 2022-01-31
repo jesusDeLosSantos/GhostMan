@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="UI.Views.MapCreator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <StackPanel x:Name="spOptions" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True">
+            <Button x:Name="btnBack"  VerticalAlignment="Top"></Button>
+            <TextBlock x:Name="tblMapName" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP NAME:"></TextBlock>
+            <TextBox x:Name="tbMapName" Width="200" Margin="10"></TextBox>
+            <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP CREATOR:"></TextBlock>
+            <TextBox x:Name="tbMapCreator" Width="200" Margin="10"></TextBox>
+            <Button x:Name="btnSave" Width="100" Margin="180,0,0,0" Content="SAVE"></Button>
+        </StackPanel>
+        <ListView x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+            
+        </ListView>
+        <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+            <Button x:Name="btnMinSize" RelativePanel.Above="gvMap" ></Button>
+            <Button x:Name="btnMedSize"></Button>
+            <Button x:Name="btnMaxSize"></Button>
+            <GridView x:Name="gvMap" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True"></GridView>
+        </RelativePanel>
+    </RelativePanel>
+</Page>
