@@ -116,6 +116,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Models\clsLeaderboardWithPosition.cs" />
+    <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
     <Compile Include="Views\App.xaml.cs">
@@ -126,7 +128,6 @@
     </Compile>
     <Compile Include="Models\clsMapLeaderboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\CustomtModeVM.cs" />
     <Compile Include="ViewModels\Utilities\clsVMBase.cs" />
     <Compile Include="ViewModels\Utilities\DelegateCommand.cs" />
     <Compile Include="Views\CustomModes.xaml.cs">
@@ -141,6 +142,7 @@
   <ItemGroup>
     <Content Include="Assets\Image\Easy_Mode.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
+    <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
     <Content Include="Assets\Image\mapaPrueba.png" />
     <Content Include="Assets\Image\Medium_Mode.png" />
     <Content Include="Properties\Default.rd.xml" />

@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Hard_Mode.png">
       <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+      <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\mapaPrueba.png">
       <PackagePath>Assets\Image\mapaPrueba.png</PackagePath>
     </AppxPackagedFile>

@@ -10,7 +10,7 @@ namespace UI.Models
     public class clsMapLeaderboard : clsMap
     {
         #region Attributes
-        clsLeaderboard leaderboard;
+        List<clsLeaderboardWithPosition> leaderboards;
         #endregion
         #region Builders
         public clsMapLeaderboard() : base()
@@ -18,13 +18,13 @@ namespace UI.Models
 
         }
 
-        public clsMapLeaderboard(clsMap map, clsLeaderboard leaderboard) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
+        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
         {
-            this.leaderboard = leaderboard;
+            this.leaderboards = leaderboards;
         }
         #endregion
         #region Getters & Setters
-        public clsLeaderboard Leaderboard { get => leaderboard; set => leaderboard = value; }
+        public List<clsLeaderboardWithPosition> Leaderboards { get => leaderboards; set => leaderboards = value; }
         #endregion
     }
 }

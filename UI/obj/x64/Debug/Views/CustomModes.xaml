@@ -96,7 +96,7 @@
     </Page.Resources>
 
     <RelativePanel>
-        <ListView Name="LstMapas" RelativePanel.AlignLeftWithPanel="True" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}"
+        <ListView x:ConnectionId='5' Name="LstMapas" RelativePanel.AlignLeftWithPanel="True" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}"
                    SelectedItem="{Binding MapSelected,Mode=TwoWay}" Height="Auto" CornerRadius="20" Style="{StaticResource FixedHeaderListViewStyle}">
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
@@ -148,7 +148,7 @@
             </StackPanel>
             
             
-            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None">
+            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="450" CornerRadius="20" Margin="0,0,0,30" ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None">
                 <ListView.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel Background="CornflowerBlue">
@@ -174,8 +174,9 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" ></Image>
+            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="0,50,0,0"></Image>
         </Grid>
 
     </RelativePanel>
 </Page>
+
