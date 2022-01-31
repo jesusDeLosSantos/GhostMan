@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="UI.Views.MapCreator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:UI.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:MapCreatorVM></vm:MapCreatorVM> 
+    </Page.DataContext>
+
+    <RelativePanel>
+        <StackPanel x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black">
+            <Button x:Name="btnBack"  VerticalAlignment="Top"></Button>
+            <TextBlock x:Name="tblMapName" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP NAME:"></TextBlock>
+            <TextBox x:Name="tbMapName" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+            <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP CREATOR:"></TextBlock>
+            <TextBox x:Name="tbMapCreator" Text="{Binding EmptyMap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+            <Button x:Name="btnSave" Width="100" Margin="180,0,0,0" Content="SAVE"></Button>
+        </StackPanel>
+        <ListView x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" BorderThickness="1" BorderBrush="Black" ItemsSource="{Binding Elements}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="Foto de un elemento"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+            <StackPanel x:Name="btnSize" Orientation="Horizontal" Margin="20" BorderThickness="1" BorderBrush="Black">
+                <Button x:Name="btnMinSize" RelativePanel.Above="gvMap" Margin="180, 10">16x16</Button>
+                <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x24</Button>
+                <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
+            </StackPanel>
+            <GridView x:Name="gvMap" DataContext="{Binding EmptyMap}" RelativePanel.AlignBottomWithPanel="True"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black" RelativePanel.Below="btnSize" Margin="20">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <RelativePanel>
+                            
+                        </RelativePanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel>
+                        </StackPanel>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+            </GridView>
+        </RelativePanel>
+    </RelativePanel>
+</Page>
