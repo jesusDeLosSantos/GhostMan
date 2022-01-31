@@ -13,24 +13,23 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UI.Views
 {
-    /// <summary>
-    /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class VistaJugar : Page
     {
         public VistaJugar()
         {
             this.InitializeComponent();
         }
-
+        /// <summary>
+        /// This method decides where to navigate depending on the name of the pressed button
+        /// </summary>
+        /// <param name="sender">Pressed button</param>
+        /// <param name="e"></param>
         private void NavigateToPlay(object sender, RoutedEventArgs e)
         {
-            var clickedItem = sender as Button;
-            switch (clickedItem.Name)
+            var buttonPressed = sender as Button;
+            switch (buttonPressed.Name)
             {
                 case "btnEasy":
                     Frame.Navigate(typeof(Prueba));
