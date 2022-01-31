@@ -11,10 +11,17 @@ D:\GitHub\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+<<<<<<< HEAD
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+=======
+>>>>>>> Albert
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+<<<<<<< HEAD
+=======
+C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+>>>>>>> Albert

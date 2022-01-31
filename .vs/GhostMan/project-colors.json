@@ -5,6 +5,7 @@
       "ProjectGuid": "83567656-f6e9-4fc4-9452-f7d47372d924",
       "DisplayName": "UI",
       "ColorIndex": 0
+<<<<<<< HEAD
     },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
@@ -18,4 +19,9 @@
     }
   },
   "NextColorIndex": 2
+=======
+    }
+  },
+  "NextColorIndex": 1
+>>>>>>> Albert
 }

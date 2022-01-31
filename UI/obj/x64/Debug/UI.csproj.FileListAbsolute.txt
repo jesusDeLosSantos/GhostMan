@@ -9,9 +9,20 @@ D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xaml
 D:\GitHub\GhostMan\UI\obj\x64\Debug\App.xbf
 D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xbf
 D:\GitHub\GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+<<<<<<< HEAD
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\App.xbf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\MainPage.xbf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\BlankPage1.xbf
+=======
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\UI.csproj.AssemblyReference.cache
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.g.i.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.xaml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\App.xbf
+>>>>>>> Albert
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.xr.xml
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.exe
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.pdb
@@ -32,6 +43,7 @@ C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\DAL.dll
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\BL.pdb
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Entities.pdb
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\DAL.pdb
+<<<<<<< HEAD
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\UI.csproj.AssemblyReference.cache
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.g.i.cs
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.g.cs
@@ -47,6 +59,8 @@ C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\App.xbf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\MainPage.xbf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\BlankPage1.xbf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+=======
+>>>>>>> Albert
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\UI.csproj.CoreCompileInputs.cache
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\UI.csproj.CopyComplete
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\UI.exe
@@ -74,3 +88,26 @@ C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\resources.en-us.resf
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles.intermediate
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\ProjectArchitectures.txt
 C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+<<<<<<< HEAD
+=======
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\Prueba.g.i.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\Prueba.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\Prueba.xaml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\Prueba.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaDificil.g.i.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaDificil.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaMedio.g.i.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaMedio.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\DefaultModes.g.i.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\DefaultModes.g.cs
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaDificil.xaml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaMedio.xaml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\DefaultModes.xaml
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaDificil.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\PruebaMedio.xbf
+C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\Views\DefaultModes.xbf
+>>>>>>> Albert

@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -127,6 +128,20 @@
     <Compile Include="ViewModels\Class1.cs" />
     <Compile Include="Views\BlankPage1.xaml.cs">
       <DependentUpon>BlankPage1.xaml</DependentUpon>
+=======
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Prueba.xaml.cs">
+      <DependentUpon>Prueba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PruebaDificil.xaml.cs">
+      <DependentUpon>PruebaDificil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PruebaMedio.xaml.cs">
+      <DependentUpon>PruebaMedio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DefaultModes.xaml.cs">
+      <DependentUpon>DefaultModes.xaml</DependentUpon>
+>>>>>>> Albert
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +150,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\DefaultModesSprites\Easy_Mode.png" />
+    <Content Include="Assets\Images\DefaultModesSprites\Hard_Mode.png" />
+    <Content Include="Assets\Images\DefaultModesSprites\Medium_Mode.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -149,6 +167,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -157,13 +176,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> Albert
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
+=======
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+>>>>>>> Albert
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{3d929f98-e8bc-4730-84c9-afc5a375ef67}</Project>
@@ -173,6 +200,27 @@
       <Project>{4e976386-8da5-4e13-9918-f6e6cbe3809a}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Prueba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PruebaDificil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PruebaMedio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DefaultModes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\ARCADECLASSIC.TTF" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
