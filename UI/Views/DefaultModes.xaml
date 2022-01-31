@@ -74,25 +74,34 @@
 
     <RelativePanel>
         <TextBlock Name="txtChooseDifficulty" Text="CHOOSE DIFFICULTY" FontSize="36" Foreground="#ff6361" HorizontalAlignment="Center" Margin="0,15,0,0" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" />
-        <Grid Background="Aquamarine" Margin="10,0,10,0" Padding="15,30,15,30" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Center" RelativePanel.Below="txtChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+        <Grid Background="Aquamarine" CornerRadius="45" Margin="25,0,25,0" Padding="15,175,15,175" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Center" RelativePanel.Below="txtChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Name="btnEasy" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="0" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnEasy" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+                    Style="{StaticResource ButtonHover}" Grid.Column="0" HorizontalAlignment="Center" 
+                    Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Assets/Images/DefaultModesSprites/Easy_Mode.png" />
                     <TextBlock Text="EASY" FontSize="26" HorizontalAlignment="Center" />
                 </StackPanel>
             </Button>
-            <Button Name="btnMedium" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="1" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnMedium" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+                    Style="{StaticResource ButtonHover}" Grid.Column="1" HorizontalAlignment="Center" 
+                    Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Assets/Images/DefaultModesSprites/Medium_Mode.png" />
                     <TextBlock Text="MEDIUM" FontSize="26" HorizontalAlignment="Center" />
                 </StackPanel>
             </Button>
-            <Button Name="btnHard" MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" Style="{StaticResource ButtonHover}" Grid.Column="2" HorizontalAlignment="Center" Background="#ffa600" Foreground="#58508d">
+            <Button Name="btnHard" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+                    Style="{StaticResource ButtonHover}" Grid.Column="2" HorizontalAlignment="Center" 
+                    Background="#ffa600" Foreground="#58508d">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Assets/Images/DefaultModesSprites/Hard_Mode.png" />
                     <TextBlock Text="HARD" FontSize="26" HorizontalAlignment="Center" />
