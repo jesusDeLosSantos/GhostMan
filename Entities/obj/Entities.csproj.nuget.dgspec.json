@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {}
+    "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+    "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\obj\\",
+        "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+        "outputPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -63,7 +63,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
