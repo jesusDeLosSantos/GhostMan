@@ -13,7 +13,7 @@ namespace UI.ViewModels
     {
         List<clsElementType> elements;
         clsMap emptyMap;
-        clsElementMap fullMap;
+        List<clsElementMap> fullMap;
 
         public clsMap EmptyMap { get => emptyMap; set => emptyMap = value; }
         public List<clsElementType> Elements { get => elements; set => elements = value; }

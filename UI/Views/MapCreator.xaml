@@ -35,20 +35,8 @@
                 <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x24</Button>
                 <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
             </StackPanel>
-            <GridView x:Name="gvMap" DataContext="{Binding EmptyMap}" RelativePanel.AlignBottomWithPanel="True"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black" RelativePanel.Below="btnSize" Margin="20">
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <RelativePanel>
-                            
-                        </RelativePanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-                <GridView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel>
-                        </StackPanel>
-                    </ItemsPanelTemplate>
-                </GridView.ItemsPanel>
+            <GridView x:Name="gvMap" MinWidth="1000" MinHeight="700" RelativePanel.AlignBottomWithPanel="True"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black" RelativePanel.Below="btnSize" Margin="20">
+                
             </GridView>
         </RelativePanel>
     </RelativePanel>

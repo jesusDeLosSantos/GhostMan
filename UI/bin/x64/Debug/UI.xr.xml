@@ -48,28 +48,25 @@
       <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="ItemsPanel" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
-      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
