@@ -11,3 +11,16 @@ C:\Users\aruiz\Documents\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj
 C:\Users\aruiz\Documents\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\aruiz\Documents\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\aruiz\Documents\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb

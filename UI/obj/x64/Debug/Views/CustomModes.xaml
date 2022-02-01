@@ -101,11 +101,11 @@
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
-                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" Text="{Binding InputText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
                             <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
                         </Button>
-                        <Button Name="btnFiltradoDerecha" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="20,0,0,0">
+                        <Button Name="btnFiltradoDerecha" Command="{Binding RightFilterButtonCommand}" Background="Transparent" Margin="20,0,0,0">
                             <FontIcon Glyph="&#xe72A;" FontSize="30"></FontIcon>
                         </Button>
                     </StackPanel>
@@ -142,13 +142,13 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
                 <TextBlock Text="Creador:" FontSize="25" Margin="15,0,0,0"></TextBlock>
-                <TextBlock Text="qwertyuiopasdfghjklñ" FontSize="25" Margin="8,0,0,0"></TextBlock>
-                <TextBlock Text="Tamaño: "  FontSize="25" HorizontalAlignment="Right" Margin="10,0,0,0"></TextBlock>
+                <TextBlock Text="qwertyuiopasdfghjklñ" FontSize="25" TextWrapping="Wrap" Margin="8,0,0,0"></TextBlock>
+                <TextBlock Text="Tamaño: "  FontSize="25" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="10,0,0,0"></TextBlock>
                 <TextBlock Text="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSizeXSize}}" FontSize="25" HorizontalAlignment="Right"></TextBlock>
             </StackPanel>
             
             
-            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="450" CornerRadius="20" Margin="0,0,0,30" ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None">
+            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None">
                 <ListView.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel Background="CornflowerBlue">
@@ -174,7 +174,7 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="0,50,0,0"></Image>
+            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" ></Image>
         </Grid>
 
     </RelativePanel>
