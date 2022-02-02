@@ -96,8 +96,9 @@
     </Page.Resources>
 
     <RelativePanel>
-        <ListView Name="LstMapas" RelativePanel.AlignLeftWithPanel="True" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}"
-                   SelectedItem="{Binding MapSelected,Mode=TwoWay}" Height="Auto" CornerRadius="20" Style="{StaticResource FixedHeaderListViewStyle}">
+        <ListView Name="LstMapas" CornerRadius="20" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}" 
+                  RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True"
+                  SelectedItem="{Binding MapSelected,Mode=TwoWay}"  Style="{StaticResource FixedHeaderListViewStyle}">
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
@@ -148,7 +149,8 @@
             </StackPanel>
             
             
-            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None">
+            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" 
+                      ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None" >
                 <ListView.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel Background="CornflowerBlue">

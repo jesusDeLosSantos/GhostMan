@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>ALEXRUIZ</Machine>
-    <WindowsUser>AlexRuiz</WindowsUser>
+    <Machine>107-19</Machine>
+    <WindowsUser>aruiz</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>78b5432a-175c-4102-bd1b-08a5898fe36b</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>D979C452B3F7A8E8428159360994CFA08B7A0B9127D4ED8EAB3D647A3FEE283B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x64__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
@@ -27,138 +27,138 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-01T21:20:35.586</Modified>
+      <Modified>2022-02-02T12:01:44.058</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-01T21:20:34.977</Modified>
+      <Modified>2022-02-02T12:01:43.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T23:15:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
       <PackagePath>System.Data.SqlClient.dll</PackagePath>
       <Modified>2021-08-16T19:22:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2019-11-15T08:54:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2019-11-15T08:37:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2019-11-15T08:53:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-02-01T18:20:40.004</Modified>
+      <Modified>2022-02-02T10:50:19.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-02-01T18:20:39.122</Modified>
+      <Modified>2022-02-02T10:50:18.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-02-01T18:20:39.633</Modified>
+      <Modified>2022-02-02T10:50:18.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Image\Easy_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Easy_Mode.png">
       <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
-      <Modified>2022-02-01T18:08:14.913</Modified>
+      <Modified>2022-01-28T11:29:29.290</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Image\Hard_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Hard_Mode.png">
       <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
-      <Modified>2022-02-01T18:08:14.913</Modified>
+      <Modified>2022-01-28T11:29:29.289</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
       <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
-      <Modified>2022-02-01T18:08:14.913</Modified>
+      <Modified>2022-01-31T11:38:20.109</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Image\mapaPrueba.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\mapaPrueba.png">
       <PackagePath>Assets\Image\mapaPrueba.png</PackagePath>
-      <Modified>2022-02-01T18:08:14.913</Modified>
+      <Modified>2022-01-28T08:59:27.053</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Image\Medium_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Medium_Mode.png">
       <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
-      <Modified>2022-02-01T18:08:14.913</Modified>
+      <Modified>2022-01-28T11:29:29.287</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-01-27T18:22:43.999</Modified>
+      <Modified>2022-01-26T12:02:57.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.000</Modified>
+      <Modified>2022-01-26T12:02:57.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.000</Modified>
+      <Modified>2022-01-26T12:02:57.812</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.001</Modified>
+      <Modified>2022-01-26T12:02:57.812</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.001</Modified>
+      <Modified>2022-01-26T12:02:57.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.002</Modified>
+      <Modified>2022-01-26T12:02:57.812</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-27T18:22:44.003</Modified>
+      <Modified>2022-01-26T12:02:57.814</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-01-27T18:22:44.029</Modified>
+      <Modified>2022-01-26T12:02:57.829</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-01T21:01:25.002</Modified>
+      <Modified>2022-02-02T10:50:32.744</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\App.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-02-01T21:20:34.869</Modified>
+      <Modified>2022-02-02T12:01:43.657</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-02-01T21:20:34.869</Modified>
+      <Modified>2022-02-02T12:01:43.657</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-02-01T21:20:34.868</Modified>
+      <Modified>2022-02-02T12:01:43.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-01T18:20:46.452</Modified>
+      <Modified>2022-02-02T10:50:33.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-01T21:20:35.581</Modified>
+      <Modified>2022-02-02T12:01:44.056</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

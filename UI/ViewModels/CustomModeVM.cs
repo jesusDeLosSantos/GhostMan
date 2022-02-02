@@ -16,6 +16,7 @@ namespace UI.ViewModels
         //CUANDO SE VAYA A CARGAR LOS SIGUIENTES MAPAS DE LA BASE DE DATOS, HACERLO ASYNC PARA QUE EL USUARIO SIGA INTERACTUANDO CON LA LISTA MIENTRAS SE CARGAN LOS SIGUIENTES MAPAS
         #region Attributes
         ObservableCollection<clsMapLeaderboard> originalMapList;
+        ObservableCollection<clsMapLeaderboard> originalMapList2;
         ObservableCollection<clsMapLeaderboard> mapList;
         clsMapLeaderboard mapSelected;
         string inputText;
@@ -96,9 +97,15 @@ namespace UI.ViewModels
         private void RightFilterButtonCommand_Executed()
         {
             cargarSiguientesMapas();
-            if (posicionSiguienteMapa == 60) 
+            if (posicionSiguienteMapa == 30) 
             {
-                crearMapasDePrueba();
+                crearMapasDePrueba2();
+
+            }
+
+            if (posicionSiguienteMapa == 60)
+            {
+                originalMapList = originalMapList2;
                 posicionSiguienteMapa = 0;
                 cargarSiguientesMapas();
             }
@@ -109,7 +116,7 @@ namespace UI.ViewModels
             //TODO Controlar cuando se llegue al limite por la Derecha
             //return posicionSiguineteMapa < 50;
             //TODO CUANDO SE LLEGUE A 50 HAY QUE COMPROBAR SI EN LA BBDD HAY MAS MAPAS
-            return posicionSiguienteMapa <= originalMapList.Count - 1;
+            return true;//posicionSiguienteMapa <= originalMapList.Count - 1;
         }
         #endregion
 
@@ -125,14 +132,13 @@ namespace UI.ViewModels
             mapList = new ObservableCollection<clsMapLeaderboard>
                     (originalMapList.ToList().GetRange(posicionSiguienteMapa, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
-
+            /*
             mapSelected = mapList[0];
-            NotifyPropertyChanged("MapSelected");
+            NotifyPropertyChanged("MapSelected");*/
 
             posicionSiguienteMapa += 10;
             rightFilterButtonCommand.RaiseCanExecuteChanged();
         }
-
         
         private void filterList()
         {
@@ -220,6 +226,69 @@ namespace UI.ViewModels
             originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick48", 16, 1), leaderboardsPosition));
             originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick49", 16, 1), leaderboardsPosition));
             originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick50", 16, 1), leaderboardsPosition));
+        }
+        private void crearMapasDePrueba2()
+        {
+            //No hace falta ordenar ya vendria de la base datos 
+            List<clsLeaderboard> leaderboards = new List<clsLeaderboard>(getLeaderboards().OrderByDescending(leaderboard => leaderboard.Score)); //Order Leaderboards of mapaseled by Score
+            List<clsLeaderboardWithPosition> leaderboardsPosition = new List<clsLeaderboardWithPosition>();
+            for (int i = 1; i <= leaderboards.Count; i++)
+            {
+                leaderboardsPosition.Add(new clsLeaderboardWithPosition(leaderboards[i - 1], i));
+            }
+
+            //50 Mapas
+            originalMapList2 = new ObservableCollection<clsMapLeaderboard>();
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(1, "Nick1", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(2, "Nick2", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(3, "Nick3", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(4, "Nick4", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(5, "Nick5", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(6, "Nick6", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(7, "Nick7", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(8, "Nick8", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(9, "Nick9", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(10, "Nick10", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(11, "Nick11", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(12, "Nick12", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(13, "Nick13", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(14, "Nick14", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(15, "Nick15", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(16, "Nick16", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(17, "Nick17", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(18, "Nick18", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(19, "Nick19", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(20, "Nick20", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick21", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(1, "Nick22", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(2, "Nick23", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(3, "Nick24", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(4, "Nick25", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(5, "Nick26", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(6, "Nick27", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(7, "Nick28", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(8, "Nick29", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(9, "Nick30", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(10, "Nick31", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(11, "Nick32", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(12, "Nick33", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(13, "Nick34", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(14, "Nick35", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(15, "Nick36", 24, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(16, "Nick37", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(17, "Nick38", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(18, "Nick39", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(19, "Nick40", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(20, "Nick41", 36, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick42", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick43", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick44", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick45", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick46", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick47", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick48", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick49", 16, 1), leaderboardsPosition));
+            originalMapList2.Add(new clsMapLeaderboard(new clsMap(21, "Nick50", 16, 1), leaderboardsPosition));
         }
     }
 }
