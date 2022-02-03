@@ -18,3 +18,13 @@ C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Ent
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
 C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb

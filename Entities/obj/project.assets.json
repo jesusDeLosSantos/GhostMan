@@ -180,25 +180,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\amachio\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Albert\\.nuget\\packages\\": {},
+    "E:\\Visual Studio 2019\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj",
+      "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
-      "outputPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\obj\\",
+      "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
+      "outputPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

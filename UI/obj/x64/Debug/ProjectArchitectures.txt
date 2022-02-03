@@ -1,1 +1,1 @@
-C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\UI.csproj;x64
+E:\GitKraken-Repos\GhostMan\UI\UI.csproj;x64
