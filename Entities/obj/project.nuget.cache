@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "idHz4Nm3hKPjIr+oHoLUr2kPo82VTV2Xt/b95sr0vHtzTtJynPAvNyUvw5/EpmxEcEc7F9OerGlK7b4X2ZZ2MA==",
+  "dgSpecHash": "PhsZy1a429q0iYuUEt9iZct24pgpqjooBQu8u2qWCRdUUZ1RerosRxZ6TQACTnxmS2Y57E8ItZ20WCakJZmCZA==",
   "success": true,
-  "projectFilePath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Albert\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Albert\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\amachio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\amachio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

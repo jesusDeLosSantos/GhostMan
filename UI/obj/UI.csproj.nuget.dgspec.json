@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj": {}
+    "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj": {}
   },
   "projects": {
-    "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj": {
+    "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-        "outputPath": "E:\\GitKraken-Repos\\GhostMan\\BL\\obj\\",
+        "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -34,11 +34,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj"
+              "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj"
               },
-              "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -70,25 +70,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj": {
+    "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-        "outputPath": "E:\\GitKraken-Repos\\GhostMan\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -104,8 +104,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -141,25 +141,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
+    "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-        "outputPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -204,27 +204,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj": {
+    "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj",
+        "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj",
-        "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-        "outputPath": "E:\\GitKraken-Repos\\GhostMan\\UI\\obj\\",
+        "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj",
+        "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -239,11 +239,11 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj": {
-                "projectPath": "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj"
+              "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj": {
+                "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj"
               },
-              "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
