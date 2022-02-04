@@ -23,6 +23,7 @@ namespace UI.ViewModels
         DelegateCommand leftFilterButtonCommand;
         DelegateCommand rightFilterButtonCommand;
         int posicionSiguienteMapa;
+        clsElementMap mapita;
         #endregion
 
         #region Builders
@@ -36,6 +37,11 @@ namespace UI.ViewModels
         #endregion
 
         #region Getters & Setters
+        public clsElementMap Mapita { get
+            {
+                mapita = new clsElementMap(1,1,0,0);
+                return mapita;
+            } }
         public ObservableCollection<clsMapLeaderboard> MapList { get => mapList; }
         public clsMapLeaderboard MapSelected
         {

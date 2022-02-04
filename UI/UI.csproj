@@ -119,7 +119,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\clsLeaderboardWithPosition.cs" />
+    <Compile Include="Models\clsMapLeaderboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CustomModeVM.cs" />
+    <Compile Include="ViewModels\Utilities\clsVMBase.cs" />
+    <Compile Include="ViewModels\Utilities\Converters\ConverterIdElementToSourceImage.cs" />
+    <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
+    <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
+    <Compile Include="ViewModels\Utilities\DelegateCommand.cs" />
+    <Compile Include="Views\CustomModes.xaml.cs">
+      <DependentUpon>CustomModes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Prueba.xaml.cs">
       <DependentUpon>Prueba.xaml</DependentUpon>
     </Compile>
@@ -142,6 +153,11 @@
     <Content Include="Assets\Images\DefaultModesSprites\Easy_Mode.png" />
     <Content Include="Assets\Images\DefaultModesSprites\Hard_Mode.png" />
     <Content Include="Assets\Images\DefaultModesSprites\Medium_Mode.png" />
+    <Content Include="Assets\Prueba\Corner_Wall_Test.png" />
+    <Content Include="Assets\Prueba\Corner_Wall_Test_2.png" />
+    <Content Include="Assets\Prueba\Corner_Wall_Test_3.png" />
+    <Content Include="Assets\Prueba\Corner_Wall_Test_4.png" />
+    <Content Include="Assets\Prueba\Cross_Wall_Test.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -162,9 +178,7 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{3d929f98-e8bc-4730-84c9-afc5a375ef67}</Project>
@@ -176,6 +190,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\CustomModes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Prueba.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

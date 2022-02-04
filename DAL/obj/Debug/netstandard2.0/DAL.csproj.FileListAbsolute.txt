@@ -24,3 +24,15 @@ E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileI
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+C:\Users\amachio\Cositas\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\amachio\Cositas\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\amachio\Cositas\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\amachio\Cositas\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\amachio\Cositas\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb

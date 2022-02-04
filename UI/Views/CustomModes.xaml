@@ -17,6 +17,7 @@
     <Page.Resources>
         <converters:ConverterSizeToSourceImage x:Key="converterSizeToSourceImage"/>
         <converters:ConverterSizeToSizeXSize x:Key="converterSizeToSizeXSize"/>
+        <converters:ConverterIdElementToSourceImage x:Key="converterIdElementToSourceImage" />
 
         <Style TargetType="ListView" x:Key="FixedHeaderListViewStyle">
             <Setter Property="IsTabStop" Value="False" />
@@ -176,7 +177,21 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" ></Image>
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Mapita.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding Mapita.AxisX}" Grid.Column="{Binding Mapita.AxisY}" />
+            </Grid>
         </Grid>
 
     </RelativePanel>
