@@ -17,7 +17,7 @@ namespace UI.ViewModels
 
         public clsMap EmptyMap { get => emptyMap; set => emptyMap = value; }
         public List<clsElementType> Elements { get => elements; set => elements = value; }
-        public clsElementMap FullMap { get => fullMap; set => fullMap = value; }
+        //public clsElementMap FullMap { get => fullMap; set => fullMap = value; }
 
         public MapCreatorVM()
         { 

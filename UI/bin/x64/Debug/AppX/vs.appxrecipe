@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>78b5432a-175c-4102-bd1b-08a5898fe36b</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>D979C452B3F7A8E8428159360994CFA08B7A0B9127D4ED8EAB3D647A3FEE283B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x64__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T13:31:29.893</Modified>
+      <Modified>2022-02-04T12:49:02.985</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\UI.exe">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-01-31T13:31:29.482</Modified>
+      <Modified>2022-02-04T12:49:02.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -58,15 +58,15 @@
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2019-11-15T08:53:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
       <Modified>2022-01-31T12:20:20.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
       <Modified>2022-01-31T12:20:19.250</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
       <Modified>2022-01-31T12:20:19.900</Modified>
     </AppxPackagedFile>
@@ -74,71 +74,87 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-01-25T08:56:53.385</Modified>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\images\Corner_Wall_Test.png">
+      <PackagePath>Assets\images\Corner_Wall_Test.png</PackagePath>
+      <Modified>2022-02-04T11:20:20.761</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\images\Corner_Wall_Test_4.png">
+      <PackagePath>Assets\images\Corner_Wall_Test_4.png</PackagePath>
+      <Modified>2022-02-04T11:49:22.159</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\images\Exorcist.png">
+      <PackagePath>Assets\images\Exorcist.png</PackagePath>
+      <Modified>2022-02-04T11:35:50.389</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\images\Horizontal_Wall_Test.png">
+      <PackagePath>Assets\images\Horizontal_Wall_Test.png</PackagePath>
+      <Modified>2022-02-04T11:20:26.898</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2022-01-25T08:56:53.366</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.372</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.373</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2022-01-25T08:56:53.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-01-31T13:31:29.417</Modified>
+      <Modified>2022-02-04T12:37:24.668</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-31T13:31:29.421</Modified>
+      <Modified>2022-02-04T12:49:02.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-31T13:31:29.421</Modified>
+      <Modified>2022-02-04T12:49:02.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-01-31T13:31:29.421</Modified>
+      <Modified>2022-02-04T12:49:02.507</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-31T13:31:29.587</Modified>
+      <Modified>2022-02-04T12:49:02.688</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-01-31T13:31:29.891</Modified>
+      <Modified>2022-02-04T12:49:02.985</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -9184,11 +9184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\UI.csproj",
+      "projectPath": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\UI\\UI.csproj",
       "packagesPath": "C:\\Users\\jsantos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\obj\\",
+      "outputPath": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9212,11 +9212,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj"
+            "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\BL\\BL.csproj": {
+              "projectPath": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\BL\\BL.csproj"
             },
-            "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj"
+            "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }

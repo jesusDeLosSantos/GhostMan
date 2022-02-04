@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FVuNgCboQLhADqCQ3SYptn+uo2dqPsKMKe2negdxYwPwxJbxwk0cpVg9IO63VO5A6TqEfLx43TOf5p4PHUKCkA==",
+  "dgSpecHash": "H67diAXNul5aSmKxxG/EeHF8uyL4G9fhX+du5/U0tTS5nbjTUbtT5CuK2Kc5A/FliXUy+ndaIqfPxwAJIz4rYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj",
+  "projectFilePath": "C:\\Users\\jsantos\\Desktop\\GhostMan\\GhostMan\\BL\\BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jsantos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jsantos\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
