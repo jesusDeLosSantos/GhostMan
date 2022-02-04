@@ -22,7 +22,8 @@ namespace UI.ViewModels
         string inputText;
         DelegateCommand leftFilterButtonCommand;
         DelegateCommand rightFilterButtonCommand;
-        int posicionSiguienteMapa;
+        int posicionSiguienteMapa = 0;
+        int posicionAnteriorMapa = 0;
         #endregion
 
         #region Builders
@@ -31,7 +32,9 @@ namespace UI.ViewModels
             rightFilterButtonCommand = new DelegateCommand(RightFilterButtonCommand_Executed, RightFilterButtonCommand_CanExecuted);
             leftFilterButtonCommand = new DelegateCommand(LeftFilterButtonCommand_Executed, LeftFilterButtonCommand_CanExecuted);
             crearMapasDePrueba();
-            cargarSiguientesMapas(); //Se cargan los 10 primeros mapas
+            cargarMapasPosicionEspecificada(posicionSiguienteMapa);
+            posicionSiguienteMapa += 10;
+            //cargarSiguientesMapas(); //Se cargan los 10 primeros mapas
         }
         #endregion
 
@@ -69,6 +72,8 @@ namespace UI.ViewModels
                 {
                     filterList();
                 }
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
+                leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
         }
         #endregion
@@ -80,13 +85,36 @@ namespace UI.ViewModels
 
         private void LeftFilterButtonCommand_Executed()
         {
-            //TODO volver a los anteriores 10 mapas
+
+            //posicionAnteriorMapa = posicionSiguienteMapa-20;
+            if (posicionAnteriorMapa == 10) //En la page 2, se obtienen los 50 mapas anteriores
+            {
+                crearMapasDePrueba2();
+            }
+
+            if (posicionAnteriorMapa == 0)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
+            {
+                crearMapasDePrueba2();
+                //if(List que me devuelve la BBDD.Count > 0)
+                originalMapList = nextOriginalMapList; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
+                originalMapList.OrderByDescending(mapa => mapa.Nick);
+                //dentro del if cargarSiguientesMapas();
+                cargarMapasPosicionEspecificada(posicionAnteriorMapa=40);//Es te eliminarlo cuando se ponga el if comentado
+                posicionSiguienteMapa = posicionAnteriorMapa;
+            }
+            else
+            {
+                posicionAnteriorMapa = posicionSiguienteMapa -10;
+                cargarMapasPosicionEspecificada(posicionAnteriorMapa);
+                posicionSiguienteMapa = posicionAnteriorMapa;
+            }
+
         }
 
         private bool LeftFilterButtonCommand_CanExecuted()
         {
             //TODO Controlar cuando se llegue al limite por la izquierda
-            return true;
+            return mapList.Count >= 10;
         }
 
         public DelegateCommand RightFilterButtonCommand
@@ -101,12 +129,20 @@ namespace UI.ViewModels
                 crearMapasDePrueba2();
             }
 
-            if (posicionSiguienteMapa == 50)//Cuandoo este en la page 50
+            if (posicionSiguienteMapa == 40)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
             {
-                originalMapList = nextOriginalMapList;
-                posicionSiguienteMapa = 0;
+                //if(List que me devuelve la BBDD.Count > 0)
+                originalMapList = nextOriginalMapList; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
+                //dentro del if cargarSiguientesMapas();
+                cargarMapasPosicionEspecificada(posicionSiguienteMapa=0);//Es te eliminarlo cuando se ponga el if comentado;
+                posicionAnteriorMapa = posicionSiguienteMapa;
             }
-            cargarSiguientesMapas();
+            else {
+                posicionSiguienteMapa = posicionAnteriorMapa + 10;
+                cargarMapasPosicionEspecificada(posicionSiguienteMapa);
+                posicionAnteriorMapa = posicionSiguienteMapa;
+
+            }
         }
 
         private bool RightFilterButtonCommand_CanExecuted()
@@ -114,12 +150,32 @@ namespace UI.ViewModels
             //TODO Controlar cuando se llegue al limite por la Derecha
             //return posicionSiguineteMapa < 50;
             //TODO CUANDO SE LLEGUE A 50 HAY QUE COMPROBAR SI EN LA BBDD HAY MAS MAPAS
-            return true;//posicionSiguienteMapa <= originalMapList.Count - 1;
+            return mapList.Count >= 10;//posicionSiguienteMapa <= originalMapList.Count - 1;
         }
         #endregion
 
         #region Methods 
+        private void cargarMapasPosicionEspecificada(int posicion)
+        {
+            int numeroDeSiguientesMapas = 10;
+            if ((posicion + 10) > originalMapList.Count - 1)
+            {
+                numeroDeSiguientesMapas = originalMapList.Count - posicion;
+            }
+            mapList = new ObservableCollection<clsMapLeaderboard>
+                    (originalMapList.ToList().GetRange(posicion, numeroDeSiguientesMapas));
+            NotifyPropertyChanged("MapList");
 
+            if (mapList.Count != 0)
+            {
+                mapSelected = mapList[0];
+                NotifyPropertyChanged("MapSelected");
+            }
+            rightFilterButtonCommand.RaiseCanExecuteChanged();
+        }
+
+
+        /*
         private void cargarSiguientesMapas()
         {
             int numeroDeSiguientesMapas = 10;
@@ -127,6 +183,7 @@ namespace UI.ViewModels
             {
                 numeroDeSiguientesMapas = originalMapList.Count - posicionSiguienteMapa;
             }
+            posicionSiguienteMapa += 10;
             mapList = new ObservableCollection<clsMapLeaderboard>
                     (originalMapList.ToList().GetRange(posicionSiguienteMapa, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
@@ -136,8 +193,6 @@ namespace UI.ViewModels
                 mapSelected = mapList[0];
                 NotifyPropertyChanged("MapSelected");
             }
-
-            posicionSiguienteMapa += 10;
             rightFilterButtonCommand.RaiseCanExecuteChanged();
         }
 
@@ -145,8 +200,9 @@ namespace UI.ViewModels
         {
             int numeroDeSiguientesMapas = 10;
 
+            posicionSiguienteMapa -= 10;
             mapList = new ObservableCollection<clsMapLeaderboard>
-                    (originalMapList.ToList().GetRange(posicionSiguienteMapa, numeroDeSiguientesMapas));
+                    (originalMapList.ToList().GetRange(posicionSiguienteMapa-10, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
 
             if (mapList.Count != 0)
@@ -154,10 +210,7 @@ namespace UI.ViewModels
                 mapSelected = mapList[0];
                 NotifyPropertyChanged("MapSelected");
             }
-
-            posicionSiguienteMapa -= 10;
-            rightFilterButtonCommand.RaiseCanExecuteChanged();
-        }
+        }*/
 
         private void filterList()
         {
