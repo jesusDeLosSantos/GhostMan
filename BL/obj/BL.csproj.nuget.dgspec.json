@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {}
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\obj\\",
+        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -34,11 +32,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj"
+              "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -74,24 +72,22 @@
         }
       }
     },
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj": {
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -104,8 +100,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -145,24 +141,22 @@
         }
       }
     },
-    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
