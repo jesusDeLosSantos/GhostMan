@@ -19,10 +19,17 @@ namespace DAL.conecction
         public clsConnection()
         {
 
+<<<<<<< HEAD
             this.server = "pedro.database.windows.net";
             this.dataBase = "BDD_ElBicho";
             this.user = "pedro_admin";
             this.pass = "#Mitesoro";
+=======
+            this.server = "ALEXRUIZ\\SQLEXPRESS";
+            this.dataBase = "GhostMan";
+            this.user = "sa";
+            this.pass = "mitesoro";
+>>>>>>> Alex
 
         }
         //Con parámetros por si quisiera cambiar las conexiones

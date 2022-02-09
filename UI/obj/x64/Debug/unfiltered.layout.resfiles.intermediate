@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 Assets\Fonts\ARCADECLASSIC.TTF
 Assets\Images\DefaultModesSprites\Easy_Mode.png
 Assets\Images\DefaultModesSprites\Hard_Mode.png
 Assets\Images\DefaultModesSprites\Medium_Mode.png
+=======
+WinMetadata\Windows.winmd
+Assets\Image\Easy_Mode.png
+Assets\Image\Hard_Mode.png
+Assets\Image\icono_Puntuacion_Prueba.png
+Assets\Image\mapaPrueba.png
+Assets\Image\Medium_Mode.png
+>>>>>>> Alex
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -9,6 +18,7 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
+<<<<<<< HEAD
 App.xbf
 UI.xr.xml
 Views\DefaultModes.xbf
@@ -17,3 +27,10 @@ Views\PruebaDificil.xbf
 Views\PruebaMedio.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd
+=======
+UI.xr.xml
+Views\App.xbf
+Views\CustomModes.xbf
+Views\MainPage.xbf
+Properties\Default.rd.xml
+>>>>>>> Alex

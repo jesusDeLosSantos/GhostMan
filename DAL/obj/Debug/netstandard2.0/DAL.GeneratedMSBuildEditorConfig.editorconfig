@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 is_global = true
 build_property.RootNamespace = DAL
 build_property.ProjectDir = C:\Users\amachio\Cositas\GhostMan\DAL\
+=======
+is_global = true
+build_property.RootNamespace = DAL
+build_property.ProjectDir = C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\
+>>>>>>> Alex

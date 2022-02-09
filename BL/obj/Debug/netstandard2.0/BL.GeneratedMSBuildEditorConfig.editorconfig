@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 is_global = true
 build_property.RootNamespace = BL
 build_property.ProjectDir = C:\Users\amachio\Cositas\GhostMan\BL\
+=======
+is_global = true
+build_property.RootNamespace = BL
+build_property.ProjectDir = C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\
+>>>>>>> Alex

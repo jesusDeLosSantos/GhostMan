@@ -17,7 +17,10 @@
     <Page.Resources>
         <converters:ConverterSizeToSourceImage x:Key="converterSizeToSourceImage"/>
         <converters:ConverterSizeToSizeXSize x:Key="converterSizeToSizeXSize"/>
+<<<<<<< HEAD
         <converters:ConverterIdElementToSourceImage x:Key="converterIdElementToSourceImage" />
+=======
+>>>>>>> Alex
 
         <Style TargetType="ListView" x:Key="FixedHeaderListViewStyle">
             <Setter Property="IsTabStop" Value="False" />
@@ -103,7 +106,12 @@
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
+<<<<<<< HEAD
                         <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+=======
+                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" 
+                                 FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+>>>>>>> Alex
                         <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
                             <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
                         </Button>
@@ -177,6 +185,7 @@
                 </ListView.ItemTemplate>
 
             </ListView>
+<<<<<<< HEAD
             <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -192,6 +201,9 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="{Binding Mapita.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding Mapita.AxisX}" Grid.Column="{Binding Mapita.AxisY}" />
             </Grid>
+=======
+            <Image Source="/Assets/Image/mapaPrueba.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" ></Image>
+>>>>>>> Alex
         </Grid>
 
     </RelativePanel>

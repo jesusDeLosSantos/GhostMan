@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 is_global = true
 build_property.RootNamespace = Entities
 build_property.ProjectDir = C:\Users\amachio\Cositas\GhostMan\Entities\
+=======
+is_global = true
+build_property.RootNamespace = Entities
+build_property.ProjectDir = C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\
+>>>>>>> Alex

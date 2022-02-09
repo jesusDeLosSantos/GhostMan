@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "PhsZy1a429q0iYuUEt9iZct24pgpqjooBQu8u2qWCRdUUZ1RerosRxZ6TQACTnxmS2Y57E8ItZ20WCakJZmCZA==",
@@ -8,4 +9,16 @@
     "C:\\Users\\amachio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "s6RzXJiR9q4Oj4CzRHGsH7ozPz1uwvzJB0auqYeReD4ZderNfq02ygCeKpBz+o/jEOWcmRPqe+dNq3R2KVT63A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+>>>>>>> Alex
 }

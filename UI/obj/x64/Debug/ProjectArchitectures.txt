@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 E:\GitKraken-Repos\GhostMan\UI\UI.csproj;x64
+=======
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\UI.csproj;x64
+>>>>>>> Alex
