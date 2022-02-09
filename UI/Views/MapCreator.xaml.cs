@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UI.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,14 +24,11 @@ namespace UI.Views
     /// </summary>
     public sealed partial class MapCreator : Page
     {
+        public MapCreatorVM vm { get; }
         public MapCreator()
         {
             this.InitializeComponent();
-        }
-
-        private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            
+            this.vm = new MapCreatorVM();
         }
     }
 }

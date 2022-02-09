@@ -36,22 +36,22 @@
                 <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
             </StackPanel>
             <Canvas x:Name="gvMap" Background="Gray" RelativePanel.AlignBottomWithPanel="True" Width="1500" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="btnSize" Margin="20">
-                <Rectangle Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="Rectangle_Tapped">
+                <Rectangle Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
                     <Rectangle.Fill>
                         <ImageBrush x:Name="esquina" ImageSource=""/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Canvas.Left="50" Canvas.Top="0" Height="50" Width="50">
+                <Rectangle Canvas.Left="50" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Canvas.Left="100" Canvas.Top="0" Height="50" Width="50">
+                <Rectangle Canvas.Left="100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Canvas.Left="150" Canvas.Top="0" Height="50" Width="50">
+                <Rectangle Canvas.Left="150" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
                     </Rectangle.Fill>

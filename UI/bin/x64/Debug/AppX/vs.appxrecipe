@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D979C452B3F7A8E8428159360994CFA08B7A0B9127D4ED8EAB3D647A3FEE283B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2B8F31C156E8FA440F0628177131242DCDFECEB2BC8A687B828821C12856A626</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x64__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>78b5432a-175c-4102-bd1b-08a5898fe36b</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-04T12:49:02.985</Modified>
+      <Modified>2022-02-09T13:34:36.398</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-04T12:49:02.562</Modified>
+      <Modified>2022-02-09T13:34:35.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -60,15 +60,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-01-31T12:20:20.131</Modified>
+      <Modified>2022-02-09T13:04:53.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-01-31T12:20:19.250</Modified>
+      <Modified>2022-02-09T13:04:53.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-01-31T12:20:19.900</Modified>
+      <Modified>2022-02-09T13:04:53.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -130,19 +130,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-04T12:37:24.668</Modified>
+      <Modified>2022-02-09T12:13:17.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-04T12:49:02.507</Modified>
+      <Modified>2022-02-09T13:34:35.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-02-04T12:49:02.507</Modified>
+      <Modified>2022-02-09T13:34:35.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-02-04T12:49:02.507</Modified>
+      <Modified>2022-02-09T13:34:35.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,11 +150,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-04T12:49:02.688</Modified>
+      <Modified>2022-02-09T13:34:36.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-04T12:49:02.985</Modified>
+      <Modified>2022-02-09T13:34:36.398</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

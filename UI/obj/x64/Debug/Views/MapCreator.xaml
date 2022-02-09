@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="UI.Views.MapCreator"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -15,12 +15,12 @@
 
     <RelativePanel>
         <StackPanel x:ConnectionId='2' x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black">
-            <Button x:ConnectionId='13' x:Name="btnBack"  VerticalAlignment="Top"></Button>
-            <TextBlock x:ConnectionId='14' x:Name="tblMapName" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP NAME:"></TextBlock>
-            <TextBox x:ConnectionId='15' x:Name="tbMapName" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
-            <TextBlock x:ConnectionId='16' x:Name="tblMapCreator" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP CREATOR:"></TextBlock>
-            <TextBox x:ConnectionId='17' x:Name="tbMapCreator" Text="{Binding EmptyMap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
-            <Button x:ConnectionId='18' x:Name="btnSave" Width="100" Margin="180,0,0,0" Content="SAVE"></Button>
+            <Button x:ConnectionId='16' x:Name="btnBack"  VerticalAlignment="Top"></Button>
+            <TextBlock x:ConnectionId='17' x:Name="tblMapName" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP NAME:"></TextBlock>
+            <TextBox x:ConnectionId='18' x:Name="tbMapName" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+            <TextBlock x:ConnectionId='19' x:Name="tblMapCreator" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP CREATOR:"></TextBlock>
+            <TextBox x:ConnectionId='20' x:Name="tbMapCreator" Text="{Binding EmptyMap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+            <Button x:ConnectionId='21' x:Name="btnSave" Width="100" Margin="180,0,0,0" Content="SAVE"></Button>
         </StackPanel>
         <ListView x:ConnectionId='3' x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" BorderThickness="1" BorderBrush="Black" ItemsSource="{Binding Elements}">
             <ListView.ItemTemplate>
@@ -31,27 +31,27 @@
         </ListView>
         <RelativePanel x:ConnectionId='4' x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
             <StackPanel x:ConnectionId='5' x:Name="btnSize" Orientation="Horizontal" Margin="20" BorderThickness="1" BorderBrush="Black">
-                <Button x:ConnectionId='9' x:Name="btnMinSize" RelativePanel.Above="gvMap" Margin="180, 10">16x16</Button>
-                <Button x:ConnectionId='10' x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x24</Button>
-                <Button x:ConnectionId='11' x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
+                <Button x:ConnectionId='12' x:Name="btnMinSize" RelativePanel.Above="gvMap" Margin="180, 10">16x16</Button>
+                <Button x:ConnectionId='13' x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x24</Button>
+                <Button x:ConnectionId='14' x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
             </StackPanel>
             <Canvas x:ConnectionId='6' x:Name="gvMap" Background="Gray" RelativePanel.AlignBottomWithPanel="True" Width="1500" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="btnSize" Margin="20">
-                <Rectangle x:ConnectionId='7' Canvas.Left="0" Canvas.Top="0" Height="50" Width="50"                          >
+                <Rectangle x:ConnectionId='7' Canvas.Left="0" Canvas.Top="0" Height="50" Width="50"                                      >
                     <Rectangle.Fill>
-                        <ImageBrush x:ConnectionId='8' x:Name="esquina" ImageSource=""/>
+                        <ImageBrush x:ConnectionId='11' x:Name="esquina" ImageSource=""/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Canvas.Left="50" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="100" Canvas.Top="0" Height="50" Width="50">
+                <Rectangle x:ConnectionId='8' Canvas.Left="50" Canvas.Top="0" Height="50" Width="50"                                      >
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle Canvas.Left="150" Canvas.Top="0" Height="50" Width="50">
+                <Rectangle x:ConnectionId='9' Canvas.Left="100" Canvas.Top="0" Height="50" Width="50"                                      >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:ConnectionId='10' Canvas.Left="150" Canvas.Top="0" Height="50" Width="50"                                      >
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
                     </Rectangle.Fill>
