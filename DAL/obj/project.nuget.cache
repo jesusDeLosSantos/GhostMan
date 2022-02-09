@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BEOBI2paphPorqZHWJjZmGIwOGghOfUKTNYzkGeUR9u0VstQ6cqccotOe0HRieokkC/jtpTelWJkFHXQi64G+A==",
+  "dgSpecHash": "wO9PPB1GBZtyElXOp3yt3gDFc3+KDwRzW9k3c60ICZeEwCIjidNmGyfdDm4H+Z+PYYlLtyAychruKbHWUcvFjw==",
   "success": true,
-  "projectFilePath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amachio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\amachio\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

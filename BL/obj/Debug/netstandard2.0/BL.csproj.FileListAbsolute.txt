@@ -13,3 +13,32 @@ C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj
 C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
 C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+E:\GitKraken-Repos\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb

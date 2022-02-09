@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5OEN3FiGYIR0PAPzjBcTtIpBaecnuP4/3xnpT+Y2BcPVKt/AbuPo1tpWMMUsS57+ULdjAbDPJ83UTxdlmAjF0g==",
+  "dgSpecHash": "PhsZy1a429q0iYuUEt9iZct24pgpqjooBQu8u2qWCRdUUZ1RerosRxZ6TQACTnxmS2Y57E8ItZ20WCakJZmCZA==",
   "success": true,
-  "projectFilePath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amachio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\amachio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

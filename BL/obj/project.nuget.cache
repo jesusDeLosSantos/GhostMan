@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ncMaufZbR1o+BC9F9OfT+8hjviKOqVMccrpYzQLh1yK/ymBGbMmbc1lSFni2eDXD3I+S7nQknvm21EiS2tqB2A==",
+  "dgSpecHash": "rPe6dpSOmvcnZyYq7R7bL+mlJRmj1SF16JD5sB7nGBTqNySHkpqgzqsrgSSqMv3aEMgmbBwmlm7+cLnOiVbz3Q==",
   "success": true,
-  "projectFilePath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\BL\\BL.csproj",
+  "projectFilePath": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amachio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\amachio\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -879,11 +879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
-      "outputPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -906,8 +906,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\CositasEpicas\\Visual Studio\\DI_GhostMan\\Entities\\Entities.csproj"
+            "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }
@@ -943,7 +943,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

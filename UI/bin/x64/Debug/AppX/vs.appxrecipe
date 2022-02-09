@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>107-10</Machine>
-    <WindowsUser>amachio</WindowsUser>
+    <Machine>DESKTOP-ERFMNCS</Machine>
+    <WindowsUser>Albert</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,16 +10,16 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>78b5432a-175c-4102-bd1b-08a5898fe36b</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\GitKraken-Repos\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D979C452B3F7A8E8428159360994CFA08B7A0B9127D4ED8EAB3D647A3FEE283B</RegisteredManifestChecksum>
+    <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>48EF7B7A7FB141C40C09671240B57BE77340F93792EE4A8B896A48B950CB9913</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x64__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>78b5432a-175c-4102-bd1b-08a5898fe36b</RegisteredPackageID>
@@ -27,142 +27,142 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T11:34:33.511</Modified>
+      <Modified>2022-02-03T17:56:17.992</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.exe">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-01-31T11:34:33.121</Modified>
+      <Modified>2022-02-03T17:56:16.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T23:15:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
       <PackagePath>System.Data.SqlClient.dll</PackagePath>
       <Modified>2021-08-16T19:22:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2019-11-15T08:54:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2019-11-15T08:37:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2019-11-15T08:53:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-01-28T10:14:36.887</Modified>
+      <Modified>2022-02-03T17:56:13.315</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-01-28T10:14:36.209</Modified>
+      <Modified>2022-02-03T17:56:12.770</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-01-28T10:14:36.678</Modified>
+      <Modified>2022-02-03T17:56:13.133</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Easy_Mode.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Easy_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Easy_Mode.png</PackagePath>
-      <Modified>2022-01-28T11:48:18.432</Modified>
+      <Modified>2022-02-03T17:53:08.015</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Hard_Mode.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Hard_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Hard_Mode.png</PackagePath>
-      <Modified>2022-01-28T11:28:43.965</Modified>
+      <Modified>2022-02-03T17:53:08.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Medium_Mode.png</PackagePath>
-      <Modified>2022-01-28T11:28:43.966</Modified>
+      <Modified>2022-02-03T17:53:08.016</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-01-28T09:26:33.731</Modified>
+      <Modified>2022-02-03T17:28:42.834</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.732</Modified>
+      <Modified>2022-02-03T17:28:42.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.732</Modified>
+      <Modified>2022-02-03T17:28:42.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.732</Modified>
+      <Modified>2022-02-03T17:28:42.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.732</Modified>
+      <Modified>2022-02-03T17:28:42.838</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.733</Modified>
+      <Modified>2022-02-03T17:28:42.839</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-28T09:26:33.733</Modified>
+      <Modified>2022-02-03T17:28:42.839</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-01-28T09:26:33.735</Modified>
+      <Modified>2022-02-03T17:28:42.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\Assets\Fonts\ARCADECLASSIC.TTF">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Fonts\ARCADECLASSIC.TTF">
       <PackagePath>Assets\Fonts\ARCADECLASSIC.TTF</PackagePath>
-      <Modified>2022-01-31T11:17:23.349</Modified>
+      <Modified>2022-02-03T17:53:08.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\UI.xr.xml">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-01-31T11:26:04.083</Modified>
+      <Modified>2022-02-03T17:54:59.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-31T11:34:33.070</Modified>
+      <Modified>2022-02-03T17:56:16.821</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf">
       <PackagePath>Views\Prueba.xbf</PackagePath>
-      <Modified>2022-01-31T11:34:33.071</Modified>
+      <Modified>2022-02-03T17:56:16.821</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf">
       <PackagePath>Views\PruebaDificil.xbf</PackagePath>
-      <Modified>2022-01-31T11:34:33.071</Modified>
+      <Modified>2022-02-03T17:56:16.821</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf">
       <PackagePath>Views\PruebaMedio.xbf</PackagePath>
-      <Modified>2022-01-31T11:34:33.071</Modified>
+      <Modified>2022-02-03T17:56:16.821</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-01-31T11:34:33.070</Modified>
+      <Modified>2022-02-03T17:56:16.820</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-31T11:34:33.223</Modified>
+      <Modified>2022-02-03T17:56:17.462</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\CositasEpicas\Visual Studio\DI_GhostMan\UI\bin\x64\Debug\Core\UI.exe">
+    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-01-31T11:34:33.508</Modified>
+      <Modified>2022-02-03T17:56:17.987</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
