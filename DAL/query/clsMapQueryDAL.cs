@@ -38,7 +38,7 @@ namespace DAL.query
                         oMap.Id = (int)myReader["id"];
                         oMap.Nick = (String)myReader["nick"];
                         oMap.Size = (int)myReader["size"];
-                        oMap.CommunityMap = (int)myReader["communityMap"];
+                        oMap.CommunityMap = (bool)myReader["communityMap"];
                         maps.Add(oMap);
                     }
                 }
@@ -73,7 +73,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM Map WHERE communityMap = 1";
+                myCommand.CommandText = "SELECT * FROM Maps WHERE communityMap = 1";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -84,7 +84,7 @@ namespace DAL.query
                         oCustomMap.Id = (int)myReader["id"];
                         oCustomMap.Nick = (String)myReader["nick"];
                         oCustomMap.Size = (int)myReader["size"];
-                        oCustomMap.CommunityMap = (int)myReader["communityMap"];
+                        oCustomMap.CommunityMap = (bool)myReader["communityMap"];
                         customMaps.Add(oCustomMap);
                     }
                 }
@@ -130,7 +130,7 @@ namespace DAL.query
                         oDefaultMap.Id = (int)myReader["id"];
                         oDefaultMap.Nick = (String)myReader["nick"];
                         oDefaultMap.Size = (int)myReader["size"];
-                        oDefaultMap.CommunityMap = (int)myReader["communityMap"];
+                        oDefaultMap.CommunityMap = (bool)myReader["communityMap"];
                         defaultMaps.Add(oDefaultMap);
                     }
                 }
