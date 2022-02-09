@@ -25,6 +25,7 @@ namespace UI.ViewModels
         DelegateCommand rightFilterButtonCommand;
         int posicionSiguienteMapa = 0;
         int posicionAnteriorMapa = 0;
+        int ultimoMapaObtenidoBBDD = 1;
         #endregion
 
         #region Builders
@@ -32,10 +33,17 @@ namespace UI.ViewModels
         {
             rightFilterButtonCommand = new DelegateCommand(RightFilterButtonCommand_Executed, RightFilterButtonCommand_CanExecuted);
             leftFilterButtonCommand = new DelegateCommand(LeftFilterButtonCommand_Executed, LeftFilterButtonCommand_CanExecuted);
-            crearMapasDePrueba();
+
+            List<clsMapLeaderboard> b = new List<clsMapLeaderboard>();
+            foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "+ 50"))
+            {
+                b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
+            }
+            originalMapList = new ObservableCollection<clsMapLeaderboard>(b);
+            ultimoMapaObtenidoBBDD += 50;
+
             cargarMapasPosicionEspecificada(posicionSiguienteMapa);
             posicionSiguienteMapa += 10;
-            //cargarSiguientesMapas(); //Se cargan los 10 primeros mapas
         }
         #endregion
 
@@ -84,13 +92,23 @@ namespace UI.ViewModels
             get { return leftFilterButtonCommand; }
         }
 
-        private void LeftFilterButtonCommand_Executed()
+        private async void LeftFilterButtonCommand_Executed()
         {
 
             //posicionAnteriorMapa = posicionSiguienteMapa-20;
             if (posicionAnteriorMapa == 10) //En la page 2, se obtienen los 50 mapas anteriores
             {
-                crearMapasDePrueba2();
+                List<clsMap> a = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "- 50"); });
+                if (a.Count != 0)
+                {
+                    List<clsMapLeaderboard> b = new List<clsMapLeaderboard>();
+                    foreach (clsMap map in a)
+                    {
+                        b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
+                    }
+                    nextOriginalMapList = new ObservableCollection<clsMapLeaderboard>(b);
+                    ultimoMapaObtenidoBBDD -= 50;
+                }  
             }
 
             if (posicionAnteriorMapa == 0)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
@@ -115,7 +133,7 @@ namespace UI.ViewModels
         private bool LeftFilterButtonCommand_CanExecuted()
         {
             //TODO Controlar cuando se llegue al limite por la izquierda
-            return mapList.Count >= 10;
+            return mapList.Count >= 10 || (nextOriginalMapList.Count > 0 && posicionSiguienteMapa == 10);
         }
 
         public DelegateCommand RightFilterButtonCommand
@@ -127,7 +145,16 @@ namespace UI.ViewModels
         {
             if (posicionSiguienteMapa == 30) //En la page 4, se obtienen los 50 siguientes mapas
             {
-                List<clsMap> a = await Task.Run(() => { return clsMapQueryBL.getListOfCustomMapsBL(); } );
+                List<clsMap> a = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "+ 50"); } );
+                if (a.Count != 0)
+                {
+                    List<clsMapLeaderboard> b = new List<clsMapLeaderboard>();
+                    foreach (clsMap map in a) {
+                        b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
+                    }
+                    nextOriginalMapList = new ObservableCollection<clsMapLeaderboard>(b);
+                    ultimoMapaObtenidoBBDD += 50;
+                }  
             }
 
             if (posicionSiguienteMapa == 40)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
