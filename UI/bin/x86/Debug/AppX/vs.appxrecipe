@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-04T11:46:15.105</Modified>
+      <Modified>2022-02-09T12:49:17.568</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-04T11:46:14.707</Modified>
+      <Modified>2022-02-09T12:49:17.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -60,15 +60,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-02-04T11:26:05.365</Modified>
+      <Modified>2022-02-09T11:13:06.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-02-04T11:26:05.083</Modified>
+      <Modified>2022-02-09T11:13:05.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-02-04T11:26:05.251</Modified>
+      <Modified>2022-02-09T11:13:06.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -85,6 +85,22 @@
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Medium_Mode.png</PackagePath>
       <Modified>2022-02-04T11:07:02.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Easy_Mode.png">
+      <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
+      <Modified>2022-02-09T11:17:35.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Hard_Mode.png">
+      <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
+      <Modified>2022-02-09T11:17:35.538</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+      <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
+      <Modified>2022-02-09T11:17:35.535</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Medium_Mode.png">
+      <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
+      <Modified>2022-02-09T11:17:35.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Corner_Wall_Test.png">
       <PackagePath>Assets\Prueba\Corner_Wall_Test.png</PackagePath>
@@ -105,6 +121,10 @@
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Cross_Wall_Test.png">
       <PackagePath>Assets\Prueba\Cross_Wall_Test.png</PackagePath>
       <Modified>2022-02-04T11:31:21.783</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Horizontal_Wall_Test.png">
+      <PackagePath>Assets\Prueba\Horizontal_Wall_Test.png</PackagePath>
+      <Modified>2022-02-09T11:59:25.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -150,31 +170,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-04T11:46:14.629</Modified>
+      <Modified>2022-02-09T12:48:03.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.649</Modified>
+      <Modified>2022-02-09T12:49:17.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.642</Modified>
+      <Modified>2022-02-09T12:49:17.084</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Views\Prueba.xbf">
       <PackagePath>Views\Prueba.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.649</Modified>
+      <Modified>2022-02-09T12:49:17.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Views\PruebaDificil.xbf">
       <PackagePath>Views\PruebaDificil.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.649</Modified>
+      <Modified>2022-02-09T12:49:17.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Views\PruebaMedio.xbf">
       <PackagePath>Views\PruebaMedio.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.649</Modified>
+      <Modified>2022-02-09T12:49:17.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-02-04T11:46:14.649</Modified>
+      <Modified>2022-02-09T12:49:17.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -182,11 +202,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-04T11:39:38.753</Modified>
+      <Modified>2022-02-09T12:00:53.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-04T11:46:15.104</Modified>
+      <Modified>2022-02-09T12:49:17.566</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

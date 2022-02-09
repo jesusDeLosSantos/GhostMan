@@ -64,6 +64,18 @@
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Medium_Mode.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Easy_Mode.png">
+      <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Hard_Mode.png">
+      <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+      <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Image\Medium_Mode.png">
+      <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Corner_Wall_Test.png">
       <PackagePath>Assets\Prueba\Corner_Wall_Test.png</PackagePath>
     </AppxPackagedFile>
@@ -78,6 +90,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Cross_Wall_Test.png">
       <PackagePath>Assets\Prueba\Cross_Wall_Test.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\Prueba\Horizontal_Wall_Test.png">
+      <PackagePath>Assets\Prueba\Horizontal_Wall_Test.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amachio\Cositas\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

@@ -24,7 +24,7 @@ namespace UI.ViewModels.Utilities.Converters
                     imagen = "/Assets/Prueba/Corner_Wall_Test_3.png";
                     break;
                 case 4:
-                    imagen = "/Assets/Prueba/Corner_Wall_Test_4.png";
+                    imagen = "/Assets/Prueba/Horizontal_Wall_Test.png";
                     break;
             }
             return imagen;

@@ -4,11 +4,11 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Mapita" />
+    <RootPropertyPathName Name="MapSelected" />
+    <RootPropertyPathName Name="ElementList" />
     <RootPropertyPathName Name="IdElement" />
     <RootPropertyPathName Name="AxisX" />
     <RootPropertyPathName Name="AxisY" />
-    <RootPropertyPathName Name="MapSelected" />
     <RootPropertyPathName Name="Leaderboards" />
     <RootPropertyPathName Name="Score" />
     <RootPropertyPathName Name="Nick" />
@@ -128,12 +128,12 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
       <RootProperty Name="VerticalAlignment" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />

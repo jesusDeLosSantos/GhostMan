@@ -1,0 +1,302 @@
+﻿<Page
+    x:Class="UI.Views.CustomModes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:vm="using:UI.ViewModels"
+    xmlns:converters="using:UI.ViewModels.Utilities.Converters"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:CustomModeVM/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <converters:ConverterSizeToSourceImage x:Key="converterSizeToSourceImage"/>
+        <converters:ConverterSizeToSizeXSize x:Key="converterSizeToSizeXSize"/>
+        <converters:ConverterIdElementToSourceImage x:Key="converterIdElementToSourceImage" />
+
+        <Style TargetType="ListView" x:Key="FixedHeaderListViewStyle">
+            <Setter Property="IsTabStop" Value="False" />
+            <Setter Property="TabNavigation" Value="Once" />
+            <Setter Property="IsSwipeEnabled" Value="True" />
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+            <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled" />
+            <Setter Property="ScrollViewer.IsHorizontalRailEnabled" Value="False" />
+            <Setter Property="ScrollViewer.VerticalScrollMode" Value="Enabled" />
+            <Setter Property="ScrollViewer.IsVerticalRailEnabled" Value="True" />
+            <Setter Property="ScrollViewer.ZoomMode" Value="Disabled" />
+            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False" />
+            <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True" />
+            <Setter Property="UseSystemFocusVisuals" Value="True" />
+            <Setter Property="ItemContainerTransitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <AddDeleteThemeTransition />
+                        <ContentThemeTransition />
+                        <ReorderThemeTransition />
+                        <EntranceThemeTransition IsStaggeringEnabled="False" />
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <ItemsStackPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListView">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <ContentControl Content="{TemplateBinding Header}"
+                                                ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                                ContentTransitions="{TemplateBinding HeaderTransitions}"/>
+
+                                <ScrollViewer x:Name="ScrollViewer"
+                                          Grid.Row="1"
+                                        TabNavigation="{TemplateBinding TabNavigation}"
+                                        HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}"
+                                        HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                        IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}"
+                                        VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}"
+                                        VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                        IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}"
+                                        IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}"
+                                        IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}"
+                                        ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}"
+                                        IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
+                                        BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}"
+                                        AutomationProperties.AccessibilityView="Raw">
+                                    <ItemsPresenter 
+                                                Footer="{TemplateBinding Footer}"
+                                                FooterTemplate="{TemplateBinding FooterTemplate}"
+                                                FooterTransitions="{TemplateBinding FooterTransitions}"
+                                                Padding="{TemplateBinding Padding}" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+    <RelativePanel>
+        <ListView x:ConnectionId='5' Name="LstMapas" CornerRadius="20" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}" 
+                  RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True"
+                  SelectedItem="{Binding MapSelected,Mode=TwoWay}"  Style="{StaticResource FixedHeaderListViewStyle}">
+            <ListView.HeaderTemplate>
+                <DataTemplate x:Name="buttons">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
+                            <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
+                        </Button>
+                        <Button Name="btnFiltradoDerecha" Command="{Binding RightFilterButtonCommand}" Background="Transparent" Margin="20,0,0,0">
+                            <FontIcon Glyph="&#xe72A;" FontSize="30"></FontIcon>
+                        </Button>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+            <ListView.ItemTemplate>
+                <DataTemplate x:Name="Items">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Size, Converter={StaticResource converterSizeToSourceImage}}" MaxHeight="100"></Image>
+                        <TextBlock Text="{Binding Nick}" FontSize="30" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Grid RelativePanel.RightOf="LstMapas" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True"  RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.8*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                <Image Source="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSourceImage}}"  MaxHeight="100" MinWidth="100" ></Image>
+                <TextBlock Text="{Binding MapSelected.Nick}" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+                <TextBlock Text="Creador:" FontSize="25" Margin="15,0,0,0"></TextBlock>
+                <TextBlock Text="qwertyuiopasdfghjklñ" FontSize="25" TextWrapping="Wrap" Margin="8,0,0,0"></TextBlock>
+                <TextBlock Text="Tamaño: "  FontSize="25" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="10,0,0,0"></TextBlock>
+                <TextBlock Text="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSizeXSize}}" FontSize="25" HorizontalAlignment="Right"></TextBlock>
+            </StackPanel>
+            
+            
+            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" 
+                      ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None" >
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Background="CornflowerBlue">
+                            <TextBlock Text="Clasificacion:" FontSize="35" HorizontalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Source="/Assets/Image/icono_Puntuacion_Prueba.png" MaxHeight="45" MaxWidth="45"></Image>
+                                <TextBlock Text="{Binding Position}" FontSize="15" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Nick}"  Margin="10,0,0,0" FontSize="30"></TextBlock>
+                            <TextBlock Text="{Binding Score}" Margin="10,0,0,0" FontSize="30"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" BorderThickness="0"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" /> 
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="{Binding MapSelected.ElementList[0].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[0].AxisX}" Grid.Column="{Binding MapSelected.ElementList[0].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[2].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[2].AxisX}" Grid.Column="{Binding MapSelected.ElementList[2].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[3].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[3].AxisX}" Grid.Column="{Binding MapSelected.ElementList[3].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[4].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[4].AxisX}" Grid.Column="{Binding MapSelected.ElementList[4].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[5].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[5].AxisX}" Grid.Column="{Binding MapSelected.ElementList[5].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[6].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[6].AxisX}" Grid.Column="{Binding MapSelected.ElementList[6].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[7].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[7].AxisX}" Grid.Column="{Binding MapSelected.ElementList[7].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[8].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[8].AxisX}" Grid.Column="{Binding MapSelected.ElementList[8].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[9].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[9].AxisX}" Grid.Column="{Binding MapSelected.ElementList[9].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[10].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[10].AxisX}" Grid.Column="{Binding MapSelected.ElementList[10].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[11].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[11].AxisX}" Grid.Column="{Binding MapSelected.ElementList[11].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[12].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[12].AxisX}" Grid.Column="{Binding MapSelected.ElementList[12].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[13].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[13].AxisX}" Grid.Column="{Binding MapSelected.ElementList[13].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[14].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[14].AxisX}" Grid.Column="{Binding MapSelected.ElementList[14].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[15].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[15].AxisX}" Grid.Column="{Binding MapSelected.ElementList[15].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[16].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[16].AxisX}" Grid.Column="{Binding MapSelected.ElementList[16].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[17].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[17].AxisX}" Grid.Column="{Binding MapSelected.ElementList[17].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[18].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[18].AxisX}" Grid.Column="{Binding MapSelected.ElementList[18].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[19].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[19].AxisX}" Grid.Column="{Binding MapSelected.ElementList[19].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[20].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[20].AxisX}" Grid.Column="{Binding MapSelected.ElementList[20].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[21].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[21].AxisX}" Grid.Column="{Binding MapSelected.ElementList[21].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[22].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[22].AxisX}" Grid.Column="{Binding MapSelected.ElementList[22].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[23].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[23].AxisX}" Grid.Column="{Binding MapSelected.ElementList[23].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[24].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[24].AxisX}" Grid.Column="{Binding MapSelected.ElementList[24].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[25].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[25].AxisX}" Grid.Column="{Binding MapSelected.ElementList[25].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[26].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[26].AxisX}" Grid.Column="{Binding MapSelected.ElementList[26].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[27].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[27].AxisX}" Grid.Column="{Binding MapSelected.ElementList[27].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[28].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[28].AxisX}" Grid.Column="{Binding MapSelected.ElementList[28].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[29].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[29].AxisX}" Grid.Column="{Binding MapSelected.ElementList[29].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[30].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[30].AxisX}" Grid.Column="{Binding MapSelected.ElementList[30].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[31].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[31].AxisX}" Grid.Column="{Binding MapSelected.ElementList[31].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[32].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[32].AxisX}" Grid.Column="{Binding MapSelected.ElementList[32].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[33].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[33].AxisX}" Grid.Column="{Binding MapSelected.ElementList[33].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[34].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[34].AxisX}" Grid.Column="{Binding MapSelected.ElementList[34].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[35].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[35].AxisX}" Grid.Column="{Binding MapSelected.ElementList[35].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[36].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[36].AxisX}" Grid.Column="{Binding MapSelected.ElementList[36].AxisY}" />
+
+
+
+            </Grid>
+        </Grid>
+
+    </RelativePanel>
+</Page>
+

@@ -42,3 +42,4 @@ C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
 C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
 C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
 C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\amachio\Cositas\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
