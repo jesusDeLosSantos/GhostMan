@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-09T13:34:36.398</Modified>
+      <Modified>2022-02-11T12:23:57.470</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-09T13:34:35.998</Modified>
+      <Modified>2022-02-11T12:23:57.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -124,25 +124,29 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-01-25T08:56:53.373</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Assets\images\Prueba.gif">
+      <PackagePath>Assets\images\Prueba.gif</PackagePath>
+      <Modified>2022-02-11T09:48:36.478</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-01-25T08:56:53.385</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-09T12:13:17.707</Modified>
+      <Modified>2022-02-11T12:23:56.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-09T13:34:35.951</Modified>
+      <Modified>2022-02-11T12:23:56.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-02-09T13:34:35.951</Modified>
+      <Modified>2022-02-11T12:23:56.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-02-09T13:34:35.951</Modified>
+      <Modified>2022-02-11T12:23:56.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,11 +154,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-09T13:34:36.110</Modified>
+      <Modified>2022-02-11T12:23:57.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jsantos\Desktop\GhostMan\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-09T13:34:36.398</Modified>
+      <Modified>2022-02-11T12:23:57.470</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

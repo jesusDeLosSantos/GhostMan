@@ -140,6 +140,7 @@
     <Content Include="Assets\images\Corner_Wall_Test_4.png" />
     <Content Include="Assets\images\Exorcist.png" />
     <Content Include="Assets\images\Horizontal_Wall_Test.png" />
+    <Content Include="Assets\images\Prueba.gif" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

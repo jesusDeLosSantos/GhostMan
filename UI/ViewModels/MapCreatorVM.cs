@@ -55,18 +55,30 @@ namespace UI.ViewModels
 
             return elementsList;
         }
-
-        public void rectangleTapped(object sender, TappedRoutedEventArgs e)
+        /// <summary>
+        ///     <header>public void imageTapped(object sender, TappedRoutedEventArgs e)</header>
+        ///     <descripton>This method gets the axisX and axisY from the image tapped, and exchanges its source image for the selected item image</descripton>
+        ///     <preconditions>None</preconditions>
+        ///     <postconditions>The tapped source image is changed for the selected item image source</postconditions>
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="e">TappedRoutedEventArgs</param>
+        public void imageTapped(object sender, TappedRoutedEventArgs e)
         {
-            Rectangle rec = (Rectangle) sender;
-            double axisX = (double)rec.GetValue(Canvas.LeftProperty);
-            double axisY = (double)rec.GetValue(Canvas.TopProperty);
+            Image img = (Image) sender;
+            double axisX = (double)img.GetValue(Canvas.LeftProperty);
+            double axisY = (double)img.GetValue(Canvas.TopProperty);
             addElementMap(axisX, axisY);
-            var imageBrush = new ImageBrush();
-            imageBrush.ImageSource = new BitmapImage(new Uri("/Assets/images/Horizontal_Wall_Test.png"));
-            rec.Fill = imageBrush;
+            img.Source = new BitmapImage(new Uri("ms-appx:///Assets/images/Prueba.gif"));
         }
-
+        /// <summary>
+        ///     <header>private void addElementMap(double axisX, double axisY)</header>
+        ///     <description>This method add a new elementMap that represent a square in the map</description>
+        ///     <preconditions>None</preconditions>
+        ///     <postconditions>The elementMap is added to the list</postconditions>
+        /// </summary>
+        /// <param name="axisX">double</param>
+        /// <param name="axisY">double</param>
         private void addElementMap(double axisX, double axisY)
         {
             bool added = false;

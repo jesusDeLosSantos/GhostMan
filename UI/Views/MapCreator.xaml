@@ -10,19 +10,22 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
-        <vm:MapCreatorVM></vm:MapCreatorVM> 
+        <vm:MapCreatorVM></vm:MapCreatorVM>
     </Page.DataContext>
 
     <RelativePanel>
-        <StackPanel x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" BorderThickness="1" BorderBrush="Black">
-            <Button x:Name="btnBack"  VerticalAlignment="Top"></Button>
-            <TextBlock x:Name="tblMapName" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP NAME:"></TextBlock>
-            <TextBox x:Name="tbMapName" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
-            <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Margin="200,0,0,0" Text="MAP CREATOR:"></TextBlock>
-            <TextBox x:Name="tbMapCreator" Text="{Binding EmptyMap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
-            <Button x:Name="btnSave" Width="100" Margin="180,0,0,0" Content="SAVE"></Button>
-        </StackPanel>
-        <ListView x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" BorderThickness="1" BorderBrush="Black" ItemsSource="{Binding Elements}">
+
+        <Border x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" CornerRadius="10" Background="AliceBlue">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="btnBack"  VerticalAlignment="Top"></Button>
+                <TextBlock x:Name="tblMapName" VerticalAlignment="Center" Text="MAP NAME:" HorizontalAlignment="Center"></TextBlock>
+                <TextBox x:Name="tbMapName" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10" HorizontalAlignment="Center"></TextBox>
+                <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Text="MAP CREATOR:"></TextBlock>
+                <TextBox x:Name="tbMapCreator" Text="{Binding EmptyMap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+                <Button x:Name="btnSave" Width="100" Content="SAVE"></Button>
+            </StackPanel>
+        </Border>
+        <ListView x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" ItemsSource="{Binding Elements}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Image Source="Foto de un elemento"/>
@@ -30,138 +33,516 @@
             </ListView.ItemTemplate>
         </ListView>
         <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            <StackPanel x:Name="btnSize" Orientation="Horizontal" Margin="20" BorderThickness="1" BorderBrush="Black">
+            <StackPanel x:Name="btnSize" Orientation="Horizontal" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" Margin="0,20" RelativePanel.AlignRightWith="gvMap" RelativePanel.AlignLeftWith="gvMap" HorizontalAlignment="Center">
                 <Button x:Name="btnMinSize" RelativePanel.Above="gvMap" Margin="180, 10">16x16</Button>
                 <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x24</Button>
                 <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x30</Button>
             </StackPanel>
-            <Canvas x:Name="gvMap" Background="Gray" RelativePanel.AlignBottomWithPanel="True" Width="1500" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="btnSize" Margin="20">
-                <Rectangle Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
-                    <Rectangle.Fill>
-                        <ImageBrush x:Name="esquina" ImageSource=""/>
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="50" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="150" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.rectangleTapped }">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="200" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="250" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="300" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="350" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="400" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="450" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="500" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="550" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="600" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="650" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="700" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="750" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="800" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="850" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="900" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="950" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="1000" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="1050" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="1100" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="1150" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Horizontal_Wall_Test.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-                <Rectangle Canvas.Left="1200" Canvas.Top="0" Height="50" Width="50">
-                    <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Assets/images/Corner_Wall_Test_4.png" />
-                    </Rectangle.Fill>
-                </Rectangle>
-            </Canvas>
+            <Border x:Name="gvMap" BorderThickness="5" BorderBrush="Blue"  CornerRadius="10" Margin="20">
+                <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" Width="1500" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" >
+                    <Image Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="50" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="100" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="150" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="200" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="250" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="300" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="350" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="400" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="450" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="500" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="550" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="600" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="650" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+
+                    <Image Canvas.Left="0" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="700" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+
+                    <Image Canvas.Left="0" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="50" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="100" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="150" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="200" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="250" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="300" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="350" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="400" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="450" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="500" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="550" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="600" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="650" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="700" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="750" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="800" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="850" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="900" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="950" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1000" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1050" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1100" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1150" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1200" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1250" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1300" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1350" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1400" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                    <Image Canvas.Left="1450" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Horizontal_Wall_Test.png"></Image>
+                </Canvas>
+            </Border>
         </RelativePanel>
     </RelativePanel>
 </Page>
