@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-ERFMNCS</Machine>
-    <WindowsUser>Albert</WindowsUser>
+    <Machine>107-10</Machine>
+    <WindowsUser>amachio</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,118 +10,151 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>78b5432a-175c-4102-bd1b-08a5898fe36b</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\GitKraken-Repos\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\CositasEpicas\GitKraken\GhostMan\UI\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\UI.exe">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
       <PackagePath>System.Data.SqlClient.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\amachio\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Easy_Mode.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Images\DefaultModesSprites\Easy_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Easy_Mode.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Hard_Mode.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Images\DefaultModesSprites\Hard_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Hard_Mode.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Images\DefaultModesSprites\Medium_Mode.png">
       <PackagePath>Assets\Images\DefaultModesSprites\Medium_Mode.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Image\Easy_Mode.png">
+      <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Image\Hard_Mode.png">
+      <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+      <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Image\Medium_Mode.png">
+      <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Corner_Wall_Test.png">
+      <PackagePath>Assets\Prueba\Corner_Wall_Test.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Corner_Wall_Test_2.png">
+      <PackagePath>Assets\Prueba\Corner_Wall_Test_2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Corner_Wall_Test_3.png">
+      <PackagePath>Assets\Prueba\Corner_Wall_Test_3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Corner_Wall_Test_4.png">
+      <PackagePath>Assets\Prueba\Corner_Wall_Test_4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Cross_Wall_Test.png">
+      <PackagePath>Assets\Prueba\Cross_Wall_Test.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Prueba\Horizontal_Wall_Test.png">
+      <PackagePath>Assets\Prueba\Horizontal_Wall_Test.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Fonts\ARCADECLASSIC.TTF">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\Assets\Fonts\ARCADECLASSIC.TTF">
       <PackagePath>Assets\Fonts\ARCADECLASSIC.TTF</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
+      <PackagePath>Views\CustomModes.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Views\Prueba.xbf">
       <PackagePath>Views\Prueba.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Views\PruebaDificil.xbf">
       <PackagePath>Views\PruebaDificil.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Views\PruebaMedio.xbf">
       <PackagePath>Views\PruebaMedio.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
+    <AppxPackagedFile Include="C:\CositasEpicas\GitKraken\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace Entities
         int id;
         String nick;
         int size;
-        int communityMap;
+        bool communityMap;
         #endregion
         #region Builders
 
@@ -19,7 +19,7 @@ namespace Entities
 
         }
 
-        public clsMap(int id,String nick,int size,int communityMap)
+        public clsMap(int id, String nick, int size, bool communityMap)
         {
             this.id = id;
             this.nick = nick;
@@ -31,7 +31,7 @@ namespace Entities
         public int Id { get => id; set => id = value; }
         public string Nick { get => nick; set => nick = value; }
         public int Size { get => size; set => size = value; }
-        public int CommunityMap { get => communityMap; set => communityMap = value; }
+        public bool CommunityMap { get => communityMap; set => communityMap = value; }
         #endregion
     }
 }

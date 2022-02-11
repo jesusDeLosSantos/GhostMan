@@ -14,17 +14,56 @@ namespace UI.ViewModels.Utilities.Converters
             String imagen="";
             switch (value)
             {
+                case 0:
+                    imagen = "/Assets/Prueba/Empty_Spot.png";
+                    break;
                 case 1:
-                    imagen = "/Assets/Prueba/Corner_Wall_Test.png";
+                    imagen = "/Assets/Prueba/Corner_Wall_1.png";
                     break;
                 case 2:
-                    imagen = "/Assets/Prueba/Corner_Wall_Test_2.png";
+                    imagen = "/Assets/Prueba/Corner_Wall_2.png";
                     break;
                 case 3:
-                    imagen = "/Assets/Prueba/Corner_Wall_Test_3.png";
+                    imagen = "/Assets/Prueba/Corner_Wall_3.png";
                     break;
                 case 4:
-                    imagen = "/Assets/Prueba/Corner_Wall_Test_4.png";
+                    imagen = "/Assets/Prueba/Corner_Wall_4.png";
+                    break;
+                case 5:
+                    imagen = "/Assets/Prueba/Cross_Wall.png";
+                    break;
+                case 6:
+                    imagen = "/Assets/Prueba/Ending_Wall_1.png";
+                    break;
+                case 7:
+                    imagen = "/Assets/Prueba/Ending_Wall_2.png";
+                    break;
+                case 8:
+                    imagen = "/Assets/Prueba/Ending_Wall_3.png";
+                    break;
+                case 9:
+                    imagen = "/Assets/Prueba/Ending_Wall_4.png";
+                    break;
+                case 10:
+                    imagen = "/Assets/Prueba/Horizontal_Wall.png";
+                    break;
+                case 11:
+                    imagen = "/Assets/Prueba/Section_Wall_1.png";
+                    break;
+                case 12:
+                    imagen = "/Assets/Prueba/Section_Wall_2.png";
+                    break;
+                case 13:
+                    imagen = "/Assets/Prueba/Section_Wall_3.png";
+                    break;
+                case 14:
+                    imagen = "/Assets/Prueba/Section_Wall_4.png";
+                    break;
+                case 15:
+                    imagen = "/Assets/Prueba/";
+                    break;
+                case 16:
+                    imagen = "/Assets/Prueba/";
                     break;
             }
             return imagen;

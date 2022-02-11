@@ -153,11 +153,16 @@
     <Content Include="Assets\Images\DefaultModesSprites\Easy_Mode.png" />
     <Content Include="Assets\Images\DefaultModesSprites\Hard_Mode.png" />
     <Content Include="Assets\Images\DefaultModesSprites\Medium_Mode.png" />
+    <Content Include="Assets\Image\Easy_Mode.png" />
+    <Content Include="Assets\Image\Hard_Mode.png" />
+    <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
+    <Content Include="Assets\Image\Medium_Mode.png" />
     <Content Include="Assets\Prueba\Corner_Wall_Test.png" />
     <Content Include="Assets\Prueba\Corner_Wall_Test_2.png" />
     <Content Include="Assets\Prueba\Corner_Wall_Test_3.png" />
     <Content Include="Assets\Prueba\Corner_Wall_Test_4.png" />
     <Content Include="Assets\Prueba\Cross_Wall_Test.png" />
+    <Content Include="Assets\Prueba\Horizontal_Wall_Test.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

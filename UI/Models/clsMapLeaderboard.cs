@@ -11,6 +11,7 @@ namespace UI.Models
     {
         #region Attributes
         List<clsLeaderboardWithPosition> leaderboards;
+        List<clsElementMap> elementList;
         #endregion
         #region Builders
         public clsMapLeaderboard() : base()
@@ -18,13 +19,15 @@ namespace UI.Models
 
         }
 
-        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
+        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards, List<clsElementMap> elementList) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
         {
             this.leaderboards = leaderboards;
+            this.elementList = elementList;
         }
         #endregion
         #region Getters & Setters
         public List<clsLeaderboardWithPosition> Leaderboards { get => leaderboards; set => leaderboards = value; }
+        public List<clsElementMap> ElementList { get => elementList; set => elementList = value; }
         #endregion
     }
 }

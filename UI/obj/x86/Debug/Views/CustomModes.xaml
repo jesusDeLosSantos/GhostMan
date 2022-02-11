@@ -177,20 +177,123 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" >
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" BorderThickness="0"  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions> 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" /> 
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Mapita.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding Mapita.AxisX}" Grid.Column="{Binding Mapita.AxisY}" />
+
+                <Image Source="{Binding MapSelected.ElementList[0].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[0].AxisX}" Grid.Column="{Binding MapSelected.ElementList[0].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[2].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[2].AxisX}" Grid.Column="{Binding MapSelected.ElementList[2].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[3].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[3].AxisX}" Grid.Column="{Binding MapSelected.ElementList[3].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[4].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[4].AxisX}" Grid.Column="{Binding MapSelected.ElementList[4].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[5].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[5].AxisX}" Grid.Column="{Binding MapSelected.ElementList[5].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[6].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[6].AxisX}" Grid.Column="{Binding MapSelected.ElementList[6].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[7].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[7].AxisX}" Grid.Column="{Binding MapSelected.ElementList[7].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[8].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[8].AxisX}" Grid.Column="{Binding MapSelected.ElementList[8].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[9].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[9].AxisX}" Grid.Column="{Binding MapSelected.ElementList[9].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[10].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[10].AxisX}" Grid.Column="{Binding MapSelected.ElementList[10].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[11].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[11].AxisX}" Grid.Column="{Binding MapSelected.ElementList[11].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[12].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[12].AxisX}" Grid.Column="{Binding MapSelected.ElementList[12].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[13].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[13].AxisX}" Grid.Column="{Binding MapSelected.ElementList[13].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[14].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[14].AxisX}" Grid.Column="{Binding MapSelected.ElementList[14].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[15].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[15].AxisX}" Grid.Column="{Binding MapSelected.ElementList[15].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[16].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[16].AxisX}" Grid.Column="{Binding MapSelected.ElementList[16].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[17].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[17].AxisX}" Grid.Column="{Binding MapSelected.ElementList[17].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[18].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[18].AxisX}" Grid.Column="{Binding MapSelected.ElementList[18].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[19].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[19].AxisX}" Grid.Column="{Binding MapSelected.ElementList[19].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[20].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[20].AxisX}" Grid.Column="{Binding MapSelected.ElementList[20].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[21].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[21].AxisX}" Grid.Column="{Binding MapSelected.ElementList[21].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[22].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[22].AxisX}" Grid.Column="{Binding MapSelected.ElementList[22].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[23].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[23].AxisX}" Grid.Column="{Binding MapSelected.ElementList[23].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[24].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[24].AxisX}" Grid.Column="{Binding MapSelected.ElementList[24].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[25].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[25].AxisX}" Grid.Column="{Binding MapSelected.ElementList[25].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[26].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[26].AxisX}" Grid.Column="{Binding MapSelected.ElementList[26].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[27].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[27].AxisX}" Grid.Column="{Binding MapSelected.ElementList[27].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[28].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[28].AxisX}" Grid.Column="{Binding MapSelected.ElementList[28].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[29].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[29].AxisX}" Grid.Column="{Binding MapSelected.ElementList[29].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[30].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[30].AxisX}" Grid.Column="{Binding MapSelected.ElementList[30].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[31].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[31].AxisX}" Grid.Column="{Binding MapSelected.ElementList[31].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[32].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[32].AxisX}" Grid.Column="{Binding MapSelected.ElementList[32].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[33].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[33].AxisX}" Grid.Column="{Binding MapSelected.ElementList[33].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[34].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[34].AxisX}" Grid.Column="{Binding MapSelected.ElementList[34].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[35].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[35].AxisX}" Grid.Column="{Binding MapSelected.ElementList[35].AxisY}" />
+                <Image Source="{Binding MapSelected.ElementList[36].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[36].AxisX}" Grid.Column="{Binding MapSelected.ElementList[36].AxisY}" />
+
+
+
             </Grid>
         </Grid>
 
