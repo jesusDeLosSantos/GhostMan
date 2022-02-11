@@ -1,8 +1,18 @@
 Assets\Fonts\ARCADECLASSIC.TTF
+Assets\Image\Easy_Mode.png
+Assets\Image\Hard_Mode.png
+Assets\Image\icono_Puntuacion_Prueba.png
+Assets\Image\Medium_Mode.png
 Assets\Images\DefaultModesSprites\Easy_Mode.png
 Assets\Images\DefaultModesSprites\Hard_Mode.png
 Assets\Images\DefaultModesSprites\Medium_Mode.png
 Assets\LockScreenLogo.scale-200.png
+Assets\Prueba\Corner_Wall_Test.png
+Assets\Prueba\Corner_Wall_Test_2.png
+Assets\Prueba\Corner_Wall_Test_3.png
+Assets\Prueba\Corner_Wall_Test_4.png
+Assets\Prueba\Cross_Wall_Test.png
+Assets\Prueba\Horizontal_Wall_Test.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
@@ -11,6 +21,7 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 UI.xr.xml
+Views\CustomModes.xbf
 Views\DefaultModes.xbf
 Views\Prueba.xbf
 Views\PruebaDificil.xbf

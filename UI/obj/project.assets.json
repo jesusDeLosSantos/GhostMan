@@ -9184,11 +9184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\UI.csproj",
+      "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\UI.csproj",
       "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\UI\\obj\\",
+      "outputPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9212,11 +9212,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\BL\\BL.csproj"
+            "C:\\CositasEpicas\\GitKraken\\GhostMan\\BL\\BL.csproj": {
+              "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\BL\\BL.csproj"
             },
-            "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\amachio\\Cositas\\GhostMan\\Entities\\Entities.csproj"
+            "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }

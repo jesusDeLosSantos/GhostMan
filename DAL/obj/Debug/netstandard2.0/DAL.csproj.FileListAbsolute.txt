@@ -37,3 +37,16 @@ C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCo
 C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
 C:\Users\amachio\Cositas\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\CositasEpicas\GitKraken\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\CositasEpicas\GitKraken\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\CositasEpicas\GitKraken\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\CositasEpicas\GitKraken\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+C:\CositasEpicas\GitKraken\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\CositasEpicas\GitKraken\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb

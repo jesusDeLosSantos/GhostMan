@@ -38,3 +38,13 @@ C:\Users\amachio\Cositas\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.Ass
 C:\Users\amachio\Cositas\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\Users\amachio\Cositas\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\amachio\Cositas\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\CositasEpicas\GitKraken\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\CositasEpicas\GitKraken\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\CositasEpicas\GitKraken\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\CositasEpicas\GitKraken\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
