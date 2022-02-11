@@ -136,6 +136,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\images\Empty_Spot.png" />
     <Content Include="Assets\images\Corner_Wall_Test.png" />
     <Content Include="Assets\images\Corner_Wall_Test_4.png" />
     <Content Include="Assets\images\Exorcist.png" />

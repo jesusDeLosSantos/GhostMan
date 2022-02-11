@@ -34,8 +34,6 @@
       <RootMethod Name="SetAlignRightWith" />
       <RootMethod Name="GetAlignLeftWith" />
       <RootMethod Name="SetAlignLeftWith" />
-      <RootMethod Name="GetAbove" />
-      <RootMethod Name="SetAbove" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="CornerRadius" />
