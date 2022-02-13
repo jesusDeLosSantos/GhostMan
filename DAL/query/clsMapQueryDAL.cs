@@ -166,8 +166,11 @@ namespace DAL.query
             int number1 = number-50;
             try
             {
+                if (number == 51) {
+                    incrementoDecremento = "-1";
+                }
                 connection = myConnection.getConnection();
-                myCommand.CommandText = $"SELECT M.id,M.nick,M.size,M.communityMap FROM(SELECT ROW_NUMBER() OVER(ORDER BY(select NULL)) AS rowNum, *FROM Maps) AS M WHERE communityMap = 1 AND M.rowNum BETWEEN @NumeroElementos {incrementoDecremento} AND @NumeroElementos ";
+                myCommand.CommandText = $"SELECT M.id,M.nick,M.size,M.communityMap FROM(SELECT ROW_NUMBER() OVER(ORDER BY(select NULL)) AS rowNum, *FROM Maps) AS M WHERE communityMap = 1 AND M.rowNum BETWEEN @NumeroElementos - 100 AND @NumeroElementos {incrementoDecremento}";
                 myCommand.Parameters.Add("@NumeroElementos", sqlDbType: System.Data.SqlDbType.Int).Value = number;
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();

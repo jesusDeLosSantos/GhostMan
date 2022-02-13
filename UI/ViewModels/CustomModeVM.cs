@@ -26,6 +26,9 @@ namespace UI.ViewModels
         DelegateCommand rightFilterButtonCommand;
         int posicionUtlimoMapa = 0;
         int ultimoMapaObtenidoBBDD = 0;
+
+        bool siguientesMapasCargados = false;
+        bool anterioresMapasCargados = false;
         int primeraCargada = 0;
         #endregion
 
@@ -38,13 +41,13 @@ namespace UI.ViewModels
             nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboard>();
 
             List<clsMapLeaderboard> b = new List<clsMapLeaderboard>();
-            foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "+ 50"))
+            foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD +1, "+ 49"))
             {
                 b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
             }
             originalMapList = new ObservableCollection<clsMapLeaderboard>(b);
             ultimoMapaObtenidoBBDD += originalMapList.Count;
-
+            ultimoMapaObtenidoBBDD = 51;
             cargarMapasPosicionEspecificada(posicionUtlimoMapa);
             rightFilterButtonCommand.RaiseCanExecuteChanged();
         }
@@ -75,6 +78,12 @@ namespace UI.ViewModels
                 inputText = value;
                 NotifyPropertyChanged("InputText");
 
+                posicionUtlimoMapa = 0;
+                ultimoMapaObtenidoBBDD = 0;
+
+                siguientesMapasCargados = false;
+                anterioresMapasCargados = false;
+                primeraCargada = 0;
                 if (string.IsNullOrEmpty(value))
                 { //Si se borra todo el contenido del input text
                     mapList = originalMapList;
@@ -97,12 +106,14 @@ namespace UI.ViewModels
 
         private async void LeftFilterButtonCommand_Executed()
         {
-            if (posicionUtlimoMapa == 0) //Corresponde a la 3 Pagina
-            {
-                primeraCargada--;
-                //nextOriginalMapListLeft = nextOriginalMapListRight;
 
-                List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDALLEFT(ultimoMapaObtenidoBBDD-originalMapList.Count, "-50"); });
+            if (posicionUtlimoMapa == 0 && !anterioresMapasCargados && ultimoMapaObtenidoBBDD - 50 > 0) //Corresponde a la 3 Pagina
+            {
+                anterioresMapasCargados = true;
+
+                //nextOriginalMapListLeft = nextOriginalMapListRight;
+                
+                List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDALLEFT(ultimoMapaObtenidoBBDD, "-50"); });
                 if (listaMapasSiguientes.Count > 0)
                 {
                     List<clsMapLeaderboard> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboard>();
@@ -112,7 +123,7 @@ namespace UI.ViewModels
                             new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
                     }
                     nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboard>(listaMapasSiguientesConPuntuacion);
-                    //ultimoMapaObtenidoBBDD -= listaMapasSiguientes.Count;
+                    ultimoMapaObtenidoBBDD -= 50;
                 }
                 else
                 { //Si la lista de mapas que se obtienen de la bbdd no hay mas mapas se resetea nextOriginalMapList
@@ -122,8 +133,12 @@ namespace UI.ViewModels
             posicionUtlimoMapa -= 10;
             if (posicionUtlimoMapa == -10)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 40 pasa a 50 y por lo tanto se hace un reset 
             {
+                
+                anterioresMapasCargados = false;
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
                 posicionUtlimoMapa = 40;
+                primeraCargada--;
+                nextOriginalMapListRight = originalMapList;//Para el caso de que se este en la pagina 5 y no se pase por la 4, es decir se llega hasta el mapa 101-111 y luego se va hasta los mapas 41-50, no pasa por la pagina 4 por lo tanto no se obtienen en el right los que deberian
                 originalMapList = nextOriginalMapListLeft; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
                 cargarMapasPosicionEspecificada(posicionUtlimoMapa);//Es te eliminarlo cuando se ponga el if comentado;
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
@@ -140,7 +155,9 @@ namespace UI.ViewModels
         {
             bool desactivarCommand = true;
 
-            if (((posicionUtlimoMapa-10 == -10) && primeraCargada == 0) || (posicionUtlimoMapa-10 == -10 && nextOriginalMapListLeft.Count == 0))//|| posicionUtlimoMapa + 10 >= originalMapList.Count) //|| posicionUtlimoMapa == originalMapList.Count)
+            if (
+                ((posicionUtlimoMapa == 0) && primeraCargada == 0) || 
+                (posicionUtlimoMapa - 10 == -10 && nextOriginalMapListLeft.Count == 0))//|| posicionUtlimoMapa + 10 >= originalMapList.Count) //|| posicionUtlimoMapa == originalMapList.Count)
             {
                 desactivarCommand = false;
             }
@@ -158,6 +175,10 @@ namespace UI.ViewModels
             posicionUtlimoMapa += 10;
             if (posicionUtlimoMapa == 50)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 40 pasa a 50 y por lo tanto se hace un reset 
             {
+   
+                ultimoMapaObtenidoBBDD += 50;
+
+                siguientesMapasCargados = false;
                 primeraCargada++;
                 nextOriginalMapListLeft = originalMapList;
                 posicionUtlimoMapa = 0;
@@ -167,10 +188,10 @@ namespace UI.ViewModels
             }
             else
             {
-                if (posicionUtlimoMapa == 30) //Corresponde a la 3 Pagina
+                if (posicionUtlimoMapa == 30 && !siguientesMapasCargados) //Corresponde a la 3 Pagina
                 {
-                    
-                    List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD+1, "+ 50"); });
+                    siguientesMapasCargados = true;
+                    List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "+ 50"); });
                     if (listaMapasSiguientes.Count > 0)
                     {
                         List<clsMapLeaderboard> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboard>();
@@ -180,7 +201,7 @@ namespace UI.ViewModels
                                 new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
                         }
                         nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboard>(listaMapasSiguientesConPuntuacion);
-                        ultimoMapaObtenidoBBDD += listaMapasSiguientes.Count;
+                        
                     }/*
                     else
                     { //Si la lista de mapas que se obtienen de la bbdd no hay mas mapas se resetea nextOriginalMapList
@@ -196,7 +217,8 @@ namespace UI.ViewModels
         private bool RightFilterButtonCommand_CanExecuted()
         {
             bool activarCommand = true;
-            if (mapList.Count < 10 || (posicionUtlimoMapa == 40 && nextOriginalMapListRight.Count == 0) || (primeraCargada != 0 && posicionUtlimoMapa + 10 >= nextOriginalMapListRight.Count))
+            if (mapList.Count < 10 || (posicionUtlimoMapa == 40 && nextOriginalMapListRight.Count == 0)
+                || (posicionUtlimoMapa != 40 && posicionUtlimoMapa >= originalMapList.Count - 10))
             {
                 activarCommand = false;
             }
