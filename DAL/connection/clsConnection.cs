@@ -19,7 +19,7 @@ namespace DAL.conecction
         public clsConnection()
         {
 
-            this.server = "ALEXRUIZ\\SQLEXPRESS";
+            this.server = "107-19\\SQLEXPRESS";
             this.dataBase = "GhostMan";
             this.user = "sa";
             this.pass = "mitesoro";

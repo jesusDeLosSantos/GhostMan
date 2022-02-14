@@ -113,7 +113,7 @@ namespace UI.ViewModels
 
                 //nextOriginalMapListLeft = nextOriginalMapListRight;
                 
-                List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDALLEFT(ultimoMapaObtenidoBBDD, "-50"); });
+                List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDALLEFT(ultimoMapaObtenidoBBDD, "-51"); });
                 if (listaMapasSiguientes.Count > 0)
                 {
                     List<clsMapLeaderboard> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboard>();
@@ -142,6 +142,7 @@ namespace UI.ViewModels
                 originalMapList = nextOriginalMapListLeft; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
                 cargarMapasPosicionEspecificada(posicionUtlimoMapa);//Es te eliminarlo cuando se ponga el if comentado;
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             else
             {
