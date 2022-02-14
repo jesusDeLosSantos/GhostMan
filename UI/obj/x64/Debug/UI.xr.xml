@@ -4,6 +4,7 @@
     <RootPropertyPathName Name="Elements" />
     <RootPropertyPathName Name="EmptyMap" />
     <RootPropertyPathName Name="Nick" />
+    <RootPropertyPathName Name="Name" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

@@ -4,8 +4,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BL.manager;
 using BL.query;
 using Entities;
+using ViewModels.utilities;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
@@ -15,7 +18,7 @@ using Windows.UI.Xaml.Shapes;
 
 namespace UI.ViewModels
 {
-    public class MapCreatorVM
+    public class MapCreatorVM : clsVMBase
     {
         #region Attributes
         List<clsElementType> elements;
@@ -23,6 +26,8 @@ namespace UI.ViewModels
         List<clsElementMap> fullMap;
         clsElementType selectedElement;
         const int SQUARE_SIZE = 50;
+        DelegateCommand commandSaveMap;
+        private ImageSource spriteSelected;
         #endregion
 
         #region Getters y Setters
@@ -30,6 +35,15 @@ namespace UI.ViewModels
         public List<clsElementType> Elements { get => elements; set => elements = value; }
         public List<clsElementMap> FullMap { get => fullMap; set => fullMap = value; }
         public clsElementType SelectedElement { get => selectedElement; set => selectedElement = value; }
+        public DelegateCommand CommandSaveMap
+        {
+            get
+            {
+                commandSaveMap = new DelegateCommand(SaveMapCommand_Execute, SaveMapCommand_CanExecute);
+                NotifyPropertyChanged("CommandGuardar");
+                return commandSaveMap;
+            }
+        }
         #endregion
 
         #region Builders
@@ -46,15 +60,21 @@ namespace UI.ViewModels
             List<clsElementType> elementsList = new List<clsElementType>();
 
             try {
-                //elementsList= clsElementTypeQueryBL.getListOfElementTypeBL();
+                elementsList= clsElementTypeQueryBL.getListOfElementTypeBL();
             }
             catch (Exception) 
             {
-                //TODO pagina de error
+                ContentDialog error = new ContentDialog()       //TODO vista error
+                {
+                    Content = "Ha ocurrido un error.",
+                    CloseButtonText = "Ok"
+                };
+
             }
 
             return elementsList;
         }
+
         /// <summary>
         ///     <header>public void imageTapped(object sender, TappedRoutedEventArgs e)</header>
         ///     <descripton>This method gets the axisX and axisY from the image tapped, and exchanges its source image for the selected item image</descripton>
@@ -71,6 +91,7 @@ namespace UI.ViewModels
             addElementMap(axisX, axisY);
             img.Source = new BitmapImage(new Uri("ms-appx:///Assets/images/Prueba.gif"));
         }
+
         /// <summary>
         ///     <header>private void addElementMap(double axisX, double axisY)</header>
         ///     <description>This method add a new elementMap that represent a square in the map</description>
@@ -98,7 +119,69 @@ namespace UI.ViewModels
                 FullMap.Add(mapSquare);
             }    
         }
+ 
+        private async void SaveMapCommand_Execute()
+        {
+            try
+            {
 
+                clsMapManagerBL.postMapBL(EmptyMap);
+                foreach (var map in FullMap)
+                {
+                    clsElementMapManagerBL.postElementMapBL(map);
+                }
+
+                ContentDialog guardar = new ContentDialog()
+                {
+                    Content = "Se han guardado los cambios.",
+                    CloseButtonText = "Ok"
+                };
+
+                ContentDialogResult respuesta = await guardar.ShowAsync();
+            }
+            catch
+            {
+                ContentDialog error = new ContentDialog()
+                {
+                    Content = "Ha ocurrido un error.",
+                    CloseButtonText = "Ok"
+                };
+
+                ContentDialogResult resultado = await error.ShowAsync();
+            }
+
+        }
+        private bool SaveMapCommand_CanExecute()
+        {
+            return true;
+        }
+
+
+        /// <summary>
+        /// Este metodo se encarga de convertir una array de bytes a imagen
+        /// </summary>
+        private async void convertirByteImagen()
+        {
+            BitmapImage imagenBitMap = new BitmapImage();
+            if (selectedElement != null && selectedElement.Sprite != null)
+            {
+                using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+                {
+                    var result = new BitmapImage();
+                    await stream.WriteAsync(selectedElement.Sprite.AsBuffer());
+                    stream.Seek(0);
+                    imagenBitMap.SetSource(stream);
+                    spriteSelected = imagenBitMap;
+                    NotifyPropertyChanged("ImagenPersona");
+
+                }
+            }
+            else
+            {
+                spriteSelected = null;
+                NotifyPropertyChanged("ImagenPersona");
+            }
+        }
         #endregion
     }
 }

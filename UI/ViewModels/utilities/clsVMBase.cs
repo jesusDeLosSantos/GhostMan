@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD_Personas_UWP.ViewModels.utilities
+namespace ViewModels.utilities
 {
     public abstract class clsVMBase : INotifyPropertyChanged
     {

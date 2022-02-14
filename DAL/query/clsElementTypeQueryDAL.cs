@@ -27,7 +27,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM ElementType";
+                myCommand.CommandText = "SELECT * FROM GM_ElementTypes";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -37,6 +37,8 @@ namespace DAL.query
                         oElementType = new clsElementType();
                         oElementType.Id = (int)myReader["id"];
                         oElementType.Name = (String)myReader["name"];
+                        oElementType.Category = (int)myReader["category"];
+                        oElementType.Sprite = (byte[])myReader["sprite"];
                         elementTypes.Add(oElementType);
                     }
                 }
@@ -47,7 +49,7 @@ namespace DAL.query
             }
             finally
             {
-                myReader.Close();
+                //myReader.Close();
                 myConnection.closeConnection(ref connection);
             }
             return elementTypes;
