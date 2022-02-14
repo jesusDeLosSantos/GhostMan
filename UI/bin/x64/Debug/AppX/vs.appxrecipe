@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-14T11:34:48.020</Modified>
+      <Modified>2022-02-14T13:33:00.491</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-14T11:34:47.677</Modified>
+      <Modified>2022-02-14T13:33:00.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -134,19 +134,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-04T11:25:41.009</Modified>
+      <Modified>2022-02-14T12:53:11.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-02-14T11:34:47.617</Modified>
+      <Modified>2022-02-14T13:33:00.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-02-14T11:34:47.617</Modified>
+      <Modified>2022-02-14T13:33:00.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-02-14T11:34:47.617</Modified>
+      <Modified>2022-02-14T13:33:00.057</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\PruebaMoverCanvas.xbf">
+      <PackagePath>Views\PruebaMoverCanvas.xbf</PackagePath>
+      <Modified>2022-02-14T13:33:00.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -154,11 +158,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-14T10:53:30.945</Modified>
+      <Modified>2022-02-14T12:00:18.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-14T11:34:48.017</Modified>
+      <Modified>2022-02-14T13:33:00.489</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

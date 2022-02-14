@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UI.Views.PruebaMoverCanvas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:UI.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:CustomModeVM></vm:CustomModeVM>
+    </Page.DataContext>
+    
+    <RelativePanel Background="red">
+        <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" 
+                RelativePanel.AlignLeftWithPanel="True" 
+                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800">
+
+            <Image x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="750" Width="50" Height="50">
+  
+
+            </Image>
+        </Canvas>
+    </RelativePanel>
+</Page>

@@ -31,9 +31,26 @@ namespace UI.ViewModels
         int posicionUtlimoMapa = 0;
         int ultimoMapaObtenidoBBDD = 0;
         int primeraCargada = 0;
+      
         bool siguientesMapasCargados = false;
         bool anterioresMapasCargados = false;
         #endregion
+
+
+        int x = 0;
+        //Eliminar ,prueba para la view PruebaMoverCanvas
+        public int X { get { return x; } set { x = value; NotifyPropertyChanged("X"); } }  
+  
+
+
+
+
+
+
+
+
+
+
 
         #region Builders
         public CustomModeVM()

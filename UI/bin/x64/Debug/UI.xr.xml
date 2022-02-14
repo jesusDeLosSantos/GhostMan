@@ -14,6 +14,7 @@
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
     <RootPropertyPathName Name="InputText" />
+    <RootPropertyPathName Name="X" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -148,6 +149,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootMethod Name="GetAlignBottomWithPanel" />
       <RootMethod Name="SetAlignBottomWithPanel" />
       <RootMethod Name="GetAlignTopWithPanel" />
@@ -213,5 +215,16 @@
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="UI.Views.CustomModes" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetLeft" />
+      <RootMethod Name="SetLeft" />
+      <RootMethod Name="GetTop" />
+      <RootMethod Name="SetTop" />
+    </RootType>
+    <RootType FullName="UI.Views.PruebaMoverCanvas" />
   </Roots.RootTypes>
 </Roots>

@@ -133,6 +133,9 @@
     <Compile Include="Views\CustomModes.xaml.cs">
       <DependentUpon>CustomModes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PruebaMoverCanvas.xaml.cs">
+      <DependentUpon>PruebaMoverCanvas.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -164,6 +167,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CustomModes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PruebaMoverCanvas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
