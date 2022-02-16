@@ -6,9 +6,9 @@ using UI.ViewModels;
 namespace UI.Views
 {
 
-    public sealed partial class PruebaMoverCanvas : Page
+    public sealed partial class Play : Page
     {
-        public PruebaMoverCanvas()
+        public Play()
         {
             this.InitializeComponent();
             

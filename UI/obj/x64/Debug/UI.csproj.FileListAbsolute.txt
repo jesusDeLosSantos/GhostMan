@@ -139,8 +139,8 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resou
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles.intermediate
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\PruebaMoverCanvas.xbf
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\PruebaMoverCanvas.g.i.cs
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\PruebaMoverCanvas.g.cs
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\PruebaMoverCanvas.xaml
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\PruebaMoverCanvas.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.g.i.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xaml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\Play.xbf

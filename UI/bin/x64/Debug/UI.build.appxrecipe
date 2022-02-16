@@ -112,8 +112,8 @@
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\PruebaMoverCanvas.xbf">
-      <PackagePath>Views\PruebaMoverCanvas.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\Play.xbf">
+      <PackagePath>Views\Play.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

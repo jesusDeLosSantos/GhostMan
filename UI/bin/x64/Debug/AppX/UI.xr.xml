@@ -228,6 +228,6 @@
       <RootMethod Name="GetTop" />
       <RootMethod Name="SetTop" />
     </RootType>
-    <RootType FullName="UI.Views.PruebaMoverCanvas" />
+    <RootType FullName="UI.Views.Play" />
   </Roots.RootTypes>
 </Roots>
