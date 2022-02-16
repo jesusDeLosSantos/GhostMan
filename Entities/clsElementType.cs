@@ -9,7 +9,6 @@ namespace Entities
         #region Attributes
         int id;
         String name;
-        String image;
         int category;
         byte[] sprite; 
         #endregion
@@ -22,7 +21,6 @@ namespace Entities
         {
             this.id = id;
             this.name = name;
-            this.image = image;
             this.category = category;
             this.sprite = sprite;
         }
@@ -30,7 +28,6 @@ namespace Entities
         #region Getters & Setters
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public String Image { get => image; set => image = value; }
         public int Category { get => category; set => category = value; }
         public byte[] Sprite { get => sprite; set => sprite = value; }
         #endregion

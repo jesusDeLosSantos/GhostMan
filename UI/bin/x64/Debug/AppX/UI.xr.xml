@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Elements" />
+    <RootPropertyPathName Name="SelectedElement" />
+    <RootPropertyPathName Name="ElementsSprite" />
+    <RootPropertyPathName Name="Imagen" />
     <RootPropertyPathName Name="EmptyMap" />
     <RootPropertyPathName Name="Nick" />
     <RootPropertyPathName Name="Name" />
@@ -45,6 +47,7 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Width" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Background" />
@@ -77,6 +80,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />

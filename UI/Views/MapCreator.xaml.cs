@@ -28,7 +28,7 @@ namespace UI.Views
         public MapCreator()
         {
             this.InitializeComponent();
-            this.vm = new MapCreatorVM();
+            vm = (MapCreatorVM) this.DataContext;
         }
     }
 }

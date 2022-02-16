@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using BL.manager;
 using BL.query;
 using Entities;
+using UI.Models;
 using ViewModels.utilities;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
@@ -22,19 +24,26 @@ namespace UI.ViewModels
     {
         #region Attributes
         List<clsElementType> elements;
+        List<clsElementTypeSprite> elementsSprite;
         clsMap emptyMap;
         List<clsElementMap> fullMap;
-        clsElementType selectedElement;
+        clsElementTypeSprite selectedElement = new clsElementTypeSprite();
         const int SQUARE_SIZE = 50;
         DelegateCommand commandSaveMap;
-        private ImageSource spriteSelected;
+        ImageSource spriteSelected;
         #endregion
 
         #region Getters y Setters
         public clsMap EmptyMap { get => emptyMap; set => emptyMap = value; }
         public List<clsElementType> Elements { get => elements; set => elements = value; }
         public List<clsElementMap> FullMap { get => fullMap; set => fullMap = value; }
-        public clsElementType SelectedElement { get => selectedElement; set => selectedElement = value; }
+        public clsElementTypeSprite SelectedElement {
+            get { return selectedElement; }
+            set { 
+                selectedElement = value;
+                NotifyPropertyChanged("SelectedElement");
+            }
+        }
         public DelegateCommand CommandSaveMap
         {
             get
@@ -44,12 +53,20 @@ namespace UI.ViewModels
                 return commandSaveMap;
             }
         }
+        public ImageSource SpriteSelected { get => spriteSelected; set => spriteSelected = value; }
+        public List <clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
         #endregion
 
         #region Builders
         public MapCreatorVM()
-        {
+        { 
+            elementsSprite= new List<clsElementTypeSprite>();
             Elements = getAllElements();
+            foreach (var e in Elements)
+            {
+                var elementSprite = new clsElementTypeSprite(e, convertirByteImagen(e));
+                elementsSprite.Add(elementSprite);
+            }
             FullMap = new List<clsElementMap>();
         }
         #endregion
@@ -88,8 +105,9 @@ namespace UI.ViewModels
             Image img = (Image) sender;
             double axisX = (double)img.GetValue(Canvas.LeftProperty);
             double axisY = (double)img.GetValue(Canvas.TopProperty);
-            addElementMap(axisX, axisY);
-            img.Source = new BitmapImage(new Uri("ms-appx:///Assets/images/Prueba.gif"));
+            addElementMap(axisX, axisY, selectedElement.Id);
+            img.Source = selectedElement.Imagen;
+           
         }
 
         /// <summary>
@@ -100,10 +118,10 @@ namespace UI.ViewModels
         /// </summary>
         /// <param name="axisX">double</param>
         /// <param name="axisY">double</param>
-        private void addElementMap(double axisX, double axisY)
+        private void addElementMap(double axisX, double axisY, int id)
         {
             bool added = false;
-            clsElementMap mapSquare = new clsElementMap(1, axisX, axisY);
+            clsElementMap mapSquare = new clsElementMap(id, axisX, axisY);
 
             for (int i=0; i<FullMap.Count;i++)
             {
@@ -160,27 +178,20 @@ namespace UI.ViewModels
         /// <summary>
         /// Este metodo se encarga de convertir una array de bytes a imagen
         /// </summary>
-        private async void convertirByteImagen()
+        private ImageSource convertirByteImagen(clsElementType e)
         {
             BitmapImage imagenBitMap = new BitmapImage();
-            if (selectedElement != null && selectedElement.Sprite != null)
+            if (e != null && e.Sprite != null)
             {
                 using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
                 {
                     var result = new BitmapImage();
-                    await stream.WriteAsync(selectedElement.Sprite.AsBuffer());
+                    stream.WriteAsync(e.Sprite.AsBuffer());
                     stream.Seek(0);
                     imagenBitMap.SetSource(stream);
-                    spriteSelected = imagenBitMap;
-                    NotifyPropertyChanged("ImagenPersona");
-
                 }
             }
-            else
-            {
-                spriteSelected = null;
-                NotifyPropertyChanged("ImagenPersona");
-            }
+            return imagenBitMap;
         }
         #endregion
     }

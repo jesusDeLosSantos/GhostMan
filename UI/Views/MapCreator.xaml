@@ -25,10 +25,10 @@
                 <Button x:Name="btnSave" Width="100" Content="SAVE"></Button>
             </StackPanel>
         </Border>
-        <ListView x:Name="lvElements" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" ItemsSource="{Binding Elements}">
+        <ListView x:Name="lvElements" SelectedItem="{Binding SelectedElement, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" ItemsSource="{Binding ElementsSprite}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding ,UpdateSourceTrigger=PropertyChanged}/>
+                    <Image Source="{Binding Imagen, UpdateSourceTrigger=PropertyChanged}" Margin="30" Height="100" Width="100"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
