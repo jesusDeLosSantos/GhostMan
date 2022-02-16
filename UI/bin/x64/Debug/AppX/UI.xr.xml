@@ -15,6 +15,7 @@
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
     <RootPropertyPathName Name="InputText" />
     <RootPropertyPathName Name="X" />
+    <RootPropertyPathName Name="Y" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -215,11 +216,13 @@
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="UI.Views.CustomModes" />
+    <RootType FullName="UI.ViewModels.PlayVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Children" />
+      <RootEvent Name="Loaded" />
       <RootMethod Name="GetLeft" />
       <RootMethod Name="SetLeft" />
       <RootMethod Name="GetTop" />

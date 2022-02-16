@@ -10,18 +10,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
-        <vm:CustomModeVM></vm:CustomModeVM>
+        <vm:PlayVM></vm:PlayVM>
     </Page.DataContext>
     
     <RelativePanel Background="red">
         <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" 
                 RelativePanel.AlignLeftWithPanel="True" 
-                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800">
+                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800" Loaded="Canvas_Loaded">
 
-            <Image x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="750" Width="50" Height="50">
-  
-
-            </Image>
+            <Image x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Canvas>
     </RelativePanel>
 </Page>

@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
+    <Compile Include="ViewModels\PlayVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
     <Compile Include="Views\App.xaml.cs">
