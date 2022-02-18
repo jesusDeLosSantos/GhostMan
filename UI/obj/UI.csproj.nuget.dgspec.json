@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\UI.csproj": {}
   },
   "projects": {
@@ -12,13 +13,30 @@
         "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\jsantos\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\obj\\",
+=======
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\obj\\",
+>>>>>>> Alex
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jsantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Alex
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -34,11 +52,19 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\DAL\\DAL.csproj": {
                 "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\DAL\\DAL.csproj"
               },
               "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+>>>>>>> Alex
               }
             }
           }
@@ -74,6 +100,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -82,13 +109,27 @@
         "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\jsantos\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\DAL\\obj\\",
+=======
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\obj\\",
+>>>>>>> Alex
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jsantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Alex
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -104,8 +145,13 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+>>>>>>> Alex
               }
             }
           }
@@ -145,6 +191,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -153,13 +200,27 @@
         "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\jsantos\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\obj\\",
+=======
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\obj\\",
+>>>>>>> Alex
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jsantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Alex
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -208,6 +269,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -216,6 +278,16 @@
         "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\UI.csproj",
         "packagesPath": "C:\\Users\\jsantos\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\UI\\obj\\",
+=======
+    "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
+        "projectName": "UI",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
+        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\obj\\",
+>>>>>>> Alex
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -224,7 +296,11 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jsantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Alex
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -239,11 +315,19 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj": {
                 "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\BL\\BL.csproj"
               },
               "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\jsantos\\Desktop\\CRUD\\GhostMan\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {
+                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj"
+              },
+              "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
+>>>>>>> Alex
               }
             }
           }

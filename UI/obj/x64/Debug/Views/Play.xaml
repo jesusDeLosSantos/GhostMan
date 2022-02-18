@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="UI.Views.Play"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:UI.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:PlayVM></vm:PlayVM>
+    </Page.DataContext>
+    
+    <RelativePanel Background="red">
+        <Canvas x:ConnectionId='2' Background="Black" RelativePanel.AlignBottomWithPanel="True" 
+                RelativePanel.AlignLeftWithPanel="True" 
+                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800"                       >
+
+            <Image x:ConnectionId='3' x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Canvas>
+    </RelativePanel>
+</Page>
+

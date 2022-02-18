@@ -9,6 +9,7 @@ D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xaml
 D:\GitHub\GhostMan\UI\obj\x64\Debug\App.xbf
 D:\GitHub\GhostMan\UI\obj\x64\Debug\MainPage.xbf
 D:\GitHub\GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+<<<<<<< HEAD
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\App.xbf
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\MainPage.xbf
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf
@@ -74,3 +75,140 @@ C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles.intermediate
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+=======
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\App.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.xr.xml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.exe
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.pdb
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\resources.pri
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\AppxManifest.xml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Core\UI.exe
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\UI.build.appxrecipe
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\System.Runtime.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\System.Data.SqlClient.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\BL.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Entities.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\DAL.dll
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\BL.pdb
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Entities.pdb
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\DAL.pdb
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\App.g.i.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\App.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\MainPage.g.i.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\MainPage.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\CustomModes.g.i.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\CustomModes.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\App.xaml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\MainPage.xaml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\CustomModes.xaml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\App.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\MainPage.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\CustomModes.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\UI.csproj.CopyComplete
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\UI.exe
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\UI.pdb
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\ResourceHandlingTask.state
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\FxResources.System.Data.SqlClient.SR.resw
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\priconfig.xml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\unfiltered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\filtered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\filtered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\excluded.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\excluded.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\resources.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\pri.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\qualifiers.txt
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\App.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.xr.xml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.exe
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\resources.pri
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\AppxManifest.xml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Core\UI.exe
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\UI.build.appxrecipe
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\System.Runtime.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\System.Data.SqlClient.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\BL.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Entities.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\DAL.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\BL.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Entities.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\DAL.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\App.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\App.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\MainPage.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\MainPage.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\CustomModes.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\CustomModes.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\App.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\MainPage.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\CustomModes.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\App.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\MainPage.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\CustomModes.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\UI.csproj.CopyComplete
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\UI.exe
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\UI.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\ResourceHandlingTask.state
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\FxResources.System.Data.SqlClient.SR.resw
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\priconfig.xml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\unfiltered.layout.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\filtered.layout.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\filtered.layout.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\excluded.layout.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\excluded.layout.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resources.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\pri.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\qualifiers.txt
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\resources.en-us.resfiles.intermediate
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.g.i.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.g.cs
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xaml
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xbf
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\Play.xbf
+>>>>>>> Alex
