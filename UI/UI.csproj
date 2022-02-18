@@ -117,6 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
+    <Compile Include="Models\Enemigo.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\PlayVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />

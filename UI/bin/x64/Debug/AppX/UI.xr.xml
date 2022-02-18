@@ -14,8 +14,12 @@
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
     <RootPropertyPathName Name="InputText" />
+    <RootPropertyPathName Name="Enemigo3" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />
+    <RootPropertyPathName Name="Enemigo2" />
+    <RootPropertyPathName Name="Enemigo1" />
+    <RootPropertyPathName Name="VisibilidadUsuario" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -177,6 +181,7 @@
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MinWidth" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Converter" />

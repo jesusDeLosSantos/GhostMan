@@ -18,8 +18,20 @@
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800"                       >
 
-            <Image x:ConnectionId='3' x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" 
+            <Image x:ConnectionId='3' x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" Visibility="{Binding VisibilidadUsuario, UpdateSourceTrigger=PropertyChanged}"
                    Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            
+            
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo1.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo1.Y, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Image Source="/Assets/Image/Medium_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo2.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo2.Y, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Image Source="/Assets/Image/Medium_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo3.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo3.Y, UpdateSourceTrigger=PropertyChanged}"/>
+
         </Canvas>
     </RelativePanel>
 </Page>
