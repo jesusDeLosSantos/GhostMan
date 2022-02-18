@@ -60,10 +60,7 @@ namespace UI.ViewModels.Utilities.Converters
                     imagen = "/Assets/Prueba/Section_Wall_4.png";
                     break;
                 case 15:
-                    imagen = "/Assets/Prueba/";
-                    break;
-                case 16:
-                    imagen = "/Assets/Prueba/";
+                    imagen = "/Assets/Prueba/Vertical_Wall.png";
                     break;
             }
             return imagen;

@@ -1,1 +1,1 @@
-C:\Users\amachio\Cositas\GhostMan\UI\UI.csproj;x86
+C:\CositasEpicas\GitKraken\GhostMan\UI\UI.csproj;x86
