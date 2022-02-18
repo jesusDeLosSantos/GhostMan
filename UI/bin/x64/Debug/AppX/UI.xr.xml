@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Size" />
+    <RootPropertyPathName Name="CommandSizeChangeToBig" />
+    <RootPropertyPathName Name="CommandSizeChangeToMedium" />
+    <RootPropertyPathName Name="CommandSizeChangeToLittle" />
     <RootPropertyPathName Name="SelectedElement" />
     <RootPropertyPathName Name="ElementsSprite" />
     <RootPropertyPathName Name="Imagen" />
+    <RootPropertyPathName Name="CommandSaveMap" />
     <RootPropertyPathName Name="EmptyMap" />
     <RootPropertyPathName Name="Nick" />
     <RootPropertyPathName Name="Name" />
@@ -33,10 +38,6 @@
       <RootMethod Name="SetAlignBottomWithPanel" />
       <RootMethod Name="GetRightOf" />
       <RootMethod Name="SetRightOf" />
-      <RootMethod Name="GetAlignRightWith" />
-      <RootMethod Name="SetAlignRightWith" />
-      <RootMethod Name="GetAlignLeftWith" />
-      <RootMethod Name="SetAlignLeftWith" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="CornerRadius" />
@@ -45,6 +46,14 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="SelectedItem" />
@@ -76,6 +85,10 @@
       <RootMethod Name="GetTop" />
       <RootMethod Name="SetTop" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
@@ -84,16 +97,6 @@
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="UpdateSourceTrigger" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>

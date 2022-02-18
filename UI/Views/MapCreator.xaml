@@ -14,17 +14,17 @@
     </Page.DataContext>
 
     <RelativePanel>
-
+        
         <Border x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" CornerRadius="10" Background="AliceBlue">
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button x:Name="btnBack"  VerticalAlignment="Top"></Button>
                 <TextBlock x:Name="tblMapName" VerticalAlignment="Center" Text="MAP NAME:" HorizontalAlignment="Center"></TextBlock>
                 <TextBox x:Name="tbMapName" Text="{Binding EmptyMap.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10" HorizontalAlignment="Center"></TextBox>
                 <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Text="MAP CREATOR:"></TextBlock>
                 <TextBox x:Name="tbMapCreator" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
-                <Button x:Name="btnSave" Width="100" Content="SAVE"></Button>
+                <Button x:Name="btnSave" Width="100" Content="SAVE" Command="{Binding CommandSaveMap}"></Button>
             </StackPanel>
         </Border>
+        <Button x:Name="btnBack" VerticalAlignment="Top" Margin="10" Background="Aquamarine" >Back</Button>
         <ListView x:Name="lvElements" SelectedItem="{Binding SelectedElement, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" ItemsSource="{Binding ElementsSprite}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -33,13 +33,13 @@
             </ListView.ItemTemplate>
         </ListView>
         <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            <StackPanel x:Name="btnSize" Orientation="Horizontal" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" Margin="0,20" RelativePanel.AlignRightWith="gvMap" RelativePanel.AlignLeftWith="gvMap" HorizontalAlignment="Center">
-                <Button x:Name="btnMinSize" Margin="180, 10">16x16</Button>
-                <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Margin="180, 10">24x16</Button>
-                <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Margin="180, 10">30x16</Button>
+            <StackPanel x:Name="btnSize" Orientation="Horizontal" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" Margin="135,20" HorizontalAlignment="Center">
+                <Button x:Name="btnMinSize" Margin="180, 10" Command="{Binding CommandSizeChangeToLittle}">16x16</Button>
+                <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Command="{Binding CommandSizeChangeToMedium}" Margin="180, 10">24x16</Button>
+                <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Command="{Binding CommandSizeChangeToBig}" Margin="180, 10">30x16</Button>
             </StackPanel>
             <Border x:Name="gvMap" BorderThickness="5" BorderBrush="Blue"  CornerRadius="10" Margin="20,85,20,30">
-                <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" Width="1500" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" >
+                <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" Width="{Binding Size,Mode=TwoWay}" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" >
                     <Image Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>
                     <Image Canvas.Left="50" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>
                     <Image Canvas.Left="100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>

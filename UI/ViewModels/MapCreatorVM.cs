@@ -29,7 +29,11 @@ namespace UI.ViewModels
         List<clsElementMap> fullMap;
         clsElementTypeSprite selectedElement = new clsElementTypeSprite();
         const int SQUARE_SIZE = 50;
+        int size = 1500;
         DelegateCommand commandSaveMap;
+        DelegateCommand commandSizeChangeToLittle;
+        DelegateCommand commandSizeChangeToMedium;
+        DelegateCommand commandSizeChangeToBig;
         ImageSource spriteSelected;
         #endregion
 
@@ -48,13 +52,74 @@ namespace UI.ViewModels
         {
             get
             {
-                commandSaveMap = new DelegateCommand(SaveMapCommand_Execute, SaveMapCommand_CanExecute);
+                commandSaveMap = new DelegateCommand(SaveMapCommand_Execute);
                 NotifyPropertyChanged("CommandGuardar");
                 return commandSaveMap;
             }
         }
         public ImageSource SpriteSelected { get => spriteSelected; set => spriteSelected = value; }
         public List <clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
+        public int Size { get => size; set => size = value; }
+        public DelegateCommand CommandSizeChangeToLittle 
+        { 
+            get
+            {
+                commandSizeChangeToLittle = new DelegateCommand(LittleSizeCommand_Execute);
+                NotifyPropertyChanged("CommandSizeChangeToLittle");
+                return commandSizeChangeToLittle;
+            } 
+        }
+
+        public DelegateCommand CommandSizeChangeToMedium { 
+            get
+            {
+                commandSizeChangeToMedium = new DelegateCommand(MediumSizeCommand_Execute);
+                NotifyPropertyChanged("CommandSizeChangeToMedium");
+                return commandSizeChangeToMedium;
+            }
+        }
+        /// <summary>
+        ///     <header>private void MediumSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the medium</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void MediumSizeCommand_Execute()
+        {
+            size = 1200;
+            NotifyPropertyChanged("Size");
+        }
+
+        public DelegateCommand CommandSizeChangeToBig { 
+            get 
+            { 
+                commandSizeChangeToBig = new DelegateCommand(BigSizeCommand_Execute);
+                NotifyPropertyChanged("CommandSizeChangeToBig");
+                return commandSizeChangeToBig;
+            } 
+        }
+        /// <summary>
+        ///     <header>private void BigSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the maximun</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void BigSizeCommand_Execute()
+        {
+            size = 1500;
+            NotifyPropertyChanged("Size");
+        }
+        /// <summary>
+        ///     <header>private void LittleSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the minimun</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void LittleSizeCommand_Execute()
+        {
+            size = 800;
+            NotifyPropertyChanged("Size");
+        }
         #endregion
 
         #region Builders
@@ -142,11 +207,10 @@ namespace UI.ViewModels
         {
             try
             {
-
-                clsMapManagerBL.postMapBL(EmptyMap);
+                int idMap = buildMap();
                 foreach (var map in FullMap)
                 {
-                    clsElementMapManagerBL.postElementMapBL(map);
+                    clsElementMapManagerBL.postElementMapBL(idMap,map);
                 }
 
                 ContentDialog guardar = new ContentDialog()
@@ -169,9 +233,11 @@ namespace UI.ViewModels
             }
 
         }
-        private bool SaveMapCommand_CanExecute()
+        private int buildMap()
         {
-            return true;
+            clsMapManagerBL.postMapBL(EmptyMap);
+            int idMap = clsMapQueryBL.getLastMapDAL();
+            return idMap;
         }
 
 
