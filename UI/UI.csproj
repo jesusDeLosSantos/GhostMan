@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
     <Compile Include="Models\Enemigo.cs" />
+    <Compile Include="Models\Wall.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\PlayVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
@@ -145,6 +146,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Image\Corner_Wall_1.png" />
     <Content Include="Assets\Image\Easy_Mode.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
     <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />

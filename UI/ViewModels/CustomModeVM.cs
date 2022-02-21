@@ -15,23 +15,23 @@ namespace UI.ViewModels
 {
     public class CustomModeVM : clsVMBase
     {
-        //TOOD HACER QUE LA LISTA PUNTUACION DE LOS MAPAS VENGAN YA ORDENADA DE LA BBDD 
-        //CUANDO SE VAYA A CARGAR LOS SIGUIENTES MAPAS DE LA BASE DE DATOS, HACERLO ASYNC PARA QUE EL USUARIO SIGA INTERACTUANDO CON LA LISTA MIENTRAS SE CARGAN LOS SIGUIENTES MAPAS
+        //TOOD HACER QUE LA LISTA PUNTUACION DE LOS MAPAS VENGAN YA ORDENADA DE LA BBDD
         #region Attributes
-        ObservableCollection<clsMapLeaderboard> originalMapList;
-        ObservableCollection<clsMapLeaderboard> nextOriginalMapListRight;
-        ObservableCollection<clsMapLeaderboard> nextOriginalMapListLeft;
-        ObservableCollection<clsMapLeaderboard> mapList;
+        ObservableCollection<clsMapLeaderboard> originalMapList;//Lista que guarda 50 mapas
+        ObservableCollection<clsMapLeaderboard> nextOriginalMapListRight;//Lista que guarda los siguientes mapas(Es necesario porque se añadira a originalMapList cuando se pase a los siguientes 50 mapas)
+        ObservableCollection<clsMapLeaderboard> nextOriginalMapListLeft;//Lista que guarda los anteriores mapas(Es necesario porque se añadira a originalMapList cuando se pase a los anteriores 50 mapas)
+        ObservableCollection<clsMapLeaderboard> mapList;//Lista que tendra los mapas que se ven actualmente, ira de 10 en 10
         clsMapLeaderboard mapSelected;
-        string inputText;
+        //string inputText;
 
         DelegateCommand leftFilterButtonCommand;
         DelegateCommand rightFilterButtonCommand;
 
-        int posicionUtlimoMapa = 0;
-        int ultimoMapaObtenidoBBDD = 0;
-        int primeraCargada = 0;
-      
+        int posicionUltimoMapa = 0;//Necesario para controlar porque parte se va de la lista donde estan todos los mapas. Son lo las paginas de la lista
+        int ultimoMapaObtenidoBBDD = 0;//Necesario para controlar a partir de que numero de mapa hay que obtener los mapas en la bbdd
+        int primeraCargadaDeMapas = 0;//Atributo neceasio para controlar que la primera vez, no se pueda ir a la izquierda de la lista
+
+        //Variables necesarias porque puede ser que el usuario llegue a la pagina donde se cargan los mapas, vuelva para las paginas anteriores, y luego llegar otra vez a la pagina en la que se cargan los mapas, pues con este booleano se pueda controlar que no se vuelva a cargar otra vez los mapas
         bool siguientesMapasCargados = false;
         bool anterioresMapasCargados = false;
         #endregion
@@ -49,12 +49,11 @@ namespace UI.ViewModels
                 List<clsMapLeaderboard> b = new List<clsMapLeaderboard>();
                 foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos AND @NumeroElementos +50"))
                 {
-                    b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>()));
+                    b.Add(new clsMapLeaderboard(map, new List<clsLeaderboardWithPosition>())); //Hacer metodo generico para lo de las puntuaciones 
                 }
                 originalMapList = new ObservableCollection<clsMapLeaderboard>(b);
-                ultimoMapaObtenidoBBDD += originalMapList.Count;
                 ultimoMapaObtenidoBBDD = 51;
-                cargarMapasPosicionEspecificada(posicionUtlimoMapa);
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             catch (SqlException)
@@ -82,7 +81,7 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("MapSelected");
             }
         }
-        public string InputText
+        /*public string InputText
         {
             get
             {
@@ -111,7 +110,7 @@ namespace UI.ViewModels
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
-        }
+        }*/
         #endregion
 
         #region Commands
@@ -122,9 +121,8 @@ namespace UI.ViewModels
 
         private async void LeftFilterButtonCommand_Executed()
         {
-
-            posicionUtlimoMapa -= 10;
-            if (posicionUtlimoMapa == -10)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 1 pasa a 5 pero de los mapas anteriores y por lo tanto se hace un reset 
+            posicionUltimoMapa -= 10;
+            if (posicionUltimoMapa == -10)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 1 pasa a 5 pero de los mapas anteriores y por lo tanto se hace un reset 
             {
                 if (!anterioresMapasCargados && ultimoMapaObtenidoBBDD - 50 > 0) {
                     anterioresMapasCargados = true;
@@ -141,11 +139,7 @@ namespace UI.ViewModels
                             }
                             nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboard>(listaMapasSiguientesConPuntuacion);
                             ultimoMapaObtenidoBBDD -= 50;
-                        }/*
-                        else
-                        { //Si la lista de mapas que se obtienen de la bbdd no hay mas mapas se resetea nextOriginalMapList
-                            nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboard>();
-                        }*/
+                        }
                     }
                     catch (SqlException)
                     {
@@ -154,17 +148,17 @@ namespace UI.ViewModels
                 }
                 anterioresMapasCargados = false;
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
-                posicionUtlimoMapa = 40;
-                primeraCargada--;
+                posicionUltimoMapa = 40;
+                primeraCargadaDeMapas--;
                 nextOriginalMapListRight = originalMapList;
                 originalMapList = nextOriginalMapListLeft;
-                cargarMapasPosicionEspecificada(posicionUtlimoMapa);
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             else
             {
-                cargarMapasPosicionEspecificada(posicionUtlimoMapa);
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
@@ -175,8 +169,8 @@ namespace UI.ViewModels
             bool desactivarCommand = true;
 
             if (
-                ((posicionUtlimoMapa == 0) && primeraCargada == 0) ||
-                (posicionUtlimoMapa - 10 == -10 && nextOriginalMapListLeft.Count == 0))
+                ((posicionUltimoMapa == 0) && primeraCargadaDeMapas == 0) ||
+                (posicionUltimoMapa - 10 == -10 && nextOriginalMapListLeft.Count == 0))
             {
                 desactivarCommand = false;
             }
@@ -192,22 +186,21 @@ namespace UI.ViewModels
 
         private async void RightFilterButtonCommand_Executed()
         {
-            posicionUtlimoMapa += 10;
-            if (posicionUtlimoMapa == 50)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 40 pasa a 50 y por lo tanto se hace un reset 
+            posicionUltimoMapa += 10;
+            if (posicionUltimoMapa == 50)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 40 pasa a 50 y por lo tanto se hace un reset 
             {
-
                 ultimoMapaObtenidoBBDD += 50;
                 siguientesMapasCargados = false;
-                primeraCargada++;
+                primeraCargadaDeMapas++;
                 nextOriginalMapListLeft = originalMapList;
-                posicionUtlimoMapa = 0;
+                posicionUltimoMapa = 0;
                 originalMapList = nextOriginalMapListRight; 
-                cargarMapasPosicionEspecificada(posicionUtlimoMapa);
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             else
             {
-                if (posicionUtlimoMapa == 30 && !siguientesMapasCargados) //Corresponde a cuando se este pasando de la pagina 3 y la siguiente en cargar sea la 4
+                if (posicionUltimoMapa == 30 && !siguientesMapasCargados) //Corresponde a cuando se este pasando de la pagina 3 y la siguiente en cargar sea la 4
                 {
                     siguientesMapasCargados = true;
                     try
@@ -229,7 +222,7 @@ namespace UI.ViewModels
                         mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
                     }
                 }
-                cargarMapasPosicionEspecificada(posicionUtlimoMapa);
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
@@ -238,8 +231,8 @@ namespace UI.ViewModels
         private bool RightFilterButtonCommand_CanExecuted()
         {
             bool activarCommand = true;
-            if (mapList.Count < 10 || (posicionUtlimoMapa == 40 && nextOriginalMapListRight.Count == 0)
-                || (posicionUtlimoMapa != 40 && posicionUtlimoMapa >= originalMapList.Count - 10))
+            if (mapList.Count < 10 || (posicionUltimoMapa == 40 && nextOriginalMapListRight.Count == 0)
+                || (posicionUltimoMapa != 40 && posicionUltimoMapa >= originalMapList.Count - 10))
             {
                 activarCommand = false;
             }
@@ -247,6 +240,16 @@ namespace UI.ViewModels
         }
         #endregion
 
+        /// <summary>
+        /// Caebecera: private void cargarMapasPosicionEspecificada(int posicion)
+        /// Comentario: Este metodo se encarga de modificar la lista donde estan los mapas que se estan mostrando.
+        /// Entradas: int posicion
+        /// Salidas: Ninguna
+        /// Precondiciones: posicion tiene que ser mayor que 0 
+        /// Postcondiciones: Se actualizara el contenido de la lista de mapas que se muestran actualmente.
+        ///                  Dicha actualizacion se hara cogiendo los 10 mapas siguientes que hay en otra lista.
+        /// </summary>
+        /// <param name="posicion"></param>
         #region Methods 
         private void cargarMapasPosicionEspecificada(int posicion)
         {
@@ -259,13 +262,13 @@ namespace UI.ViewModels
                     (originalMapList.ToList().GetRange(posicion, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
 
-            if (mapList.Count != 0)
+            if (mapList.Count != 0) //Debugear y ver si es necesario 
             {
                 mapSelected = mapList[0];
                 NotifyPropertyChanged("MapSelected");
             }
         }
-
+        /*
         private void filterList()
         {
             mapList = new ObservableCollection<clsMapLeaderboard>(from map in originalMapList
@@ -273,6 +276,7 @@ namespace UI.ViewModels
                                                                   select map);
             NotifyPropertyChanged("MapList");
         }
+        */
 
         /// <summary>
         /// Cabecera: private async void mostrarMensajeAsync(string mensaje)

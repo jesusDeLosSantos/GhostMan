@@ -102,8 +102,7 @@
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
-                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" 
-                                 FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" FontSize="26" /><!--Buscador no funcion, Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=LostFocus}"-->
                         <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
                             <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
                         </Button>

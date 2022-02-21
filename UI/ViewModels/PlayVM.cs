@@ -17,39 +17,49 @@ namespace UI.ViewModels
         private bool teclaPulsadaAR = false;
         private bool teclaPulsadaAB = false;
         private bool teclaPulsadaL = false;
-
+        private List<Wall> arrayPrueba = new List<Wall>();
         public Visibility VisibilidadUsuario { get; set; }
 
         public int X { get; set; }
         public int Y { get; set; }
 
-        public int EnemigoX { get; set; }
-        public int EnemigoY { get; set; }
-
-        public int EnemigoX2 { get; set; }
-        public int EnemigoY2 { get; set; }
-
-        public int EnemigoX3 { get; set; }
-        public int EnemigoY3 { get; set; }
-
         public Enemigo Enemigo1 { get; set; }
         public Enemigo Enemigo2 { get; set; }
         public Enemigo Enemigo3 { get; set; }
 
+        public Wall wall { get; set; }
+        public Wall wall2 { get; set; }
+        public Wall wall3 { get; set; }
+        public Wall wall4 { get; set; }
+        public Wall wall5 { get; set; }
+        public Wall wall6 { get; set; }
+        public Wall wall7 { get; set; }
+        public Wall wall8 { get; set; }
         public PlayVM()
         {
+
+            arrayPrueba.Add(wall = new Wall(0, 0));
+            arrayPrueba.Add(wall2 = new Wall(100, 400));
+            arrayPrueba.Add(wall3 = new Wall(450, 500));
+            arrayPrueba.Add(wall4 = new Wall(350, 600));
+            arrayPrueba.Add(wall5 = new Wall(750, 200));
+            arrayPrueba.Add(wall6 = new Wall(800, 0));
+            arrayPrueba.Add(wall7 = new Wall(1000, 500));
+            arrayPrueba.Add(wall8 = new Wall(1450, 750));
+
+
+
             X = 500;
             Y = 500;
          
-            Enemigo1 = new Enemigo(1000,300);
+            Enemigo1 = new Enemigo(0,750,arrayPrueba);
             Enemigo1.mover();
-
-            Enemigo2 = new Enemigo();
+         
+            Enemigo2 = new Enemigo(0,50,arrayPrueba);
             Enemigo2.mover();
 
-            Enemigo3 = new Enemigo(200,700);
+            Enemigo3 = new Enemigo(200,700,arrayPrueba);
             Enemigo3.mover();
-
         }
 
         public async void moverFantasma(object sender, KeyRoutedEventArgs e)
@@ -67,10 +77,18 @@ namespace UI.ViewModels
                     {
                         if (X + 50 < 1500)
                         {
-                            X += 50;
-                            NotifyPropertyChanged("X");
-                            Enemigo.JugadorX = X;
-                            await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
+                            if (!canMove(X + 50, Y))
+                            {
+                                X += 50;
+                               
+                                NotifyPropertyChanged("X");
+                                Enemigo.JugadorX = X;
+                                await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
+                            }
+                            else
+                            {
+                                pared = true;
+                            }
                         }
                         else
                         {
@@ -88,10 +106,18 @@ namespace UI.ViewModels
                     {
                         if (X - 50 >= 0)
                         {
-                            X -= 50;
-                            NotifyPropertyChanged("X");
-                            Enemigo.JugadorX = X;
-                            await Task.Delay(200);
+                            if (!canMove(X - 50, Y))
+                            {
+                                
+                                X -= 50;
+                                NotifyPropertyChanged("X");
+                                Enemigo.JugadorX = X;
+                                await Task.Delay(200);
+                            }
+                            else
+                            {
+                                pared = true;
+                            }
                         }
                         else
                         {
@@ -109,10 +135,17 @@ namespace UI.ViewModels
                     {
                         if (Y - 50 >= 0)
                         {
-                            Y -= 50;
-                            NotifyPropertyChanged("Y");
-                            Enemigo.JugadorY = Y;
-                            await Task.Delay(200);
+                            if (!canMove(X, Y - 50))
+                            {
+                                Y -= 50;                               
+                                NotifyPropertyChanged("Y");
+                                Enemigo.JugadorY = Y;
+                                await Task.Delay(200);
+                            }
+                            else
+                            {
+                                pared = true;
+                            }
                         }
                         else
                         {
@@ -130,10 +163,17 @@ namespace UI.ViewModels
                     {
                         if (Y + 50 < 800)
                         {
-                            Y += 50;
-                            NotifyPropertyChanged("Y");
-                            Enemigo.JugadorY = Y;
-                            await Task.Delay(200);
+                            if (!canMove(X, Y + 50))
+                            {
+                                Y += 50;                               
+                                NotifyPropertyChanged("Y");
+                                Enemigo.JugadorY = Y;
+                                await Task.Delay(200);
+                            }
+                            else
+                            {
+                                pared = true;
+                            }
                         }
                         else
                         {
@@ -142,6 +182,21 @@ namespace UI.ViewModels
                     }
                 }
             }
+        }
+        public bool canMove(int x, int y)
+        {
+            bool result = false;
+            bool found = false;
+            Wall placeholder;
+            for (int i = 0; i < arrayPrueba.Count || found == true; i++)
+            {
+                placeholder = arrayPrueba.ElementAt(i);
+                if (placeholder.xAxis == x && placeholder.yAxis == y)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

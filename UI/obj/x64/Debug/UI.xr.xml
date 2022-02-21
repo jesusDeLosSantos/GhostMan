@@ -13,7 +13,16 @@
     <RootPropertyPathName Name="MapList" />
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
-    <RootPropertyPathName Name="InputText" />
+    <RootPropertyPathName Name="wall8" />
+    <RootPropertyPathName Name="xAxis" />
+    <RootPropertyPathName Name="yAxis" />
+    <RootPropertyPathName Name="wall7" />
+    <RootPropertyPathName Name="wall6" />
+    <RootPropertyPathName Name="wall5" />
+    <RootPropertyPathName Name="wall4" />
+    <RootPropertyPathName Name="wall3" />
+    <RootPropertyPathName Name="wall2" />
+    <RootPropertyPathName Name="wall" />
     <RootPropertyPathName Name="Enemigo3" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />
@@ -207,7 +216,6 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
