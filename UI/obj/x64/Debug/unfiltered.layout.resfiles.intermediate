@@ -1,12 +1,10 @@
 WinMetadata\Windows.winmd
-<<<<<<< HEAD
-=======
 Assets\Image\Easy_Mode.png
+Assets\Image\Ending_Wall_3.png
 Assets\Image\Hard_Mode.png
 Assets\Image\icono_Puntuacion_Prueba.png
 Assets\Image\mapaPrueba.png
 Assets\Image\Medium_Mode.png
->>>>>>> Alex
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -14,16 +12,10 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
-<<<<<<< HEAD
-App.xbf
-MainPage.xbf
-UI.xr.xml
-Views\MapCreator.xbf
-=======
 UI.xr.xml
 Views\App.xbf
 Views\CustomModes.xbf
 Views\MainPage.xbf
+Views\MapCreator.xbf
 Views\Play.xbf
->>>>>>> Alex
 Properties\Default.rd.xml

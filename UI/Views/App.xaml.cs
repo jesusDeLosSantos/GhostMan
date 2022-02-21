@@ -67,11 +67,8 @@ namespace UI
                     // Cuando no se restaura la pila de navegación, navegar a la primera página,
                     // configurando la nueva página pasándole la información requerida como
                     //parámetro de navegación
-<<<<<<< HEAD:UI/App.xaml.cs
                     rootFrame.Navigate(typeof(Views.MapCreator), e.Arguments);
-=======
                     rootFrame.Navigate(typeof(Play), e.Arguments);
->>>>>>> Alex:UI/Views/App.xaml.cs
                 }
                 // Asegurarse de que la ventana actual está activa.
                 Window.Current.Activate();

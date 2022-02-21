@@ -1,48 +1,15 @@
-<<<<<<< HEAD
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
-C:\Users\jsantos\Desktop\CRUD\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
-=======
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
-C:\Users\aruiz\Documents\GitHub\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
->>>>>>> Alex
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\sforte\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb

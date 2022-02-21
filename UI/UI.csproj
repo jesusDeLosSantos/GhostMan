@@ -117,6 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
+    <Compile Include="Models\Wall.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\PlayVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
@@ -129,11 +130,10 @@
     </Compile>
     <Compile Include="Models\clsMapLeaderboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="ViewModels\MapCreatorVM.cs" />
     <Compile Include="Views\MapCreator.xaml.cs">
       <DependentUpon>MapCreator.xaml</DependentUpon>
-=======
+    </Compile>
     <Compile Include="ViewModels\Utilities\clsVMBase.cs" />
     <Compile Include="ViewModels\Utilities\DelegateCommand.cs" />
     <Compile Include="Views\CustomModes.xaml.cs">
@@ -141,7 +141,6 @@
     </Compile>
     <Compile Include="Views\Play.xaml.cs">
       <DependentUpon>Play.xaml</DependentUpon>
->>>>>>> Alex
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Image\Easy_Mode.png" />
+    <Content Include="Assets\Image\Ending_Wall_3.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
     <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
     <Content Include="Assets\Image\mapaPrueba.png" />
@@ -191,14 +191,8 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\Utilities\" />
-  </ItemGroup>
-=======
   <ItemGroup />
->>>>>>> Alex
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{3d929f98-e8bc-4730-84c9-afc5a375ef67}</Project>

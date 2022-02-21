@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-C:\Users\jsantos\Desktop\CRUD\GhostMan\UI\UI.csproj;x64
-=======
-C:\Users\aruiz\Documents\GitHub\GhostMan\UI\UI.csproj;x64
->>>>>>> Alex
+C:\Users\sforte\Desktop\GhostMan\UI\UI.csproj;x64

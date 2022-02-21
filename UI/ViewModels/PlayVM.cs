@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UI.Models;
 using UI.ViewModels.Utilities;
 using Windows.System;
 using Windows.UI.Xaml.Input;
@@ -15,10 +16,22 @@ namespace UI.ViewModels
         private bool teclaPulsadaAR = false;
         private bool teclaPulsadaAB = false;
         private bool teclaPulsadaL = false;
+        private List<Wall> arrayPrueba = new List<Wall>(); 
 
         public int X { get; set; }
         public int Y { get; set; }
 
+        public int blockX { get; set; }
+        public int blockY { get; set; } 
+        public PlayVM()
+        {
+            blockX = 500;
+            blockY = 500;
+            arrayPrueba.Add(new Wall(blockX, blockY));
+            arrayPrueba.Add(new Wall(51, 51));
+            arrayPrueba.Add(new Wall(52, 52));
+            
+        }
         public async void moverFantasma(object sender, KeyRoutedEventArgs e)
         {
             bool pared = false;
@@ -32,9 +45,16 @@ namespace UI.ViewModels
                 {
                     if (X + 50 < 1500)
                     {
-                        X += 50;
-                        NotifyPropertyChanged("X");
-                        await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
+                        if(!canMove(X + 50, Y))
+                        {
+                            X += 50;
+                            NotifyPropertyChanged("X");
+                            await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
+                        }
+                        else
+                        {
+                            pared = true;
+                        }
                     }
                     else
                     {
@@ -52,9 +72,16 @@ namespace UI.ViewModels
                 {
                     if (X - 50 >= 0)
                     {
-                        X -= 50;
-                        NotifyPropertyChanged("X");
-                        await Task.Delay(200);
+                        if (!canMove(X - 50, Y))
+                        {
+                            X -= 50;
+                            NotifyPropertyChanged("X");
+                            await Task.Delay(200);
+                        }
+                        else
+                        {
+                            pared = true;
+                        }
                     }
                     else
                     {
@@ -72,9 +99,16 @@ namespace UI.ViewModels
                 {
                     if (Y - 50 >= 0)
                     {
-                        Y -= 50;
-                        NotifyPropertyChanged("Y");
-                        await Task.Delay(200);
+                        if (!canMove(X, Y - 50))
+                        {
+                            Y -= 50;
+                            NotifyPropertyChanged("Y");
+                            await Task.Delay(200);
+                        }
+                        else
+                        {
+                            pared = true;
+                        }
                     }
                     else
                     {
@@ -90,11 +124,18 @@ namespace UI.ViewModels
                 teclaPulsadaL = false;
                 while (!pared && teclaPulsadaAB)
                 {
-                    if (Y + 50 < 800)
+                    if (Y + 50 < 800 || canMove(X, Y + 50))
                     {
-                        Y += 50;
-                        NotifyPropertyChanged("Y");
-                        await Task.Delay(200);
+                        if(!canMove(X, Y + 50))
+                        {
+                            Y += 50;
+                            NotifyPropertyChanged("Y");
+                            await Task.Delay(200);
+                        }
+                        else
+                        {
+                            pared = true;
+                        }  
                     }
                     else
                     {
@@ -102,6 +143,22 @@ namespace UI.ViewModels
                     }
                 }
             }
+        }
+
+        public bool canMove(int x, int y)
+        {
+            bool result = false;
+            bool found = false;
+            Wall placeholder;
+            for(int i = 0; i < arrayPrueba.Count || found == true; i++)
+            {
+                placeholder = arrayPrueba.ElementAt(i);    
+                if(placeholder.xAxis == x && placeholder.yAxis == y)
+                {
+                    result = true;
+                } 
+            }
+            return result;
         }
     }
 }
