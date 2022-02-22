@@ -26,11 +26,10 @@ namespace DAL.manager
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = oMap.Id;
                 myCommand.Parameters.Add("@nick", System.Data.SqlDbType.VarChar).Value = oMap.Nick;
                 myCommand.Parameters.Add("@size", System.Data.SqlDbType.Int).Value = oMap.Size;
                 myCommand.Parameters.Add("@communityMap", System.Data.SqlDbType.Int).Value = oMap.CommunityMap;
-                myCommand.CommandText = "INSERT INTO Map VALUES (@id,@nick,@size,@communityMap)";
+                myCommand.CommandText = "INSERT INTO GM_Maps VALUES (@nick,@size,@communityMap)";
                 myCommand.Connection = connection;
                 result = myCommand.ExecuteNonQuery();
             }

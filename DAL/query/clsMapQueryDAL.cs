@@ -27,7 +27,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM Map";
+                myCommand.CommandText = "SELECT * FROM GM_Maps";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -73,7 +73,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM Map WHERE communityMap = 1";
+                myCommand.CommandText = "SELECT * FROM GM_Maps WHERE communityMap = 1";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -119,7 +119,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM Map WHERE communityMap = 0";
+                myCommand.CommandText = "SELECT * FROM GM_Maps WHERE communityMap = 0";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -145,6 +145,43 @@ namespace DAL.query
                 myConnection.closeConnection(ref connection);
             }
             return defaultMaps;
+        }
+        /// <summary>
+        ///     <header>public static int getLastMapDAL()</header>
+        ///     <description> This method calls the database and returns the id of the last map</description>
+        ///     <precondition> None </precondition>
+        ///     <postcondition> returns an id to the BL </postcondition>
+        /// </summary>
+        /// <returns>returns int idMap</returns>
+        public static int getLastMapDAL()
+        {
+            conecction.clsConnection myConnection = new conecction.clsConnection();
+            SqlConnection connection = null;
+            SqlCommand myCommand = new SqlCommand();
+            SqlDataReader myReader = null;
+            int idMap = -1;
+
+            try
+            {
+                connection = myConnection.getConnection();
+                myCommand.CommandText = "SELECT TOP 1 * FROM GM_Maps ORDER BY id DESC";
+                myCommand.Connection = connection;
+                myReader = myCommand.ExecuteReader();
+                if (myReader.HasRows)
+                { 
+                idMap = (int)myReader["id"];     
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                myReader.Close();
+                myConnection.closeConnection(ref connection);
+            }
+            return idMap;
         }
     }
 }
