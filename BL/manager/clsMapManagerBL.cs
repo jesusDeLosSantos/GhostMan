@@ -9,16 +9,16 @@ namespace BL.manager
     public class clsMapManagerBL
     {
         /// <summary>
-        ///     <header> public static int postMapBL(clsMap oMap)</header>
-        ///     <description> This method insert a new map in the database </description>
+        ///     <header> public static int procedureMapBL(clsMap oMap)</header>
+        ///     <description>This method execute a procedure which inserts a new map and returns his id</description>
         ///     <precondition> None </precondition>
-        ///     <postcondition> Returns the count of rows affected </postcondition>
+        ///     <postcondition> Returns the id of the inserted map</postcondition>
         /// </summary>
         /// <param name="oMap">clsMap</param>
-        /// <returns>int result</returns>
-        public static int postMapBL(clsMap oMap)
+        /// <returns>int idMap</returns>
+        public static int procedureMapBL(clsMap oMap)
         {
-            return clsMapManagerDAL.postMapDAL(oMap);
+            return clsMapManagerDAL.procedureMapDAL(oMap);
         }
     }
 }
