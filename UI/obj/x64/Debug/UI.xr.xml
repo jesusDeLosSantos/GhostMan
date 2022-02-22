@@ -23,11 +23,9 @@
     <RootPropertyPathName Name="wall3" />
     <RootPropertyPathName Name="wall2" />
     <RootPropertyPathName Name="wall" />
-    <RootPropertyPathName Name="Enemigo3" />
+    <RootPropertyPathName Name="Enemigo1" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />
-    <RootPropertyPathName Name="Enemigo2" />
-    <RootPropertyPathName Name="Enemigo1" />
     <RootPropertyPathName Name="VisibilidadUsuario" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

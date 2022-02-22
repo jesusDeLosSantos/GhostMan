@@ -144,3 +144,8 @@ C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.g.cs
 C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xaml
 C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x64\Debug\Views\Play.xbf
 C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x64\Debug\Views\Play.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\bin\x64\Debug\Views\Play.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\Play.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\Play.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\Play.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\obj\x64\Debug\Views\Play.xbf

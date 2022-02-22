@@ -24,8 +24,8 @@ namespace UI.ViewModels
         public int Y { get; set; }
 
         public Enemigo Enemigo1 { get; set; }
-        public Enemigo Enemigo2 { get; set; }
-        public Enemigo Enemigo3 { get; set; }
+        /*public Enemigo Enemigo2 { get; set; }
+        public Enemigo Enemigo3 { get; set; }*/
 
         public Wall wall { get; set; }
         public Wall wall2 { get; set; }
@@ -39,7 +39,7 @@ namespace UI.ViewModels
         {
 
             arrayPrueba.Add(wall = new Wall(0, 0));
-            arrayPrueba.Add(wall2 = new Wall(100, 400));
+            arrayPrueba.Add(wall2 = new Wall(100, 450));
             arrayPrueba.Add(wall3 = new Wall(450, 500));
             arrayPrueba.Add(wall4 = new Wall(350, 600));
             arrayPrueba.Add(wall5 = new Wall(750, 200));
@@ -49,17 +49,18 @@ namespace UI.ViewModels
 
 
 
-            X = 500;
-            Y = 500;
-         
-            Enemigo1 = new Enemigo(0,750,arrayPrueba);
+            X = 150;
+            Y = 450;
+            Enemigo.JugadorX = X;
+            Enemigo.JugadorY = Y;
+            Enemigo1 = new Enemigo(100,150,arrayPrueba);
             Enemigo1.mover();
          
-            Enemigo2 = new Enemigo(0,50,arrayPrueba);
+           /* Enemigo2 = new Enemigo(0,50,arrayPrueba);
             Enemigo2.mover();
 
             Enemigo3 = new Enemigo(200,700,arrayPrueba);
-            Enemigo3.mover();
+            Enemigo3.mover();*/
         }
 
         public async void moverFantasma(object sender, KeyRoutedEventArgs e)
@@ -79,11 +80,11 @@ namespace UI.ViewModels
                         {
                             if (!canMove(X + 50, Y))
                             {
-                                X += 50;
                                
-                                NotifyPropertyChanged("X");
-                                Enemigo.JugadorX = X;
+                                X += 50;
+                                NotifyPropertyChanged("X");Enemigo.JugadorX = X;
                                 await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
+                                                       
                             }
                             else
                             {
@@ -108,10 +109,11 @@ namespace UI.ViewModels
                         {
                             if (!canMove(X - 50, Y))
                             {
-                                
+                                  
                                 X -= 50;
-                                NotifyPropertyChanged("X");
                                 Enemigo.JugadorX = X;
+                                NotifyPropertyChanged("X");
+                              
                                 await Task.Delay(200);
                             }
                             else
@@ -137,10 +139,10 @@ namespace UI.ViewModels
                         {
                             if (!canMove(X, Y - 50))
                             {
-                                Y -= 50;                               
+                                Y -= 50;                
                                 NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y;
-                                await Task.Delay(200);
+                                Enemigo.JugadorY = Y; 
+                                await Task.Delay(200);  
                             }
                             else
                             {
@@ -165,10 +167,11 @@ namespace UI.ViewModels
                         {
                             if (!canMove(X, Y + 50))
                             {
-                                Y += 50;                               
+                                
+                                Y += 50;                       
                                 NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y;
-                                await Task.Delay(200);
+                                Enemigo.JugadorY = Y;   
+                                await Task.Delay(200);  
                             }
                             else
                             {
