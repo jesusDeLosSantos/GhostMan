@@ -22,17 +22,21 @@ namespace DAL.manager
             conecction.clsConnection myConnection = new conecction.clsConnection();
             SqlConnection connection = null;
             SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
             try
             {
                 connection = myConnection.getConnection();
                 myCommand.Parameters.Add("@nick", System.Data.SqlDbType.VarChar).Value = oMap.Nick;
-                myCommand.Parameters.Add("@name", System.Data.SqlDbType.VarChar).Value = oMap.Name;
+                myCommand.Parameters.Add("@mapName", System.Data.SqlDbType.VarChar).Value = oMap.Name;
                 myCommand.Parameters.Add("@size", System.Data.SqlDbType.Int).Value = oMap.Size;
                 myCommand.Parameters.Add("@communityMap", System.Data.SqlDbType.Int).Value = oMap.CommunityMap;
-                myCommand.CommandText = "EXEC insertMap @nick,@name,@size,@communityMap)";
+                var returnParameter = myCommand.Parameters.Add("@mapId", System.Data.SqlDbType.Int);
+                returnParameter.Direction = System.Data.ParameterDirection.ReturnValue;
+                myCommand.CommandText = "insertMap";
                 myCommand.Connection = connection;
-                result = (int) myCommand.ExecuteScalar();
+                myCommand.ExecuteNonQuery();
+                result = (int) returnParameter.Value;
             }
             catch (Exception e)
             {

@@ -11,6 +11,7 @@ using Entities;
 using UI.Models;
 using ViewModels.utilities;
 using Windows.Storage.Streams;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
@@ -25,16 +26,16 @@ namespace UI.ViewModels
         #region Attributes
         List<clsElementType> elements;
         List<clsElementTypeSprite> elementsSprite;
-        clsMap emptyMap;
+        clsMap emptyMap = new clsMap();
         List<clsElementMap> fullMap;
         clsElementTypeSprite selectedElement = new clsElementTypeSprite();
-        const int SQUARE_SIZE = 50;
         int size = 1500;
         DelegateCommand commandSaveMap;
         DelegateCommand commandSizeChangeToLittle;
         DelegateCommand commandSizeChangeToMedium;
         DelegateCommand commandSizeChangeToBig;
         ImageSource spriteSelected;
+        Visibility visibility = Visibility.Collapsed;
         #endregion
 
         #region Getters y Setters
@@ -87,6 +88,7 @@ namespace UI.ViewModels
         private void MediumSizeCommand_Execute()
         {
             size = 1200;
+            emptyMap.Size = 24;
             NotifyPropertyChanged("Size");
         }
 
@@ -98,6 +100,9 @@ namespace UI.ViewModels
                 return commandSizeChangeToBig;
             } 
         }
+
+        public Visibility Visibility { get => visibility; set => visibility = value; }
+
         /// <summary>
         ///     <header>private void BigSizeCommand_Execute()</header>
         ///     <description>This command changes the size of the map to the maximun</description>
@@ -107,6 +112,7 @@ namespace UI.ViewModels
         private void BigSizeCommand_Execute()
         {
             size = 1500;
+            emptyMap.Size = 30;
             NotifyPropertyChanged("Size");
         }
         /// <summary>
@@ -118,13 +124,14 @@ namespace UI.ViewModels
         private void LittleSizeCommand_Execute()
         {
             size = 800;
+            emptyMap.Size = 16;
             NotifyPropertyChanged("Size");
         }
         #endregion
 
         #region Builders
         public MapCreatorVM()
-        { 
+        {
             elementsSprite= new List<clsElementTypeSprite>();
             Elements = getAllElements();
             foreach (var e in Elements)
@@ -146,12 +153,7 @@ namespace UI.ViewModels
             }
             catch (Exception) 
             {
-                ContentDialog error = new ContentDialog()       //TODO vista error
-                {
-                    Content = "Ha ocurrido un error.",
-                    CloseButtonText = "Ok"
-                };
-
+                showError();
             }
 
             return elementsList;
@@ -212,12 +214,14 @@ namespace UI.ViewModels
         {
             try
             {
+                visibility = Visibility.Visible;
+                NotifyPropertyChanged("Visibility");
                 int idMap = buildMap();
                 foreach (var element in FullMap)
                 {
                     clsElementMapManagerBL.postElementMapBL(idMap,element);
                 }
-
+                
                 ContentDialog guardar = new ContentDialog()
                 {
                     Content = "Se han guardado los cambios.",
@@ -228,15 +232,10 @@ namespace UI.ViewModels
             }
             catch
             {
-                ContentDialog error = new ContentDialog()
-                {
-                    Content = "Ha ocurrido un error.",
-                    CloseButtonText = "Ok"
-                };
-
-                ContentDialogResult resultado = await error.ShowAsync();
+                showError();
             }
-
+            visibility = Visibility.Collapsed;
+            NotifyPropertyChanged("Visibility");
         }
         /// <summary>
         ///     <header>private int buildMap()</header>

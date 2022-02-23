@@ -29,7 +29,7 @@ namespace DAL.manager
                 myCommand.Parameters.Add("@idMap", System.Data.SqlDbType.Int).Value = idMap;
                 myCommand.Parameters.Add("@idElement", System.Data.SqlDbType.Int).Value = oElementMap.IdElement;
                 myCommand.Parameters.Add("@axisX", System.Data.SqlDbType.Int).Value = oElementMap.AxisX;
-                myCommand.Parameters.Add("@asixY", System.Data.SqlDbType.Int).Value = oElementMap.AxisY;
+                myCommand.Parameters.Add("@axisY", System.Data.SqlDbType.Int).Value = oElementMap.AxisY;
                 myCommand.CommandText = "INSERT INTO GM_ElementMaps VALUES (@idMap,@idElement,@axisX,@axisY)";
                 myCommand.Connection = connection;
                 result = myCommand.ExecuteNonQuery();

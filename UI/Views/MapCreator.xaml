@@ -22,6 +22,7 @@
                 <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Text="MAP CREATOR:"></TextBlock>
                 <TextBox x:Name="tbMapCreator" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
                 <Button x:Name="btnSave" Width="100" Content="SAVE" Command="{Binding CommandSaveMap}"></Button>
+                <ProgressRing IsActive="True" Visibility="{Binding Visibility}" Width="25" Height="25" Margin="20,0,0,0"></ProgressRing>
             </StackPanel>
         </Border>
         <Button x:Name="btnBack" VerticalAlignment="Top" Margin="10" Background="Aquamarine" >Back</Button>
@@ -32,14 +33,14 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            <StackPanel x:Name="btnSize" Orientation="Horizontal" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" Margin="135,20" HorizontalAlignment="Center">
+        <RelativePanel x:Name="rpMapView" RelativePanel.Below="spOptions" RelativePanel.RightOf="lvElements" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" HorizontalAlignment="Center">
+            <StackPanel x:Name="btnSize" Orientation="Horizontal" CornerRadius="10" Background="AliceBlue" BorderThickness="0.5" BorderBrush="Black" Margin="135,20">
                 <Button x:Name="btnMinSize" Margin="180, 10" Command="{Binding CommandSizeChangeToLittle}">16x16</Button>
                 <Button x:Name="btnMedSize" RelativePanel.RightOf="btnMinSize" Command="{Binding CommandSizeChangeToMedium}" Margin="180, 10">24x16</Button>
                 <Button x:Name="btnMaxSize" RelativePanel.RightOf="btnMedSize" Command="{Binding CommandSizeChangeToBig}" Margin="180, 10">30x16</Button>
             </StackPanel>
-            <Border x:Name="gvMap" BorderThickness="5" BorderBrush="Blue"  CornerRadius="10" Margin="20,85,20,30">
-                <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" Width="{Binding Size,Mode=TwoWay}" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" >
+            <Border x:Name="gvMap" BorderThickness="5" BorderBrush="Blue"  CornerRadius="10" Margin="0,85,0,30">
+                <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" Width="{Binding Size,Mode=TwoWay}" Height="800"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
                     <Image Canvas.Left="0" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>
                     <Image Canvas.Left="50" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>
                     <Image Canvas.Left="100" Canvas.Top="0" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/images/Empty_Spot.png"></Image>
