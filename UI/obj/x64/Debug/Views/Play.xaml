@@ -13,7 +13,7 @@
         <vm:PlayVM></vm:PlayVM>
     </Page.DataContext>
     
-    <RelativePanel Background="red">
+    <RelativePanel Background="LightBlue">
         <Canvas x:ConnectionId='2' Background="Black" RelativePanel.AlignBottomWithPanel="True" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800"                       >
@@ -23,7 +23,11 @@
 
             <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
                    Canvas.Left="{Binding Enemigo1.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo1.Y, UpdateSourceTrigger=PropertyChanged}"/>
-
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo2.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo2.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo3.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo3.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            
 
             <Image x:ConnectionId='4' x:Name="bloqueRandom" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
                    Canvas.Left="{Binding wall.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall.yAxis, Mode=TwoWay}"/>

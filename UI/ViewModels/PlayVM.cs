@@ -17,15 +17,15 @@ namespace UI.ViewModels
         private bool teclaPulsadaAR = false;
         private bool teclaPulsadaAB = false;
         private bool teclaPulsadaL = false;
-        private List<Wall> arrayPrueba = new List<Wall>();
+
         public Visibility VisibilidadUsuario { get; set; }
 
         public int X { get; set; }
         public int Y { get; set; }
 
         public Enemigo Enemigo1 { get; set; }
-        /*public Enemigo Enemigo2 { get; set; }
-        public Enemigo Enemigo3 { get; set; }*/
+        public Enemigo Enemigo2 { get; set; }
+        public Enemigo Enemigo3 { get; set; }
 
         public Wall wall { get; set; }
         public Wall wall2 { get; set; }
@@ -37,6 +37,8 @@ namespace UI.ViewModels
         public Wall wall8 { get; set; }
         public PlayVM()
         {
+            List<Wall> arrayPrueba = new List<Wall>();
+
 
             arrayPrueba.Add(wall = new Wall(0, 0));
             arrayPrueba.Add(wall2 = new Wall(100, 450));
@@ -47,20 +49,20 @@ namespace UI.ViewModels
             arrayPrueba.Add(wall7 = new Wall(1000, 500));
             arrayPrueba.Add(wall8 = new Wall(1450, 750));
 
-
+            Utilidades.listaParedes = arrayPrueba;
 
             X = 150;
             Y = 450;
             Enemigo.JugadorX = X;
             Enemigo.JugadorY = Y;
-            Enemigo1 = new Enemigo(100,150,arrayPrueba);
+            Enemigo1 = new Enemigo(100, 150, arrayPrueba);
             Enemigo1.mover();
-         
-           /* Enemigo2 = new Enemigo(0,50,arrayPrueba);
+
+            Enemigo2 = new Enemigo(0, 50, arrayPrueba);
             Enemigo2.mover();
 
-            Enemigo3 = new Enemigo(200,700,arrayPrueba);
-            Enemigo3.mover();*/
+            Enemigo3 = new Enemigo(200, 700, arrayPrueba);
+            Enemigo3.mover();
         }
 
         public async void moverFantasma(object sender, KeyRoutedEventArgs e)
@@ -70,6 +72,10 @@ namespace UI.ViewModels
                 bool pared = false;
                 if (e.Key == VirtualKey.Right && !teclaPulsadaR)
                 {
+                    if (teclaPulsadaL)
+                    {
+                        await Task.Delay(200);
+                    }
                     teclaPulsadaR = true;
                     teclaPulsadaAR = false;
                     teclaPulsadaAB = false;
@@ -78,13 +84,12 @@ namespace UI.ViewModels
                     {
                         if (X + 50 < 1500)
                         {
-                            if (!canMove(X + 50, Y))
+                            if (!Utilidades.canMove(X + 50, Y))
                             {
-                               
                                 X += 50;
-                                NotifyPropertyChanged("X");Enemigo.JugadorX = X;
+                                NotifyPropertyChanged("X"); Enemigo.JugadorX = X;
                                 await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
-                                                       
+
                             }
                             else
                             {
@@ -99,6 +104,7 @@ namespace UI.ViewModels
                 }
                 else if (e.Key == VirtualKey.Left && !teclaPulsadaL)
                 {
+
                     teclaPulsadaR = false;
                     teclaPulsadaAR = false;
                     teclaPulsadaAB = false;
@@ -107,13 +113,13 @@ namespace UI.ViewModels
                     {
                         if (X - 50 >= 0)
                         {
-                            if (!canMove(X - 50, Y))
+                            if (!Utilidades.canMove(X - 50, Y))
                             {
-                                  
+
                                 X -= 50;
                                 Enemigo.JugadorX = X;
                                 NotifyPropertyChanged("X");
-                              
+
                                 await Task.Delay(200);
                             }
                             else
@@ -129,6 +135,7 @@ namespace UI.ViewModels
                 }
                 else if (e.Key == VirtualKey.Up && !teclaPulsadaAR)
                 {
+
                     teclaPulsadaR = false;
                     teclaPulsadaAR = true;
                     teclaPulsadaAB = false;
@@ -137,12 +144,12 @@ namespace UI.ViewModels
                     {
                         if (Y - 50 >= 0)
                         {
-                            if (!canMove(X, Y - 50))
+                            if (!Utilidades.canMove(X, Y - 50))
                             {
-                                Y -= 50;                
+                                Y -= 50;
                                 NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y; 
-                                await Task.Delay(200);  
+                                Enemigo.JugadorY = Y;
+                                await Task.Delay(200);
                             }
                             else
                             {
@@ -157,6 +164,7 @@ namespace UI.ViewModels
                 }
                 else if (e.Key == VirtualKey.Down && !teclaPulsadaAB)
                 {
+
                     teclaPulsadaR = false;
                     teclaPulsadaAR = false;
                     teclaPulsadaAB = true;
@@ -165,13 +173,13 @@ namespace UI.ViewModels
                     {
                         if (Y + 50 < 800)
                         {
-                            if (!canMove(X, Y + 50))
+                            if (!Utilidades.canMove(X, Y + 50))
                             {
-                                
-                                Y += 50;                       
+
+                                Y += 50;
                                 NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y;   
-                                await Task.Delay(200);  
+                                Enemigo.JugadorY = Y;
+                                await Task.Delay(200);
                             }
                             else
                             {
@@ -185,21 +193,6 @@ namespace UI.ViewModels
                     }
                 }
             }
-        }
-        public bool canMove(int x, int y)
-        {
-            bool result = false;
-            bool found = false;
-            Wall placeholder;
-            for (int i = 0; i < arrayPrueba.Count || found == true; i++)
-            {
-                placeholder = arrayPrueba.ElementAt(i);
-                if (placeholder.xAxis == x && placeholder.yAxis == y)
-                {
-                    result = true;
-                }
-            }
-            return result;
         }
     }
 }

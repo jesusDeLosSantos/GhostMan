@@ -123,6 +123,7 @@
     <Compile Include="ViewModels\PlayVM.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
+    <Compile Include="ViewModels\Utilities\Utilidades.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>

@@ -46,9 +46,9 @@ namespace UI.Models
                 switch (aletorio)
                 {
                     case 0: //IZQ
-                        while (X - 50 >= 150 && usuarioVivo && !izqPared)
+                        while (X - 50 >= 0 && usuarioVivo && !izqPared)
                         {
-                            if (!canMove(X - 50, Y))
+                            if (!Utilidades.canMove(X - 50, Y))
                             {
                                 derPared = false;
                                 arrPared = false;
@@ -56,19 +56,25 @@ namespace UI.Models
                                 X -= 50; 
                                 NotifyPropertyChanged("X");
                                 await Task.Delay(200);
-                                comprobarEliminarUsuario(0);
+                                comprobarEliminarUsuario();
+                                if (X - 50 == JugadorX && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
+                                {
+                                    X -= 50;
+                                    NotifyPropertyChanged("X");
+                                    usuarioVivo = false;
+                                    await Task.Delay(200);
+                                }
                             }
                             else {
                                izqPared = true;    
-                            }
-                            
+                            }   
                         }
                         break;
                     case 1: //DER
-                        while (X + 50 < 500 && usuarioVivo && !derPared)
+                        while (X + 50 < 1500 && usuarioVivo && !derPared)
                         {
 
-                            if (!canMove(X + 50, Y))
+                            if (!Utilidades.canMove(X + 50, Y))
                             {
                                 izqPared = false;
                                 arrPared = false;
@@ -77,7 +83,14 @@ namespace UI.Models
                                 X += 50; 
                                 NotifyPropertyChanged("X");
                                 await Task.Delay(200);
-                                comprobarEliminarUsuario(1);
+                                comprobarEliminarUsuario();
+                                if (X + 50 == JugadorX && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
+                                {
+                                    X += 50;
+                                    NotifyPropertyChanged("X");
+                                    usuarioVivo = false;
+                                    await Task.Delay(200);
+                                }
                             }
                             else
                             {
@@ -86,9 +99,9 @@ namespace UI.Models
                         }
                         break;
                     case 2: //ARR
-                        while (Y - 50 >= 150 && usuarioVivo && !arrPared)
+                        while (Y - 50 >= 0 && usuarioVivo && !arrPared)
                         {
-                            if (!canMove(X, Y - 50))
+                            if (!Utilidades.canMove(X, Y - 50))
                             {
                                 derPared = false;
                                 izqPared = false;
@@ -98,9 +111,14 @@ namespace UI.Models
                                 
                                 NotifyPropertyChanged("Y");
                                 await Task.Delay(200); 
-                                comprobarEliminarUsuario(2);
-                                
-                                
+                                comprobarEliminarUsuario();
+                                if (X == JugadorX && Y - 50 == JugadorY)
+                                {
+                                    Y -= 50;
+                                    NotifyPropertyChanged("Y");
+                                    usuarioVivo = false;
+                                    await Task.Delay(200);
+                                }
                             }
                             else
                             {
@@ -111,11 +129,10 @@ namespace UI.Models
                         break;
 
                     case 3: //ABA
-                        while (Y + 50 < 500 && usuarioVivo && !abaPared)
+                        while (Y + 50 < 800 && usuarioVivo && !abaPared)
                         {
-                            if (!canMove(X,Y + 50))
-                            {
-                                int a = JugadorY;   
+                            if (!Utilidades.canMove(X,Y + 50))
+                            {   
                                 derPared = false;
                                 arrPared = false;
                                 izqPared = false;
@@ -123,8 +140,14 @@ namespace UI.Models
                                 Y += 50;
                                 NotifyPropertyChanged("Y");
                                 await Task.Delay(200);
-                                comprobarEliminarUsuario(3);
-                                
+                                comprobarEliminarUsuario();
+                                if (X == JugadorX && Y + 50 == JugadorY)
+                                {
+                                    Y += 50;
+                                    NotifyPropertyChanged("Y");
+                                    usuarioVivo = false;
+                                    await Task.Delay(200);
+                                }
                             }
                             else
                             {
@@ -136,55 +159,12 @@ namespace UI.Models
                 }
             }
         }
-        private async void comprobarEliminarUsuario(int aletorioMovimiento)
+        private void comprobarEliminarUsuario()
         {
             if (X == JugadorX && Y == JugadorY)
             {
                 usuarioVivo = false;
             }
-            else if (aletorioMovimiento == 0 && X-50 == JugadorX  && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
-            {            
-                X -= 50;
-                NotifyPropertyChanged("X");
-                usuarioVivo = false;
-                await Task.Delay(200);
-            }
-            else if (aletorioMovimiento == 1 && X + 50 == JugadorX && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
-            {
-                X += 50;
-                NotifyPropertyChanged("X");
-                usuarioVivo = false;
-                await Task.Delay(200);
-            }
-            else if (aletorioMovimiento == 2 && X == JugadorX && Y-50 == JugadorY)
-            {
-                Y -= 50;
-                NotifyPropertyChanged("Y"); 
-                usuarioVivo = false;
-                await Task.Delay(200);
-            }
-            else if (aletorioMovimiento == 3 && X == JugadorX && Y + 50 == JugadorY)
-            {
-                Y += 50;
-                NotifyPropertyChanged("Y");
-                usuarioVivo = false;
-                await Task.Delay(200);
-            }
-        }
-
-        public bool canMove(int x, int y)
-        {
-            bool result = false;
-            Wall placeholder;
-            for (int i = 0; i < arrayPrueba.Count && !result; i++)
-            {
-                placeholder = arrayPrueba.ElementAt(i);
-                if (placeholder.xAxis == x && placeholder.yAxis == y)
-                {
-                    result = true;
-                }
-            }
-            return result;
         }
     }
 }
