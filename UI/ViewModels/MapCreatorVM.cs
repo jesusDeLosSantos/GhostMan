@@ -202,15 +202,20 @@ namespace UI.ViewModels
                 FullMap.Add(mapSquare);
             }    
         }
- 
+        /// <summary>
+        ///     <header>private async void SaveMapCommand_Execute()</header>
+        ///     <description>This method calls BL to insert a list of elementMap</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Insert a list of element map</postcondition>
+        /// </summary>
         private async void SaveMapCommand_Execute()
         {
             try
             {
                 int idMap = buildMap();
-                foreach (var map in FullMap)
+                foreach (var element in FullMap)
                 {
-                    clsElementMapManagerBL.postElementMapBL(idMap,map);
+                    clsElementMapManagerBL.postElementMapBL(idMap,element);
                 }
 
                 ContentDialog guardar = new ContentDialog()
@@ -233,14 +238,26 @@ namespace UI.ViewModels
             }
 
         }
+        /// <summary>
+        ///     <header>private int buildMap()</header>
+        ///     <description>This method calls the Bl to insert a Map and gets the id</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Returns the id of the map inserted</postcondition>
+        /// </summary>
+        /// <returns>int idMap</returns>
         private int buildMap()
         {
-            clsMapManagerBL.postMapBL(EmptyMap);
-            int idMap = clsMapQueryBL.getLastMapDAL();
+            int idMap = 0;
+            try
+            {
+                idMap = clsMapManagerBL.procedureMapBL(EmptyMap);
+            }
+            catch (Exception)
+            {
+
+            }
             return idMap;
         }
-
-
         /// <summary>
         /// Este metodo se encarga de convertir una array de bytes a imagen
         /// </summary>

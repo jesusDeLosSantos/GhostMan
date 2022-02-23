@@ -10,13 +10,13 @@ namespace DAL.manager
     {
         /// <summary>
         ///     <header> public static int postMapDAL(clsMap oMap)</header>
-        ///     <description> This method insert a new map in the database </description>
+        ///     <description> This method execute a procedure which inserts a new map and returns his id</description>
         ///     <precondition> None </precondition>
-        ///     <postcondition> Returns the count of rows affected </postcondition>
+        ///     <postcondition> Returns the id of the inserted map</postcondition>
         /// </summary>
         /// <param name="oMap">clsMap</param>
-        /// <returns>int result</returns>
-        public static int postMapDAL(clsMap oMap)
+        /// <returns>int idMap</returns>
+        public static int procedureMapDAL(clsMap oMap)
         {
             int result = 0;
             conecction.clsConnection myConnection = new conecction.clsConnection();
@@ -27,11 +27,12 @@ namespace DAL.manager
             {
                 connection = myConnection.getConnection();
                 myCommand.Parameters.Add("@nick", System.Data.SqlDbType.VarChar).Value = oMap.Nick;
+                myCommand.Parameters.Add("@name", System.Data.SqlDbType.VarChar).Value = oMap.Name;
                 myCommand.Parameters.Add("@size", System.Data.SqlDbType.Int).Value = oMap.Size;
                 myCommand.Parameters.Add("@communityMap", System.Data.SqlDbType.Int).Value = oMap.CommunityMap;
-                myCommand.CommandText = "INSERT INTO GM_Maps VALUES (@nick,@size,@communityMap)";
+                myCommand.CommandText = "EXEC insertMap @nick,@name,@size,@communityMap)";
                 myCommand.Connection = connection;
-                result = myCommand.ExecuteNonQuery();
+                result = (int) myCommand.ExecuteScalar();
             }
             catch (Exception e)
             {
