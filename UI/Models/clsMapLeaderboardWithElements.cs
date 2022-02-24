@@ -7,19 +7,23 @@ using Entities;
 
 namespace UI.Models
 {
-    public class clsMapLeaderboard : clsMap
+    public class clsMapLeaderboardWithElements : clsMap
     {
         #region Attributes
         List<clsLeaderboardWithPosition> leaderboards;
         List<clsElementMap> elementList;
         #endregion
         #region Builders
-        public clsMapLeaderboard() : base()
+        public clsMapLeaderboardWithElements() : base()
         {
 
         }
 
-        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards, List<clsElementMap> elementList) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
+        public clsMapLeaderboardWithElements(clsMap map, List<clsLeaderboardWithPosition> leaderboards) : base(map.Id, map.Nick, map.Name, map.Size, map.CommunityMap)
+        {
+            this.leaderboards = leaderboards;
+        }
+        public clsMapLeaderboardWithElements(clsMap map, List<clsLeaderboardWithPosition> leaderboards, List<clsElementMap> elementList) : base(map.Id, map.Nick, map.Name, map.Size, map.CommunityMap)
         {
             this.leaderboards = leaderboards;
             this.elementList = elementList;

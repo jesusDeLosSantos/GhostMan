@@ -119,8 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\clsElementTypeSprite.cs" />
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
-    <Compile Include="Models\clsMapLeaderboard.cs" />
+    <Compile Include="Models\clsMapLeaderboardWithElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\Utilities\clsVMBase.cs" />

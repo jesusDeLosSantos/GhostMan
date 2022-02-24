@@ -16,9 +16,9 @@ namespace BL.manager
         /// </summary>
         /// <param name="oElementMap">clsMap</param>
         /// <returns>int result</returns>
-        public static int postElementMapBL(clsElementMap oElementMap)
+        public static int postElementMapBL(int idMap, clsElementMap oElementMap)
         {
-            return clsElementMapManagerDAL.postElementMapDAL(oElementMap);
+            return clsElementMapManagerDAL.postElementMapDAL(idMap, oElementMap);
         }
     }
 }

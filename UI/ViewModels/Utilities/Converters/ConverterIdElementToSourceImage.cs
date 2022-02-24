@@ -1,74 +1,50 @@
-﻿using System;
+﻿using BL.query;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace UI.ViewModels.Utilities.Converters
 {
-    class ConverterIdElementToSourceImage : IValueConverter
+    public class ConverterIdElementToSourceImage : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            String imagen="";
-            switch (value)
-            {
-                case 0:
-                    imagen = "/Assets/Prueba/Empty_Spot.png";
-                    break;
-                case 1:
-                    imagen = "/Assets/Prueba/Corner_Wall_1.png";
-                    break;
-                case 2:
-                    imagen = "/Assets/Prueba/Corner_Wall_2.png";
-                    break;
-                case 3:
-                    imagen = "/Assets/Prueba/Corner_Wall_3.png";
-                    break;
-                case 4:
-                    imagen = "/Assets/Prueba/Corner_Wall_4.png";
-                    break;
-                case 5:
-                    imagen = "/Assets/Prueba/Cross_Wall.png";
-                    break;
-                case 6:
-                    imagen = "/Assets/Prueba/Ending_Wall_1.png";
-                    break;
-                case 7:
-                    imagen = "/Assets/Prueba/Ending_Wall_2.png";
-                    break;
-                case 8:
-                    imagen = "/Assets/Prueba/Ending_Wall_3.png";
-                    break;
-                case 9:
-                    imagen = "/Assets/Prueba/Ending_Wall_4.png";
-                    break;
-                case 10:
-                    imagen = "/Assets/Prueba/Horizontal_Wall.png";
-                    break;
-                case 11:
-                    imagen = "/Assets/Prueba/Section_Wall_1.png";
-                    break;
-                case 12:
-                    imagen = "/Assets/Prueba/Section_Wall_2.png";
-                    break;
-                case 13:
-                    imagen = "/Assets/Prueba/Section_Wall_3.png";
-                    break;
-                case 14:
-                    imagen = "/Assets/Prueba/Section_Wall_4.png";
-                    break;
-                case 15:
-                    imagen = "/Assets/Prueba/Vertical_Wall.png";
-                    break;
-            }
-            return imagen;
+            //TODO: ¡¡¡MUY IMPORTANTE!!! MIRAR COMO OPTIMIZAR ESTO
+            ImageSource imageSource = convertirByteImagen(clsElementTypeQueryBL.getSpriteOfElementTypeIdBL((int)value));
+            
+            return imageSource;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Este metodo se encarga de convertir una array de bytes a imagen
+        /// </summary>
+        private ImageSource convertirByteImagen(byte[] sprite)
+        {
+            BitmapImage imagenBitMap = new BitmapImage();
+            if (sprite != null)
+            {
+                using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+                {
+                    var result = new BitmapImage();
+                    stream.WriteAsync(sprite.AsBuffer());
+                    stream.Seek(0);
+                    imagenBitMap.SetSource(stream);
+                }
+            }
+            return imagenBitMap;
         }
     }
 }

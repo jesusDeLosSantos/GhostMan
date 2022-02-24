@@ -16,7 +16,7 @@ namespace Entities
         {
 
         }
-        public clsLeaderboard(int idMap,String nick,int score)
+        public clsLeaderboard(int idMap, String nick, int score)
         {
             this.idMap = idMap;
             this.nick = nick;

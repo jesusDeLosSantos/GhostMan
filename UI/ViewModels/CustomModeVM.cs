@@ -8,23 +8,33 @@ using Entities;
 using UI.Models;
 using UI.ViewModels.Utilities;
 using BL.query;
+using Windows.UI.Popups;
+using System.Data.SqlClient;
 
 namespace UI.ViewModels
 {
     public class CustomModeVM : clsVMBase
     {
-        //TOOD HACER QUE LA LISTA PUNTUACION DE LOS MAPAS VENGAN YA ORDENADA DE LA BBDD 
-        //CUANDO SE VAYA A CARGAR LOS SIGUIENTES MAPAS DE LA BASE DE DATOS, HACERLO ASYNC PARA QUE EL USUARIO SIGA INTERACTUANDO CON LA LISTA MIENTRAS SE CARGAN LOS SIGUIENTES MAPAS
+        //TOOD HACER QUE LA LISTA PUNTUACION DE LOS MAPAS VENGAN YA ORDENADA DE LA BBDD
         #region Attributes
-        ObservableCollection<clsMapLeaderboard> originalMapList;
-        ObservableCollection<clsMapLeaderboard> nextOriginalMapList;
-        ObservableCollection<clsMapLeaderboard> mapList;
-        clsMapLeaderboard mapSelected;
-        string inputText;
+        ObservableCollection<clsMapLeaderboardWithElements> originalMapList;//Lista que guarda 50 mapas
+        ObservableCollection<clsMapLeaderboardWithElements> nextOriginalMapListRight;//Lista que guarda los siguientes mapas(Es necesario porque se añadira a originalMapList cuando se pase a los siguientes 50 mapas)
+        ObservableCollection<clsMapLeaderboardWithElements> nextOriginalMapListLeft;//Lista que guarda los anteriores mapas(Es necesario porque se añadira a originalMapList cuando se pase a los anteriores 50 mapas)
+        ObservableCollection<clsMapLeaderboardWithElements> mapList;//Lista que tendra los mapas que se ven actualmente, ira de 10 en 10
+        clsMapLeaderboardWithElements mapSelected;
+        List<clsElementMap> allElementMaps;
+        //string inputText;
+
         DelegateCommand leftFilterButtonCommand;
         DelegateCommand rightFilterButtonCommand;
-        int posicionSiguienteMapa = 0;
-        int posicionAnteriorMapa = 0;
+
+        int posicionUltimoMapa = 0;//Necesario para controlar porque parte se va de la lista donde estan todos los mapas. Son lo las paginas de la lista
+        int ultimoMapaObtenidoBBDD = 0;//Necesario para controlar a partir de que numero de mapa hay que obtener los mapas en la bbdd
+        int primeraCargadaDeMapas = 0;//Atributo neceasio para controlar que la primera vez, no se pueda ir a la izquierda de la lista
+
+        //Variables necesarias porque puede ser que el usuario llegue a la pagina donde se cargan los mapas, vuelva para las paginas anteriores, y luego llegar otra vez a la pagina en la que se cargan los mapas, pues con este booleano se pueda controlar que no se vuelva a cargar otra vez los mapas
+        bool siguientesMapasCargados = false;
+        bool anterioresMapasCargados = false;
         #endregion
 
         #region Builders
@@ -32,16 +42,40 @@ namespace UI.ViewModels
         {
             rightFilterButtonCommand = new DelegateCommand(RightFilterButtonCommand_Executed, RightFilterButtonCommand_CanExecuted);
             leftFilterButtonCommand = new DelegateCommand(LeftFilterButtonCommand_Executed, LeftFilterButtonCommand_CanExecuted);
-            crearMapasDePrueba();
-            cargarMapasPosicionEspecificada(posicionSiguienteMapa);
-            posicionSiguienteMapa += 10;
-            //cargarSiguientesMapas(); //Se cargan los 10 primeros mapas
+            nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>();
+            nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboardWithElements>();
+
+            try
+            {
+                allElementMaps = clsElementMapQueryBL.getListOfElementMapBL();
+                List<clsMapLeaderboardWithElements> b = new List<clsMapLeaderboardWithElements>();
+                List<clsElementMap> specificMapElements = null;
+                foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos AND @NumeroElementos +50"))
+                {
+                    specificMapElements = new List<clsElementMap>(from element in allElementMaps
+                                           where element.IdMap == map.Id
+                                           select element);
+                    b.Add(new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>(), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
+                }
+                originalMapList = new ObservableCollection<clsMapLeaderboardWithElements>(b);
+                ultimoMapaObtenidoBBDD = 51;
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
+            }
+            catch (SqlException)
+            {
+                mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+            }
+            catch (Exception)
+            {
+                mostrarMensajeAsync("A ocurrido un error desconocido.");
+            }
         }
         #endregion
 
         #region Getters & Setters
-        public ObservableCollection<clsMapLeaderboard> MapList { get => mapList; }
-        public clsMapLeaderboard MapSelected
+        public ObservableCollection<clsMapLeaderboardWithElements> MapList { get => mapList; }
+        public clsMapLeaderboardWithElements MapSelected
         {
             get
             {
@@ -53,7 +87,7 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("MapSelected");
             }
         }
-        public string InputText
+        /*public string InputText
         {
             get
             {
@@ -64,6 +98,12 @@ namespace UI.ViewModels
                 inputText = value;
                 NotifyPropertyChanged("InputText");
 
+                posicionUtlimoMapa = 0;
+                ultimoMapaObtenidoBBDD = 0;
+
+                siguientesMapasCargados = false;
+                anterioresMapasCargados = false;
+                primeraCargada = 0;
                 if (string.IsNullOrEmpty(value))
                 { //Si se borra todo el contenido del input text
                     mapList = originalMapList;
@@ -76,48 +116,76 @@ namespace UI.ViewModels
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
-        }
+        }*/
         #endregion
+
         #region Commands
         public DelegateCommand LeftFilterButtonCommand
         {
             get { return leftFilterButtonCommand; }
         }
 
-        private void LeftFilterButtonCommand_Executed()
+        private async void LeftFilterButtonCommand_Executed()
         {
-
-            //posicionAnteriorMapa = posicionSiguienteMapa-20;
-            if (posicionAnteriorMapa == 10) //En la page 2, se obtienen los 50 mapas anteriores
+            posicionUltimoMapa -= 10;
+            if (posicionUltimoMapa == -10)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 1 pasa a 5 pero de los mapas anteriores y por lo tanto se hace un reset 
             {
-                crearMapasDePrueba2();
-            }
-
-            if (posicionAnteriorMapa == 0)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
-            {
-                crearMapasDePrueba2();
-                //if(List que me devuelve la BBDD.Count > 0)
-                originalMapList = nextOriginalMapList; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
-                originalMapList.OrderByDescending(mapa => mapa.Nick);
-                //dentro del if cargarSiguientesMapas();
-                cargarMapasPosicionEspecificada(posicionAnteriorMapa = 40);//Es te eliminarlo cuando se ponga el if comentado
-                posicionSiguienteMapa = posicionAnteriorMapa;
+                if (!anterioresMapasCargados && ultimoMapaObtenidoBBDD - 50 > 0)
+                {
+                    anterioresMapasCargados = true;
+                    try
+                    {
+                        List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos - 100 AND @NumeroElementos -51"); });
+                        if (listaMapasSiguientes.Count > 0)
+                        {
+                            List<clsMapLeaderboardWithElements> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboardWithElements>();
+                            foreach (clsMap map in listaMapasSiguientes)
+                            {
+                                listaMapasSiguientesConPuntuacion.Add(
+                                    new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>()));
+                            }
+                            nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
+                            ultimoMapaObtenidoBBDD -= 50;
+                        }
+                    }
+                    catch (SqlException)
+                    {
+                        mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+                    }
+                }
+                anterioresMapasCargados = false;
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
+                posicionUltimoMapa = 40;
+                primeraCargadaDeMapas--;
+                nextOriginalMapListRight = originalMapList;
+                originalMapList = nextOriginalMapListLeft;
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
+                leftFilterButtonCommand.RaiseCanExecuteChanged();
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             else
             {
-                posicionAnteriorMapa = posicionSiguienteMapa - 10;
-                cargarMapasPosicionEspecificada(posicionAnteriorMapa);
-                posicionSiguienteMapa = posicionAnteriorMapa;
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
+                leftFilterButtonCommand.RaiseCanExecuteChanged();
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
-
         }
 
         private bool LeftFilterButtonCommand_CanExecuted()
         {
-            //TODO Controlar cuando se llegue al limite por la izquierda
-            return mapList.Count >= 10;
+            bool desactivarCommand = true;
+
+            if (
+                ((posicionUltimoMapa == 0) && primeraCargadaDeMapas == 0) ||
+                (posicionUltimoMapa - 10 == -10 && nextOriginalMapListLeft.Count == 0))
+            {
+                desactivarCommand = false;
+            }
+
+            return desactivarCommand;
         }
 
+        //rightFilterButtonCommand
         public DelegateCommand RightFilterButtonCommand
         {
             get { return rightFilterButtonCommand; }
@@ -125,95 +193,89 @@ namespace UI.ViewModels
 
         private async void RightFilterButtonCommand_Executed()
         {
-            if (posicionSiguienteMapa == 30) //En la page 4, se obtienen los 50 siguientes mapas
+            posicionUltimoMapa += 10;
+            if (posicionUltimoMapa == 50)//Corresponde a cuando se esta en la 5 pagina y se hace click entonces de 40 pasa a 50 y por lo tanto se hace un reset 
             {
-                List<clsMap> a = await Task.Run(() => { return clsMapQueryBL.getListOfCustomMapsBL(); });
-            }
-
-            if (posicionSiguienteMapa == 40)//Cuando la posicion siguiente mapa sea 50 significa que se paso de la pagina 5 y se quiere ir a la siguiente
-            {
-                //if(List que me devuelve la BBDD.Count > 0)
-                originalMapList = nextOriginalMapList; //Se llama a la bbdd entonces la condicion del comand es si la bbdd la lista de mapas que me da tiene elementos
-                //dentro del if cargarSiguientesMapas();
-                cargarMapasPosicionEspecificada(posicionSiguienteMapa = 0);//Es te eliminarlo cuando se ponga el if comentado;
-                posicionAnteriorMapa = posicionSiguienteMapa;
+                ultimoMapaObtenidoBBDD += 50;
+                siguientesMapasCargados = false;
+                primeraCargadaDeMapas++;
+                nextOriginalMapListLeft = originalMapList;
+                posicionUltimoMapa = 0;
+                originalMapList = nextOriginalMapListRight;
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             else
             {
-                posicionSiguienteMapa = posicionAnteriorMapa + 10;
-                cargarMapasPosicionEspecificada(posicionSiguienteMapa);
-                posicionAnteriorMapa = posicionSiguienteMapa;
-
+                if (posicionUltimoMapa == 30 && !siguientesMapasCargados) //Corresponde a cuando se este pasando de la pagina 3 y la siguiente en cargar sea la 4
+                {
+                    siguientesMapasCargados = true;
+                    try
+                    {
+                        List<clsMap> listaMapasSiguientes = await Task.Run(() => { return clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos AND @NumeroElementos +50"); });
+                        if (listaMapasSiguientes.Count > 0)
+                        {
+                            List<clsMapLeaderboardWithElements> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboardWithElements>();
+                            foreach (clsMap map in listaMapasSiguientes)
+                            {
+                                listaMapasSiguientesConPuntuacion.Add(
+                                    new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>()));
+                            }
+                            nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
+                        }
+                    }
+                    catch (SqlException)
+                    {
+                        mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+                    }
+                }
+                cargarMapasPosicionEspecificada(posicionUltimoMapa);
+                rightFilterButtonCommand.RaiseCanExecuteChanged();
+                leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
         }
 
         private bool RightFilterButtonCommand_CanExecuted()
         {
-            //TODO Controlar cuando se llegue al limite por la Derecha
-            //return posicionSiguineteMapa < 50;
-            //TODO CUANDO SE LLEGUE A 50 HAY QUE COMPROBAR SI EN LA BBDD HAY MAS MAPAS
-            return mapList.Count >= 10 || (nextOriginalMapList.Count > 0 && posicionSiguienteMapa == 50);//posicionSiguienteMapa <= originalMapList.Count - 1;
+            bool activarCommand = true;
+            if (mapList.Count < 10 || (posicionUltimoMapa == 40 && nextOriginalMapListRight.Count == 0)
+                || (posicionUltimoMapa != 40 && posicionUltimoMapa >= originalMapList.Count - 10))
+            {
+                activarCommand = false;
+            }
+            return activarCommand;
         }
         #endregion
 
+        /// <summary>
+        /// Caebecera: private void cargarMapasPosicionEspecificada(int posicion)
+        /// Comentario: Este metodo se encarga de modificar la lista donde estan los mapas que se estan mostrando.
+        /// Entradas: int posicion
+        /// Salidas: Ninguna
+        /// Precondiciones: posicion tiene que ser mayor que 0 
+        /// Postcondiciones: Se actualizara el contenido de la lista de mapas que se muestran actualmente.
+        ///                  Dicha actualizacion se hara cogiendo los 10 mapas siguientes que hay en otra lista.
+        /// </summary>
+        /// <param name="posicion"></param>
         #region Methods 
         private void cargarMapasPosicionEspecificada(int posicion)
         {
             int numeroDeSiguientesMapas = 10;
-            if ((posicion + 10) > originalMapList.Count - 1)
+            if ((posicion + 10) >= originalMapList.Count - 1)
             {
                 numeroDeSiguientesMapas = originalMapList.Count - posicion;
             }
-            mapList = new ObservableCollection<clsMapLeaderboard>
+            mapList = new ObservableCollection<clsMapLeaderboardWithElements>
                     (originalMapList.ToList().GetRange(posicion, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
 
-            if (mapList.Count != 0)
+            if (mapList.Count != 0) //Debugear y ver si es necesario 
             {
                 mapSelected = mapList[0];
                 NotifyPropertyChanged("MapSelected");
             }
-            rightFilterButtonCommand.RaiseCanExecuteChanged();
         }
-
-
         /*
-        private void cargarSiguientesMapas()
-        {
-            int numeroDeSiguientesMapas = 10;
-            if ((posicionSiguienteMapa + 10) > originalMapList.Count - 1)
-            {
-                numeroDeSiguientesMapas = originalMapList.Count - posicionSiguienteMapa;
-            }
-            posicionSiguienteMapa += 10;
-            mapList = new ObservableCollection<clsMapLeaderboard>
-                    (originalMapList.ToList().GetRange(posicionSiguienteMapa, numeroDeSiguientesMapas));
-            NotifyPropertyChanged("MapList");
-
-            if (mapList.Count != 0)
-            {
-                mapSelected = mapList[0];
-                NotifyPropertyChanged("MapSelected");
-            }
-            rightFilterButtonCommand.RaiseCanExecuteChanged();
-        }
-
-        private void cargarMapasAnteriores()
-        {
-            int numeroDeSiguientesMapas = 10;
-
-            posicionSiguienteMapa -= 10;
-            mapList = new ObservableCollection<clsMapLeaderboard>
-                    (originalMapList.ToList().GetRange(posicionSiguienteMapa-10, numeroDeSiguientesMapas));
-            NotifyPropertyChanged("MapList");
-
-            if (mapList.Count != 0)
-            {
-                mapSelected = mapList[0];
-                NotifyPropertyChanged("MapSelected");
-            }
-        }*/
-
         private void filterList()
         {
             mapList = new ObservableCollection<clsMapLeaderboard>(from map in originalMapList
@@ -221,260 +283,22 @@ namespace UI.ViewModels
                                                                   select map);
             NotifyPropertyChanged("MapList");
         }
+        */
 
-        public List<clsLeaderboard> getLeaderboards()
+        /// <summary>
+        /// Cabecera: private async void mostrarMensajeAsync(string mensaje)
+        /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
+        /// Entradas: string mensaje
+        /// Salidas: Ninguna
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
+        /// </summary>
+        /// <param name="mensaje"></param>
+        private async void mostrarMensajeAsync(string mensaje)
         {
-            List<clsLeaderboard> list = new List<clsLeaderboard>();
-            list.Add(new clsLeaderboard(1, "Jugador 1", 1111111111));
-            list.Add(new clsLeaderboard(1, "Jugador 2", 2));
-            list.Add(new clsLeaderboard(1, "Jugador 3", 0));
-            list.Add(new clsLeaderboard(1, "Jugador 4", 1));
-            list.Add(new clsLeaderboard(1, "Jugador 5", 10));
-            list.Add(new clsLeaderboard(1, "Jugador 6", 1000));
-            list.Add(new clsLeaderboard(1, "Jugador 1", 1111111111));
-            list.Add(new clsLeaderboard(1, "Jugador 2", 2));
-            list.Add(new clsLeaderboard(1, "Jugador 3", 0));
-            list.Add(new clsLeaderboard(1, "Jugador 4", 1));
-            return list;
+            var dialog = new MessageDialog(mensaje);
+            await dialog.ShowAsync();
         }
         #endregion
-
-        private void crearMapasDePrueba()
-        {
-            //No hace falta ordenar ya vendria de la base datos 
-            List<clsLeaderboard> leaderboards = new List<clsLeaderboard>(getLeaderboards().OrderByDescending(leaderboard => leaderboard.Score)); //Order Leaderboards of mapaseled by Score
-            List<clsLeaderboardWithPosition> leaderboardsPosition = new List<clsLeaderboardWithPosition>();
-            for (int i = 1; i <= leaderboards.Count; i++)
-            {
-                leaderboardsPosition.Add(new clsLeaderboardWithPosition(leaderboards[i - 1], i));
-            }
-            List<clsElementMap> elementListMap1 = new List<clsElementMap>();
-            elementListMap1.Add(new clsElementMap(1, 1, 0, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 1, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 2, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 3, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 1, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 1, 0));
-            elementListMap1.Add(new clsElementMap(1, 3, 1, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 2, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 4, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 5, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 6, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 7, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 8, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 9, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 10, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 11, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 12, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 13, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 14, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 15, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 16, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 17, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 18, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 19, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 20, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 21, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 22, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 23, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 24, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 25, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 26, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 27, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 28, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 29, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 30, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 31, 3));
-            List<clsElementMap> elementListMap2 = new List<clsElementMap>();
-            elementListMap2.Add(new clsElementMap(1, 1, 0, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 1, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 2, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 3, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 1, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 1, 0));
-            elementListMap2.Add(new clsElementMap(1, 3, 1, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 2, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 4, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 5, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 6, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 7, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 8, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 9, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 10, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 11, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 12, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 25, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 21, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 2, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 34, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 17, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 18, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 19, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 20, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 21, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 22, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 23, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 24, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 25, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 26, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 27, 3));
-            elementListMap2.Add(new clsElementMap(1, 1, 28, 0));
-            elementListMap2.Add(new clsElementMap(1, 2, 29, 1));
-            elementListMap2.Add(new clsElementMap(1, 3, 30, 2));
-            elementListMap2.Add(new clsElementMap(1, 4, 31, 3));
-
-            //50 Mapas
-            originalMapList = new ObservableCollection<clsMapLeaderboard>();
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(1, "Nick1", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(2, "Nick2", 24, true), leaderboardsPosition, elementListMap2));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(3, "Nick3", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(4, "Nick4", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(5, "Nick5", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(6, "Nick6", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(7, "Nick7", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(8, "Nick8", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(9, "Nick9", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(10, "Nick10", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(11, "Nick11", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(12, "Nick12", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(13, "Nick13", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(14, "Nick14", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(15, "Nick15", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(16, "Nick16", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(17, "Nick17", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(18, "Nick18", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(19, "Nick19", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(20, "Nick20", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick21", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(1, "Nick22", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(2, "Nick23", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(3, "Nick24", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(4, "Nick25", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(5, "Nick26", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(6, "Nick27", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(7, "Nick28", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(8, "Nick29", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(9, "Nick30", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(10, "Nick31", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(11, "Nick32", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(12, "Nick33", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(13, "Nick34", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(14, "Nick35", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(15, "Nick36", 24, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(16, "Nick37", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(17, "Nick38", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(18, "Nick39", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(19, "Nick40", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(20, "Nick41", 36, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick42", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick43", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick44", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick45", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick46", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick47", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick48", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick49", 16, true), leaderboardsPosition, elementListMap1));
-            originalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick50", 16, true), leaderboardsPosition, elementListMap1));
-        }
-        private void crearMapasDePrueba2()
-        {
-            //No hace falta ordenar ya vendria de la base datos 
-            List<clsLeaderboard> leaderboards = new List<clsLeaderboard>(getLeaderboards().OrderByDescending(leaderboard => leaderboard.Score)); //Order Leaderboards of mapaseled by Score
-            List<clsLeaderboardWithPosition> leaderboardsPosition = new List<clsLeaderboardWithPosition>();
-            for (int i = 1; i <= leaderboards.Count; i++)
-            {
-                leaderboardsPosition.Add(new clsLeaderboardWithPosition(leaderboards[i - 1], i));
-            }
-            List<clsElementMap> elementListMap1 = new List<clsElementMap>();
-            elementListMap1.Add(new clsElementMap(1, 1, 0, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 1, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 2, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 3, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 1, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 1, 0));
-            elementListMap1.Add(new clsElementMap(1, 3, 1, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 2, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 4, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 5, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 6, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 7, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 8, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 9, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 10, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 11, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 12, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 13, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 14, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 15, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 16, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 17, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 18, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 19, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 20, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 21, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 22, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 23, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 24, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 25, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 26, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 27, 3));
-            elementListMap1.Add(new clsElementMap(1, 1, 28, 0));
-            elementListMap1.Add(new clsElementMap(1, 2, 29, 1));
-            elementListMap1.Add(new clsElementMap(1, 3, 30, 2));
-            elementListMap1.Add(new clsElementMap(1, 4, 31, 3));
-
-            //50 Mapas
-            nextOriginalMapList = new ObservableCollection<clsMapLeaderboard>();
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(1, "Nick1", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(2, "Nick2", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(3, "Nick3", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(4, "Nick4", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(5, "Nick5", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(6, "Nick6", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(7, "Nick7", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(8, "Nick8", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(9, "Nick9", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(10, "Nick10", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(11, "Nick11", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(12, "Nick12", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(13, "Nick13", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(14, "Nick14", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(15, "Nick15", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(16, "Nick16", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(17, "Nick17", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(18, "Nick18", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(19, "Nick19", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(20, "Nick20", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick21", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(1, "Nick22", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(2, "Nick23", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(3, "Nick24", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(4, "Nick25", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(5, "Nick26", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(6, "Nick27", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(7, "Nick28", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(8, "Nick29", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(9, "Nick30", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(10, "Nick31", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(11, "Nick32", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(12, "Nick33", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(13, "Nick34", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(14, "Nick35", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(15, "Nick36", 24, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(16, "Nick37", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(17, "Nick38", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(18, "Nick39", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(19, "Nick40", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(20, "Nick41", 36, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick42", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick43", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick44", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick45", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick46", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick47", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick48", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick49", 16, true), leaderboardsPosition, elementListMap1));
-            nextOriginalMapList.Add(new clsMapLeaderboard(new clsMap(21, "Nick50", 16, true), leaderboardsPosition, elementListMap1));
-        }
     }
 }
