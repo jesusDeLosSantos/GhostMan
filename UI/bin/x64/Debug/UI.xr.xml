@@ -8,6 +8,7 @@
     <RootPropertyPathName Name="SelectedElement" />
     <RootPropertyPathName Name="ElementsSprite" />
     <RootPropertyPathName Name="Imagen" />
+    <RootPropertyPathName Name="Visibility" />
     <RootPropertyPathName Name="CommandSaveMap" />
     <RootPropertyPathName Name="EmptyMap" />
     <RootPropertyPathName Name="Nick" />
@@ -26,6 +27,7 @@
     <RootType FullName="UI.ViewModels.MapCreatorVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootMethod Name="GetAlignTopWithPanel" />
       <RootMethod Name="SetAlignTopWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
@@ -72,8 +74,8 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Background" />
@@ -110,6 +112,13 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="IsActive" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="UI.Views.MapCreator" />
   </Roots.RootTypes>

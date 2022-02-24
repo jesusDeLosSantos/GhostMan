@@ -18,7 +18,8 @@ namespace Entities
 
         public clsMap()
         {
-
+            size = 30;
+            communityMap = 1;
         }
 
         public clsMap(int id,String nick,String name,int size,int communityMap)
