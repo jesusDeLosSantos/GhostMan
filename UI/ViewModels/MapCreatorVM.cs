@@ -26,7 +26,7 @@ namespace UI.ViewModels
         #region Attributes
         List<clsElementType> elements;
         List<clsElementTypeSprite> elementsSprite;
-        clsMap emptyMap = new clsMap();
+        clsMapNPC emptyMap = new clsMapNPC();
         List<clsElementMap> fullMap;
         clsElementTypeSprite selectedElement = new clsElementTypeSprite();
         int size = 1500;
@@ -39,7 +39,20 @@ namespace UI.ViewModels
         #endregion
 
         #region Getters y Setters
-        public clsMap EmptyMap { get => emptyMap; set => emptyMap = value; }
+        public clsMapNPC EmptyMap 
+        {
+            get
+            {
+                return emptyMap;
+            }
+            set
+            {
+                emptyMap = value;
+                NotifyPropertyChanged("EmptyMap");
+                if (emptyMap != null)
+                    commandSaveMap.RaiseCanExecuteChanged();
+            }
+        }
         public List<clsElementType> Elements { get => elements; set => elements = value; }
         public List<clsElementMap> FullMap { get => fullMap; set => fullMap = value; }
         public clsElementTypeSprite SelectedElement {
@@ -53,11 +66,12 @@ namespace UI.ViewModels
         {
             get
             {
-                commandSaveMap = new DelegateCommand(SaveMapCommand_Execute);
+                commandSaveMap = new DelegateCommand(SaveMapCommand_Execute, SaveMapCommand_CanExecute);
                 NotifyPropertyChanged("CommandGuardar");
                 return commandSaveMap;
             }
         }
+
         public ImageSource SpriteSelected { get => spriteSelected; set => spriteSelected = value; }
         public List <clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
         public int Size { get => size; set => size = value; }
@@ -88,7 +102,7 @@ namespace UI.ViewModels
         private void MediumSizeCommand_Execute()
         {
             size = 1200;
-            emptyMap.Size = 24;
+            emptyMap.Map.Size = 24;
             NotifyPropertyChanged("Size");
         }
 
@@ -112,7 +126,7 @@ namespace UI.ViewModels
         private void BigSizeCommand_Execute()
         {
             size = 1500;
-            emptyMap.Size = 30;
+            emptyMap.Map.Size = 30;
             NotifyPropertyChanged("Size");
         }
         /// <summary>
@@ -124,7 +138,7 @@ namespace UI.ViewModels
         private void LittleSizeCommand_Execute()
         {
             size = 800;
-            emptyMap.Size = 16;
+            emptyMap.Map.Size = 16;
             NotifyPropertyChanged("Size");
         }
         #endregion
@@ -237,6 +251,22 @@ namespace UI.ViewModels
             visibility = Visibility.Collapsed;
             NotifyPropertyChanged("Visibility");
         }
+
+
+        private bool SaveMapCommand_CanExecute()
+        {
+            bool executable = false;
+            if (!String.IsNullOrEmpty(EmptyMap.Map.Name) && !String.IsNullOrEmpty(EmptyMap.Map.Nick) && !EmptyMap.Map.Nick.Equals("Default"))
+            {
+                executable = true;
+            }
+
+            return executable;
+        }
+
+
+
+
         /// <summary>
         ///     <header>private int buildMap()</header>
         ///     <description>This method calls the Bl to insert a Map and gets the id</description>
@@ -249,7 +279,7 @@ namespace UI.ViewModels
             int idMap = 0;
             try
             {
-                idMap = clsMapManagerBL.procedureMapBL(EmptyMap);
+                idMap = clsMapManagerBL.procedureMapBL(EmptyMap.Map);
             }
             catch (Exception)
             {
