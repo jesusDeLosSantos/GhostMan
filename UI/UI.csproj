@@ -123,7 +123,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\clsElementTypeSprite.cs" />
-    <Compile Include="Models\clsMapNPC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MapCreatorVM.cs" />
     <Compile Include="ViewModels\utilities\clsVMBase.cs" />

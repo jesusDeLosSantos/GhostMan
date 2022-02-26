@@ -26,7 +26,7 @@ namespace UI.ViewModels
         #region Attributes
         List<clsElementType> elements;
         List<clsElementTypeSprite> elementsSprite;
-        clsMapNPC emptyMap = new clsMapNPC();
+        clsMap emptyMap = new clsMap();
         List<clsElementMap> fullMap;
         clsElementTypeSprite selectedElement = new clsElementTypeSprite();
         int size = 1500;
@@ -39,7 +39,7 @@ namespace UI.ViewModels
         #endregion
 
         #region Getters y Setters
-        public clsMapNPC EmptyMap 
+        public clsMap EmptyMap 
         {
             get
             {
@@ -48,9 +48,6 @@ namespace UI.ViewModels
             set
             {
                 emptyMap = value;
-                NotifyPropertyChanged("EmptyMap");
-                if (emptyMap != null)
-                    commandSaveMap.RaiseCanExecuteChanged();
             }
         }
         public List<clsElementType> Elements { get => elements; set => elements = value; }
@@ -102,7 +99,7 @@ namespace UI.ViewModels
         private void MediumSizeCommand_Execute()
         {
             size = 1200;
-            emptyMap.Map.Size = 24;
+            emptyMap.Size = 24;
             NotifyPropertyChanged("Size");
         }
 
@@ -126,7 +123,7 @@ namespace UI.ViewModels
         private void BigSizeCommand_Execute()
         {
             size = 1500;
-            emptyMap.Map.Size = 30;
+            emptyMap.Size = 30;
             NotifyPropertyChanged("Size");
         }
         /// <summary>
@@ -138,7 +135,7 @@ namespace UI.ViewModels
         private void LittleSizeCommand_Execute()
         {
             size = 800;
-            emptyMap.Map.Size = 16;
+            emptyMap.Size = 16;
             NotifyPropertyChanged("Size");
         }
         #endregion
@@ -256,7 +253,7 @@ namespace UI.ViewModels
         private bool SaveMapCommand_CanExecute()
         {
             bool executable = false;
-            if (!String.IsNullOrEmpty(EmptyMap.Map.Name) && !String.IsNullOrEmpty(EmptyMap.Map.Nick) && !EmptyMap.Map.Nick.Equals("Default"))
+            if (!String.IsNullOrEmpty(EmptyMap.Name) && !String.IsNullOrEmpty(EmptyMap.Nick) && !EmptyMap.Nick.Equals("Default"))
             {
                 executable = true;
             }
@@ -279,7 +276,7 @@ namespace UI.ViewModels
             int idMap = 0;
             try
             {
-                idMap = clsMapManagerBL.procedureMapBL(EmptyMap.Map);
+                idMap = clsMapManagerBL.procedureMapBL(EmptyMap);
             }
             catch (Exception)
             {
