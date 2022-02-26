@@ -24,3 +24,16 @@ C:\Users\jsantos\Desktop\GhostMan\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.cspr
 C:\Users\jsantos\Desktop\GhostMan\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\jsantos\Desktop\GhostMan\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\jsantos\Desktop\GhostMan\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb

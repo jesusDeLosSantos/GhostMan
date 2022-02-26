@@ -15,10 +15,16 @@ namespace Entities
         #endregion
 
         #region Builders
-
         public clsMap()
         {
-            size = 30;
+
+        }
+
+        public clsMap(String nick, String name, int size)
+        {
+            this.nick = nick;
+            this.name = name;
+            this.size = size;
             communityMap = 1;
         }
 

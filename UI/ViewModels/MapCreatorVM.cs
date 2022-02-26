@@ -24,9 +24,10 @@ namespace UI.ViewModels
     public class MapCreatorVM : clsVMBase
     {
         #region Attributes
+        String mapName;
+        String mapNick;
         List<clsElementType> elements;
         List<clsElementTypeSprite> elementsSprite;
-        clsMap emptyMap = new clsMap();
         List<clsElementMap> fullMap;
         clsElementTypeSprite selectedElement = new clsElementTypeSprite();
         int size = 1500;
@@ -39,17 +40,6 @@ namespace UI.ViewModels
         #endregion
 
         #region Getters y Setters
-        public clsMap EmptyMap 
-        {
-            get
-            {
-                return emptyMap;
-            }
-            set
-            {
-                emptyMap = value;
-            }
-        }
         public List<clsElementType> Elements { get => elements; set => elements = value; }
         public List<clsElementMap> FullMap { get => fullMap; set => fullMap = value; }
         public clsElementTypeSprite SelectedElement {
@@ -68,7 +58,6 @@ namespace UI.ViewModels
                 return commandSaveMap;
             }
         }
-
         public ImageSource SpriteSelected { get => spriteSelected; set => spriteSelected = value; }
         public List <clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
         public int Size { get => size; set => size = value; }
@@ -81,7 +70,6 @@ namespace UI.ViewModels
                 return commandSizeChangeToLittle;
             } 
         }
-
         public DelegateCommand CommandSizeChangeToMedium { 
             get
             {
@@ -90,19 +78,6 @@ namespace UI.ViewModels
                 return commandSizeChangeToMedium;
             }
         }
-        /// <summary>
-        ///     <header>private void MediumSizeCommand_Execute()</header>
-        ///     <description>This command changes the size of the map to the medium</description>
-        ///     <precondition>None</precondition>
-        ///     <postcondition>Changes the map's size</postcondition>
-        /// </summary>
-        private void MediumSizeCommand_Execute()
-        {
-            size = 1200;
-            emptyMap.Size = 24;
-            NotifyPropertyChanged("Size");
-        }
-
         public DelegateCommand CommandSizeChangeToBig { 
             get 
             { 
@@ -111,32 +86,32 @@ namespace UI.ViewModels
                 return commandSizeChangeToBig;
             } 
         }
-
         public Visibility Visibility { get => visibility; set => visibility = value; }
-
-        /// <summary>
-        ///     <header>private void BigSizeCommand_Execute()</header>
-        ///     <description>This command changes the size of the map to the maximun</description>
-        ///     <precondition>None</precondition>
-        ///     <postcondition>Changes the map's size</postcondition>
-        /// </summary>
-        private void BigSizeCommand_Execute()
+        public string MapName
         {
-            size = 1500;
-            emptyMap.Size = 30;
-            NotifyPropertyChanged("Size");
+            get
+            {
+                return mapName;
+            }
+            set
+            {
+                mapName = value;
+                commandSaveMap.RaiseCanExecuteChanged();
+                NotifyPropertyChanged("MapName");
+            }
         }
-        /// <summary>
-        ///     <header>private void LittleSizeCommand_Execute()</header>
-        ///     <description>This command changes the size of the map to the minimun</description>
-        ///     <precondition>None</precondition>
-        ///     <postcondition>Changes the map's size</postcondition>
-        /// </summary>
-        private void LittleSizeCommand_Execute()
+        public string MapNick
         {
-            size = 800;
-            emptyMap.Size = 16;
-            NotifyPropertyChanged("Size");
+            get
+            {
+                return mapNick;
+            }
+            set
+            {
+                mapNick = value;
+                commandSaveMap.RaiseCanExecuteChanged();
+                NotifyPropertyChanged("MapNick");
+            }
         }
         #endregion
 
@@ -155,21 +130,28 @@ namespace UI.ViewModels
         #endregion
 
         #region Metodos (a traducir)
+        /// <summary>
+        ///     <header> private List<clsElementType> getAllElements()</header>
+        ///     <description>This method calls BL in order to take the list of elements in the database</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Returns the list of elements</postcondition>
+        /// </summary>
+        /// <returns>List<clsElementType> elements</returns>
         private List<clsElementType> getAllElements()
         {
             List<clsElementType> elementsList = new List<clsElementType>();
 
-            try {
-                elementsList= clsElementTypeQueryBL.getListOfElementTypeBL();
+            try
+            {
+                elementsList = clsElementTypeQueryBL.getListOfElementTypeBL();
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 showError();
             }
 
             return elementsList;
         }
-
         /// <summary>
         ///     <header>public void imageTapped(object sender, TappedRoutedEventArgs e)</header>
         ///     <descripton>This method gets the axisX and axisY from the image tapped, and exchanges its source image for the selected item image</descripton>
@@ -187,7 +169,6 @@ namespace UI.ViewModels
             img.Source = selectedElement.Imagen;
            
         }
-
         /// <summary>
         ///     <header>private void addElementMap(double axisX, double axisY)</header>
         ///     <description>This method add a new elementMap that represent a square in the map</description>
@@ -201,7 +182,7 @@ namespace UI.ViewModels
             bool added = false;
             clsElementMap mapSquare = new clsElementMap(id, axisX, axisY);
 
-            for (int i=0; i<FullMap.Count;i++)
+            for (int i=0; i<FullMap.Count&&!added;i++)
             {
                 if(FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
                 {
@@ -221,7 +202,7 @@ namespace UI.ViewModels
         ///     <precondition>None</precondition>
         ///     <postcondition>Insert a list of element map</postcondition>
         /// </summary>
-        private async void SaveMapCommand_Execute()
+        private void SaveMapCommand_Execute()
         {
             try
             {
@@ -232,14 +213,7 @@ namespace UI.ViewModels
                 {
                     clsElementMapManagerBL.postElementMapBL(idMap,element);
                 }
-                
-                ContentDialog guardar = new ContentDialog()
-                {
-                    Content = "Se han guardado los cambios.",
-                    CloseButtonText = "Ok"
-                };
-
-                ContentDialogResult respuesta = await guardar.ShowAsync();
+                showSuccess();
             }
             catch
             {
@@ -248,22 +222,23 @@ namespace UI.ViewModels
             visibility = Visibility.Collapsed;
             NotifyPropertyChanged("Visibility");
         }
-
-
+        /// <summary>
+        ///     <header>private bool SaveMapCommand_CanExecute()</header>
+        ///     <description>This method makes savecommand executable or not depends on the map name and the map nick</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Returns a bool that indicates if savecommand is executable</postcondition>
+        /// </summary>
+        /// <returns>bool executable</returns>
         private bool SaveMapCommand_CanExecute()
         {
             bool executable = false;
-            if (!String.IsNullOrEmpty(EmptyMap.Name) && !String.IsNullOrEmpty(EmptyMap.Nick) && !EmptyMap.Nick.Equals("Default"))
+            if (!String.IsNullOrEmpty(mapName) && !String.IsNullOrEmpty(mapNick) && !mapNick.ToLower().Equals("default"))
             {
                 executable = true;
             }
 
             return executable;
         }
-
-
-
-
         /// <summary>
         ///     <header>private int buildMap()</header>
         ///     <description>This method calls the Bl to insert a Map and gets the id</description>
@@ -273,19 +248,23 @@ namespace UI.ViewModels
         /// <returns>int idMap</returns>
         private int buildMap()
         {
+            clsMap map = new clsMap(mapNick,mapName,size/50);
             int idMap = 0;
             try
             {
-                idMap = clsMapManagerBL.procedureMapBL(EmptyMap);
+                idMap = clsMapManagerBL.procedureMapBL(map);
             }
             catch (Exception)
             {
-
+                showError();
             }
             return idMap;
         }
         /// <summary>
-        /// Este metodo se encarga de convertir una array de bytes a imagen
+        ///     <header>private ImageSource convertirByteImagen(clsElementType e)</header>
+        ///     <description>This method converts an imagen into a byte array</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Returns a byte array</postcondition>
         /// </summary>
         private ImageSource convertirByteImagen(clsElementType e)
         {
@@ -303,5 +282,42 @@ namespace UI.ViewModels
             return imagenBitMap;
         }
         #endregion
+
+        #region Commands
+        /// <summary>
+        ///     <header>private void LittleSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the minimun</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void LittleSizeCommand_Execute()
+        {
+            size = 800;
+            NotifyPropertyChanged("Size");
+        }
+        /// <summary>
+        ///     <header>private void MediumSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the medium</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void MediumSizeCommand_Execute()
+        {
+            size = 1200;
+            NotifyPropertyChanged("Size");
+        }
+        /// <summary>
+        ///     <header>private void BigSizeCommand_Execute()</header>
+        ///     <description>This command changes the size of the map to the maximun</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Changes the map's size</postcondition>
+        /// </summary>
+        private void BigSizeCommand_Execute()
+        {
+            size = 1500;
+            NotifyPropertyChanged("Size");
+        }
+        #endregion
+
     }
 }

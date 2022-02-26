@@ -18,9 +18,9 @@
         <Border x:ConnectionId='2' x:Name="spOptions" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" CornerRadius="10" Background="AliceBlue">
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <TextBlock x:ConnectionId='492' x:Name="tblMapName" VerticalAlignment="Center" Text="MAP NAME:" HorizontalAlignment="Center"></TextBlock>
-                <TextBox x:ConnectionId='493' x:Name="tbMapName" Text="{Binding EmptyMap.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10" HorizontalAlignment="Center"></TextBox>
+                <TextBox x:ConnectionId='493' x:Name="tbMapName" Text="{Binding MapName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10" HorizontalAlignment="Center"></TextBox>
                 <TextBlock x:ConnectionId='494' x:Name="tblMapCreator" VerticalAlignment="Center" Text="MAP CREATOR:"></TextBlock>
-                <TextBox x:ConnectionId='495' x:Name="tbMapCreator" Text="{Binding EmptyMap.Nick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
+                <TextBox x:ConnectionId='495' x:Name="tbMapCreator" Text="{Binding MapNick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"></TextBox>
                 <Button x:ConnectionId='496' x:Name="btnSave" Width="100" Content="SAVE" Command="{Binding CommandSaveMap}"></Button>
                 <ProgressRing IsActive="True" Visibility="{Binding Visibility}" Width="25" Height="25" Margin="20,0,0,0"></ProgressRing>
             </StackPanel>

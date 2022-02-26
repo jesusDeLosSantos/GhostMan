@@ -10,9 +10,8 @@
     <RootPropertyPathName Name="Imagen" />
     <RootPropertyPathName Name="Visibility" />
     <RootPropertyPathName Name="CommandSaveMap" />
-    <RootPropertyPathName Name="EmptyMap" />
-    <RootPropertyPathName Name="Nick" />
-    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="MapNick" />
+    <RootPropertyPathName Name="MapName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
