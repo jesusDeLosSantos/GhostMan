@@ -11,3 +11,15 @@ C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCom
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+E:\Programacion\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+E:\Programacion\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+E:\Programacion\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+E:\Programacion\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
