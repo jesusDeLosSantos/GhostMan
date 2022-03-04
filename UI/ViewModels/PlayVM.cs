@@ -13,15 +13,14 @@ namespace UI.ViewModels
 {
     public class PlayVM : clsVMBase
     {
-        private bool teclaPulsadaR = false;
-        private bool teclaPulsadaAR = false;
-        private bool teclaPulsadaAB = false;
-        private bool teclaPulsadaL = false;
-
         public Visibility VisibilidadUsuario { get; set; }
 
         public int X { get; set; }
         public int Y { get; set; }
+
+        private int velocidadX, velocidadY;
+        bool movimientoIniciado;
+
 
         public Enemigo Enemigo1 { get; set; }
         public Enemigo Enemigo2 { get; set; }
@@ -39,7 +38,6 @@ namespace UI.ViewModels
         {
             List<Wall> arrayPrueba = new List<Wall>();
 
-
             arrayPrueba.Add(wall = new Wall(0, 0));
             arrayPrueba.Add(wall2 = new Wall(100, 450));
             arrayPrueba.Add(wall3 = new Wall(450, 500));
@@ -53,6 +51,8 @@ namespace UI.ViewModels
 
             X = 150;
             Y = 450;
+            velocidadX = velocidadY = 0;
+            movimientoIniciado = false;
             Enemigo.JugadorX = X;
             Enemigo.JugadorY = Y;
             Enemigo1 = new Enemigo(100, 150, arrayPrueba);
@@ -65,134 +65,83 @@ namespace UI.ViewModels
             Enemigo3.mover();
         }
 
+        public async Task moverFantasmaB()
+        {
+            while (Enemigo.usuarioVivo)
+            {
+                if(velocidadX != 0 && !Utilidades.canMove(X + velocidadX, Y)//revisar canMove a false
+                    && (X>0 && velocidadX<0 || X < 1450 && velocidadX>0))
+                {                  
+                        X += velocidadX;                    
+                }
+                else
+                {
+                    velocidadX = 0;
+                }
+                if (velocidadY != 0 && !Utilidades.canMove(X, Y + velocidadY)
+                    && (Y>0 && velocidadY<0 || Y<750 && velocidadY >0))
+                {                   
+                        Y += velocidadY;                    
+                }
+                else
+                {
+                    velocidadY = 0;
+                }
+                NotifyPropertyChanged("X");
+                NotifyPropertyChanged("Y");
+                await Task.Delay(200);
+            }
+        }
+
         public async void moverFantasma(object sender, KeyRoutedEventArgs e)
         {
             if (Enemigo.usuarioVivo)
             {
-                bool pared = false;
-                if (e.Key == VirtualKey.Right && !teclaPulsadaR)
+                switch (e.Key)
                 {
-                    if (teclaPulsadaL)
-                    {
-                        await Task.Delay(200);
-                    }
-                    teclaPulsadaR = true;
-                    teclaPulsadaAR = false;
-                    teclaPulsadaAB = false;
-                    teclaPulsadaL = false;
-                    while (!pared && teclaPulsadaR && Enemigo.usuarioVivo)
-                    {
-                        if (X + 50 < 1500)
+                    case VirtualKey.Right:
+                        if (velocidadX < 50)
                         {
-                            if (!Utilidades.canMove(X + 50, Y))
-                            {
-                                X += 50;
-                                NotifyPropertyChanged("X"); Enemigo.JugadorX = X;
-                                await Task.Delay(200); //System.Threading.Tasks.Task.Delay(200);
-
-                            }
-                            else
-                            {
-                                pared = true;
-                            }
+                            velocidadX += 50;
+                            velocidadY = 0;
                         }
-                        else
+                        break;
+                    case VirtualKey.Left:
+                        if (velocidadX > -50)
                         {
-                            pared = true;
+                            velocidadX -= 50;
+                            velocidadY = 0;
                         }
-                    }
+                        break;
+                    case VirtualKey.Up:
+                        if (velocidadY > -50)
+                        {
+                            velocidadY -= 50;
+                            velocidadX = 0;
+                        }
+                        break;
+                    case VirtualKey.Down:
+                        if (velocidadY < 50)
+                        {
+                            velocidadY += 50;
+                            velocidadX = 0;
+                        }
+                        break;
                 }
-                else if (e.Key == VirtualKey.Left && !teclaPulsadaL)
+
+                if (!movimientoIniciado)
                 {
-
-                    teclaPulsadaR = false;
-                    teclaPulsadaAR = false;
-                    teclaPulsadaAB = false;
-                    teclaPulsadaL = true;
-                    while (!pared && teclaPulsadaL && Enemigo.usuarioVivo)
-                    {
-                        if (X - 50 >= 0)
-                        {
-                            if (!Utilidades.canMove(X - 50, Y))
-                            {
-
-                                X -= 50;
-                                Enemigo.JugadorX = X;
-                                NotifyPropertyChanged("X");
-
-                                await Task.Delay(200);
-                            }
-                            else
-                            {
-                                pared = true;
-                            }
-                        }
-                        else
-                        {
-                            pared = true;
-                        }
-                    }
+                    movimientoIniciado = true;
+                    await moverFantasmaB();
                 }
-                else if (e.Key == VirtualKey.Up && !teclaPulsadaAR)
-                {
 
-                    teclaPulsadaR = false;
-                    teclaPulsadaAR = true;
-                    teclaPulsadaAB = false;
-                    teclaPulsadaL = false;
-                    while (!pared && teclaPulsadaAR && Enemigo.usuarioVivo)
-                    {
-                        if (Y - 50 >= 0)
-                        {
-                            if (!Utilidades.canMove(X, Y - 50))
-                            {
-                                Y -= 50;
-                                NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y;
-                                await Task.Delay(200);
-                            }
-                            else
-                            {
-                                pared = true;
-                            }
-                        }
-                        else
-                        {
-                            pared = true;
-                        }
-                    }
-                }
-                else if (e.Key == VirtualKey.Down && !teclaPulsadaAB)
-                {
-
-                    teclaPulsadaR = false;
-                    teclaPulsadaAR = false;
-                    teclaPulsadaAB = true;
-                    teclaPulsadaL = false;
-                    while (!pared && teclaPulsadaAB && Enemigo.usuarioVivo)
-                    {
-                        if (Y + 50 < 800)
-                        {
-                            if (!Utilidades.canMove(X, Y + 50))
-                            {
-
-                                Y += 50;
-                                NotifyPropertyChanged("Y");
-                                Enemigo.JugadorY = Y;
-                                await Task.Delay(200);
-                            }
-                            else
-                            {
-                                pared = true;
-                            }
-                        }
-                        else
-                        {
-                            pared = true;
-                        }
-                    }
-                }
+            }
+            else
+            {
+                VisibilidadUsuario = Visibility.Collapsed;
+                NotifyPropertyChanged("VisibilidadUsuario");
             }
         }
     }
 }
+
