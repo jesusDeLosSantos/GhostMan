@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>2352F58453BFF529D0305502AE950625BDB1AB52F1C2F09AAFF99A33CD82CF4B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>DECF093DE260984FA8CE2A5D8BE561A2CFE3DF1742030FD73B6FC7154F9899F0</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x64__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>78b5432a-175c-4102-bd1b-08a5898fe36b</RegisteredPackageID>
@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-04T09:56:10.463</Modified>
+      <Modified>2022-03-04T10:02:02.015</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +118,231 @@
       <PackagePath>Assets\Image\trophy.png</PackagePath>
       <Modified>2022-03-04T09:46:31.718</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.344</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.363</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.077</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.119</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.681</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.706</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.741</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.005</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.206</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.643</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.649</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.628</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.610</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.615</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.545</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.550</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.569</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.596</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.579</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.584</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.011</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.016</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.025</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:51.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.245</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-03-04T10:01:50.329</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2022-01-31T10:56:11.643</Modified>
@@ -125,32 +350,27 @@
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.642</Modified>
+      <Modified>2022-03-04T10:01:50.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.643</Modified>
+      <Modified>2022-03-04T10:01:50.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.649</Modified>
+      <Modified>2022-03-04T10:01:50.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.644</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.648</Modified>
+      <Modified>2022-03-04T10:01:50.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-31T10:56:11.651</Modified>
+      <Modified>2022-03-04T10:01:50.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -166,27 +386,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.410</Modified>
+      <Modified>2022-03-04T10:02:01.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.410</Modified>
+      <Modified>2022-03-04T10:02:01.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.407</Modified>
+      <Modified>2022-03-04T10:02:01.415</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.410</Modified>
+      <Modified>2022-03-04T10:02:01.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.410</Modified>
+      <Modified>2022-03-04T10:02:01.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-      <Modified>2022-03-04T09:56:09.411</Modified>
+      <Modified>2022-03-04T10:02:01.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -194,11 +414,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-04T09:56:09.945</Modified>
+      <Modified>2022-03-04T10:02:01.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-03-04T09:56:10.459</Modified>
+      <Modified>2022-03-04T10:02:02.012</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
