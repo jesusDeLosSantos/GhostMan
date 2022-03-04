@@ -51,37 +51,40 @@ namespace UI.ViewModels
 
             X = 150;
             Y = 450;
-            velocidadX = velocidadY = 0;
+            velocidadX = 0;
+            velocidadY = 0;
             movimientoIniciado = false;
             Enemigo.JugadorX = X;
             Enemigo.JugadorY = Y;
             Enemigo1 = new Enemigo(100, 150, arrayPrueba);
-            Enemigo1.mover();
+            Enemigo1.moverFantasma();
 
             Enemigo2 = new Enemigo(0, 50, arrayPrueba);
-            Enemigo2.mover();
+            Enemigo2.moverFantasma();
 
             Enemigo3 = new Enemigo(200, 700, arrayPrueba);
-            Enemigo3.mover();
+            Enemigo3.moverFantasma();
         }
 
-        public async Task moverFantasmaB()
+        public async Task moverFantasma()
         {
             while (Enemigo.usuarioVivo)
             {
-                if(velocidadX != 0 && !Utilidades.canMove(X + velocidadX, Y)//revisar canMove a false
-                    && (X>0 && velocidadX<0 || X < 1450 && velocidadX>0))
-                {                  
-                        X += velocidadX;                    
+                if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
+                    && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
+                {
+                    X += velocidadX;
+                    Enemigo.JugadorX = X;
                 }
                 else
                 {
                     velocidadX = 0;
                 }
-                if (velocidadY != 0 && !Utilidades.canMove(X, Y + velocidadY)
-                    && (Y>0 && velocidadY<0 || Y<750 && velocidadY >0))
-                {                   
-                        Y += velocidadY;                    
+                if (velocidadY != 0 && Utilidades.canMove(X, Y + velocidadY)
+                    && (Y > 0 && velocidadY < 0 || Y < 750 && velocidadY > 0))
+                {
+                    Y += velocidadY;
+                    Enemigo.JugadorY = Y;
                 }
                 else
                 {
@@ -91,37 +94,54 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("Y");
                 await Task.Delay(200);
             }
+            VisibilidadUsuario = Visibility.Collapsed;
+            NotifyPropertyChanged("VisibilidadUsuario");
         }
 
-        public async void moverFantasma(object sender, KeyRoutedEventArgs e)
+        public async void determinarMovilidadFantasma(object sender, KeyRoutedEventArgs e)
         {
             if (Enemigo.usuarioVivo)
             {
                 switch (e.Key)
                 {
                     case VirtualKey.Right:
-                        if (velocidadX < 50)
+                        if (velocidadX == -50)//Para que no haga la pausa cuando se cambie en la direccion opuesta
+                        {
+                            velocidadX += 100;
+                        }
+                        else if(velocidadX < 50)
                         {
                             velocidadX += 50;
                             velocidadY = 0;
                         }
                         break;
                     case VirtualKey.Left:
-                        if (velocidadX > -50)
+                        if (velocidadX == 50) {
+                            velocidadX -= 100;
+                        }else if (velocidadX > -50)
                         {
                             velocidadX -= 50;
                             velocidadY = 0;
                         }
+
                         break;
                     case VirtualKey.Up:
-                        if (velocidadY > -50)
+                        if (velocidadY == 50)
+                        {
+                            velocidadY -= 100;
+                        }
+                        else if(velocidadY > -50)
                         {
                             velocidadY -= 50;
                             velocidadX = 0;
                         }
                         break;
                     case VirtualKey.Down:
-                        if (velocidadY < 50)
+                        if (velocidadY == -50)
+                        {
+                            velocidadY += 100;
+                        }
+                        else if(velocidadY < 50)
                         {
                             velocidadY += 50;
                             velocidadX = 0;
@@ -132,14 +152,8 @@ namespace UI.ViewModels
                 if (!movimientoIniciado)
                 {
                     movimientoIniciado = true;
-                    await moverFantasmaB();
+                    await moverFantasma();
                 }
-
-            }
-            else
-            {
-                VisibilidadUsuario = Visibility.Collapsed;
-                NotifyPropertyChanged("VisibilidadUsuario");
             }
         }
     }

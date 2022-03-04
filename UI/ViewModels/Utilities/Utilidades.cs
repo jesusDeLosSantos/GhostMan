@@ -12,14 +12,14 @@ namespace UI.ViewModels.Utilities
         public static List<Wall> listaParedes;
         public static bool canMove(int x, int y)
         {
-            bool result = false;
+            bool result = true;
             Wall placeholder;
-            for (int i = 0; i < listaParedes.Count && !result; i++)
+            for (int i = 0; i < listaParedes.Count && result; i++)
             {
                 placeholder = listaParedes.ElementAt(i);
                 if (placeholder.xAxis == x && placeholder.yAxis == y)
                 {
-                    result = true;
+                    result = false;
                 }
             }
             return result;

@@ -25,7 +25,7 @@ namespace UI.Views
         }
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
-            Window.Current.Content.KeyDown += playVM.moverFantasma;
+            Window.Current.Content.KeyDown += playVM.determinarMovilidadFantasma;
         }
 
         private void timer_Tick(object sender, object e)
@@ -39,7 +39,6 @@ namespace UI.Views
                 cronometro.Text = currentTime;
             }
             else {
-                
                 stopwatch.Stop();
             }
         }

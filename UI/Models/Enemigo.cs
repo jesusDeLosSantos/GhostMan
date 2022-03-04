@@ -30,135 +30,118 @@ namespace UI.Models
         public static int JugadorY { get; set; }
 
         public static bool usuarioVivo = true;
-        public bool derPared = false;
-        public bool izqPared = false;
-        public bool arrPared = false;
-        public bool abaPared = false;
+
+        private int velocidadX;
+        private int velocidadY;
+
+        public async void moverFantasma()
+        {
+            Random random = new Random();
+            int cambioDireccionAleatorio;//De esta manera cambiar de direccion de manera mas realista, porque sino solo cambiaria de direccion cuando no se pueda mover
+
+            
+            while (usuarioVivo)
+            {
+                cambioDireccionAleatorio = random.Next(6);
+                if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
+                    && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
+                {
+                    X += velocidadX;
+                    if (cambioDireccionAleatorio == 1) {
+                        determinarMovilidadFantasma();
+                    }
+                }
+                else
+                {
+                    velocidadX = 0;
+                    if (velocidadY == 0) {
+                        determinarMovilidadFantasma();
+                    }
+                   
+                }
+                
+                if (velocidadY != 0 && Utilidades.canMove(X, Y + velocidadY)
+                    && (Y > 0 && velocidadY < 0 || Y < 750 && velocidadY > 0))
+                {
+                    Y += velocidadY;
+                    if (cambioDireccionAleatorio == 1)
+                    {
+                        determinarMovilidadFantasma();
+                    }
+                }
+                else
+                {
+                    velocidadY = 0;
+                    if (velocidadX == 0)
+                    {
+                        determinarMovilidadFantasma();
+                    }
+                }
+
+                NotifyPropertyChanged("X");
+                NotifyPropertyChanged("Y");
+                comprobarEliminarUsuario();
+                await Task.Delay(200);
+            }
+        }
 
 
-        public async void mover()
+        public void determinarMovilidadFantasma()
         {
             Random random = new Random();
             int aletorio;
-            while (usuarioVivo)
+
+            aletorio = random.Next(4);
+            switch (aletorio)
             {
-                aletorio = random.Next(4);
-                switch (aletorio)
-                {
-                    case 0: //IZQ
-                        while (X - 50 >= 0 && usuarioVivo && !izqPared)
-                        {
-                            if (!Utilidades.canMove(X - 50, Y))
-                            {
-                                derPared = false;
-                                arrPared = false;
-                                abaPared = false;
-                                X -= 50; 
-                                NotifyPropertyChanged("X");
-                                await Task.Delay(200);
-                                comprobarEliminarUsuario();
-                                if (X - 50 == JugadorX && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
-                                {
-                                    X -= 50;
-                                    NotifyPropertyChanged("X");
-                                    usuarioVivo = false;
-                                    await Task.Delay(200);
-                                }
-                            }
-                            else {
-                               izqPared = true;    
-                            }   
-                        }
-                        break;
-                    case 1: //DER
-                        while (X + 50 < 1500 && usuarioVivo && !derPared)
-                        {
+                case 0:
+                    if (velocidadX == -50)//Para que no haga la pausa cuando se cambie en la direccion opuesta
+                    {
+                        velocidadX += 100;
+                    }
+                    else if (velocidadX < 50)
+                    {
+                        velocidadX += 50;
+                        velocidadY = 0;
+                    }
+                    break;
+                case 1:
+                    if (velocidadX == 50)
+                    {
+                        velocidadX -= 100;
+                    }
+                    else if (velocidadX > -50)
+                    {
+                        velocidadX -= 50;
+                        velocidadY = 0;
+                    }
 
-                            if (!Utilidades.canMove(X + 50, Y))
-                            {
-                                izqPared = false;
-                                arrPared = false;
-                                abaPared = false;
-
-                                X += 50; 
-                                NotifyPropertyChanged("X");
-                                await Task.Delay(200);
-                                comprobarEliminarUsuario();
-                                if (X + 50 == JugadorX && Y == JugadorY)//aletorioMovimiento < 2 sera cuando sea 0 o 1 que sera cuando el fantasma se este moviendo o a la izq o a la der, sino se controla eso se moveria en diagonal y eliminaria al jugador
-                                {
-                                    X += 50;
-                                    NotifyPropertyChanged("X");
-                                    usuarioVivo = false;
-                                    await Task.Delay(200);
-                                }
-                            }
-                            else
-                            {
-                                derPared = true;    
-                            }
-                        }
-                        break;
-                    case 2: //ARR
-                        while (Y - 50 >= 0 && usuarioVivo && !arrPared)
-                        {
-                            if (!Utilidades.canMove(X, Y - 50))
-                            {
-                                derPared = false;
-                                izqPared = false;
-                                abaPared = false;
-                                
-                                Y -= 50;
-                                
-                                NotifyPropertyChanged("Y");
-                                await Task.Delay(200); 
-                                comprobarEliminarUsuario();
-                                if (X == JugadorX && Y - 50 == JugadorY)
-                                {
-                                    Y -= 50;
-                                    NotifyPropertyChanged("Y");
-                                    usuarioVivo = false;
-                                    await Task.Delay(200);
-                                }
-                            }
-                            else
-                            {
-                                arrPared = true;    
-                            }
-
-                        }
-                        break;
-
-                    case 3: //ABA
-                        while (Y + 50 < 800 && usuarioVivo && !abaPared)
-                        {
-                            if (!Utilidades.canMove(X,Y + 50))
-                            {   
-                                derPared = false;
-                                arrPared = false;
-                                izqPared = false;
-                                
-                                Y += 50;
-                                NotifyPropertyChanged("Y");
-                                await Task.Delay(200);
-                                comprobarEliminarUsuario();
-                                if (X == JugadorX && Y + 50 == JugadorY)
-                                {
-                                    Y += 50;
-                                    NotifyPropertyChanged("Y");
-                                    usuarioVivo = false;
-                                    await Task.Delay(200);
-                                }
-                            }
-                            else
-                            {
-                                abaPared = true;
-                            }
-
-                        }
-                        break;
-                }
+                    break;
+                case 2:
+                    if (velocidadY == 50)
+                    {
+                        velocidadY -= 100;
+                    }
+                    else if (velocidadY > -50)
+                    {
+                        velocidadY -= 50;
+                        velocidadX = 0;
+                    }
+                    break;
+                case 3:
+                    if (velocidadY == -50)
+                    {
+                        velocidadY += 100;
+                    }
+                    else if (velocidadY < 50)
+                    {
+                        velocidadY += 50;
+                        velocidadX = 0;
+                    }
+                    break;
             }
         }
+
         private void comprobarEliminarUsuario()
         {
             if (X == JugadorX && Y == JugadorY)
@@ -167,4 +150,5 @@ namespace UI.Models
             }
         }
     }
+
 }
