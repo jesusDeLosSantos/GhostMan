@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UI.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,18 +20,21 @@ namespace UI.Views
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class MapCreator : Page
+    public sealed partial class PlayMenu : Page
     {
-        public MapCreatorVM vm { get; }
-        public MapCreator()
+        public PlayMenu()
         {
             this.InitializeComponent();
-            vm = (MapCreatorVM)this.DataContext;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
+        }
+
+        private void customBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Frame.Navigate(typeof(CustomModes));
         }
     }
 }

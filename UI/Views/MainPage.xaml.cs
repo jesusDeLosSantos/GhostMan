@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UI.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,16 @@ namespace UI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void playBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PlayMenu));
+        }
+
+        private void createBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MapCreator));
         }
     }
 }

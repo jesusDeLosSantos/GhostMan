@@ -31,17 +31,6 @@ namespace BL.query
             return clsMapQueryDAL.getListOfCustomMapsDAL();
         }
         /// <summary>
-        ///     <header>public static List<clsMap> getListOfCustomMapsBL()</header>
-        ///     <description> This method calls DAL and returns a list of custom maps</description>
-        ///     <precondition> None </precondition>
-        ///     <postcondition> returns List<clsMap> maps to the UI </postcondition>
-        /// </summary>
-        /// <returns>returns List<clsMap> maps</returns>
-        public static List<clsMap> getEspecificNumbersCustomMapsDAL(int number,string incrementoDecremento)
-        {
-            return clsMapQueryDAL.getEspecificNumbersCustomMapsDAL(number,incrementoDecremento);
-        }
-        /// <summary>
         ///     <header>public static List<clsMap> getListOfDefaultMapsBL()</header>
         ///     <description> This method calls DAL and returns a list of default maps</description>
         ///     <precondition> None </precondition>
@@ -52,5 +41,30 @@ namespace BL.query
         {
             return clsMapQueryDAL.getListOfDefaultMapsDAL();
         }
+        /// <summary>
+        ///     <header>public static List<clsMap> getListOfDefaultMapsBL()</header>
+        ///     <description> This method calls DAL and returns a list of default maps</description>
+        ///     <precondition> None </precondition>
+        ///     <postcondition> returns List<clsMap> maps to the UI </postcondition>
+        /// </summary>
+        /// <returns>returns List<clsMap> maps</returns>
+        public static int getLastMapDAL()
+        {
+            return clsMapQueryDAL.getLastMapDAL();
+        }
+
+
+        /// <summary>
+        ///     <header>public static List<clsMap> getListOfCustomMapsBL()</header>
+        ///     <description> This method calls DAL and returns a list of custom maps</description>
+        ///     <precondition> None </precondition>
+        ///     <postcondition> returns List<clsMap> maps to the UI </postcondition>
+        /// </summary>
+        /// <returns>returns List<clsMap> maps</returns>
+        public static List<clsMap> getEspecificNumbersCustomMapsDAL(int number, string incrementoDecremento)
+        {
+            return clsMapQueryDAL.getEspecificNumbersCustomMapsDAL(number, incrementoDecremento);
+        }
+       
     }
 }

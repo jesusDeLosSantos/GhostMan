@@ -19,10 +19,10 @@ namespace DAL.conecction
         public clsConnection()
         {
 
-            this.server = "107-19\\SQLEXPRESS";
-            this.dataBase = "GhostMan";
-            this.user = "sa";
-            this.pass = "mitesoro";
+            this.server = "iesnervion.database.windows.net";
+            this.dataBase = "WPFSample";
+            this.user = "prueba";
+            this.pass = "iesnervion123.";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones

@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\Easy_Mode.png">
       <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\Empty_Spot.png">
+      <PackagePath>Assets\Image\Empty_Spot.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\Ending_Wall_3.png">
       <PackagePath>Assets\Image\Ending_Wall_3.png</PackagePath>
     </AppxPackagedFile>

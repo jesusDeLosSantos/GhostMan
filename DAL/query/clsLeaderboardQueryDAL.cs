@@ -28,7 +28,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM Leaderboard";
+                myCommand.CommandText = "SELECT * FROM GM_Leaderboards";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)

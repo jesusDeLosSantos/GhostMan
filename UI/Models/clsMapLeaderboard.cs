@@ -18,7 +18,7 @@ namespace UI.Models
 
         }
 
-        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards) : base(map.Id, map.Nick, map.Size, map.CommunityMap)
+        public clsMapLeaderboard(clsMap map, List<clsLeaderboardWithPosition> leaderboards) : base(map.Id, map.Nick, map.Name, map.Size, map.CommunityMap)
         {
             this.leaderboards = leaderboards;
         }

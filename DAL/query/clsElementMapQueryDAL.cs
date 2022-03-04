@@ -27,7 +27,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM ElementMap";
+                myCommand.CommandText = "SELECT * FROM GM_ElementMaps";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
