@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-21T11:50:27.587</Modified>
+      <Modified>2022-03-04T09:56:10.463</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-02-21T11:50:27.243</Modified>
+      <Modified>2022-03-04T09:56:09.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -60,19 +60,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-02-18T11:50:37.145</Modified>
+      <Modified>2022-03-04T09:26:45.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-02-18T11:50:36.801</Modified>
+      <Modified>2022-03-04T09:26:44.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-02-18T11:50:37.026</Modified>
+      <Modified>2022-03-04T09:26:45.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\crown.png">
+      <PackagePath>Assets\Image\crown.png</PackagePath>
+      <Modified>2022-03-04T09:49:22.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\Easy_Mode.png">
       <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
@@ -97,6 +101,22 @@
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\Medium_Mode.png">
       <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
       <Modified>2022-02-18T10:53:37.018</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\play_button.png">
+      <PackagePath>Assets\Image\play_button.png</PackagePath>
+      <Modified>2022-03-04T09:19:43.969</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\puzzle_btn.png">
+      <PackagePath>Assets\Image\puzzle_btn.png</PackagePath>
+      <Modified>2022-03-04T09:19:43.984</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\star.png">
+      <PackagePath>Assets\Image\star.png</PackagePath>
+      <Modified>2022-03-04T09:42:35.902</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Image\trophy.png">
+      <PackagePath>Assets\Image\trophy.png</PackagePath>
+      <Modified>2022-03-04T09:46:31.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -136,29 +156,37 @@
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-01-31T10:56:11.667</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\Assets\Fonts\dogicapixelbold.ttf">
+      <PackagePath>Assets\Fonts\dogicapixelbold.ttf</PackagePath>
+      <Modified>2022-03-04T09:27:48.026</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-02-21T11:16:41.576</Modified>
+      <Modified>2022-03-04T09:56:09.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-02-21T11:50:27.183</Modified>
+      <Modified>2022-03-04T09:56:09.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-02-21T11:50:27.183</Modified>
+      <Modified>2022-03-04T09:56:09.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-02-21T11:50:27.181</Modified>
+      <Modified>2022-03-04T09:56:09.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-02-21T11:50:27.183</Modified>
+      <Modified>2022-03-04T09:56:09.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-02-21T11:50:27.183</Modified>
+      <Modified>2022-03-04T09:56:09.410</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Views\PlayMenu.xbf">
+      <PackagePath>Views\PlayMenu.xbf</PackagePath>
+      <Modified>2022-03-04T09:56:09.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -166,11 +194,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-21T11:19:23.401</Modified>
+      <Modified>2022-03-04T09:56:09.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sforte\Desktop\GhostMan\UI\bin\x64\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-02-21T11:50:27.584</Modified>
+      <Modified>2022-03-04T09:56:10.459</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

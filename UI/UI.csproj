@@ -149,6 +149,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Image\crown.png" />
     <Content Include="Assets\Image\Easy_Mode.png" />
     <Content Include="Assets\Image\Ending_Wall_3.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
@@ -157,6 +158,8 @@
     <Content Include="Assets\Image\Medium_Mode.png" />
     <Content Include="Assets\Image\play_button.png" />
     <Content Include="Assets\Image\puzzle_btn.png" />
+    <Content Include="Assets\Image\star.png" />
+    <Content Include="Assets\Image\trophy.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -187,13 +190,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PlayMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\Fonts\dogicapixelbold.ttf" />
+  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">

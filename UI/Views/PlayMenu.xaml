@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="UI.PlayMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel Background="Black">
+
+        <RelativePanel MinHeight="720" MinWidth="1400" Background="#8ECE27" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <Button RelativePanel.AlignVerticalCenterWithPanel="True" Margin="50,0,0,0" MinHeight="450" MinWidth="450" Name="playBtn" CornerRadius="50">
+                <Image Source="/Assets/Image/star.png" Height="300" Width="300"/>
+            </Button>
+            <Button RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" MinHeight="450" MinWidth="450" Name="createBtn" CornerRadius="50">
+                <Image Source="/Assets/Image/crown.png" Height="300" Width="300"/>
+            </Button>
+
+            <TextBlock FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="playBtn" RelativePanel.AlignHorizontalCenterWith="playBtn" FontSize="40" Margin="40,30,0,0" Foreground="#FFCA3A"> DEFAULT</TextBlock>
+            <TextBlock FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="playBtn" RelativePanel.AlignHorizontalCenterWith="createBtn" FontSize="40" Margin="0,30,50,0" Foreground="#FFCA3A"> CUSTOM</TextBlock>
+        </RelativePanel>
+    </RelativePanel>
+</Page>

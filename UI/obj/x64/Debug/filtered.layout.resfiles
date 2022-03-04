@@ -1,4 +1,6 @@
 WinMetadata\Windows.winmd
+Assets\Fonts\dogicapixelbold.ttf
+Assets\Image\crown.png
 Assets\Image\Easy_Mode.png
 Assets\Image\Ending_Wall_3.png
 Assets\Image\Hard_Mode.png
@@ -6,6 +8,9 @@ Assets\Image\icono_Puntuacion_Prueba.png
 Assets\Image\mapaPrueba.png
 Assets\Image\Medium_Mode.png
 Assets\Image\play_button.png
+Assets\Image\puzzle_btn.png
+Assets\Image\star.png
+Assets\Image\trophy.png
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -19,4 +24,5 @@ Views\CustomModes.xbf
 Views\MainPage.xbf
 Views\MapCreator.xbf
 Views\Play.xbf
+Views\PlayMenu.xbf
 Properties\Default.rd.xml
