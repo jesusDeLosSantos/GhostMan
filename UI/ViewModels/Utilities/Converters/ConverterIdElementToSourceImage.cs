@@ -18,33 +18,15 @@ namespace UI.ViewModels.Utilities.Converters
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             //TODO: ¡¡¡MUY IMPORTANTE!!! MIRAR COMO OPTIMIZAR ESTO
-            ImageSource imageSource = convertirByteImagen(clsElementTypeQueryBL.getSpriteOfElementTypeIdBL((int)value));
+            //ImageSource imageSource = convertirByteImagen(clsElementTypeQueryBL.getSpriteOfElementTypeIdBL((int)value));
+            List<ImageSource> allImageSprites = SharedData.AllImageSourceOfSprites;
             
-            return imageSource;
+            return allImageSprites[(int)value];
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Este metodo se encarga de convertir una array de bytes a imagen
-        /// </summary>
-        private ImageSource convertirByteImagen(byte[] sprite)
-        {
-            BitmapImage imagenBitMap = new BitmapImage();
-            if (sprite != null)
-            {
-                using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
-                {
-                    var result = new BitmapImage();
-                    stream.WriteAsync(sprite.AsBuffer());
-                    stream.Seek(0);
-                    imagenBitMap.SetSource(stream);
-                }
-            }
-            return imagenBitMap;
         }
     }
 }

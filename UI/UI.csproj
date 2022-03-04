@@ -129,6 +129,7 @@
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
     <Compile Include="ViewModels\Utilities\DelegateCommand.cs" />
+    <Compile Include="ViewModels\Utilities\SharedData.cs" />
     <Compile Include="Views\CustomModes.xaml.cs">
       <DependentUpon>CustomModes.xaml</DependentUpon>
     </Compile>

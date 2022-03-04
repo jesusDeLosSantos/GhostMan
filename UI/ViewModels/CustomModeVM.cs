@@ -10,6 +10,10 @@ using UI.ViewModels.Utilities;
 using BL.query;
 using Windows.UI.Popups;
 using System.Data.SqlClient;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage.Streams;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace UI.ViewModels
 {
@@ -40,6 +44,7 @@ namespace UI.ViewModels
         #region Builders
         public CustomModeVM()
         {
+            SharedData.AllImageSourceOfSprites = convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
             rightFilterButtonCommand = new DelegateCommand(RightFilterButtonCommand_Executed, RightFilterButtonCommand_CanExecuted);
             leftFilterButtonCommand = new DelegateCommand(LeftFilterButtonCommand_Executed, LeftFilterButtonCommand_CanExecuted);
             nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>();
@@ -53,8 +58,15 @@ namespace UI.ViewModels
                 foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos AND @NumeroElementos +50"))
                 {
                     specificMapElements = new List<clsElementMap>(from element in allElementMaps
-                                           where element.IdMap == map.Id
-                                           select element);
+                                                                  where element.IdMap == map.Id
+                                                                  select element);
+                    //PRUEBA
+                    for (int i = 0; i < specificMapElements.Count; i++)
+                    {
+                        specificMapElements[i].AxisX /= 50;
+                        specificMapElements[i].AxisY /= 50;
+                    }
+
                     b.Add(new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>(), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
                 }
                 originalMapList = new ObservableCollection<clsMapLeaderboardWithElements>(b);
@@ -72,6 +84,28 @@ namespace UI.ViewModels
             }
         }
         #endregion
+
+        private List<ImageSource> convertirByteImagen(List<byte[]> sprites)
+        {
+            List<ImageSource> imageSources = new List<ImageSource>();
+            if (sprites != null)
+            {
+                foreach (var sprite in sprites)
+                {
+                    using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+                    {
+
+                        BitmapImage imagenBitMap = new BitmapImage();
+                        var result = new BitmapImage();
+                        stream.WriteAsync(sprite.AsBuffer());
+                        stream.Seek(0);
+                        imagenBitMap.SetSource(stream);
+                        imageSources.Add(imagenBitMap);
+                    }
+                }
+            }
+            return imageSources;
+        }
 
         #region Getters & Setters
         public ObservableCollection<clsMapLeaderboardWithElements> MapList { get => mapList; }
