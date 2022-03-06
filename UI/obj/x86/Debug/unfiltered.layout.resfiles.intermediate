@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 Assets\Fonts\dogicapixelbold.ttf
 Assets\Image\crown.png
 Assets\Image\Easy_Mode.png
@@ -74,3 +73,4 @@ Views\MapCreator.xbf
 Views\Play.xbf
 Views\PlayMenu.xbf
 Properties\Default.rd.xml
+WinMetadata\Windows.winmd
