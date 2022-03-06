@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = Entities
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Jesus\Desktop\GhostMan\Entities\
+=======
+build_property.ProjectDir = D:\GitHub\GhostMan\Entities\
+>>>>>>> Develop

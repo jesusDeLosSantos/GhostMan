@@ -11,6 +11,21 @@ E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileI
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 E:\GitKraken-Repos\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+<<<<<<< HEAD
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+D:\GitHub\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\GitHub\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+=======
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
@@ -24,3 +39,4 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstand
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+>>>>>>> Develop

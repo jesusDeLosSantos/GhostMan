@@ -1,1 +1,1 @@
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\UI\UI.csproj;x86
+D:\GitHub\GhostMan\UI\UI.csproj;x86

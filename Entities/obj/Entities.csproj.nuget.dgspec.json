@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {}
+    "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
+    "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\obj\\",
+        "projectPath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VSPC-EternalStormV2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

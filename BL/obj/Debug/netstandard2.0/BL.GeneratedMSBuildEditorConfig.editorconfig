@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = BL
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Jesus\Desktop\GhostMan\BL\
+=======
+build_property.ProjectDir = D:\GitHub\GhostMan\BL\
+>>>>>>> Develop
