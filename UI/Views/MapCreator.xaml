@@ -187,6 +187,7 @@
                 <TextBox x:Name="tbMapCreator" Style="{StaticResource TextBoxStyle1}" Text="{Binding MapNick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"  Padding="10" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBox>
                 <Button x:Name="btnSave" Width="100" Content="SAVE" Command="{Binding CommandSaveMap}" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></Button>
                 <ProgressRing IsActive="True" Visibility="{Binding Visibility}" Foreground="#703CB9" Width="25" Height="25" Margin="20,0,0,0"></ProgressRing>
+                <Image Visibility="{Binding Visibility}" Source="/Assets/Image/Loading.gif" HorizontalAlignment="Center" Width="400" Height="50"/>
             </StackPanel>
         </Border>
         <Button x:Name="btnBack" Click="btnBack_Click" VerticalAlignment="Top" Margin="70,15,0,0" Background="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C" >Back</Button>

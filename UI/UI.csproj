@@ -167,6 +167,7 @@
     <Content Include="Assets\Image\Ghost.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
     <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
+    <Content Include="Assets\Image\Loading.gif" />
     <Content Include="Assets\Image\mapaPrueba.png" />
     <Content Include="Assets\Image\Medium_Mode.png" />
     <Content Include="Assets\Image\play_button.png" />
