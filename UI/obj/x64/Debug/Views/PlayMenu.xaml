@@ -87,8 +87,8 @@
 
         <VisualStateManager.VisualStateGroups>
             <!-- Visual states mnager -->
-            <VisualStateGroup x:Name="visualStateGroup">
-                <VisualState x:Name="Narrow">
+            <VisualStateGroup x:ConnectionId='9' x:Name="visualStateGroup">
+                <VisualState x:ConnectionId='10' x:Name="Narrow">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
@@ -109,7 +109,7 @@
                     </VisualState.Setters>
                 </VisualState>
 
-                <VisualState x:Name="Wide">
+                <VisualState x:ConnectionId='11' x:Name="Wide">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1700"/>
                     </VisualState.StateTriggers>
@@ -137,19 +137,20 @@
 
 
 
-        <RelativePanel Name="contenedor" BorderBrush="#33FF5C" BorderThickness="10" Background="#703CB9" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-            <Button RelativePanel.AlignVerticalCenterWithPanel="True" Name="defaultBtn" Click="defaultBtn_Click" Margin="50,0,0,0" CornerRadius="50">
-                <Image Source="/Assets/Image/star.png" Name="defaultImg" Height="300" Width="300"/>
+        <RelativePanel x:ConnectionId='12' Name="contenedor" BorderBrush="#33FF5C" BorderThickness="10" Background="#703CB9" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <Button x:ConnectionId='14' RelativePanel.AlignVerticalCenterWithPanel="True" Name="defaultBtn"                          Margin="50,0,0,0" CornerRadius="50">
+                <Image x:ConnectionId='19' Source="/Assets/Image/star.png" Name="defaultImg" Height="300" Width="300"/>
             </Button>
-            <Button RelativePanel.AlignVerticalCenterWithPanel="True" Name="customBtn" Click="customBtn_Click" RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" CornerRadius="50">
-                <Image Source="/Assets/Image/crown.png" Name="customImg" Height="300" Width="300"/>
+            <Button x:ConnectionId='15' RelativePanel.AlignVerticalCenterWithPanel="True" Name="customBtn"                         RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" CornerRadius="50">
+                <Image x:ConnectionId='18' Source="/Assets/Image/crown.png" Name="customImg" Height="300" Width="300"/>
             </Button>
 
-            <TextBlock x:Name="defaultTxt" FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="defaultBtn" RelativePanel.AlignHorizontalCenterWith="defaultBtn" Margin="40,30,0,0" Foreground="#FFCA3A"> DEFAULT</TextBlock>
-            <TextBlock Name="customTxt" FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="defaultBtn" RelativePanel.AlignHorizontalCenterWith="customBtn" Margin="0,30,50,0" Foreground="#FFCA3A"> CUSTOM</TextBlock>
+            <TextBlock x:ConnectionId='16' x:Name="defaultTxt" FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="defaultBtn" RelativePanel.AlignHorizontalCenterWith="defaultBtn" Margin="40,30,0,0" Foreground="#FFCA3A"> DEFAULT</TextBlock>
+            <TextBlock x:ConnectionId='17' Name="customTxt" FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="defaultBtn" RelativePanel.AlignHorizontalCenterWith="customBtn" Margin="0,30,50,0" Foreground="#FFCA3A"> CUSTOM</TextBlock>
         </RelativePanel>
 
-        <Button Style="{StaticResource ButtonStyle1}" x:Name="btnBack" Margin="880,10,0,20" Click="btnBack_Click" RelativePanel.AlignBottomWithPanel="True" CornerRadius="10" Width="150" Height="75" VerticalAlignment="Top" Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" >Back</Button>
+        <Button x:ConnectionId='13' Style="{StaticResource ButtonStyle1}" x:Name="btnBack" Margin="880,10,0,20"                       RelativePanel.AlignBottomWithPanel="True" CornerRadius="10" Width="150" Height="75" VerticalAlignment="Top" Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" >Back</Button>
 
     </RelativePanel>
 </Page>
+

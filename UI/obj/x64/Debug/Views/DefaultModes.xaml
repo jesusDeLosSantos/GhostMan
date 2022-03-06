@@ -189,16 +189,16 @@
 
 
 
-        <Border Name="brdChooseDifficulty"
+        <Border x:ConnectionId='15' Name="brdChooseDifficulty"
                 CornerRadius="14" Background="#6737A9" BorderThickness="5" BorderBrush="Black"
                 RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" 
                 RelativePanel.AlignTopWithPanel="True" HorizontalAlignment="Center" Margin="0,15,0,0" Padding="15">
             <TextBlock Text="CHOOSE  DIFFICULTY" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" 
                        FontSize="64" Foreground="#00ff33" HorizontalAlignment="Center" />
         </Border>
-        <RelativePanel Name="relativePanel" Background="#6737A9" CornerRadius="45" Margin="25,0,25,0" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Center" RelativePanel.Below="brdChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" HorizontalAlignment="Center" Height="600">
-            <Button Name="btnEasy" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
-                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+        <RelativePanel x:ConnectionId='16' Name="relativePanel" Background="#6737A9" CornerRadius="45" Margin="25,0,25,0" BorderBrush="Black" BorderThickness="3" VerticalAlignment="Center" RelativePanel.Below="brdChooseDifficulty" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" HorizontalAlignment="Center" Height="600">
+            <Button x:ConnectionId='18' Name="btnEasy" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500"                        MaxWidth="400" Margin="15,0,15,0" 
                     Style="{StaticResource ButtonHover}" HorizontalAlignment="Center" RelativePanel.AlignVerticalCenterWithPanel="True"
                     Background="#00ff33" Foreground="#6737A9">
                 <StackPanel Orientation="Vertical">
@@ -206,8 +206,8 @@
                     <TextBlock Text="EASY" FontSize="42" HorizontalAlignment="Center" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" />
                 </StackPanel>
             </Button>
-            <Button Name="btnMedium" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
-                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+            <Button x:ConnectionId='19' Name="btnMedium" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500"                        MaxWidth="400" Margin="15,0,15,0" 
                     Style="{StaticResource ButtonHover}" HorizontalAlignment="Center"
                     RelativePanel.RightOf="btnEasy" RelativePanel.AlignVerticalCenterWithPanel="True"
                     Background="#00ff33" Foreground="#6737A9">
@@ -216,8 +216,8 @@
                     <TextBlock Text="MEDIUM" FontSize="42" HorizontalAlignment="Center" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" />
                 </StackPanel>
             </Button>
-            <Button Name="btnHard" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
-                    MaxHeight="500" Click="NavigateToPlay" MaxWidth="400" Margin="15,0,15,0" 
+            <Button x:ConnectionId='20' Name="btnHard" BorderBrush="Black" BorderThickness="5" CornerRadius="14" 
+                    MaxHeight="500"                        MaxWidth="400" Margin="15,0,15,0" 
                     Style="{StaticResource ButtonHover}" HorizontalAlignment="Center" 
                      RelativePanel.RightOf="btnMedium" RelativePanel.AlignVerticalCenterWithPanel="True"
                     Background="#00ff33" Foreground="#6737A9">
@@ -227,7 +227,8 @@
                 </StackPanel>
             </Button>
         </RelativePanel>
-        <Button Style="{StaticResource ButtonStyle1}" Name="btnBack" Click="btnBack_Click" Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" Width="150" Height="75" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,0,0,50"  CornerRadius="10">Back</Button>
+        <Button x:ConnectionId='17' Style="{StaticResource ButtonStyle1}" Name="btnBack"                       Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" Width="150" Height="75" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,0,0,50"  CornerRadius="10">Back</Button>
     </RelativePanel>
 </Page>
     
+

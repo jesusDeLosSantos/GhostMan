@@ -97,13 +97,13 @@
     </Page.Resources>
 
     <RelativePanel>
-        <ListView Name="LstMapas" Width="400" Background="#33FF5C" ItemsSource="{Binding MapList}" 
+        <ListView x:ConnectionId='5' Name="LstMapas" Width="400" Background="#33FF5C" ItemsSource="{Binding MapList}" 
                   RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True"
                   SelectedItem="{Binding MapSelected,Mode=TwoWay}"  Style="{StaticResource FixedHeaderListViewStyle}">
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name="btnBack" Click="btnBack_Click" VerticalAlignment="Top" Margin="10,10,180,0" Background="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C" >Back</Button>
+                        <Button x:ConnectionId='11' x:Name="btnBack"                       VerticalAlignment="Top" Margin="10,10,180,0" Background="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C" >Back</Button>
                         <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
                             <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
                         </Button>
@@ -154,7 +154,7 @@
             </StackPanel>
 
 
-            <ListView Background="#7E5DAC" Grid.Column="0" Grid.Row="2"  Width="auto" Height="500" Margin="40,0,40,0" 
+            <ListView x:ConnectionId='6' Background="#7E5DAC" Grid.Column="0" Grid.Row="2"  Width="auto" Height="500" Margin="40,0,40,0" 
                       ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None" Name="lsvLeaderboards" >
                 <ListView.HeaderTemplate>
                     <DataTemplate>
@@ -181,16 +181,7 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Button Name="btnPlay" Content="Jugar" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom" Click="btnPlay_Click" />
-            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,18" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
-=======
             <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
->>>>>>> Develop
-=======
-            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
->>>>>>> Develop
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -1788,115 +1779,12 @@
                 <Image Source="{Binding MapSelected.ElementList[425].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[425].AxisY}" Grid.Column="{Binding MapSelected.ElementList[425].AxisX}" MaxHeight="70" MaxWidth="61" />
 
                 <Image Source="{Binding MapSelected.ElementList[426].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[426].AxisY}" Grid.Column="{Binding MapSelected.ElementList[426].AxisX}" MaxHeight="70" MaxWidth="61" />
-                
                 <Image Source="{Binding MapSelected.ElementList[427].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[427].AxisY}" Grid.Column="{Binding MapSelected.ElementList[427].AxisX}" MaxHeight="70" MaxWidth="61" />
-                
-                <Image Source="{Binding MapSelected.ElementList[428].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[428].AxisY}" Grid.Column="{Binding MapSelected.ElementList[428].AxisX}" MaxHeight="70" MaxWidth="61" />
 
-                <Image Source="{Binding MapSelected.ElementList[429].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[429].AxisY}" Grid.Column="{Binding MapSelected.ElementList[429].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[430].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[430].AxisY}" Grid.Column="{Binding MapSelected.ElementList[430].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[431].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[431].AxisY}" Grid.Column="{Binding MapSelected.ElementList[431].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[432].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[432].AxisY}" Grid.Column="{Binding MapSelected.ElementList[432].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[433].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[433].AxisY}" Grid.Column="{Binding MapSelected.ElementList[433].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[434].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[434].AxisY}" Grid.Column="{Binding MapSelected.ElementList[434].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[435].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[435].AxisY}" Grid.Column="{Binding MapSelected.ElementList[435].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[436].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[436].AxisY}" Grid.Column="{Binding MapSelected.ElementList[436].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[437].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[437].AxisY}" Grid.Column="{Binding MapSelected.ElementList[437].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[438].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[438].AxisY}" Grid.Column="{Binding MapSelected.ElementList[438].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[439].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[439].AxisY}" Grid.Column="{Binding MapSelected.ElementList[439].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[440].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[440].AxisY}" Grid.Column="{Binding MapSelected.ElementList[440].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[441].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[441].AxisY}" Grid.Column="{Binding MapSelected.ElementList[441].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[442].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[442].AxisY}" Grid.Column="{Binding MapSelected.ElementList[442].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[443].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[443].AxisY}" Grid.Column="{Binding MapSelected.ElementList[443].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[444].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[444].AxisY}" Grid.Column="{Binding MapSelected.ElementList[444].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[445].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[445].AxisY}" Grid.Column="{Binding MapSelected.ElementList[445].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[446].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[446].AxisY}" Grid.Column="{Binding MapSelected.ElementList[446].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[447].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[447].AxisY}" Grid.Column="{Binding MapSelected.ElementList[447].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[448].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[448].AxisY}" Grid.Column="{Binding MapSelected.ElementList[448].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[449].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[449].AxisY}" Grid.Column="{Binding MapSelected.ElementList[449].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[450].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[450].AxisY}" Grid.Column="{Binding MapSelected.ElementList[450].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[451].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[451].AxisY}" Grid.Column="{Binding MapSelected.ElementList[451].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[452].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[452].AxisY}" Grid.Column="{Binding MapSelected.ElementList[452].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[453].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[453].AxisY}" Grid.Column="{Binding MapSelected.ElementList[453].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[454].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[454].AxisY}" Grid.Column="{Binding MapSelected.ElementList[454].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[455].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[455].AxisY}" Grid.Column="{Binding MapSelected.ElementList[455].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[456].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[456].AxisY}" Grid.Column="{Binding MapSelected.ElementList[456].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[457].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[457].AxisY}" Grid.Column="{Binding MapSelected.ElementList[457].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[458].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[458].AxisY}" Grid.Column="{Binding MapSelected.ElementList[458].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[459].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[459].AxisY}" Grid.Column="{Binding MapSelected.ElementList[459].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[460].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[460].AxisY}" Grid.Column="{Binding MapSelected.ElementList[460].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[461].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[461].AxisY}" Grid.Column="{Binding MapSelected.ElementList[461].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[462].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[462].AxisY}" Grid.Column="{Binding MapSelected.ElementList[462].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[463].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[463].AxisY}" Grid.Column="{Binding MapSelected.ElementList[463].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[464].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[464].AxisY}" Grid.Column="{Binding MapSelected.ElementList[464].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[465].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[465].AxisY}" Grid.Column="{Binding MapSelected.ElementList[465].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[466].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[466].AxisY}" Grid.Column="{Binding MapSelected.ElementList[466].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[467].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[467].AxisY}" Grid.Column="{Binding MapSelected.ElementList[467].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[468].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[468].AxisY}" Grid.Column="{Binding MapSelected.ElementList[468].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[469].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[469].AxisY}" Grid.Column="{Binding MapSelected.ElementList[469].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[470].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[470].AxisY}" Grid.Column="{Binding MapSelected.ElementList[470].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[471].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[471].AxisY}" Grid.Column="{Binding MapSelected.ElementList[471].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[472].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[472].AxisY}" Grid.Column="{Binding MapSelected.ElementList[472].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[473].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[473].AxisY}" Grid.Column="{Binding MapSelected.ElementList[473].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[474].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[474].AxisY}" Grid.Column="{Binding MapSelected.ElementList[474].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[475].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[475].AxisY}" Grid.Column="{Binding MapSelected.ElementList[475].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[476].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[476].AxisY}" Grid.Column="{Binding MapSelected.ElementList[476].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[477].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[477].AxisY}" Grid.Column="{Binding MapSelected.ElementList[477].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[478].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[478].AxisY}" Grid.Column="{Binding MapSelected.ElementList[478].AxisX}" MaxHeight="70" MaxWidth="61" />
-
-                <Image Source="{Binding MapSelected.ElementList[479].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Grid.Row="{Binding MapSelected.ElementList[479].AxisY}" Grid.Column="{Binding MapSelected.ElementList[479].AxisX}" MaxHeight="70" MaxWidth="61" />
 
             </Grid>
         </Grid>
 
     </RelativePanel>
 </Page>
+

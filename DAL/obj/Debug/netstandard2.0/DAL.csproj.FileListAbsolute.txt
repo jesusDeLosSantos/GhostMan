@@ -90,4 +90,7 @@ E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInpu
 E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 E:\Programacion\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+<<<<<<< HEAD
+>>>>>>> Develop
+=======
 >>>>>>> Develop

@@ -19,10 +19,13 @@
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <RootPropertyPathName Name="InputText" />
     <RootPropertyPathName Name="elementMaps" />
     <RootPropertyPathName Name="Enemigo4" />
 =======
+=======
+>>>>>>> Develop
     <RootPropertyPathName Name="wall8" />
     <RootPropertyPathName Name="xAxis" />
     <RootPropertyPathName Name="yAxis" />
@@ -79,6 +82,7 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="HorizontalAlignment" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
@@ -86,16 +90,23 @@
       <RootProperty Name="MinWidth" />
 =======
 >>>>>>> Develop
+=======
+>>>>>>> Develop
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="IsTabStop" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <RootProperty Name="MinWidth" />
 >>>>>>> Develop
       <RootProperty Name="Visibility" />
       <RootProperty Name="MinHeight" />
+=======
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="Visibility" />
+>>>>>>> Develop
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -193,8 +204,11 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
+<<<<<<< HEAD
       <RootProperty Name="MinHeight" />
       <RootProperty Name="MinWidth" />
+=======
+>>>>>>> Develop
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
