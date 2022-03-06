@@ -9176,30 +9176,18 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
->>>>>>> Develop
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\GitHub\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
       "projectPath": "D:\\GitHub\\GhostMan\\UI\\UI.csproj",
       "packagesPath": "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\GhostMan\\UI\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\obj\\",
->>>>>>> Develop
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9207,11 +9195,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\VSPC-EternalStormV2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Develop
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9225,19 +9209,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-<<<<<<< HEAD
             "D:\\GitHub\\GhostMan\\BL\\BL.csproj": {
               "projectPath": "D:\\GitHub\\GhostMan\\BL\\BL.csproj"
             },
             "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
               "projectPath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj"
-=======
-            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj"
-            },
-            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj"
->>>>>>> Develop
             }
           }
         }
