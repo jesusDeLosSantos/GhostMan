@@ -8,3 +8,13 @@ E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyI
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
