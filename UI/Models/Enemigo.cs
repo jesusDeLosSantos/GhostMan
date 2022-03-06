@@ -29,8 +29,6 @@ namespace UI.Models
         public static int JugadorX { get; set; }
         public static int JugadorY { get; set; }
 
-        public static bool usuarioVivo = true;
-
         private int velocidadX;
         private int velocidadY;
 
@@ -40,7 +38,7 @@ namespace UI.Models
             int cambioDireccionAleatorio;//De esta manera cambiar de direccion de manera mas realista, porque sino solo cambiaria de direccion cuando no se pueda mover
 
 
-            while (usuarioVivo)
+            while (!SharedData.FinPartida)
             {
                 cambioDireccionAleatorio = random.Next(6);
                 if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
@@ -80,24 +78,18 @@ namespace UI.Models
                     }
                 }
 
-                NotifyPropertyChanged("X");
-                NotifyPropertyChanged("Y");
-                comprobarEliminarUsuario();
-                await Task.Delay(200);
                 if (X + velocidadX == JugadorX && Y == JugadorY)
                 {
                     X += velocidadX;
-                    NotifyPropertyChanged("X");
-                    usuarioVivo = false;
-                    await Task.Delay(200);
                 }
                 else if (X == JugadorX && Y + velocidadY == JugadorY)
                 {
                     Y += velocidadY;
-                    NotifyPropertyChanged("Y");
-                    usuarioVivo = false;
-                    await Task.Delay(200);
                 }
+                NotifyPropertyChanged("X");
+                NotifyPropertyChanged("Y");
+                comprobarEliminarUsuario();
+                await Task.Delay(200);
             }
         }
 
@@ -162,7 +154,7 @@ namespace UI.Models
         {
             if (X == JugadorX && Y == JugadorY)
             {
-                usuarioVivo = false;
+                SharedData.FinPartida = true;
             }
         }
     }

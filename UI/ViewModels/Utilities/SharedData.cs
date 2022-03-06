@@ -16,6 +16,7 @@ namespace UI.ViewModels.Utilities
     {
         private static List<ImageSource> allImageSourceOfSprites;
         private static List<clsElementMap> mapSelectedToPlay;
+        private static bool finPartida = false;
         public SharedData()
         {
             //todo: TRYCATCH!!!!!!!!!!!
@@ -25,5 +26,6 @@ namespace UI.ViewModels.Utilities
         public static List<ImageSource> AllImageSourceOfSprites { get => allImageSourceOfSprites; set => allImageSourceOfSprites = value; }
 
         public static List<clsElementMap> MapSelectedToPlay { get => mapSelectedToPlay; set => mapSelectedToPlay = value; }
+        public static bool FinPartida { get => finPartida; set => finPartida = value; }
     }
 }

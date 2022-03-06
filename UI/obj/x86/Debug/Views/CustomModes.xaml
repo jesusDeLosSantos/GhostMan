@@ -139,7 +139,7 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
                 <Image Source="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSourceImage}}"  MaxHeight="100" MinWidth="100" ></Image>
-                <TextBlock Text="{Binding MapSelected.Name}" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"  FontSize="40" Foreground="#33FF5C"  HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="{Binding MapSelected.Name}" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Margin="0,30" FontSize="40" Foreground="#33FF5C"  HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
