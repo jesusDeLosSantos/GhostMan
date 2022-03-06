@@ -13,16 +13,40 @@
         <vm:PlayVM></vm:PlayVM>
     </Page.DataContext>
     
-    <RelativePanel Background="red">
+    <RelativePanel Background="LightBlue">
+        <TextBlock Name="cronometro" Text="{Binding CurrentTime, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="100" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30"></TextBlock>
         <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800" Loaded="Canvas_Loaded">
 
-            <Image x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" 
+            <Image x:Name="imagenFantasma" Source="/Assets/Image/Easy_Mode.png" Width="50" Height="50" Visibility="{Binding VisibilidadUsuario, UpdateSourceTrigger=PropertyChanged}"
                    Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-            <Image x:Name="bloqueRandom" Source="/Assets/Image/Ending_Wall_3.png" Width="50" Height="50"
-                   Canvas.Left="{Binding blockX, Mode=TwoWay}" Canvas.Top="{Binding blockY, Mode=TwoWay}"/>
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo1.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo1.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo2.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo2.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="/Assets/Image/Hard_Mode.png" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo3.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo3.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            
+
+            <Image x:Name="bloqueRandom" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom2" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall2.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall2.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom3" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall3.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall3.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom4" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall4.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall4.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom5" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall5.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall5.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom6" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall6.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall6.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom7" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall7.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall7.yAxis, Mode=TwoWay}"/>
+            <Image x:Name="bloqueRandom8" Source="/Assets/Image/Corner_Wall_1.png" Width="50" Height="50"
+                   Canvas.Left="{Binding wall8.xAxis, Mode=TwoWay}" Canvas.Top="{Binding wall8.yAxis, Mode=TwoWay}"/>
+
         </Canvas>
     </RelativePanel>
 </Page>

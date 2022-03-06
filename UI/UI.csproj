@@ -118,14 +118,22 @@
   <ItemGroup>
     <Compile Include="Models\clsElementTypeSprite.cs" />
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
+    <Compile Include="Models\clsMapLeaderboardWithElements.cs" />
+    <Compile Include="Models\Enemigo.cs" />
     <Compile Include="Models\Wall.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\MapCreatorVM.cs" />
     <Compile Include="ViewModels\PlayVM.cs" />
+    <Compile Include="ViewModels\Utilities\Converters\ConverterIdElementToSourceImage.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
+    <Compile Include="ViewModels\Utilities\SharedData.cs" />
+    <Compile Include="ViewModels\Utilities\Utilidades.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DefaultModes.xaml.cs">
+      <DependentUpon>DefaultModes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -223,6 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\DefaultModes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

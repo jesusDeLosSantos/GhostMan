@@ -37,8 +37,8 @@ namespace DAL.query
                         oElementMap = new clsElementMap();
                         oElementMap.IdMap = (int)myReader["idMap"];
                         oElementMap.IdElement = (int)myReader["idElement"];
-                        oElementMap.AxisX = (int)myReader["axisX"];
-                        oElementMap.AxisY = (int)myReader["axisY"];
+                        oElementMap.AxisX = (short)myReader["axisX"];
+                        oElementMap.AxisY = (short)myReader["axisY"];
                         elementsMap.Add(oElementMap);
                     }
                 }

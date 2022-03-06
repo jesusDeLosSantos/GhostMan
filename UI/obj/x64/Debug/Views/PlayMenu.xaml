@@ -85,7 +85,7 @@
     <RelativePanel Background="Black">
 
         <RelativePanel BorderBrush="#33FF5C" BorderThickness="10" MinHeight="720" MinWidth="1400" Background="#703CB9" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-            <Button x:ConnectionId='10' RelativePanel.AlignVerticalCenterWithPanel="True" Margin="50,0,0,0" MinHeight="450" MinWidth="450" Name="playBtn" CornerRadius="50">
+            <Button x:ConnectionId='10' RelativePanel.AlignVerticalCenterWithPanel="True"                          Margin="50,0,0,0" MinHeight="450" MinWidth="450" Name="playBtn" CornerRadius="50">
                 <Image Source="/Assets/Image/star.png" Height="300" Width="300"/>
             </Button>
             <Button x:ConnectionId='11' RelativePanel.AlignVerticalCenterWithPanel="True"                         RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" MinHeight="450" MinWidth="450" Name="createBtn" CornerRadius="50">

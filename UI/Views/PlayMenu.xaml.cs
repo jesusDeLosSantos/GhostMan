@@ -34,7 +34,12 @@ namespace UI.Views
 
         private void customBtn_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(CustomModes));
+            this.Frame.Navigate(typeof(CustomModes));
+        }
+
+        private void defaultBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DefaultModes));
         }
     }
 }

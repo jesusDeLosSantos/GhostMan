@@ -38,3 +38,13 @@ C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.Asse
 C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\Jesus\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\Jesus\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Jesus\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb

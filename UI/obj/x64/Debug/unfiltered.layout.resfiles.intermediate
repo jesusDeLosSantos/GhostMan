@@ -66,6 +66,7 @@ Assets\Wide310x150Logo.scale-400.png
 UI.xr.xml
 Views\App.xbf
 Views\CustomModes.xbf
+Views\DefaultModes.xbf
 Views\MainPage.xbf
 Views\MapCreator.xbf
 Views\Play.xbf

@@ -50,3 +50,16 @@ C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCom
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\sforte\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
+C:\Users\Jesus\Desktop\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\Jesus\Desktop\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Jesus\Desktop\GhostMan\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Jesus\Desktop\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Jesus\Desktop\GhostMan\DAL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\Jesus\Desktop\GhostMan\DAL\obj\Debug\netstandard2.0\DAL.pdb
