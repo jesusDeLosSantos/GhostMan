@@ -139,7 +139,7 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
                 <Image Source="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSourceImage}}"  MaxHeight="100" MinWidth="100" ></Image>
-                <TextBlock Text="{Binding MapSelected.Name}" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="{Binding MapSelected.Name}" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"  FontSize="40" Foreground="#33FF5C"  HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
@@ -179,9 +179,9 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
+                
             </ListView>
-            <Button x:ConnectionId='7' Name="btnPlay" Content="Jugar" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom"                       />
+            <Button x:ConnectionId='7' x:Name="btnPlay" Grid.Column="0" Grid.Row="3"                       VerticalAlignment="Bottom" Margin="150,10,180,30" Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" >Jugar</Button>
             <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,18" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
                 <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
                     <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">

@@ -30,21 +30,13 @@
     <AppXManifest Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:20.051</Modified>
-=======
-      <Modified>2022-03-06T21:43:53.463</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:38.067</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:19.247</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.746</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:37.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -402,59 +394,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.779</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.331</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.547</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.130</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.779</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.331</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.640</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.212</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.722</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.280</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.774</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.326</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:18.778</Modified>
-=======
-      <Modified>2022-03-06T21:43:52.331</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:36.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -466,11 +430,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-<<<<<<< HEAD
-      <Modified>2022-03-06T21:55:20.048</Modified>
-=======
-      <Modified>2022-03-06T21:43:53.459</Modified>
->>>>>>> Develop
+      <Modified>2022-03-06T22:28:38.064</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
