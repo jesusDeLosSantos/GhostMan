@@ -1,11 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "HLQjSRiEaTSNsIniFbeJfVciL+pB2EJ8QKLfYbpduO6fUgrxnOv+rmj9wZWPM3EvYVXzEJkTdBjZtlD4Bicmtg==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+=======
+  "dgSpecHash": "s6RzXJiR9q4Oj4CzRHGsH7ozPz1uwvzJB0auqYeReD4ZderNfq02ygCeKpBz+o/jEOWcmRPqe+dNq3R2KVT63A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+>>>>>>> Develop
   ],
   "logs": []
 }
