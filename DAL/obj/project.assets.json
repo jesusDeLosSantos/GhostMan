@@ -872,28 +872,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Albert\\.nuget\\packages\\": {},
-    "E:\\Visual Studio 2019\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\GitHub\\GhostMan\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "E:\\GitKraken-Repos\\GhostMan\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-      "outputPath": "E:\\GitKraken-Repos\\GhostMan\\DAL\\obj\\",
+      "projectPath": "D:\\GitHub\\GhostMan\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\GhostMan\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VSPC-EternalStormV2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -906,8 +903,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj"
+            "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }
@@ -943,7 +940,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

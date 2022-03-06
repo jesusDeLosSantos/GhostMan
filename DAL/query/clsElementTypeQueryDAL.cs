@@ -27,7 +27,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM GM_ElementTypes";
+                myCommand.CommandText = "SELECT * FROM GM_ElementTypes WHERE id < 21";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
