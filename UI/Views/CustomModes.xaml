@@ -118,7 +118,7 @@
                 <DataTemplate x:Name="Items">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding Size, Converter={StaticResource converterSizeToSourceImage}}" MaxHeight="100"></Image>
-                        <TextBlock Text="{Binding Nick}" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
+                        <TextBlock Text="{Binding Name}" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

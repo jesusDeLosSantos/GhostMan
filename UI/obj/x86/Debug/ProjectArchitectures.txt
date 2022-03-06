@@ -1,1 +1,1 @@
-D:\GitHub\GhostMan\UI\UI.csproj;x86
+C:\Users\Jesus\Desktop\GhostMan\UI\UI.csproj;x86

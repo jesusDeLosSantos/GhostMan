@@ -1,7 +1,3 @@
 is_global = true
 build_property.RootNamespace = DAL
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Jesus\Desktop\GhostMan\DAL\
-=======
-build_property.ProjectDir = D:\GitHub\GhostMan\DAL\
->>>>>>> Develop

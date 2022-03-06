@@ -1,18 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HLQjSRiEaTSNsIniFbeJfVciL+pB2EJ8QKLfYbpduO6fUgrxnOv+rmj9wZWPM3EvYVXzEJkTdBjZtlD4Bicmtg==",
+  "dgSpecHash": "BoK3y/GVJrLRpK60MRDIwLoKPCFM3nxu6XbsunslaHTpCtaAt+JRQlvL638S1lGtjWWIw4W0uY/WignrHNPXpA==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\GhostMan\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\VSPC-EternalStormV2\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Jesus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jesus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché D:\\GitHub\\GhostMan\\Entities\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

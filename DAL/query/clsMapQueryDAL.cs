@@ -204,7 +204,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = $"SELECT M.id,M.nick,M.size,M.communityMap FROM(SELECT ROW_NUMBER() OVER(ORDER BY(select NULL)) AS rowNum, *FROM GM_Maps) AS M WHERE communityMap = 1 AND M.rowNum BETWEEN {condicionBetween}";
+                myCommand.CommandText = $"SELECT M.id,M.nick,M.mapName,M.size,M.communityMap FROM(SELECT ROW_NUMBER() OVER(ORDER BY(select NULL)) AS rowNum, *FROM GM_Maps) AS M WHERE communityMap = 1 AND M.rowNum BETWEEN {condicionBetween}";
                 myCommand.Parameters.Add("@NumeroElementos", sqlDbType: System.Data.SqlDbType.Int).Value = number;
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
@@ -215,6 +215,7 @@ namespace DAL.query
                         oCustomMap = new clsMap();
                         oCustomMap.Id = (int)myReader["id"];
                         oCustomMap.Nick = (String)myReader["nick"];
+                        oCustomMap.Name = (String)myReader["mapName"];
                         oCustomMap.Size = (int)myReader["size"];
                         oCustomMap.CommunityMap = (bool)myReader["communityMap"];
                         customMaps.Add(oCustomMap);

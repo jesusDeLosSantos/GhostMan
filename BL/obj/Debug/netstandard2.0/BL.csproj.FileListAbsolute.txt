@@ -46,3 +46,18 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstanda
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
 >>>>>>> Develop
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Jesus\Desktop\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.AssemblyReference.cache
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
