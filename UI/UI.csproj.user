@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <Source>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</Source>
+    <SmallTileSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</SmallTileSource>
+    <MediumTileSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</MediumTileSource>
+    <WideTileSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</WideTileSource>
+    <LargeTileSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</LargeTileSource>
+    <AppIconSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</AppIconSource>
+    <SplashScreenSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\sforte\Desktop\GhostMan\Sprites\Exports\Unplated_Icon.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>

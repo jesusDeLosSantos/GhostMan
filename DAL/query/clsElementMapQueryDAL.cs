@@ -27,7 +27,7 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT * FROM ElementMap";
+                myCommand.CommandText = "SELECT * FROM GM_ElementMaps";
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -37,8 +37,8 @@ namespace DAL.query
                         oElementMap = new clsElementMap();
                         oElementMap.IdMap = (int)myReader["idMap"];
                         oElementMap.IdElement = (int)myReader["idElement"];
-                        oElementMap.AxisX = (int)myReader["axisX"];
-                        oElementMap.AxisY = (int)myReader["axisY"];
+                        oElementMap.AxisX = (short)myReader["axisX"];
+                        oElementMap.AxisY = (short)myReader["axisY"];
                         elementsMap.Add(oElementMap);
                     }
                 }
