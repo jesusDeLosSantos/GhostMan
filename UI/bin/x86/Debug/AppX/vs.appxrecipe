@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T21:22:38.965</Modified>
+      <Modified>2022-03-06T21:43:53.463</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-03-06T21:22:36.412</Modified>
+      <Modified>2022-03-06T21:43:52.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -394,31 +394,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.973</Modified>
+      <Modified>2022-03-06T21:43:52.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.763</Modified>
+      <Modified>2022-03-06T21:43:52.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.973</Modified>
+      <Modified>2022-03-06T21:43:52.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.850</Modified>
+      <Modified>2022-03-06T21:43:52.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.915</Modified>
+      <Modified>2022-03-06T21:43:52.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.967</Modified>
+      <Modified>2022-03-06T21:43:52.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-      <Modified>2022-03-06T21:22:35.972</Modified>
+      <Modified>2022-03-06T21:43:52.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -430,7 +430,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-03-06T21:22:38.960</Modified>
+      <Modified>2022-03-06T21:43:53.459</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

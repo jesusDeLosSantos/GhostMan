@@ -196,7 +196,7 @@ namespace UI.ViewModels
             if (selectedElement.Id >= 16 && selectedElement.Id <= 20)
             {
                 img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image/Empty_Spot.png"));
-                findNPC(selectedElement.Id, axisX, axisY);
+                findCharacter(selectedElement.Id, axisX, axisY);
             }
             else
             {
@@ -204,7 +204,16 @@ namespace UI.ViewModels
                 img.Source = selectedElement.Imagen;
             }
         }
-        private void findNPC(int idNpc,short axisX,short axisY)
+        /// <summary>
+        ///     <header>private void findCharacter(int idNpc,short axisX,short axisY)</header>
+        ///     <description>This method finds the character who has to update his position</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Update the position of the character</postcondition>
+        /// </summary>
+        /// <param name="idNpc">int</param>
+        /// <param name="axisX">short</param>
+        /// <param name="axisY">short</param>
+        private void findCharacter(int idNpc,short axisX,short axisY)
         {
             switch (idNpc)
             {
@@ -255,12 +264,11 @@ namespace UI.ViewModels
 
             for (int i=0; i<FullMap.Count&&!added;i++)
             {
-                if(id!=15 && FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
+                if(FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
                 {
-                    if (id != 22)
+                    if (FullMap[i].IdElement==15 || id != 22)
                     {
                         FullMap[i] = mapSquare;
-                        i = FullMap.Count;
                     }
                     added = true;
                 }
