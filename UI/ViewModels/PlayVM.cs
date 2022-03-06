@@ -10,7 +10,6 @@ using Windows.UI.Xaml.Input;
 using UI.Models;
 using Entities;
 using BL.query;
-using Windows.UI.Xaml.Media;
 using System.Collections.ObjectModel;
 
 namespace UI.ViewModels
@@ -25,7 +24,7 @@ namespace UI.ViewModels
         private int velocidadX, velocidadY;
         bool movimientoIniciado;
 
-        public ObservableCollection<clsElementMap> ElementMaps { get;set; }
+        public ObservableCollection<clsElementMap> elementMaps { get;set; }
         private List<clsElementMap> enemies = new List<clsElementMap>();
         private List<clsElementMap> elementMapsWithoutEnemiesNorEnemies;
         private List<clsElementMap> elementMapsPuntos;
@@ -43,8 +42,8 @@ namespace UI.ViewModels
         public PlayVM()
         {
             List<clsElementType> elementTypes = clsElementTypeQueryBL.getListOfElementTypeBL();
-            ElementMaps = new ObservableCollection<clsElementMap>(SharedData.MapSelectedToPlay);
-            if (SharedData.IsCommunityMap)
+            elementMaps = new ObservableCollection<clsElementMap>(SharedData.MapSelectedToPlay);
+            foreach(var elementMap in elementMaps)
             {
                 foreach (var elementMap in ElementMaps)
                 {
@@ -53,20 +52,20 @@ namespace UI.ViewModels
                 }
             }
 
-            elementMapsPuntos = new List<clsElementMap>(from element in ElementMaps
-                                                        where element.IdElement == 22 //aqui hariamos otro linq, pero no funciona no sabemos por que
-                                                        select element);
+            elementMapsPuntos = new List<clsElementMap>(from element in elementMaps
+                                                 where element.IdElement == 22
+                                                 select element);
             puntosTotales = elementMapsPuntos.Count;
 
-            Utilidades.listaParedes = new List<clsElementMap>(from element in ElementMaps
+            Utilidades.listaParedes = new List<clsElementMap>(from element in elementMaps
                                                               where element.IdElement == (from elementType in elementTypes
                                                                                            where (element.IdElement == elementType.Id) && elementType.Name.Contains("wall")
                                                                                            select elementType.Id).FirstOrDefault()
                                                               select element);
 
             initializeEnemiesList(elementTypes);
-            clsElementMap player =ElementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
-            ObservableCollection<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new ObservableCollection<clsElementMap>(ElementMaps.Except(enemies));
+            clsElementMap player = elementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
+            ObservableCollection<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new ObservableCollection<clsElementMap>(elementMaps.Except(enemies));
             elementMapsWithoutEnemiesNorPlayer.Remove(player);
             ElementMaps = elementMapsWithoutEnemiesNorPlayer;
             elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorPlayer.Except(Utilidades.listaParedes));
@@ -76,9 +75,6 @@ namespace UI.ViewModels
                 where (elements.IdElement == elementType.Id) && elementType.Name.Contains("Exorcist")
                     select elementType.Id).FirstOrDefault()
             select elements); ESTE LINQ NO FUNCIONA, NO SABEMOS POR QUE, TRAE MAS ELEMENTOS DE LOS QUE DEBERIA */
-            
-
-
             X = player.AxisX;
             Y = player.AxisY;
             velocidadX = 0;
@@ -223,14 +219,11 @@ namespace UI.ViewModels
                 }
             }
         }
-        private void comprobarRecogerPuntos()
-        {
+        private void comprobarRecogerPuntos() {
             bool puntoRecogido = false;
-            for (int i = 0; i < elementMapsPuntos.Count && !puntoRecogido; i++)
-            {
-                if (X == elementMapsPuntos[i].AxisX && Y == elementMapsPuntos[i].AxisY)
-                {
-                    ElementMaps.Remove(elementMapsPuntos[i]);
+            for (int i = 0; i < elementMapsPuntos.Count && !puntoRecogido; i++) {
+                if (X == elementMapsPuntos[i].AxisX && Y == elementMapsPuntos[i].AxisY) {
+                    elementMaps.Remove(elementMapsPuntos[i]);
                     elementMapsPuntos.Remove(elementMapsPuntos[i]);
                     puntoRecogido = true;
                     puntosTotales--;

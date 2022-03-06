@@ -25,7 +25,11 @@
     <RootPropertyPathName Name="Enemigo2" />
     <RootPropertyPathName Name="Enemigo1" />
     <RootPropertyPathName Name="VisibilidadUsuario" />
+<<<<<<< HEAD
     <RootPropertyPathName Name="ElementMaps" />
+=======
+    <RootPropertyPathName Name="elementMaps" />
+>>>>>>> Develop
     <RootPropertyPathName Name="CurrentTime" />
     <RootPropertyPathName Name="PlaceholderForeground" />
     <RootPropertyPathName Name="AxisXP" />

@@ -1,3 +1,4 @@
+WinMetadata\Windows.winmd
 Assets\Fonts\dogicapixelbold.ttf
 Assets\Image\crown.png
 Assets\Image\Easy_Mode.png
@@ -6,6 +7,7 @@ Assets\Image\Ending_Wall_3.png
 Assets\Image\Ghost.png
 Assets\Image\Hard_Mode.png
 Assets\Image\icono_Puntuacion_Prueba.png
+Assets\Image\Loading.gif
 Assets\Image\mapaPrueba.png
 Assets\Image\Medium_Mode.png
 Assets\Image\play_button.png
@@ -72,4 +74,3 @@ Views\MapCreator.xbf
 Views\Play.xbf
 Views\PlayMenu.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

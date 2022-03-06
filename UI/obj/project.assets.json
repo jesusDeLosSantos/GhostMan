@@ -9176,31 +9176,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Albert\\.nuget\\packages\\": {},
-    "E:\\Visual Studio 2019\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "E:\\GitKraken-Repos\\GhostMan\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-      "outputPath": "E:\\GitKraken-Repos\\GhostMan\\UI\\obj\\",
+      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "E:\\Visual Studio 2019\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -9212,11 +9209,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "E:\\GitKraken-Repos\\GhostMan\\BL\\BL.csproj"
+            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj": {
+              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\BL\\BL.csproj"
             },
-            "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\GitKraken-Repos\\GhostMan\\Entities\\Entities.csproj"
+            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }

@@ -240,7 +240,7 @@ namespace UI.ViewModels
         /// <param name="idNpc">int</param>
         /// <param name="axisX">short</param>
         /// <param name="axisY">short</param>
-        private void findCharacter(int idNpc, short axisX, short axisY)
+        private void findCharacter(int idNpc,short axisX,short axisY)
         {
             switch (idNpc)
             {
@@ -293,7 +293,7 @@ namespace UI.ViewModels
             {
                 if (FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
                 {
-                    if (FullMap[i].IdElement == 15 || id != 22)
+                    if (FullMap[i].IdElement==15 || id != 22)
                     {
                         FullMap[i] = mapSquare;
                     }
@@ -322,7 +322,7 @@ namespace UI.ViewModels
                 await Task.Run(() => { return fillElementMapListWithPoints(); });
                 foreach (var element in FullMap)
                 {
-                    clsElementMapManagerBL.postElementMapBL(idMap, element);
+                   clsElementMapManagerBL.postElementMapBL(idMap,element);
                 }
                 showSuccess();
             }
@@ -400,9 +400,9 @@ namespace UI.ViewModels
         /// </summary>
         private async Task fillElementMapListWithPoints()
         {
-            for (short i = 0; i < size; i += 50)
+            for(short i = 0; i < size; i += 50)
             {
-                for (short j = 0; j < 800; j += 50)
+                for(short j = 0; j < 800; j += 50)
                 {
                     await addElementMap(i, j, 22);
                 }
@@ -410,7 +410,7 @@ namespace UI.ViewModels
         }
         private void addCharacters()
         {
-            fullMap.Add(new clsElementMap(16, axisXE1, axisYE1));
+            fullMap.Add(new clsElementMap(16,axisXE1,axisYE1));
             fullMap.Add(new clsElementMap(17, axisXE2, axisYE4));
             fullMap.Add(new clsElementMap(18, axisXE3, axisYE3));
             fullMap.Add(new clsElementMap(19, axisXE4, axisYE4));
