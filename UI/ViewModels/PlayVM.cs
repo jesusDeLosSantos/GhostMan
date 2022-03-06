@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Input;
 using UI.Models;
 using Entities;
 using BL.query;
+using Windows.UI.Xaml.Media;
 
 namespace UI.ViewModels
 {
@@ -23,7 +24,7 @@ namespace UI.ViewModels
         private int velocidadX, velocidadY;
         bool movimientoIniciado;
 
-        public List<clsElementMap> elementMaps { get;set; }
+        public List<clsElementMap> ElementMaps { get;set; }
         private List<clsElementMap> enemies = new List<clsElementMap>();
         private List<clsElementMap> elementMapsWithoutEnemiesNorEnemies;
 
@@ -39,24 +40,27 @@ namespace UI.ViewModels
         public PlayVM()
         {
             List<clsElementType> elementTypes = clsElementTypeQueryBL.getListOfElementTypeBL();
-            elementMaps = SharedData.MapSelectedToPlay;
-            foreach(var elementMap in elementMaps)
+            ElementMaps = SharedData.MapSelectedToPlay;
+            if (SharedData.IsCommunityMap)
             {
-                elementMap.AxisX *= 50;
-                elementMap.AxisY *= 50;
+                foreach (var elementMap in ElementMaps)
+                {
+                    elementMap.AxisX *= 50;
+                    elementMap.AxisY *= 50;
+                }
             }
 
-            Utilidades.listaParedes = new List<clsElementMap>(from element in elementMaps
+            Utilidades.listaParedes = new List<clsElementMap>(from element in ElementMaps
                                                               where element.IdElement == (from elementType in elementTypes
                                                                                            where (element.IdElement == elementType.Id) && elementType.Name.Contains("wall")
                                                                                            select elementType.Id).FirstOrDefault()
                                                               select element);
 
             initializeEnemiesList(elementTypes);
-            clsElementMap player = elementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
-            List<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new List<clsElementMap>(elementMaps.Except(enemies));
+            clsElementMap player =ElementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
+            List<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new List<clsElementMap>(ElementMaps.Except(enemies));
             elementMapsWithoutEnemiesNorPlayer.Remove(player);
-            elementMaps = elementMapsWithoutEnemiesNorPlayer;
+            ElementMaps = elementMapsWithoutEnemiesNorPlayer;
             elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorPlayer.Except(Utilidades.listaParedes));
 
             /*(from elements in elementMaps
@@ -102,7 +106,7 @@ namespace UI.ViewModels
 
         private void initializeEnemiesList(List<clsElementType> elementTypes)
         {
-            foreach (var element in elementMaps)
+            foreach (var element in ElementMaps)
             {
                 foreach (var elementType in elementTypes)
                 {

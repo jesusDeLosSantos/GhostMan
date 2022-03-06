@@ -33,6 +33,7 @@ namespace UI.Views
         {
             CustomModeVM myVm = (CustomModeVM)this.DataContext;
             SharedData.MapSelectedToPlay = myVm.MapSelected.ElementList;
+            SharedData.IsCommunityMap = true;
             this.Frame.Navigate(typeof(Play));
         }
         private void btnBack_Click(object sender, RoutedEventArgs e)

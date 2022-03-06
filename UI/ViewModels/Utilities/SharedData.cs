@@ -16,14 +16,12 @@ namespace UI.ViewModels.Utilities
     {
         private static List<ImageSource> allImageSourceOfSprites;
         private static List<clsElementMap> mapSelectedToPlay;
-        public SharedData()
-        {
-            //todo: TRYCATCH!!!!!!!!!!!
-            
-        }
-        //TODO: borrar el constructor, añadir set, y desde el constrcutor de custommodevm asignar el valor desde el set, y el converter edeberia poder acceder a ael
+        private static Boolean isCommunityMap = true;
+        
         public static List<ImageSource> AllImageSourceOfSprites { get => allImageSourceOfSprites; set => allImageSourceOfSprites = value; }
 
         public static List<clsElementMap> MapSelectedToPlay { get => mapSelectedToPlay; set => mapSelectedToPlay = value; }
+
+        public static Boolean IsCommunityMap { get => isCommunityMap; set => isCommunityMap = value; }
     }
 }

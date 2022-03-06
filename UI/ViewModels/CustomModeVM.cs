@@ -44,7 +44,7 @@ namespace UI.ViewModels
         #region Builders
         public CustomModeVM()
         {
-            SharedData.AllImageSourceOfSprites = convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
+            SharedData.AllImageSourceOfSprites = fromByteToImageConverter.convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
             rightFilterButtonCommand = new DelegateCommand(RightFilterButtonCommand_Executed, RightFilterButtonCommand_CanExecuted);
             leftFilterButtonCommand = new DelegateCommand(LeftFilterButtonCommand_Executed, LeftFilterButtonCommand_CanExecuted);
             nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>();
@@ -84,28 +84,6 @@ namespace UI.ViewModels
             }
         }
         #endregion
-
-        private List<ImageSource> convertirByteImagen(List<byte[]> sprites)
-        {
-            List<ImageSource> imageSources = new List<ImageSource>();
-            if (sprites != null)
-            {
-                foreach (var sprite in sprites)
-                {
-                    using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
-                    {
-
-                        BitmapImage imagenBitMap = new BitmapImage();
-                        var result = new BitmapImage();
-                        stream.WriteAsync(sprite.AsBuffer());
-                        stream.Seek(0);
-                        imagenBitMap.SetSource(stream);
-                        imageSources.Add(imagenBitMap);
-                    }
-                }
-            }
-            return imageSources;
-        }
 
         #region Getters & Setters
         public ObservableCollection<clsMapLeaderboardWithElements> MapList { get => mapList; }

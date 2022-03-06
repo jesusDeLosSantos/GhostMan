@@ -126,6 +126,7 @@
     <Compile Include="ViewModels\Utilities\Converters\ConverterIdElementToSourceImage.cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSizeXSize .cs" />
     <Compile Include="ViewModels\Utilities\Converters\ConverterSizeToSourceImage.cs" />
+    <Compile Include="ViewModels\Utilities\fromByteToImageConverter.cs" />
     <Compile Include="ViewModels\Utilities\SharedData.cs" />
     <Compile Include="ViewModels\Utilities\Utilidades.cs" />
     <Compile Include="Views\App.xaml.cs">

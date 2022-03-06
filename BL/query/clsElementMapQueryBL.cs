@@ -19,5 +19,16 @@ namespace BL.query
         {
             return clsElementMapQueryDAL.getListOfElementMapDAL();
         }
+        /// <summary>
+        ///     <header>public static List<clsElementMap> getElementMapOfDefaultHardMap()</header>
+        ///     <description> This method calls DAL and returns a list of the elements of the default hard map</description>
+        ///     <precondition> None </precondition>
+        ///     <postcondition> returns List<clsMap> defaultHardElementsMap to the UI </postcondition>
+        /// </summary>
+        /// <returns>returns List<clsElementMap> defaultHardElementsMap</returns>
+        public static List<clsElementMap> getElementMapOfDefaultHardMap()
+        {
+            return clsElementMapQueryDAL.getElementMapOfDefaultHardMap();
+        }
     }
 }

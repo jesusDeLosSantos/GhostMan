@@ -18,7 +18,7 @@
     <RootPropertyPathName Name="MapList" />
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
-    <RootPropertyPathName Name="elementMaps" />
+    <RootPropertyPathName Name="ElementMaps" />
     <RootPropertyPathName Name="Enemigo4" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />

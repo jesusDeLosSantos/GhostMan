@@ -25,7 +25,7 @@ namespace Entities
             this.nick = nick;
             this.name = name;
             this.size = size;
-            communityMap = true;
+            communityMap = false;
         }
 
         public clsMap(int id,String nick,String name,int size,bool communityMap)

@@ -84,6 +84,20 @@ namespace UI.Models
                 NotifyPropertyChanged("Y");
                 comprobarEliminarUsuario();
                 await Task.Delay(200);
+                if (X + velocidadX == JugadorX && Y == JugadorY)
+                {
+                    X += velocidadX;
+                    NotifyPropertyChanged("X");
+                    usuarioVivo = false;
+                    await Task.Delay(200);
+                }
+                else if (X == JugadorX && Y + velocidadY == JugadorY)
+                {
+                    Y += velocidadY;
+                    NotifyPropertyChanged("Y");
+                    usuarioVivo = false;
+                    await Task.Delay(200);
+                }
             }
         }
 

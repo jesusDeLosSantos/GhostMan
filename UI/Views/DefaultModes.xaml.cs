@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BL.query;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UI.ViewModels.Utilities;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -44,7 +46,10 @@ namespace UI.Views
                     //Frame.Navigate(typeof(PruebaMedio));
                     break;
                 case "btnHard":
-                    //Frame.Navigate(typeof(PruebaDificil));
+                    SharedData.AllImageSourceOfSprites = fromByteToImageConverter.convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
+                    SharedData.MapSelectedToPlay = clsElementMapQueryBL.getElementMapOfDefaultHardMap();
+                    SharedData.IsCommunityMap = false;
+                    this.Frame.Navigate(typeof(Play));
                     break;
             }
         }
