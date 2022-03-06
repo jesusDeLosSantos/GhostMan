@@ -230,6 +230,7 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">

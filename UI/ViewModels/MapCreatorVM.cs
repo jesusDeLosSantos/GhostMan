@@ -38,19 +38,19 @@ namespace UI.ViewModels
         ImageSource spriteSelected;
         Visibility visibility = Visibility.Collapsed;
 
-        //Prueba
+        //Enemy1
         short axisXE1 = 50;
         short axisYE1 = 50;
-        //Prueba
+        //Enemy2
         short axisXE2 = 50;
         short axisYE2 = 100;
-        //Prueba
+        //Enemy3
         short axisXE3 = 100;
         short axisYE3 = 50;
-        //Prueba
+        //Enemy4
         short axisXE4 = 100;
         short axisYE4 = 100;
-        //Prueba
+        //MainCharacter
         short axisXP = 50;
         short axisYP = 700;
 
@@ -179,6 +179,29 @@ namespace UI.ViewModels
             }
 
             return elementsList;
+        }
+        private void setStartingAxis()
+        {
+            axisXE1 = 50;
+            axisYE1 = 50;
+            NotifyPropertyChanged("AxisXE1");
+            NotifyPropertyChanged("AxisYE1");
+            axisXE2 = 50;
+            axisYE2 = 100;
+            NotifyPropertyChanged("AxisXE2");
+            NotifyPropertyChanged("AxisYE2");
+            axisXE3 = 100;
+            axisYE3 = 50;
+            NotifyPropertyChanged("AxisXE3");
+            NotifyPropertyChanged("AxisYE3");
+            axisXE4 = 100;
+            axisYE4 = 100;
+            NotifyPropertyChanged("AxisXE4");
+            NotifyPropertyChanged("AxisYE4");
+            axisXP = 50;
+            axisYP = 700;
+            NotifyPropertyChanged("AxisXP");
+            NotifyPropertyChanged("AxisYP");
         }
         /// <summary>
         ///     <header>public void imageTapped(object sender, TappedRoutedEventArgs e)</header>
@@ -402,6 +425,7 @@ namespace UI.ViewModels
         {
             size = 800;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         /// <summary>
         ///     <header>private void MediumSizeCommand_Execute()</header>
@@ -413,6 +437,7 @@ namespace UI.ViewModels
         {
             size = 1200;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         /// <summary>
         ///     <header>private void BigSizeCommand_Execute()</header>
@@ -424,6 +449,7 @@ namespace UI.ViewModels
         {
             size = 1500;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         #endregion
 

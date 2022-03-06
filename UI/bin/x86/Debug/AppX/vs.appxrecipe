@@ -30,13 +30,21 @@
     <AppXManifest Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:38.067</Modified>
+=======
+      <Modified>2022-03-06T22:16:47.716</Modified>
+>>>>>>> Develop
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:37.304</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.924</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -380,7 +388,15 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-03-04T19:48:31.844</Modified>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\Properties\Default.rd.xml">
+=======
+    <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\Assets\Image\Loading.gif">
+      <PackagePath>Assets\Image\Loading.gif</PackagePath>
+      <Modified>2022-03-06T22:11:14.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\Properties\Default.rd.xml">
+>>>>>>> Develop
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-03-04T19:48:15.370</Modified>
     </AppxPackagedFile>
@@ -390,35 +406,67 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T21:27:39.590</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.234</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.900</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.471</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.699</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.245</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.900</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.471</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.786</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.340</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.848</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.413</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.896</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.465</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:36.900</Modified>
+=======
+      <Modified>2022-03-06T22:16:46.470</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -426,11 +474,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T21:51:07.250</Modified>
+=======
+      <Modified>2022-03-06T22:12:26.012</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2022-03-06T22:28:38.064</Modified>
+=======
+      <Modified>2022-03-06T22:16:47.712</Modified>
+>>>>>>> Develop
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

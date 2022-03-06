@@ -297,7 +297,14 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\Properties\Default.rd.xml">
+=======
+    <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\Assets\Image\Loading.gif">
+      <PackagePath>Assets\Image\Loading.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\GhostMan\UI\Properties\Default.rd.xml">
+>>>>>>> Develop
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jesus\Desktop\GhostMan\UI\Assets\Fonts\dogicapixelbold.ttf">
