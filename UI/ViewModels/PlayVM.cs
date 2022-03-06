@@ -46,16 +46,18 @@ namespace UI.ViewModels
                 elementMap.AxisY *= 50;
             }
 
-            Utilidades.listaParedes = new List<clsElementMap>(from elements in elementMaps
-                                                              where elements.IdElement == (from elementType in elementTypes
-                                                                                           where (elements.IdElement == elementType.Id) && elementType.Name.Contains("wall")
+            Utilidades.listaParedes = new List<clsElementMap>(from element in elementMaps
+                                                              where element.IdElement == (from elementType in elementTypes
+                                                                                           where (element.IdElement == elementType.Id) && elementType.Name.Contains("wall")
                                                                                            select elementType.Id).FirstOrDefault()
-                                                              select elements);
+                                                              select element);
 
             initializeEnemiesList(elementTypes);
-
-            List<clsElementMap> elementMapsWithoutEnemiesNorEnemiesAux = new List<clsElementMap>(elementMaps.Except(Utilidades.listaParedes));
-            elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorEnemiesAux.Except(enemies));
+            clsElementMap player = elementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
+            List<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new List<clsElementMap>(elementMaps.Except(enemies));
+            elementMapsWithoutEnemiesNorPlayer.Remove(player);
+            elementMaps = elementMapsWithoutEnemiesNorPlayer;
+            elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorPlayer.Except(Utilidades.listaParedes));
 
             /*(from elements in elementMaps
             where elements.IdElement == (from elementType in elementTypes
@@ -63,32 +65,34 @@ namespace UI.ViewModels
                     select elementType.Id).FirstOrDefault()
             select elements); ESTE LINQ NO FUNCIONA, NO SABEMOS POR QUE, TRAE MAS ELEMENTOS DE LOS QUE DEBERIA */
             
-            X = 150;
-            Y = 450;
+
+
+            X = player.AxisX;
+            Y = player.AxisY;
             velocidadX = 0;
             velocidadY = 0;
             movimientoIniciado = false;
             Enemigo.JugadorX = X;
             Enemigo.JugadorY = Y;
 
-            for (int i=enemies.Count; i < 0; i--)
+            for (int i=enemies.Count; i > 0; i--)
             {
                 switch (i)
                 {
                     case 4:
-                        Enemigo4 = new Enemigo(enemies[4].AxisX, enemies[4].AxisY, 16);
+                        Enemigo4 = new Enemigo(enemies[3].AxisX, enemies[3].AxisY, 16);
                         Enemigo4.moverFantasma();
                         break;
                     case 3:
-                        Enemigo3 = new Enemigo(enemies[3].AxisX, enemies[3].AxisY, 17);
+                        Enemigo3 = new Enemigo(enemies[2].AxisX, enemies[2].AxisY, 17);
                         Enemigo3.moverFantasma();
                         break;
                     case 2:
-                        Enemigo2 = new Enemigo(enemies[2].AxisX, enemies[2].AxisY, 18);
+                        Enemigo2 = new Enemigo(enemies[1].AxisX, enemies[1].AxisY, 18);
                         Enemigo2.moverFantasma();
                         break;
                     case 1:
-                        Enemigo1 = new Enemigo(enemies[1].AxisX, enemies[1].AxisY, 19);
+                        Enemigo1 = new Enemigo(enemies[0].AxisX, enemies[0].AxisY, 19);
                         Enemigo1.moverFantasma();
                         break;
                 }

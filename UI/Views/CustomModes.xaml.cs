@@ -29,24 +29,15 @@ namespace UI.Views
         {
             this.InitializeComponent();
         }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             CustomModeVM myVm = (CustomModeVM)this.DataContext;
             SharedData.MapSelectedToPlay = myVm.MapSelected.ElementList;
             this.Frame.Navigate(typeof(Play));
-=======
+        }
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
->>>>>>> Develop
-=======
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
->>>>>>> Develop
         }
     }
 }
