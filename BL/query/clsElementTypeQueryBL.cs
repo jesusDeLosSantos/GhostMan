@@ -20,18 +20,6 @@ namespace BL.query
             return clsElementTypeQueryDAL.getListOfElementTypeDAL();
         }
         /// <summary>
-        ///     <header>public static byte[] getSpriteOfElementTypeIdBL(int elementTypeId)</header>
-        ///     <description>This method calls DAL and returns a byte array that contains the sprite of the given element type id</description>
-        ///     <precondition>The element type id must exists in the database</precondition>
-        ///     <postcondition>returns byte[] sprite to the UI</postcondition>
-        /// </summary>
-        /// <param name="elementTypeId">int</param>
-        /// <returns>byte[] sprite</returns>
-        public static byte[] getSpriteOfElementTypeIdBL(int elementTypeId)
-        {
-            return clsElementTypeQueryDAL.getSpriteOfElementTypeIdDAL(elementTypeId);
-        }
-        /// <summary>
         ///     <header>public static List<byte[]> getAllSpritesBL()</header>
         ///     <description>This method calls DAL and returns a List of byte[] that contains all the sprites in the database</description>
         ///     <precondition>The connection must works and you need to have Internet connection</precondition>

@@ -1,4 +1,5 @@
 ﻿using BL.query;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace UI.ViewModels.Utilities
     public class SharedData
     {
         private static List<ImageSource> allImageSourceOfSprites;
+        private static List<clsElementMap> mapSelectedToPlay;
         public SharedData()
         {
             //todo: TRYCATCH!!!!!!!!!!!
@@ -22,6 +24,6 @@ namespace UI.ViewModels.Utilities
         //TODO: borrar el constructor, añadir set, y desde el constrcutor de custommodevm asignar el valor desde el set, y el converter edeberia poder acceder a ael
         public static List<ImageSource> AllImageSourceOfSprites { get => allImageSourceOfSprites; set => allImageSourceOfSprites = value; }
 
-        
+        public static List<clsElementMap> MapSelectedToPlay { get => mapSelectedToPlay; set => mapSelectedToPlay = value; }
     }
 }

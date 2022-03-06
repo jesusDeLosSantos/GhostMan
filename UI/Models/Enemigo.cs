@@ -15,15 +15,15 @@ namespace UI.Models
             Y = 0;
         }
 
-        public Enemigo(int x, int y, List<Wall> arrayPrueba)
+        public Enemigo(int x, int y, int idElement)
         {
             X = x;
             Y = y;
-            this.arrayPrueba = arrayPrueba;
+            IdElement = idElement;
         }
-        public List<Wall> arrayPrueba;
         public int X { get; set; }
         public int Y { get; set; }
+        public int IdElement { get; set; }
 
         //JugadorX y JugadorY, se iran setteando continuamente, cada vez que la posicion del usuario cambie
         public static int JugadorX { get; set; }
@@ -39,7 +39,7 @@ namespace UI.Models
             Random random = new Random();
             int cambioDireccionAleatorio;//De esta manera cambiar de direccion de manera mas realista, porque sino solo cambiaria de direccion cuando no se pueda mover
 
-            
+
             while (usuarioVivo)
             {
                 cambioDireccionAleatorio = random.Next(6);
@@ -47,19 +47,21 @@ namespace UI.Models
                     && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
                 {
                     X += velocidadX;
-                    if (cambioDireccionAleatorio == 1) {
+                    if (cambioDireccionAleatorio == 1)
+                    {
                         determinarMovilidadFantasma();
                     }
                 }
                 else
                 {
                     velocidadX = 0;
-                    if (velocidadY == 0) {
+                    if (velocidadY == 0)
+                    {
                         determinarMovilidadFantasma();
                     }
-                   
+
                 }
-                
+
                 if (velocidadY != 0 && Utilidades.canMove(X, Y + velocidadY)
                     && (Y > 0 && velocidadY < 0 || Y < 750 && velocidadY > 0))
                 {

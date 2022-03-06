@@ -17,8 +17,6 @@ namespace UI.ViewModels.Utilities.Converters
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            //TODO: ¡¡¡MUY IMPORTANTE!!! MIRAR COMO OPTIMIZAR ESTO
-            //ImageSource imageSource = convertirByteImagen(clsElementTypeQueryBL.getSpriteOfElementTypeIdBL((int)value));
             List<ImageSource> allImageSprites = SharedData.AllImageSourceOfSprites;
             
             return allImageSprites[(int)value];

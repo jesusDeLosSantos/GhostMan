@@ -4,6 +4,9 @@ using UI.ViewModels;
 using System;
 using System.Diagnostics;
 using UI.Models;
+using Windows.UI.Xaml.Navigation;
+using Entities;
+using System.Collections.Generic;
 
 namespace UI.Views
 {

@@ -21,6 +21,12 @@ namespace UI.Views
         {
             this.InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
+
         /// <summary>
         /// This method decides where to navigate depending on the name of the pressed button
         /// </summary>

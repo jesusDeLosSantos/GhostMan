@@ -120,7 +120,6 @@
     <Compile Include="Models\clsLeaderboardWithPosition.cs" />
     <Compile Include="Models\clsMapLeaderboardWithElements.cs" />
     <Compile Include="Models\Enemigo.cs" />
-    <Compile Include="Models\Wall.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
     <Compile Include="ViewModels\MapCreatorVM.cs" />
     <Compile Include="ViewModels\PlayVM.cs" />
@@ -165,6 +164,7 @@
     <Content Include="Assets\Image\Easy_Mode.png" />
     <Content Include="Assets\Image\Empty_Spot.png" />
     <Content Include="Assets\Image\Ending_Wall_3.png" />
+    <Content Include="Assets\Image\Ghost.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
     <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
     <Content Include="Assets\Image\mapaPrueba.png" />

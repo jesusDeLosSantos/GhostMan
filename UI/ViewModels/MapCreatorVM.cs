@@ -163,8 +163,8 @@ namespace UI.ViewModels
         public void imageTapped(object sender, TappedRoutedEventArgs e)
         {
             Image img = (Image) sender;
-            double axisX = (double)img.GetValue(Canvas.LeftProperty);
-            double axisY = (double)img.GetValue(Canvas.TopProperty);
+            short axisX = Convert.ToInt16(img.GetValue(Canvas.LeftProperty));
+            short axisY = Convert.ToInt16(img.GetValue(Canvas.TopProperty));
             addElementMap(axisX, axisY, selectedElement.Id);
             img.Source = selectedElement.Imagen;
            
@@ -177,7 +177,7 @@ namespace UI.ViewModels
         /// </summary>
         /// <param name="axisX">double</param>
         /// <param name="axisY">double</param>
-        private void addElementMap(double axisX, double axisY, int id)
+        private void addElementMap(short axisX, short axisY, int id)
         {
             bool added = false;
             clsElementMap mapSquare = new clsElementMap(id, axisX, axisY);

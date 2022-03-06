@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UI.ViewModels;
+using UI.ViewModels.Utilities;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +28,19 @@ namespace UI.Views
         public CustomModes()
         {
             this.InitializeComponent();
+        }
+
+<<<<<<< HEAD
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            CustomModeVM myVm = (CustomModeVM)this.DataContext;
+            SharedData.MapSelectedToPlay = myVm.MapSelected.ElementList;
+            this.Frame.Navigate(typeof(Play));
+=======
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+>>>>>>> Develop
         }
     }
 }

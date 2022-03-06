@@ -8,14 +8,61 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <RelativePanel Background="Black">
-        <TextBlock  FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" FontSize="80" Margin="20,30,0,0" Foreground="#FFCA3A" RelativePanel.AlignHorizontalCenterWithPanel="True">GHOST-MAN</TextBlock>
-        <RelativePanel BorderBrush="#33FF5C" BorderThickness="10" MinHeight="720" MinWidth="1400" Background="#703CB9" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-            <Button RelativePanel.AlignVerticalCenterWithPanel="True" Margin="50,0,0,0" MinHeight="450" MinWidth="450" Name="playBtn" CornerRadius="50" Click="playBtn_Click">
-                <Image Source="/Assets/Image/play_button.png" Height="300" Width="300"/>
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states mnager -->
+            <VisualStateGroup x:Name="visualStateGroup">
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="contenedor.Height" Value="520"/>
+                        <Setter Target="contenedor.Width" Value="900"/>
+                        <Setter Target="playBtn.Height" Value="250"/>
+                        <Setter Target="playBtn.Width" Value="250"/>
+                        <Setter Target="playImg.Height" Value="100"/>
+                        <Setter Target="playImg.Width" Value="100"/>
+                        <Setter Target="createBtn.Height" Value="250"/>
+                        <Setter Target="createBtn.Width" Value="250"/>
+                        <Setter Target="createImg.Height" Value="100"/>
+                        <Setter Target="createImg.Width" Value="100"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1700"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="contenedor.Height" Value="720"/>
+                        <Setter Target="contenedor.Width" Value="1400"/>
+                        <Setter Target="playBtn.Height" Value="450"/>
+                        <Setter Target="playBtn.Width" Value="450"/>
+                        <Setter Target="playImg.Height" Value="300"/>
+                        <Setter Target="playImg.Width" Value="300"/>
+                        <Setter Target="createBtn.Height" Value="450"/>
+                        <Setter Target="createBtn.Width" Value="450"/>
+                        <Setter Target="createImg.Height" Value="300"/>
+                        <Setter Target="createImg.Width" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        
+        
+        
+        
+
+        <TextBlock Name="nombre" FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" FontSize="80" Margin="20,30,0,0" Foreground="#FFCA3A" RelativePanel.AlignHorizontalCenterWithPanel="True">GHOST-MAN</TextBlock>
+        <RelativePanel Name="contenedor" BorderBrush="#33FF5C" BorderThickness="10" Background="#703CB9" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <Button RelativePanel.AlignVerticalCenterWithPanel="True" Margin="50,0,0,0" Name="playBtn" CornerRadius="50" Click="playBtn_Click">
+                <Image x:Name="playImg" Source="/Assets/Image/play_button.png"/>
             </Button>
-            <Button RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" MinHeight="450" MinWidth="450" Name="createBtn" CornerRadius="50" Click="createBtn_Click">
-                <Image Source="/Assets/Image/puzzle_btn.png" Height="300" Width="300" Margin="30,0,0,0"/>
+            <Button RelativePanel.AlignVerticalCenterWithPanel="True" x:Name="createBtn" RelativePanel.AlignRightWithPanel="True" Margin="0,0,50,0" CornerRadius="50" Click="createBtn_Click">
+                <Image Name="createImg" Source="/Assets/Image/puzzle_btn.png" Height="300" Width="300" Margin="30,0,0,0"/>
             </Button>
 
             <TextBlock FontWeight="Normal" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" RelativePanel.Below="playBtn" RelativePanel.AlignHorizontalCenterWith="playBtn" FontSize="40" Margin="20,30,0,0" Foreground="#FFCA3A"> PLAY</TextBlock>
