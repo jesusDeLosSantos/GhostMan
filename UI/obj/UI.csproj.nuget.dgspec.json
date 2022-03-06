@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programacion\\GhostMan\\UI\\UI.csproj": {}
+    "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj": {}
   },
   "projects": {
-    "E:\\Programacion\\GhostMan\\BL\\BL.csproj": {
+    "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programacion\\GhostMan\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "E:\\Programacion\\GhostMan\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\Kanadista\\.nuget\\packages\\",
-        "outputPath": "E:\\Programacion\\GhostMan\\BL\\obj\\",
+        "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kanadista\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -30,12 +30,13 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\Programacion\\GhostMan\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\Programacion\\GhostMan\\DAL\\DAL.csproj"
+              "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\DAL.csproj"
               },
-              "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -48,6 +49,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -66,26 +68,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programacion\\GhostMan\\DAL\\DAL.csproj": {
+    "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programacion\\GhostMan\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\Programacion\\GhostMan\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Kanadista\\.nuget\\packages\\",
-        "outputPath": "E:\\Programacion\\GhostMan\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kanadista\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -96,9 +98,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }
@@ -111,6 +114,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -133,26 +137,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj": {
+    "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Kanadista\\.nuget\\packages\\",
-        "outputPath": "E:\\Programacion\\GhostMan\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kanadista\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -163,6 +167,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -174,6 +179,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -192,28 +198,28 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Programacion\\GhostMan\\UI\\UI.csproj": {
+    "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programacion\\GhostMan\\UI\\UI.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "E:\\Programacion\\GhostMan\\UI\\UI.csproj",
-        "packagesPath": "C:\\Users\\Kanadista\\.nuget\\packages\\",
-        "outputPath": "E:\\Programacion\\GhostMan\\UI\\obj\\",
+        "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj",
+        "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kanadista\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"
@@ -225,11 +231,11 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "E:\\Programacion\\GhostMan\\BL\\BL.csproj": {
-                "projectPath": "E:\\Programacion\\GhostMan\\BL\\BL.csproj"
+              "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj": {
+                "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj"
               },
-              "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj"
+              "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj"
               }
             }
           }

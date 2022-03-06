@@ -77,7 +77,6 @@
       <RootProperty Name="IsTabStop" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="MinHeight" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -175,8 +174,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="MinHeight" />
-      <RootProperty Name="MinWidth" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
