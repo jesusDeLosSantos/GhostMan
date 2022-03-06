@@ -186,13 +186,11 @@
                 <TextBlock x:Name="tblMapCreator" VerticalAlignment="Center" Text="MAP CREATOR:" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
                 <TextBox x:Name="tbMapCreator" Style="{StaticResource TextBoxStyle1}" Text="{Binding MapNick,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="10"  Padding="10" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBox>
                 <Button x:Name="btnSave" Width="100" Content="SAVE" Command="{Binding CommandSaveMap}" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></Button>
-                <ProgressRing IsActive="True" Visibility="{Binding Visibility}" Width="25" Height="25" Margin="20,0,0,0"></ProgressRing>
+                <ProgressRing IsActive="True" Visibility="{Binding Visibility}" Foreground="#703CB9" Width="25" Height="25" Margin="20,0,0,0"></ProgressRing>
+                <Image Visibility="{Binding Visibility}" Source="/Assets/Image/Loading.gif" HorizontalAlignment="Center" Width="400" Height="50"/>
             </StackPanel>
         </Border>
         <Button x:Name="btnBack" Click="btnBack_Click" VerticalAlignment="Top" Margin="70,15,0,0" Background="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C" >Back</Button>
-
-
-
         <ListView Margin="10" x:Name="lvElements" SelectedItem="{Binding SelectedElement, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.Below="spOptions" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Width="200" CornerRadius="10" Background="#703CB9" BorderThickness="5" BorderBrush="#00ff33" ItemsSource="{Binding ElementsSprite}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -709,6 +707,11 @@
                     <Image Canvas.Left="1350" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/Image/Empty_Spot.png"></Image>
                     <Image Canvas.Left="1400" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/Image/Empty_Spot.png"></Image>
                     <Image Canvas.Left="1450" Canvas.Top="750" Height="50" Width="50" Tapped="{x:Bind vm.imageTapped }" Source="/Assets/Image/Empty_Spot.png"></Image>
+                    <Image Canvas.Left="{Binding AxisXE1}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE1}" Source="/Assets/Image/Hard_Mode.png"/>
+                    <Image Canvas.Left="{Binding AxisXE2}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE2}" Source="/Assets/Image/Hard_Mode.png"/>
+                    <Image Canvas.Left="{Binding AxisXE3}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE3}" Source="/Assets/Image/Hard_Mode.png"/>
+                    <Image Canvas.Left="{Binding AxisXE4}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE4}" Source="/Assets/Image/Hard_Mode.png"/>
+                    <Image Canvas.Left="{Binding AxisXP}" Height="50" Width="50"  Canvas.Top="{Binding AxisYP}" Source="/Assets/Image/Ghost.png"/>
                 </Canvas>
             </Border>
         </RelativePanel>

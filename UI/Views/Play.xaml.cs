@@ -7,6 +7,7 @@ using UI.Models;
 using Windows.UI.Xaml.Navigation;
 using Entities;
 using System.Collections.Generic;
+using UI.ViewModels.Utilities;
 
 namespace UI.Views
 {
@@ -35,7 +36,7 @@ namespace UI.Views
         {
             string currentTime;
             TimeSpan ts;
-            if (Enemigo.usuarioVivo)//Si jugador esta vivo
+            if (!SharedData.FinPartida)//Si jugador esta vivo
             {
                 ts = stopwatch.Elapsed;
                 currentTime = string.Format("{0:00}:{1:00}:{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);

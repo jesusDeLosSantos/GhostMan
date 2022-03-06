@@ -24,16 +24,7 @@
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="1500" Height="800"                       >
 
-            <Image x:ConnectionId='4' x:Name="imagenFantasma" Source="/Assets/Image/Ghost.png" Width="50" Height="50" Visibility="{Binding VisibilidadUsuario, UpdateSourceTrigger=PropertyChanged}"
-                   Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <Image Source="{Binding Enemigo1.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
-                   Canvas.Left="{Binding Enemigo1.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo1.Y, UpdateSourceTrigger=PropertyChanged}"/>
-            <Image Source="{Binding Enemigo2.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
-                   Canvas.Left="{Binding Enemigo2.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo2.Y, UpdateSourceTrigger=PropertyChanged}"/>
-            <Image Source="{Binding Enemigo3.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
-                   Canvas.Left="{Binding Enemigo3.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo3.Y, UpdateSourceTrigger=PropertyChanged}"/>
-            <Image Source="{Binding Enemigo4.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
-                   Canvas.Left="{Binding Enemigo4.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo4.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            
 
 
             <Image  Source="{Binding ElementMaps[0].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
@@ -996,6 +987,16 @@
                    Canvas.Left="{Binding ElementMaps[478].AxisX, Mode=TwoWay}" Canvas.Top="{Binding ElementMaps[478].AxisY, Mode=TwoWay}"/>
             <Image  Source="{Binding ElementMaps[479].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
                    Canvas.Left="{Binding ElementMaps[479].AxisX, Mode=TwoWay}" Canvas.Top="{Binding ElementMaps[479].AxisY, Mode=TwoWay}"/>
+            <Image x:ConnectionId='4' x:Name="imagenFantasma" Source="/Assets/Image/Ghost.png" Width="50" Height="50" Visibility="{Binding VisibilidadUsuario, UpdateSourceTrigger=PropertyChanged}"
+                   Canvas.Left="{Binding X,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Y,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="{Binding Enemigo1.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
+                   Canvas.Left="{Binding Enemigo1.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo1.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="{Binding Enemigo2.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo2.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo2.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="{Binding Enemigo3.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo3.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo3.Y, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Source="{Binding Enemigo4.IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50" 
+                   Canvas.Left="{Binding Enemigo4.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo4.Y, UpdateSourceTrigger=PropertyChanged}"/>
 
         </Canvas>
     </RelativePanel>

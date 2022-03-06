@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T21:56:44.942</Modified>
+      <Modified>2022-03-06T23:26:06.420</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-03-06T21:56:43.875</Modified>
+      <Modified>2022-03-06T23:26:04.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -60,15 +60,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-03-06T21:56:36.056</Modified>
+      <Modified>2022-03-06T22:28:07.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-03-06T18:54:49.073</Modified>
+      <Modified>2022-03-06T22:28:06.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-03-06T21:56:35.837</Modified>
+      <Modified>2022-03-06T22:28:06.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -92,7 +92,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Ghost.png">
       <PackagePath>Assets\Image\Ghost.png</PackagePath>
-      <Modified>2022-03-06T16:42:42.991</Modified>
+      <Modified>2022-03-06T22:24:10.016</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Hard_Mode.png">
       <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
@@ -390,35 +390,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-03-06T20:19:17.675</Modified>
+      <Modified>2022-03-06T22:34:21.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.513</Modified>
+      <Modified>2022-03-06T23:26:04.389</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.342</Modified>
+      <Modified>2022-03-06T23:26:04.099</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.513</Modified>
+      <Modified>2022-03-06T23:26:04.389</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.415</Modified>
+      <Modified>2022-03-06T23:26:04.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.471</Modified>
+      <Modified>2022-03-06T23:26:04.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.508</Modified>
+      <Modified>2022-03-06T23:26:04.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-      <Modified>2022-03-06T21:56:43.513</Modified>
+      <Modified>2022-03-06T23:26:04.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -426,11 +426,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-06T17:39:10.652</Modified>
+      <Modified>2022-03-06T22:30:35.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-03-06T21:56:44.940</Modified>
+      <Modified>2022-03-06T23:26:06.417</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

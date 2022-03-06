@@ -11,6 +11,7 @@ using UI.Models;
 using Entities;
 using BL.query;
 using Windows.UI.Xaml.Media;
+using System.Collections.ObjectModel;
 
 namespace UI.ViewModels
 {
@@ -24,9 +25,11 @@ namespace UI.ViewModels
         private int velocidadX, velocidadY;
         bool movimientoIniciado;
 
-        public List<clsElementMap> ElementMaps { get;set; }
+        public ObservableCollection<clsElementMap> ElementMaps { get;set; }
         private List<clsElementMap> enemies = new List<clsElementMap>();
         private List<clsElementMap> elementMapsWithoutEnemiesNorEnemies;
+        private List<clsElementMap> elementMapsPuntos;
+        private int puntosTotales;
 
         public List<clsElementMap> Enemies { get => enemies;set => enemies = value; }
         public List<clsElementMap> ElementMapsWithoutEnemiesNorEnemies { get => elementMapsWithoutEnemiesNorEnemies; set => elementMapsWithoutEnemiesNorEnemies = value; }
@@ -40,7 +43,7 @@ namespace UI.ViewModels
         public PlayVM()
         {
             List<clsElementType> elementTypes = clsElementTypeQueryBL.getListOfElementTypeBL();
-            ElementMaps = SharedData.MapSelectedToPlay;
+            ElementMaps = new ObservableCollection<clsElementMap>(SharedData.MapSelectedToPlay);
             if (SharedData.IsCommunityMap)
             {
                 foreach (var elementMap in ElementMaps)
@@ -50,6 +53,11 @@ namespace UI.ViewModels
                 }
             }
 
+            elementMapsPuntos = new List<clsElementMap>(from element in ElementMaps
+                                                        where element.IdElement == 22 //aqui hariamos otro linq, pero no funciona no sabemos por que
+                                                        select element);
+            puntosTotales = elementMapsPuntos.Count;
+
             Utilidades.listaParedes = new List<clsElementMap>(from element in ElementMaps
                                                               where element.IdElement == (from elementType in elementTypes
                                                                                            where (element.IdElement == elementType.Id) && elementType.Name.Contains("wall")
@@ -58,7 +66,7 @@ namespace UI.ViewModels
 
             initializeEnemiesList(elementTypes);
             clsElementMap player =ElementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
-            List<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new List<clsElementMap>(ElementMaps.Except(enemies));
+            ObservableCollection<clsElementMap> elementMapsWithoutEnemiesNorPlayer = new ObservableCollection<clsElementMap>(ElementMaps.Except(enemies));
             elementMapsWithoutEnemiesNorPlayer.Remove(player);
             ElementMaps = elementMapsWithoutEnemiesNorPlayer;
             elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorPlayer.Except(Utilidades.listaParedes));
@@ -120,13 +128,14 @@ namespace UI.ViewModels
 
         public async Task moverFantasma()
         {
-            while (Enemigo.usuarioVivo)
+            while (!SharedData.FinPartida)
             {
                 if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
                     && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
                 {
                     X += velocidadX;
                     Enemigo.JugadorX = X;
+                    comprobarRecogerPuntos();
                 }
                 else
                 {
@@ -137,6 +146,7 @@ namespace UI.ViewModels
                 {
                     Y += velocidadY;
                     Enemigo.JugadorY = Y;
+                    comprobarRecogerPuntos();
                 }
                 else
                 {
@@ -145,14 +155,17 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("X");
                 NotifyPropertyChanged("Y");
                 await Task.Delay(200);
+                if (puntosTotales == 0)
+                {
+                    SharedData.FinPartida = true;
+                }
             }
-            VisibilidadUsuario = Visibility.Collapsed;
-            NotifyPropertyChanged("VisibilidadUsuario");
+
         }
 
         public async void determinarMovilidadFantasma(object sender, KeyRoutedEventArgs e)
         {
-            if (Enemigo.usuarioVivo)
+            if (!SharedData.FinPartida)
             {
                 switch (e.Key)
                 {
@@ -161,16 +174,18 @@ namespace UI.ViewModels
                         {
                             velocidadX += 100;
                         }
-                        else if(velocidadX < 50)
+                        else if (velocidadX < 50)
                         {
                             velocidadX += 50;
                             velocidadY = 0;
                         }
                         break;
                     case VirtualKey.Left:
-                        if (velocidadX == 50) {
+                        if (velocidadX == 50)
+                        {
                             velocidadX -= 100;
-                        }else if (velocidadX > -50)
+                        }
+                        else if (velocidadX > -50)
                         {
                             velocidadX -= 50;
                             velocidadY = 0;
@@ -182,7 +197,7 @@ namespace UI.ViewModels
                         {
                             velocidadY -= 100;
                         }
-                        else if(velocidadY > -50)
+                        else if (velocidadY > -50)
                         {
                             velocidadY -= 50;
                             velocidadX = 0;
@@ -193,7 +208,7 @@ namespace UI.ViewModels
                         {
                             velocidadY += 100;
                         }
-                        else if(velocidadY < 50)
+                        else if (velocidadY < 50)
                         {
                             velocidadY += 50;
                             velocidadX = 0;
@@ -205,6 +220,20 @@ namespace UI.ViewModels
                 {
                     movimientoIniciado = true;
                     await moverFantasma();
+                }
+            }
+        }
+        private void comprobarRecogerPuntos()
+        {
+            bool puntoRecogido = false;
+            for (int i = 0; i < elementMapsPuntos.Count && !puntoRecogido; i++)
+            {
+                if (X == elementMapsPuntos[i].AxisX && Y == elementMapsPuntos[i].AxisY)
+                {
+                    ElementMaps.Remove(elementMapsPuntos[i]);
+                    elementMapsPuntos.Remove(elementMapsPuntos[i]);
+                    puntoRecogido = true;
+                    puntosTotales--;
                 }
             }
         }

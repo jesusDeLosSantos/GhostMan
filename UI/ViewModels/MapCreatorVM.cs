@@ -37,14 +37,33 @@ namespace UI.ViewModels
         DelegateCommand commandSizeChangeToBig;
         ImageSource spriteSelected;
         Visibility visibility = Visibility.Collapsed;
+
+        //Enemy1
+        short axisXE1 = 50;
+        short axisYE1 = 50;
+        //Enemy2
+        short axisXE2 = 50;
+        short axisYE2 = 100;
+        //Enemy3
+        short axisXE3 = 100;
+        short axisYE3 = 50;
+        //Enemy4
+        short axisXE4 = 100;
+        short axisYE4 = 100;
+        //MainCharacter
+        short axisXP = 50;
+        short axisYP = 700;
+
         #endregion
 
         #region Getters y Setters
         public List<clsElementType> Elements { get => elements; set => elements = value; }
         public List<clsElementMap> FullMap { get => fullMap; set => fullMap = value; }
-        public clsElementTypeSprite SelectedElement {
+        public clsElementTypeSprite SelectedElement
+        {
             get { return selectedElement; }
-            set { 
+            set
+            {
                 selectedElement = value;
                 NotifyPropertyChanged("SelectedElement");
             }
@@ -59,18 +78,19 @@ namespace UI.ViewModels
             }
         }
         public ImageSource SpriteSelected { get => spriteSelected; set => spriteSelected = value; }
-        public List <clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
+        public List<clsElementTypeSprite> ElementsSprite { get => elementsSprite; set => elementsSprite = value; }
         public int Size { get => size; set => size = value; }
-        public DelegateCommand CommandSizeChangeToLittle 
-        { 
+        public DelegateCommand CommandSizeChangeToLittle
+        {
             get
             {
                 commandSizeChangeToLittle = new DelegateCommand(LittleSizeCommand_Execute);
                 NotifyPropertyChanged("CommandSizeChangeToLittle");
                 return commandSizeChangeToLittle;
-            } 
+            }
         }
-        public DelegateCommand CommandSizeChangeToMedium { 
+        public DelegateCommand CommandSizeChangeToMedium
+        {
             get
             {
                 commandSizeChangeToMedium = new DelegateCommand(MediumSizeCommand_Execute);
@@ -78,13 +98,14 @@ namespace UI.ViewModels
                 return commandSizeChangeToMedium;
             }
         }
-        public DelegateCommand CommandSizeChangeToBig { 
-            get 
-            { 
+        public DelegateCommand CommandSizeChangeToBig
+        {
+            get
+            {
                 commandSizeChangeToBig = new DelegateCommand(BigSizeCommand_Execute);
                 NotifyPropertyChanged("CommandSizeChangeToBig");
                 return commandSizeChangeToBig;
-            } 
+            }
         }
         public Visibility Visibility { get => visibility; set => visibility = value; }
         public string MapName
@@ -113,12 +134,23 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("MapNick");
             }
         }
+
+        public short AxisXE1 { get => axisXE1; set => axisXE1 = value; }
+        public short AxisYE1 { get => axisYE1; set => axisYE1 = value; }
+        public short AxisXE2 { get => axisXE2; set => axisXE2 = value; }
+        public short AxisYE2 { get => axisYE2; set => axisYE2 = value; }
+        public short AxisXE3 { get => axisXE3; set => axisXE3 = value; }
+        public short AxisYE3 { get => axisYE3; set => axisYE3 = value; }
+        public short AxisXE4 { get => axisXE4; set => axisXE4 = value; }
+        public short AxisYE4 { get => axisYE4; set => axisYE4 = value; }
+        public short AxisXP { get => axisXP; set => axisXP = value; }
+        public short AxisYP { get => axisYP; set => axisYP = value; }
         #endregion
 
         #region Builders
         public MapCreatorVM()
         {
-            elementsSprite= new List<clsElementTypeSprite>();
+            elementsSprite = new List<clsElementTypeSprite>();
             Elements = getAllElements();
             foreach (var e in Elements)
             {
@@ -152,6 +184,29 @@ namespace UI.ViewModels
 
             return elementsList;
         }
+        private void setStartingAxis()
+        {
+            axisXE1 = 50;
+            axisYE1 = 50;
+            NotifyPropertyChanged("AxisXE1");
+            NotifyPropertyChanged("AxisYE1");
+            axisXE2 = 50;
+            axisYE2 = 100;
+            NotifyPropertyChanged("AxisXE2");
+            NotifyPropertyChanged("AxisYE2");
+            axisXE3 = 100;
+            axisYE3 = 50;
+            NotifyPropertyChanged("AxisXE3");
+            NotifyPropertyChanged("AxisYE3");
+            axisXE4 = 100;
+            axisYE4 = 100;
+            NotifyPropertyChanged("AxisXE4");
+            NotifyPropertyChanged("AxisYE4");
+            axisXP = 50;
+            axisYP = 700;
+            NotifyPropertyChanged("AxisXP");
+            NotifyPropertyChanged("AxisYP");
+        }
         /// <summary>
         ///     <header>public void imageTapped(object sender, TappedRoutedEventArgs e)</header>
         ///     <descripton>This method gets the axisX and axisY from the image tapped, and exchanges its source image for the selected item image</descripton>
@@ -162,12 +217,64 @@ namespace UI.ViewModels
         /// <param name="e">TappedRoutedEventArgs</param>
         public void imageTapped(object sender, TappedRoutedEventArgs e)
         {
-            Image img = (Image) sender;
+            Image img = (Image)sender;
             short axisX = Convert.ToInt16(img.GetValue(Canvas.LeftProperty));
             short axisY = Convert.ToInt16(img.GetValue(Canvas.TopProperty));
-            addElementMap(axisX, axisY, selectedElement.Id);
-            img.Source = selectedElement.Imagen;
-           
+            if (selectedElement.Id >= 16 && selectedElement.Id <= 20)
+            {
+                img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image/Empty_Spot.png"));
+                findCharacter(selectedElement.Id, axisX, axisY);
+            }
+            else
+            {
+                addElementMap(axisX, axisY, selectedElement.Id);
+                img.Source = selectedElement.Imagen;
+            }
+        }
+        /// <summary>
+        ///     <header>private void findCharacter(int idNpc,short axisX,short axisY)</header>
+        ///     <description>This method finds the character who has to update his position</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Update the position of the character</postcondition>
+        /// </summary>
+        /// <param name="idNpc">int</param>
+        /// <param name="axisX">short</param>
+        /// <param name="axisY">short</param>
+        private void findCharacter(int idNpc, short axisX, short axisY)
+        {
+            switch (idNpc)
+            {
+                case 16:
+                    axisXE1 = axisX;
+                    axisYE1 = axisY;
+                    NotifyPropertyChanged("AxisXE1");
+                    NotifyPropertyChanged("AxisYE1");
+                    break;
+                case 17:
+                    axisXE2 = axisX;
+                    axisYE2 = axisY;
+                    NotifyPropertyChanged("AxisXE2");
+                    NotifyPropertyChanged("AxisYE2");
+                    break;
+                case 18:
+                    axisXE3 = axisX;
+                    axisYE3 = axisY;
+                    NotifyPropertyChanged("AxisXE3");
+                    NotifyPropertyChanged("AxisYE3");
+                    break;
+                case 19:
+                    axisXE4 = axisX;
+                    axisYE4 = axisY;
+                    NotifyPropertyChanged("AxisXE4");
+                    NotifyPropertyChanged("AxisYE4");
+                    break;
+                case 20:
+                    axisXP = axisX;
+                    axisYP = axisY;
+                    NotifyPropertyChanged("AxisXP");
+                    NotifyPropertyChanged("AxisYP");
+                    break;
+            }
         }
         /// <summary>
         ///     <header>private void addElementMap(double axisX, double axisY)</header>
@@ -177,24 +284,26 @@ namespace UI.ViewModels
         /// </summary>
         /// <param name="axisX">double</param>
         /// <param name="axisY">double</param>
-        private void addElementMap(short axisX, short axisY, int id)
+        private async Task addElementMap(short axisX, short axisY, int id)
         {
             bool added = false;
             clsElementMap mapSquare = new clsElementMap(id, axisX, axisY);
 
-            for (int i=0; i<FullMap.Count&&!added;i++)
+            for (int i = 0; i < FullMap.Count && !added; i++)
             {
-                if(FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
+                if (FullMap[i].AxisX == axisX && FullMap[i].AxisY == axisY)
                 {
-                    FullMap[i] = mapSquare;
-                    i = FullMap.Count;
+                    if (FullMap[i].IdElement == 15 || id != 22)
+                    {
+                        FullMap[i] = mapSquare;
+                    }
                     added = true;
                 }
             }
             if (!added)
             {
                 FullMap.Add(mapSquare);
-            }    
+            }
         }
         /// <summary>
         ///     <header>private async void SaveMapCommand_Execute()</header>
@@ -202,16 +311,18 @@ namespace UI.ViewModels
         ///     <precondition>None</precondition>
         ///     <postcondition>Insert a list of element map</postcondition>
         /// </summary>
-        private void SaveMapCommand_Execute()
+        private async void SaveMapCommand_Execute()
         {
             try
             {
                 visibility = Visibility.Visible;
                 NotifyPropertyChanged("Visibility");
                 int idMap = buildMap();
+                addCharacters();
+                await Task.Run(() => { return fillElementMapListWithPoints(); });
                 foreach (var element in FullMap)
                 {
-                    clsElementMapManagerBL.postElementMapBL(idMap,element);
+                    clsElementMapManagerBL.postElementMapBL(idMap, element);
                 }
                 showSuccess();
             }
@@ -248,7 +359,7 @@ namespace UI.ViewModels
         /// <returns>int idMap</returns>
         private int buildMap()
         {
-            clsMap map = new clsMap(mapNick,mapName,size/50);
+            clsMap map = new clsMap(mapNick, mapName, size / 50);
             int idMap = 0;
             try
             {
@@ -281,6 +392,30 @@ namespace UI.ViewModels
             }
             return imagenBitMap;
         }
+        /// <summary>
+        ///     <header>private void fillElementMapListWithPoints()</header>
+        ///     <description>This method fills the map with points</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Fills the map with points</postcondition>
+        /// </summary>
+        private async Task fillElementMapListWithPoints()
+        {
+            for (short i = 0; i < size; i += 50)
+            {
+                for (short j = 0; j < 800; j += 50)
+                {
+                    await addElementMap(i, j, 22);
+                }
+            }
+        }
+        private void addCharacters()
+        {
+            fullMap.Add(new clsElementMap(16, axisXE1, axisYE1));
+            fullMap.Add(new clsElementMap(17, axisXE2, axisYE4));
+            fullMap.Add(new clsElementMap(18, axisXE3, axisYE3));
+            fullMap.Add(new clsElementMap(19, axisXE4, axisYE4));
+            fullMap.Add(new clsElementMap(20, axisXP, axisYP));
+        }
         #endregion
 
         #region Commands
@@ -294,6 +429,7 @@ namespace UI.ViewModels
         {
             size = 800;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         /// <summary>
         ///     <header>private void MediumSizeCommand_Execute()</header>
@@ -305,6 +441,7 @@ namespace UI.ViewModels
         {
             size = 1200;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         /// <summary>
         ///     <header>private void BigSizeCommand_Execute()</header>
@@ -316,6 +453,7 @@ namespace UI.ViewModels
         {
             size = 1500;
             NotifyPropertyChanged("Size");
+            setStartingAxis();
         }
         #endregion
 

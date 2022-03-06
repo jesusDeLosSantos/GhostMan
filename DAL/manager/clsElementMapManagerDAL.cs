@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
+using System.Threading.Tasks;
 using Entities;
 
 namespace DAL.manager
@@ -16,7 +17,7 @@ namespace DAL.manager
         /// </summary>
         /// <param name="oElementMap">clsMap</param>
         /// <returns>int result</returns>
-        public static int postElementMapDAL(int idMap,clsElementMap oElementMap)
+        public static int postElementMapDAL(int idMap, clsElementMap oElementMap)
         {
             int result = 0;
             conecction.clsConnection myConnection = new conecction.clsConnection();

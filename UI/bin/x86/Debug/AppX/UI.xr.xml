@@ -18,7 +18,6 @@
     <RootPropertyPathName Name="MapList" />
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
-    <RootPropertyPathName Name="ElementMaps" />
     <RootPropertyPathName Name="Enemigo4" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />
@@ -26,8 +25,19 @@
     <RootPropertyPathName Name="Enemigo2" />
     <RootPropertyPathName Name="Enemigo1" />
     <RootPropertyPathName Name="VisibilidadUsuario" />
+    <RootPropertyPathName Name="ElementMaps" />
     <RootPropertyPathName Name="CurrentTime" />
     <RootPropertyPathName Name="PlaceholderForeground" />
+    <RootPropertyPathName Name="AxisXP" />
+    <RootPropertyPathName Name="AxisYP" />
+    <RootPropertyPathName Name="AxisXE4" />
+    <RootPropertyPathName Name="AxisYE4" />
+    <RootPropertyPathName Name="AxisXE3" />
+    <RootPropertyPathName Name="AxisYE3" />
+    <RootPropertyPathName Name="AxisXE2" />
+    <RootPropertyPathName Name="AxisYE2" />
+    <RootPropertyPathName Name="AxisXE1" />
+    <RootPropertyPathName Name="AxisYE1" />
     <RootPropertyPathName Name="CommandSizeChangeToBig" />
     <RootPropertyPathName Name="CommandSizeChangeToMedium" />
     <RootPropertyPathName Name="CommandSizeChangeToLittle" />
@@ -220,6 +230,7 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -415,6 +426,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="IsActive" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />

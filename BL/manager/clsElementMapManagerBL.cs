@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Entities;
 using DAL.manager;
+using System.Threading.Tasks;
 
 namespace BL.manager
 {
@@ -16,9 +17,9 @@ namespace BL.manager
         /// </summary>
         /// <param name="oElementMap">clsMap</param>
         /// <returns>int result</returns>
-        public static int postElementMapBL(int idMap,clsElementMap oElementMap)
+        public static int postElementMapBL(int idMap, clsElementMap oElementMap)
         {
-            return clsElementMapManagerDAL.postElementMapDAL(idMap,oElementMap);
+            return clsElementMapManagerDAL.postElementMapDAL(idMap, oElementMap);
         }
     }
 }
