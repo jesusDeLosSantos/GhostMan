@@ -48,3 +48,12 @@ C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.Assem
 C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\Jesus\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb

@@ -73,3 +73,17 @@ C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompil
 C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
 C:\Users\Jesus\Desktop\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\BL.deps.json
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\BL.pdb
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\DAL.pdb
+E:\Programacion\GhostMan\BL\bin\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.dll
+E:\Programacion\GhostMan\BL\obj\Debug\netstandard2.0\BL.pdb

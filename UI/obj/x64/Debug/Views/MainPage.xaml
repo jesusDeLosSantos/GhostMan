@@ -19,7 +19,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="contenedor.Height" Value="520"/>
-                        <Setter Target="contenedor.Width" Value="1200"/>
+                        <Setter Target="contenedor.Width" Value="900"/>
                         <Setter Target="playBtn.Height" Value="250"/>
                         <Setter Target="playBtn.Width" Value="250"/>
                         <Setter Target="playImg.Height" Value="100"/>

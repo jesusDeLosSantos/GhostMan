@@ -9176,28 +9176,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jesus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Kanadista\\.nuget\\packages\\": {},
+    "E:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj",
+      "projectUniqueName": "E:\\Programacion\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\UI\\obj\\",
+      "projectPath": "E:\\Programacion\\GhostMan\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\Kanadista\\.nuget\\packages\\",
+      "outputPath": "E:\\Programacion\\GhostMan\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "E:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Kanadista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -9209,11 +9209,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\BL\\BL.csproj"
+            "E:\\Programacion\\GhostMan\\BL\\BL.csproj": {
+              "projectPath": "E:\\Programacion\\GhostMan\\BL\\BL.csproj"
             },
-            "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Jesus\\Desktop\\GhostMan\\Entities\\Entities.csproj"
+            "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\Programacion\\GhostMan\\Entities\\Entities.csproj"
             }
           }
         }

@@ -97,13 +97,13 @@
     </Page.Resources>
 
     <RelativePanel>
-        <ListView Name="LstMapas" CornerRadius="20" Width="400" Background="LightSteelBlue" ItemsSource="{Binding MapList}" 
+        <ListView Name="LstMapas" Width="400" Background="#33FF5C" ItemsSource="{Binding MapList}" 
                   RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True"
                   SelectedItem="{Binding MapSelected,Mode=TwoWay}"  Style="{StaticResource FixedHeaderListViewStyle}">
             <ListView.HeaderTemplate>
                 <DataTemplate x:Name="buttons">
                     <StackPanel Orientation="Horizontal">
-                        <TextBox MinHeight="60" Width="250" CornerRadius="20" TextWrapping="NoWrap" FontSize="26" Text="{Binding InputText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button x:Name="btnBack" Click="btnBack_Click" VerticalAlignment="Top" Margin="10,10,180,0" Background="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C" >Back</Button>
                         <Button Name="btnFiltradoIzquierda" Command="{Binding LeftFilterButtonCommand}" Background="Transparent" Margin="10,0,0,0">
                             <FontIcon Glyph="&#xe72B;" FontSize="30"></FontIcon>
                         </Button>
@@ -118,14 +118,14 @@
                 <DataTemplate x:Name="Items">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding Size, Converter={StaticResource converterSizeToSourceImage}}" MaxHeight="100"></Image>
-                        <TextBlock Text="{Binding Nick}" FontSize="30" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                        <TextBlock Text="{Binding Nick}" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
 
         </ListView>
 
-        <Grid RelativePanel.RightOf="LstMapas" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True"  RowSpacing="30">
+        <Grid RelativePanel.RightOf="LstMapas" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True"  RowSpacing="30" Background="#703CB9">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -142,20 +142,24 @@
                 <TextBlock Text="{Binding MapSelected.Name}" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
-                <TextBlock Text="Creador:" FontSize="25" Margin="15,0,0,0"></TextBlock>
-                <TextBlock Text="{Binding MapSelected.Nick}" FontSize="25" TextWrapping="Wrap" Margin="8,0,0,0"></TextBlock>
-                <TextBlock Text="Tamaño: "  FontSize="25" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="10,0,0,0"></TextBlock>
-                <TextBlock Text="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSizeXSize}}" FontSize="25" HorizontalAlignment="Right"></TextBlock>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Creador:" FontSize="30" Margin="10,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C"></TextBlock>
+                    <TextBlock Text="{Binding MapSelected.Nick}" FontSize="30" TextWrapping="Wrap" Margin="8,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                    <TextBlock Text="Tamaño: "  FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="10,0,0,0" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C"></TextBlock>
+                    <TextBlock Text="{Binding MapSelected.Size, Converter={StaticResource converterSizeToSizeXSize}}" FontSize="30" HorizontalAlignment="Right" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#33FF5C"></TextBlock>
+                </StackPanel>
             </StackPanel>
-            
-            
-            <ListView Background="LightSteelBlue" Grid.Column="0" Grid.Row="2"  Width="auto" CornerRadius="20"  Height="500" Margin="10,0,0,0" 
+
+
+            <ListView Background="#7E5DAC" Grid.Column="0" Grid.Row="2"  Width="auto" Height="500" Margin="40,0,40,0" 
                       ItemsSource="{Binding MapSelected.Leaderboards}" SelectionMode="None" Name="lsvLeaderboards" >
                 <ListView.HeaderTemplate>
                     <DataTemplate>
-                        <StackPanel Background="CornflowerBlue">
-                            <TextBlock Text="Clasificacion:" FontSize="35" HorizontalAlignment="Center"></TextBlock>
+                        <StackPanel Background="#33FF5C" Height="35" Padding="5">
+                            <TextBlock Text="Clasificacion:" FontSize="20" Foreground="#703CB9"  HorizontalAlignment="Center" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.HeaderTemplate>
@@ -167,17 +171,17 @@
                                     <RowDefinition Height="Auto"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Image Source="/Assets/Image/icono_Puntuacion_Prueba.png" MaxHeight="70" MaxWidth="61"></Image>
-                                <TextBlock Text="{Binding Position}" FontSize="15" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                                <TextBlock Text="{Binding Position}" FontSize="15" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" ></TextBlock>
                             </Grid>
 
-                            <TextBlock Text="{Binding Nick}"  Margin="10,0,0,0" FontSize="30"></TextBlock>
-                            <TextBlock Text="{Binding Score}" Margin="10,0,0,0" FontSize="30"></TextBlock>
+                            <TextBlock Text="{Binding Nick}"  Margin="10,0,0,0" FontSize="20" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
+                            <TextBlock Text="{Binding Score}" Margin="10,0,0,0" FontSize="20" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
