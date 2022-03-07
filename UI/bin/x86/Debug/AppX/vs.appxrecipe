@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-ERFMNCS</Machine>
-    <WindowsUser>Albert</WindowsUser>
+    <Machine>107-19</Machine>
+    <WindowsUser>aruiz</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,16 +10,16 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>78b5432a-175c-4102-bd1b-08a5898fe36b</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\GitKraken-Repos\GhostMan\UI\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\GhostMan\UI\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>A3F7D555B298E7CF990B3737E51E79962063D2E8E961858EC3F3FA9977B6FFB9</RegisteredManifestChecksum>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>33BE45DE7CF9979A1DFA6486C411FED147B72434EFA38CA76846701A6A7FAC16</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78b5432a-175c-4102-bd1b-08a5898fe36b_1.0.0.0_x86__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78b5432a-175c-4102-bd1b-08a5898fe36b_x3hap7anq5jnt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>78b5432a-175c-4102-bd1b-08a5898fe36b</RegisteredPackageID>
@@ -27,414 +27,414 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T23:40:20.683</Modified>
+      <Modified>2022-03-07T09:09:08.156</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\UI.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-03-06T23:40:19.028</Modified>
+      <Modified>2022-03-07T09:09:07.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T23:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
       <PackagePath>System.Data.SqlClient.dll</PackagePath>
       <Modified>2021-08-16T19:22:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2019-11-15T08:54:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2019-11-15T08:37:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Albert\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2019-11-15T08:53:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-03-06T23:36:30.194</Modified>
+      <Modified>2022-03-07T08:57:13.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-03-06T23:36:28.733</Modified>
+      <Modified>2022-03-07T08:57:13.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-03-06T23:36:29.679</Modified>
+      <Modified>2022-03-07T08:57:13.410</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\crown.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\crown.png">
       <PackagePath>Assets\Image\crown.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.935</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Easy_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Easy_Mode.png">
       <PackagePath>Assets\Image\Easy_Mode.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.935</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Empty_Spot.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Empty_Spot.png">
       <PackagePath>Assets\Image\Empty_Spot.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Ending_Wall_3.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Ending_Wall_3.png">
       <PackagePath>Assets\Image\Ending_Wall_3.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.936</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Ghost.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Ghost.png">
       <PackagePath>Assets\Image\Ghost.png</PackagePath>
-      <Modified>2022-03-06T22:24:10.016</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Hard_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Hard_Mode.png">
       <PackagePath>Assets\Image\Hard_Mode.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.936</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\icono_Puntuacion_Prueba.png">
       <PackagePath>Assets\Image\icono_Puntuacion_Prueba.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\mapaPrueba.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\mapaPrueba.png">
       <PackagePath>Assets\Image\mapaPrueba.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Medium_Mode.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Medium_Mode.png">
       <PackagePath>Assets\Image\Medium_Mode.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\play_button.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\play_button.png">
       <PackagePath>Assets\Image\play_button.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.938</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\puzzle_btn.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\puzzle_btn.png">
       <PackagePath>Assets\Image\puzzle_btn.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.938</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\star.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\star.png">
       <PackagePath>Assets\Image\star.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.936</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\trophy.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\trophy.png">
       <PackagePath>Assets\Image\trophy.png</PackagePath>
-      <Modified>2022-03-06T12:59:59.938</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.937</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.938</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.941</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.941</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.942</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.938</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.940</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.939</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.939</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.939</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.939</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.940</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.941</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.942</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.942</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.943</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.945</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.945</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.945</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.946</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.945</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.947</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.946</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.946</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.948</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.948</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.946</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.949</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.947</Modified>
+      <Modified>2022-03-07T07:15:41.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.950</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.949</Modified>
+      <Modified>2022-03-07T07:15:41.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.948</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.950</Modified>
+      <Modified>2022-03-07T07:15:41.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-03-06T12:59:49.095</Modified>
+      <Modified>2022-01-26T12:02:57.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.942</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.941</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.944</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.946</Modified>
+      <Modified>2022-03-07T07:15:41.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-06T12:59:59.948</Modified>
+      <Modified>2022-03-07T07:15:41.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Image\Loading.gif">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Image\Loading.gif">
       <PackagePath>Assets\Image\Loading.gif</PackagePath>
-      <Modified>2022-03-06T23:28:53.694</Modified>
+      <Modified>2022-03-07T07:15:41.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-03-06T12:59:49.106</Modified>
+      <Modified>2022-01-26T12:02:57.829</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\Assets\Fonts\dogicapixelbold.ttf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\Assets\Fonts\dogicapixelbold.ttf">
       <PackagePath>Assets\Fonts\dogicapixelbold.ttf</PackagePath>
-      <Modified>2022-03-06T12:59:59.935</Modified>
+      <Modified>2022-03-07T07:15:41.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\UI.xr.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\UI.xr.xml">
       <PackagePath>UI.xr.xml</PackagePath>
-      <Modified>2022-03-06T23:36:42.430</Modified>
+      <Modified>2022-03-07T07:15:41.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.541</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.283</Modified>
+      <Modified>2022-03-07T09:09:07.090</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.541</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.390</Modified>
+      <Modified>2022-03-07T09:09:07.170</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.482</Modified>
+      <Modified>2022-03-07T09:09:07.233</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.534</Modified>
+      <Modified>2022-03-07T09:09:07.275</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-      <Modified>2022-03-06T23:40:18.540</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-06T23:36:45.524</Modified>
+      <Modified>2022-03-07T08:46:21.119</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitKraken-Repos\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-03-06T23:40:20.680</Modified>
+      <Modified>2022-03-07T09:09:08.154</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

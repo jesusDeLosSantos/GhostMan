@@ -19,7 +19,6 @@ namespace UI.ViewModels
 {
     public class CustomModeVM : clsVMBase
     {
-        //TOOD HACER QUE LA LISTA PUNTUACION DE LOS MAPAS VENGAN YA ORDENADA DE LA BBDD
         #region Attributes
         ObservableCollection<clsMapLeaderboardWithElements> originalMapList;//Lista que guarda 50 mapas
         ObservableCollection<clsMapLeaderboardWithElements> nextOriginalMapListRight;//Lista que guarda los siguientes mapas(Es necesario porque se añadira a originalMapList cuando se pase a los siguientes 50 mapas)
@@ -27,7 +26,7 @@ namespace UI.ViewModels
         ObservableCollection<clsMapLeaderboardWithElements> mapList;//Lista que tendra los mapas que se ven actualmente, ira de 10 en 10
         clsMapLeaderboardWithElements mapSelected;
         List<clsElementMap> allElementMaps;
-        //string inputText;
+        List<clsLeaderboard> allLeaderboards;
 
         DelegateCommand leftFilterButtonCommand;
         DelegateCommand rightFilterButtonCommand;
@@ -52,35 +51,35 @@ namespace UI.ViewModels
 
             try
             {
+                allLeaderboards = clsLeaderboardQueryBL.getAllLeaderboardBL();
                 allElementMaps = clsElementMapQueryBL.getListOfElementMapBL();
-                List<clsMapLeaderboardWithElements> b = new List<clsMapLeaderboardWithElements>();
+
+                List<clsMapLeaderboardWithElements> clsMapLeaderboardWithElements = new List<clsMapLeaderboardWithElements>();
                 List<clsElementMap> specificMapElements = null;
                 foreach (clsMap map in clsMapQueryBL.getEspecificNumbersCustomMapsDAL(ultimoMapaObtenidoBBDD, "@NumeroElementos AND @NumeroElementos +50"))
                 {
                     specificMapElements = new List<clsElementMap>(from element in allElementMaps
                                                                   where element.IdMap == map.Id
                                                                   select element);
-                    //PRUEBA
-                    for (int i = 0; i < specificMapElements.Count; i++)
+                    for (int i = 0; i < specificMapElements.Count; i++) //Dividirlo por que las posicion estan en un sitio para un canvas y en otro para un grid
                     {
                         specificMapElements[i].AxisX /= 50;
                         specificMapElements[i].AxisY /= 50;
                     }
-
-                    b.Add(new clsMapLeaderboardWithElements(map,clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
+                    clsMapLeaderboardWithElements.Add(new clsMapLeaderboardWithElements(map, getLeaderboardsOfMap(map.Id), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
                 }
-                originalMapList = new ObservableCollection<clsMapLeaderboardWithElements>(b);
-                ultimoMapaObtenidoBBDD = 51;
+                originalMapList = new ObservableCollection<clsMapLeaderboardWithElements>(clsMapLeaderboardWithElements);
+                ultimoMapaObtenidoBBDD = 51; //Para que se puedan obtener mapas de 50 en 50
                 cargarMapasPosicionEspecificada(posicionUltimoMapa);
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
             catch (SqlException)
             {
-                mostrarMensajeAsync("Ha ocurrido un error al obtener los mapas");
+                Utilidades.mostrarMensajeAsync("Ha ocurrido un error al obtener los mapas");
             }
             catch (Exception)
             {
-                mostrarMensajeAsync("Ha ocurrido un error desconocido.");
+                Utilidades.mostrarMensajeAsync("Ha ocurrido un error desconocido.");
             }
         }
         #endregion
@@ -99,36 +98,6 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("MapSelected");
             }
         }
-        /*public string InputText
-        {
-            get
-            {
-                return inputText;
-            }
-            set
-            {
-                inputText = value;
-                NotifyPropertyChanged("InputText");
-
-                posicionUtlimoMapa = 0;
-                ultimoMapaObtenidoBBDD = 0;
-
-                siguientesMapasCargados = false;
-                anterioresMapasCargados = false;
-                primeraCargada = 0;
-                if (string.IsNullOrEmpty(value))
-                { //Si se borra todo el contenido del input text
-                    mapList = originalMapList;
-                    NotifyPropertyChanged("MapList");
-                }
-                else
-                {
-                    filterList();
-                }
-                rightFilterButtonCommand.RaiseCanExecuteChanged();
-                leftFilterButtonCommand.RaiseCanExecuteChanged();
-            }
-        }*/
         #endregion
 
         #region Commands
@@ -154,7 +123,7 @@ namespace UI.ViewModels
                             foreach (clsMap map in listaMapasSiguientes)
                             {
                                 listaMapasSiguientesConPuntuacion.Add(
-                                    new clsMapLeaderboardWithElements(map, clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id))); 
+                                    new clsMapLeaderboardWithElements(map, getLeaderboardsOfMap(map.Id))); 
                             }
                             nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
                             ultimoMapaObtenidoBBDD -= 50;
@@ -162,7 +131,7 @@ namespace UI.ViewModels
                     }
                     catch (SqlException)
                     {
-                        mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+                        Utilidades.mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
                     }
                 }
                 anterioresMapasCargados = false;
@@ -186,7 +155,6 @@ namespace UI.ViewModels
         private bool LeftFilterButtonCommand_CanExecuted()
         {
             bool desactivarCommand = true;
-
             if (
                 ((posicionUltimoMapa == 0) && primeraCargadaDeMapas == 0) ||
                 (posicionUltimoMapa - 10 == -10 && nextOriginalMapListLeft.Count == 0))
@@ -230,15 +198,16 @@ namespace UI.ViewModels
                             List<clsMapLeaderboardWithElements> listaMapasSiguientesConPuntuacion = new List<clsMapLeaderboardWithElements>();
                             foreach (clsMap map in listaMapasSiguientes)
                             {
+
                                 listaMapasSiguientesConPuntuacion.Add(
-                                    new clsMapLeaderboardWithElements(map, clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id)));
+                                    new clsMapLeaderboardWithElements(map, getLeaderboardsOfMap(map.Id)));
                             }
                             nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
                         }
                     }
                     catch (SqlException)
                     {
-                        mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+                        Utilidades.mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
                     }
                 }
                 cargarMapasPosicionEspecificada(posicionUltimoMapa);
@@ -246,11 +215,10 @@ namespace UI.ViewModels
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
         }
-
         private bool RightFilterButtonCommand_CanExecuted()
         {
             bool activarCommand = true;
-            if (mapList.Count < 10 || (posicionUltimoMapa == 40 && nextOriginalMapListRight.Count == 0)
+            if (mapList != null && mapList.Count < 10 || (posicionUltimoMapa == 40 && nextOriginalMapListRight.Count == 0)
                 || (posicionUltimoMapa != 40 && posicionUltimoMapa >= originalMapList.Count - 10))
             {
                 activarCommand = false;
@@ -259,6 +227,7 @@ namespace UI.ViewModels
         }
         #endregion
 
+        #region Methods
         /// <summary>
         /// Caebecera: private void cargarMapasPosicionEspecificada(int posicion)
         /// Comentario: Este metodo se encarga de modificar la lista donde estan los mapas que se estan mostrando.
@@ -269,7 +238,6 @@ namespace UI.ViewModels
         ///                  Dicha actualizacion se hara cogiendo los 10 mapas siguientes que hay en otra lista.
         /// </summary>
         /// <param name="posicion"></param>
-        #region Methods 
         private void cargarMapasPosicionEspecificada(int posicion)
         {
             int numeroDeSiguientesMapas = 10;
@@ -281,35 +249,26 @@ namespace UI.ViewModels
                     (originalMapList.ToList().GetRange(posicion, numeroDeSiguientesMapas));
             NotifyPropertyChanged("MapList");
 
-            if (mapList.Count != 0) //Debugear y ver si es necesario 
+            if (mapList.Count != 0) 
             {
                 mapSelected = mapList[0];
                 NotifyPropertyChanged("MapSelected");
             }
         }
-        /*
-        private void filterList()
-        {
-            mapList = new ObservableCollection<clsMapLeaderboard>(from map in originalMapList
-                                                                  where map.Nick.ToLower().Contains(inputText.ToLower())
-                                                                  select map);
-            NotifyPropertyChanged("MapList");
-        }
-        */
 
-        /// <summary>
-        /// Cabecera: private async void mostrarMensajeAsync(string mensaje)
-        /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
-        /// Entradas: string mensaje
-        /// Salidas: Ninguna
-        /// Precondiciones: Ninguna
-        /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
-        /// </summary>
-        /// <param name="mensaje"></param>
-        private async void mostrarMensajeAsync(string mensaje)
+        private List<clsLeaderboard> getLeaderboardsOfMap(int idMap)
         {
-            var dialog = new MessageDialog(mensaje);
-            await dialog.ShowAsync();
+            List<clsLeaderboard> leaderboardsOfMap;
+            leaderboardsOfMap = new List<clsLeaderboard>(from leaderboard in allLeaderboards
+                                                         where leaderboard.IdMap == idMap
+                                                         select leaderboard);
+            int numeroLeadersBoards = leaderboardsOfMap.Count;
+
+            if (numeroLeadersBoards > 10) { 
+                numeroLeadersBoards = 11;
+            }
+            leaderboardsOfMap = leaderboardsOfMap.GetRange(0, numeroLeadersBoards); //Obtener solo los 10 primeros
+            return leaderboardsOfMap;
         }
         #endregion
     }

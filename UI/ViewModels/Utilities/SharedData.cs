@@ -31,40 +31,6 @@ namespace UI.ViewModels.Utilities
         public static bool FinPartida { get => finPartida; set => finPartida = value; }
 
         public static string CompletionTime { get => completionTime; set => completionTime = value; }
-        public static async void gameLost()
-        {
-            ContentDialog lost = new ContentDialog()
-            {
-                Title = "Has perdido.",
-                Content = "Git gut.",
-                PrimaryButtonText = "Aceptar"
-            };
 
-            ContentDialogResult result = await lost.ShowAsync();
-
-            // Delete the file if the user clicked the primary button.
-            /// Otherwise, do nothing.
-            if (result == ContentDialogResult.Primary)
-            {
-                (Window.Current.Content as Frame).Navigate(typeof(MainPage));
-            }
-        }
-
-        public static async Task<String> gameWon()
-        {
-            TextBox inputTextBox = new TextBox();
-            ContentDialog won = new ContentDialog()
-            {
-                Title = "¡Has ganado! Introduce tu nick.",
-                Content = inputTextBox,
-                PrimaryButtonText = "Aceptar"
-            };
-
-            ContentDialogResult result = await won.ShowAsync();
-            (Window.Current.Content as Frame).Navigate(typeof(MainPage));
-            return inputTextBox.Text;
-
-            
-        }
     }
 }

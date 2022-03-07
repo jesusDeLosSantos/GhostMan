@@ -117,7 +117,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Models\clsElementTypeSprite.cs" />
-    <Compile Include="Models\clsLeaderboardWithPosition.cs" />
     <Compile Include="Models\clsMapLeaderboardWithElements.cs" />
     <Compile Include="Models\Enemigo.cs" />
     <Compile Include="ViewModels\CustomModeVM.cs" />
@@ -138,7 +137,6 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\clsMapLeaderboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MapCreator.xaml.cs">
       <DependentUpon>MapCreator.xaml</DependentUpon>

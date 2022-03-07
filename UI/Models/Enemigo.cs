@@ -26,13 +26,13 @@ namespace UI.Models
         public int IdElement { get; set; }
 
         //JugadorX y JugadorY, se iran setteando continuamente, cada vez que la posicion del usuario cambie
-        public static int JugadorX { get; set; }
-        public static int JugadorY { get; set; }
+        public static int PlayerPositionX { get; set; }
+        public static int PlayerPositionY { get; set; }
 
         private int velocidadX;
         private int velocidadY;
 
-        public async void moverFantasma()
+        public async void mover()
         {
             Random random = new Random();
             int cambioDireccionAleatorio;//De esta manera cambiar de direccion de manera mas realista, porque sino solo cambiaria de direccion cuando no se pueda mover
@@ -47,7 +47,7 @@ namespace UI.Models
                     X += velocidadX;
                     if (cambioDireccionAleatorio == 1)
                     {
-                        determinarMovilidadFantasma();
+                        determinarMovilidad();
                     }
                 }
                 else
@@ -55,7 +55,7 @@ namespace UI.Models
                     velocidadX = 0;
                     if (velocidadY == 0)
                     {
-                        determinarMovilidadFantasma();
+                        determinarMovilidad();
                     }
 
                 }
@@ -66,7 +66,7 @@ namespace UI.Models
                     Y += velocidadY;
                     if (cambioDireccionAleatorio == 1)
                     {
-                        determinarMovilidadFantasma();
+                        determinarMovilidad();
                     }
                 }
                 else
@@ -74,15 +74,15 @@ namespace UI.Models
                     velocidadY = 0;
                     if (velocidadX == 0)
                     {
-                        determinarMovilidadFantasma();
+                        determinarMovilidad();
                     }
                 }
 
-                if (X + velocidadX == JugadorX && Y == JugadorY)
+                if (X + velocidadX == PlayerPositionX && Y == PlayerPositionY)
                 {
                     X += velocidadX;
                 }
-                else if (X == JugadorX && Y + velocidadY == JugadorY)
+                else if (X == PlayerPositionX && Y + velocidadY == PlayerPositionY)
                 {
                     Y += velocidadY;
                 }
@@ -94,7 +94,7 @@ namespace UI.Models
         }
 
 
-        public void determinarMovilidadFantasma()
+        public void determinarMovilidad()
         {
             Random random = new Random();
             int aletorio;
@@ -152,10 +152,10 @@ namespace UI.Models
 
         private void comprobarEliminarUsuario()
         {
-            if (X == JugadorX && Y == JugadorY)
+            if (X == PlayerPositionX && Y == PlayerPositionY)
             {
                 SharedData.FinPartida = true;
-                SharedData.gameLost();
+                Utilidades.gameLost();
             }
         }
     }
