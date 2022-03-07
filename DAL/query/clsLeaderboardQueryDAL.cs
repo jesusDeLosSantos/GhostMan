@@ -93,5 +93,43 @@ namespace DAL.query
             }
             return leaderboards;
         }
+
+        public static List<clsLeaderboard> getAllLeaderboardDAL()
+        {
+            conecction.clsConnection myConnection = new conecction.clsConnection();
+            List<clsLeaderboard> leaderboards = new List<clsLeaderboard>();
+            SqlConnection connection = null;
+            SqlCommand myCommand = new SqlCommand();
+            SqlDataReader myReader = null;
+            clsLeaderboard oLeaderboard;
+
+            try
+            {
+                connection = myConnection.getConnection();
+                myCommand.CommandText = "SELECT * FROM GM_Leaderboards order by score asc";
+                myCommand.Connection = connection;
+                myReader = myCommand.ExecuteReader();
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        oLeaderboard = new clsLeaderboard();
+                        oLeaderboard.IdMap = (int)myReader["idMap"];
+                        oLeaderboard.Nick = (string)myReader["nick"];
+                        oLeaderboard.Score = (string)myReader["score"];
+                        leaderboards.Add(oLeaderboard);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                myConnection.closeConnection(ref connection);
+            }
+            return leaderboards;
+        }
     }
 }

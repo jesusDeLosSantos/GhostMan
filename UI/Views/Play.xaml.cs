@@ -36,7 +36,7 @@ namespace UI.Views
         {
             string currentTime;
             TimeSpan ts;
-            if (!SharedData.FinPartida)//Si jugador esta vivo
+            if (!SharedData.FinPartida)//Si no termino la partida
             {
                 ts = stopwatch.Elapsed;
                 currentTime = string.Format("{0:00}:{1:00}:{2:00}", ts.Minutes, ts.Seconds, ts.Milliseconds / 10);

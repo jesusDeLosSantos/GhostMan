@@ -1,1 +1,1 @@
-E:\GitKraken-Repos\GhostMan\UI\UI.csproj;x86
+C:\Users\aruiz\Documents\GitHub\GhostMan\UI\UI.csproj;x86
