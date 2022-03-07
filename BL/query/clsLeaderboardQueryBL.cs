@@ -19,5 +19,10 @@ namespace BL.query
         {
             return clsLeaderBoardQueryDAL.getListOfLeaderboardDAL();
         }
+
+        public static List<clsLeaderboard> getMapLeaderboardBL(int id)
+        {
+            return clsLeaderBoardQueryDAL.getMapLeaderboardDAL(id);
+        }
     }
 }

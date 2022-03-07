@@ -21,7 +21,7 @@ namespace UI.ViewModels.Utilities.Converters
                     source = "/Assets/Image/Medium_Mode.png";
                     break;
 
-                case 36:
+                case 30:
                     source = "/Assets/Image/Hard_Mode.png";
                     break;
             }

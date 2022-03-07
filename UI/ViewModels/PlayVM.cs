@@ -11,6 +11,7 @@ using UI.Models;
 using Entities;
 using BL.query;
 using System.Collections.ObjectModel;
+using BL.manager;
 
 namespace UI.ViewModels
 {
@@ -28,6 +29,7 @@ namespace UI.ViewModels
         private List<clsElementMap> enemies = new List<clsElementMap>();
         private List<clsElementMap> elementMapsWithoutEnemiesNorEnemies;
         private List<clsElementMap> elementMapsPuntos;
+        private String winnerNick;
         private int puntosTotales;
 
         public List<clsElementMap> Enemies { get => enemies; set => enemies = value; }
@@ -41,6 +43,7 @@ namespace UI.ViewModels
 
         public PlayVM()
         {
+            SharedData.FinPartida = false;
             List<clsElementType> elementTypes = clsElementTypeQueryBL.getListOfElementTypeBL();
             ElementMaps = new ObservableCollection<clsElementMap>(SharedData.MapSelectedToPlay);
             if (SharedData.IsCommunityMap)
@@ -154,6 +157,8 @@ namespace UI.ViewModels
                 if (puntosTotales == 0)
                 {
                     SharedData.FinPartida = true;
+                    winnerNick = await SharedData.gameWon();
+                    clsLeaderboardManagerBL.postLeaderboardBL(new clsLeaderboard(SharedData.MapSelectedToPlay.First().IdMap, winnerNick, SharedData.CompletionTime));
                 }
             }
 

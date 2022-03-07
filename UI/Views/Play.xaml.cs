@@ -44,6 +44,7 @@ namespace UI.Views
             }
             else {
                 stopwatch.Stop();
+                SharedData.CompletionTime = cronometro.Text;
             }
         }
     }

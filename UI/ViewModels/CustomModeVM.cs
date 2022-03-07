@@ -67,7 +67,7 @@ namespace UI.ViewModels
                         specificMapElements[i].AxisY /= 50;
                     }
 
-                    b.Add(new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>(), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
+                    b.Add(new clsMapLeaderboardWithElements(map,clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id), specificMapElements)); //Hacer metodo generico para lo de las puntuaciones 
                 }
                 originalMapList = new ObservableCollection<clsMapLeaderboardWithElements>(b);
                 ultimoMapaObtenidoBBDD = 51;
@@ -76,11 +76,11 @@ namespace UI.ViewModels
             }
             catch (SqlException)
             {
-                mostrarMensajeAsync("Ocurrio un error al obtener los mapas");
+                mostrarMensajeAsync("Ha ocurrido un error al obtener los mapas");
             }
             catch (Exception)
             {
-                mostrarMensajeAsync("A ocurrido un error desconocido.");
+                mostrarMensajeAsync("Ha ocurrido un error desconocido.");
             }
         }
         #endregion
@@ -154,7 +154,7 @@ namespace UI.ViewModels
                             foreach (clsMap map in listaMapasSiguientes)
                             {
                                 listaMapasSiguientesConPuntuacion.Add(
-                                    new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>()));
+                                    new clsMapLeaderboardWithElements(map, clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id))); 
                             }
                             nextOriginalMapListLeft = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
                             ultimoMapaObtenidoBBDD -= 50;
@@ -231,7 +231,7 @@ namespace UI.ViewModels
                             foreach (clsMap map in listaMapasSiguientes)
                             {
                                 listaMapasSiguientesConPuntuacion.Add(
-                                    new clsMapLeaderboardWithElements(map, new List<clsLeaderboardWithPosition>()));
+                                    new clsMapLeaderboardWithElements(map, clsLeaderboardQueryBL.getMapLeaderboardBL(map.Id)));
                             }
                             nextOriginalMapListRight = new ObservableCollection<clsMapLeaderboardWithElements>(listaMapasSiguientesConPuntuacion);
                         }

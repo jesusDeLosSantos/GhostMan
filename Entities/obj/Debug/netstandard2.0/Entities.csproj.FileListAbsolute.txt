@@ -8,3 +8,12 @@ E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyI
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 E:\GitKraken-Repos\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+E:\Programacion\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb

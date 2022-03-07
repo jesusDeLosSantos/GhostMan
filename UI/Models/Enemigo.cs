@@ -155,6 +155,7 @@ namespace UI.Models
             if (X == JugadorX && Y == JugadorY)
             {
                 SharedData.FinPartida = true;
+                SharedData.gameLost();
             }
         }
     }
