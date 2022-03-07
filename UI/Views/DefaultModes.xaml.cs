@@ -37,21 +37,21 @@ namespace UI.Views
         private void NavigateToPlay(object sender, RoutedEventArgs e)
         {
             var buttonPressed = sender as Button;
+            SharedData.AllImageSourceOfSprites = fromByteToImageConverter.convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
+            SharedData.IsCommunityMap = false;
             switch (buttonPressed.Name)
             {
                 case "btnEasy":
-                    //Frame.Navigate(typeof(Prueba));
+                    SharedData.MapSelectedToPlay = clsElementMapQueryBL.getElementMapOfDefaultMap(1);
                     break;
                 case "btnMedium":
-                    //Frame.Navigate(typeof(PruebaMedio));
+                    SharedData.MapSelectedToPlay = clsElementMapQueryBL.getElementMapOfDefaultMap(2);
                     break;
                 case "btnHard":
-                    SharedData.AllImageSourceOfSprites = fromByteToImageConverter.convertirByteImagen(clsElementTypeQueryBL.getAllSpritesBL());
-                    SharedData.MapSelectedToPlay = clsElementMapQueryBL.getElementMapOfDefaultHardMap();
-                    SharedData.IsCommunityMap = false;
-                    this.Frame.Navigate(typeof(Play));
+                    SharedData.MapSelectedToPlay = clsElementMapQueryBL.getElementMapOfDefaultMap(3);
                     break;
             }
+            this.Frame.Navigate(typeof(Play));
         }
     }
 }
