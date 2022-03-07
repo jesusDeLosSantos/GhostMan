@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = BL
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\aruiz\Documents\GitHub\GhostMan\BL\
+=======
+build_property.ProjectDir = C:\Users\sforte\Desktop\GhostMan\BL\
+>>>>>>> Stashed changes

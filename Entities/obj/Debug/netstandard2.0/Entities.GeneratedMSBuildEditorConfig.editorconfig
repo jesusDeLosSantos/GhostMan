@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = Entities
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\
+=======
+build_property.ProjectDir = C:\Users\sforte\Desktop\GhostMan\Entities\
+>>>>>>> Stashed changes

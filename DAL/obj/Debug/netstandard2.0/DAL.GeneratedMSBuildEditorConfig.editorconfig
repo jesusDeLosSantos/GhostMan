@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = DAL
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\aruiz\Documents\GitHub\GhostMan\DAL\
+=======
+build_property.ProjectDir = C:\Users\sforte\Desktop\GhostMan\DAL\
+>>>>>>> Stashed changes
