@@ -20,17 +20,6 @@ namespace BL.query
             return clsElementMapQueryDAL.getListOfElementMapDAL();
         }
         /// <summary>
-        ///     <header>public static List<clsElementMap> getElementMapOfDefaultHardMap()</header>
-        ///     <description> This method calls DAL and returns a list of the elements of the default hard map</description>
-        ///     <precondition> None </precondition>
-        ///     <postcondition> returns List<clsMap> defaultHardElementsMap to the UI </postcondition>
-        /// </summary>
-        /// <returns>returns List<clsElementMap> defaultHardElementsMap</returns>
-        public static List<clsElementMap> getElementMapOfDefaultHardMap()
-        {
-            return clsElementMapQueryDAL.getElementMapOfDefaultHardMap();
-        }
-        /// <summary>
         ///     <header>public static List<clsElementMap> getElementMapOfDefaultMap(int id)</header>
         ///     <description> This method calls DAL and returns a list of the elements of the map depending on which one you have selected with the id number received in parameters</description>
         ///     <precondition> the int id must be between 1-3 depending on which map u want to get elements from:
