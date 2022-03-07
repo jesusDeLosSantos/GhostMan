@@ -28,8 +28,8 @@ namespace DAL.manager
                 connection = myConnection.getConnection();
                 myCommand.Parameters.Add("@idMap", System.Data.SqlDbType.Int).Value = oLeaderboard.IdMap;
                 myCommand.Parameters.Add("@nick", System.Data.SqlDbType.VarChar).Value = oLeaderboard.Nick;
-                myCommand.Parameters.Add("@score", System.Data.SqlDbType.Int).Value = oLeaderboard.Score;
-                myCommand.CommandText = "INSERT INTO Leaderboard VALUES (@idMap,@nick,@score)";
+                myCommand.Parameters.Add("@score", System.Data.SqlDbType.VarChar).Value = oLeaderboard.Score;
+                myCommand.CommandText = "INSERT INTO GM_Leaderboards VALUES (@idMap,@nick,@score)";
                 myCommand.Connection = connection;
                 result = myCommand.ExecuteNonQuery();
             }

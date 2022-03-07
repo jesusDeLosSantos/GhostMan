@@ -9,8 +9,8 @@ namespace Entities
         #region Attributes
         int idMap;
         int idElement;
-        int axisX;
-        int axisY;
+        short axisX;
+        short axisY;
         #endregion
         #region Builders
         public clsElementMap()
@@ -18,9 +18,16 @@ namespace Entities
 
         }
 
-        public clsElementMap(int idMap,int idElement,int axisX,int axisY)
+        public clsElementMap(int idMap,int idElement,short axisX, short axisY)
         {
             this.idMap = idMap;
+            this.idElement = idElement;
+            this.axisX = axisX;
+            this.axisY = axisY;
+        }
+        public clsElementMap(int idElement, short axisX, short axisY)
+        {
+            this.idMap = 0;
             this.idElement = idElement;
             this.axisX = axisX;
             this.axisY = axisY;
@@ -29,8 +36,8 @@ namespace Entities
         #region Getters & Setters
         public int IdMap { get => idMap; set => idMap = value; }
         public int IdElement { get => idElement; set => idElement = value; }
-        public int AxisX { get => axisX; set => axisX = value; }
-        public int AxisY { get => axisY; set => axisY = value; }
+        public short AxisX { get => axisX; set => axisX = value; }
+        public short AxisY { get => axisY; set => axisY = value; }
         #endregion
     }
 }

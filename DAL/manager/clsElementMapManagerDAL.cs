@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
+using System.Threading.Tasks;
 using Entities;
 
 namespace DAL.manager
@@ -16,7 +17,7 @@ namespace DAL.manager
         /// </summary>
         /// <param name="oElementMap">clsMap</param>
         /// <returns>int result</returns>
-        public static int postElementMapDAL(clsElementMap oElementMap)
+        public static int postElementMapDAL(int idMap, clsElementMap oElementMap)
         {
             int result = 0;
             conecction.clsConnection myConnection = new conecction.clsConnection();
@@ -26,11 +27,11 @@ namespace DAL.manager
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.Parameters.Add("@idMap", System.Data.SqlDbType.Int).Value = oElementMap.IdMap;
+                myCommand.Parameters.Add("@idMap", System.Data.SqlDbType.Int).Value = idMap;
                 myCommand.Parameters.Add("@idElement", System.Data.SqlDbType.Int).Value = oElementMap.IdElement;
                 myCommand.Parameters.Add("@axisX", System.Data.SqlDbType.Int).Value = oElementMap.AxisX;
-                myCommand.Parameters.Add("@asixY", System.Data.SqlDbType.Int).Value = oElementMap.AxisY;
-                myCommand.CommandText = "INSERT INTO ElementMap VALUES (@idMap,@idElement,@axisX,@axisY)";
+                myCommand.Parameters.Add("@axisY", System.Data.SqlDbType.Int).Value = oElementMap.AxisY;
+                myCommand.CommandText = "INSERT INTO GM_ElementMaps VALUES (@idMap,@idElement,@axisX,@axisY)";
                 myCommand.Connection = connection;
                 result = myCommand.ExecuteNonQuery();
             }
