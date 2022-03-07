@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "4e976386-8da5-4e13-9918-f6e6cbe3809a": {
+      "ProjectGuid": "4e976386-8da5-4e13-9918-f6e6cbe3809a",
+      "DisplayName": "Entities",
+      "ColorIndex": 0
+    },
+    "3d929f98-e8bc-4730-84c9-afc5a375ef67": {
+      "ProjectGuid": "3d929f98-e8bc-4730-84c9-afc5a375ef67",
+      "DisplayName": "BL",
+      "ColorIndex": 1
+    },
+    "d7e9c0e7-7060-4f57-8ce4-d4ad128c13b7": {
+      "ProjectGuid": "d7e9c0e7-7060-4f57-8ce4-d4ad128c13b7",
+      "DisplayName": "DAL",
+      "ColorIndex": 2
+    },
+    "83567656-f6e9-4fc4-9452-f7d47372d924": {
+      "ProjectGuid": "83567656-f6e9-4fc4-9452-f7d47372d924",
+      "DisplayName": "UI",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
