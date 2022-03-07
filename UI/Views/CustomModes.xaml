@@ -182,8 +182,8 @@
             </ListView>
             <Button x:Name="btnPlay" Grid.Column="0" Grid.Row="3" Width="100" Height="50"  Click="btnPlay_Click" VerticalAlignment="Bottom" Margin="200,10,180,30" Background="#33FF5C" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel" Foreground="#703CB9" >Jugar</Button>
             <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,18" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
-                <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
-                    <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Margin="2,10,0,23" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards" BorderBrush="#33FF5C" BorderThickness="4">
+                <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto" Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
+                    <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Height="auto" Width="auto"  Background="Black" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="lsvLeaderboards">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />

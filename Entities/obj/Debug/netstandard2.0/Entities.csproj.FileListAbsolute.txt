@@ -27,3 +27,13 @@ C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\obj\Debug\netstandard2.0\Entit
 C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\sforte\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\sforte\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\sforte\Desktop\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\sforte\Desktop\GhostMan\Entities\obj\Debug\netstandard2.0\Entities.pdb

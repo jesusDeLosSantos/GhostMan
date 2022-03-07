@@ -19,8 +19,8 @@
         <converters:ConverterSizeToWidth x:Key="converterSizeToWidth" />
     </Page.Resources>
     
-    <RelativePanel Background="LightBlue">
-        <TextBlock Name="cronometro" Text="{Binding CurrentTime, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="100" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30"></TextBlock>
+    <RelativePanel Background="Black">
+        <TextBlock Name="cronometro" Text="{Binding CurrentTime, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="100" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="40" Margin="0,40,0,0" Foreground="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
         <Canvas Background="Black" RelativePanel.AlignBottomWithPanel="True" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="{Binding MapSize, Converter={StaticResource converterSizeToWidth}}" Height="800" Loaded="Canvas_Loaded">

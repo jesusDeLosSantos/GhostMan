@@ -164,6 +164,10 @@
     <Content Include="Assets\Image\Easy_Mode.png" />
     <Content Include="Assets\Image\Empty_Spot.png" />
     <Content Include="Assets\Image\Ending_Wall_3.png" />
+    <Content Include="Assets\Image\Exorcist_Blue.png" />
+    <Content Include="Assets\Image\Exorcist_Green.png" />
+    <Content Include="Assets\Image\Exorcist_Purple.png" />
+    <Content Include="Assets\Image\Exorcist_Red.png" />
     <Content Include="Assets\Image\Ghost.png" />
     <Content Include="Assets\Image\Hard_Mode.png" />
     <Content Include="Assets\Image\icono_Puntuacion_Prueba.png" />
