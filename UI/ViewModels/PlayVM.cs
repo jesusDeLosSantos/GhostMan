@@ -42,6 +42,7 @@ namespace UI.ViewModels
         public Enemigo Enemigo2 { get; set; }
         public Enemigo Enemigo3 { get; set; }
         public Enemigo Enemigo4 { get; set; }
+        public int MapSize { get; set; }
 
         public PlayVM()
         {
@@ -50,6 +51,7 @@ namespace UI.ViewModels
             prepararDatosPuntos();
             prepararListaSoloParedes();
             initializeEnemiesList(elementTypes);
+            
 
             //Configuracion omitir de lista con todos elementos los enemigos y el jugador
             clsElementMap player = ElementMaps.Where(x => x.IdElement == elementTypes.Where(y => y.Name.Contains("Ghost")).FirstOrDefault().Id).First(); //esto lo hariamos con un linq, pero el linq devuelve un valor que no es el correcto
@@ -58,6 +60,16 @@ namespace UI.ViewModels
             ElementMaps = elementMapsWithoutEnemiesNorPlayer;
             elementMapsWithoutEnemiesNorEnemies = new List<clsElementMap>(elementMapsWithoutEnemiesNorPlayer.Except(Utilidades.ListaParedes));
 
+            try
+            {
+                MapSize = clsMapQueryBL.getSizeMapDAL(player.IdMap);
+                NotifyPropertyChanged(nameof(MapSize));
+
+            }
+            catch (Exception) {
+                Utilidades.mostrarMensajeAsync("Ocurrio un error obtener los datos");
+            }
+          
             prepararDatosJugabilidad(player);
             configurarEnemigos();
         }
@@ -88,6 +100,7 @@ namespace UI.ViewModels
             }
             catch (Exception)
             {
+                Utilidades.mostrarMensajeAsync("Ocurrio un error obtener los datos necesarios para el juego");
             }
         }
 
@@ -160,7 +173,7 @@ namespace UI.ViewModels
             while (!SharedData.FinPartida)
             {
                 if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
-                    && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
+                    && (X > 0 && velocidadX < 0 || X < SharedData.MaxMapWidth - 50 && velocidadX > 0))
                 {
                     X += velocidadX;
                     Enemigo.PlayerPositionX = X;

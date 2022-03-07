@@ -42,7 +42,7 @@ namespace UI.Models
             {
                 cambioDireccionAleatorio = random.Next(6);
                 if (velocidadX != 0 && Utilidades.canMove(X + velocidadX, Y)
-                    && (X > 0 && velocidadX < 0 || X < 1450 && velocidadX > 0))
+                    && (X > 0 && velocidadX < 0 || X < SharedData.MaxMapWidth - 50 && velocidadX > 0))
                 {
                     X += velocidadX;
                     if (cambioDireccionAleatorio == 1)

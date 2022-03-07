@@ -233,5 +233,36 @@ namespace DAL.query
             return customMaps;
         }
 
+        public static int getSizeMapDAL(int id)
+        {
+            conecction.clsConnection myConnection = new conecction.clsConnection();
+            SqlConnection connection = null;
+            SqlCommand myCommand = new SqlCommand();
+            SqlDataReader myReader = null;
+            int size = 0;
+
+            try
+            {
+                connection = myConnection.getConnection();
+                myCommand.CommandText = "SELECT * FROM GM_Maps WHERE id = @id";
+                myCommand.Parameters.Add("@id",System.Data.SqlDbType.Int).Value = id;
+                myCommand.Connection = connection;
+                myReader = myCommand.ExecuteReader();
+                if (myReader.HasRows)
+                {
+                    myReader.Read();
+                    size = (int)myReader["size"];
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                myConnection.closeConnection(ref connection);
+            }
+            return size;
+        }
     }
 }

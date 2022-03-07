@@ -52,8 +52,6 @@ namespace BL.query
         {
             return clsMapQueryDAL.getLastMapDAL();
         }
-
-
         /// <summary>
         ///     <header>public static List<clsMap> getListOfCustomMapsBL()</header>
         ///     <description> This method calls DAL and returns a list of custom maps</description>
@@ -65,6 +63,9 @@ namespace BL.query
         {
             return clsMapQueryDAL.getEspecificNumbersCustomMapsDAL(number, incrementoDecremento);
         }
-       
+        public static int getSizeMapDAL(int id)
+        {
+            return clsMapQueryDAL.getSizeMapDAL(id);
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace UI.ViewModels.Utilities
         private static bool isCommunityMap = true;
         private static string completionTime = "";
         private static bool finPartida = false;
+        public static int MaxMapWidth { get; set; }
 
         public static List<ImageSource> AllImageSourceOfSprites { get => allImageSourceOfSprites; set => allImageSourceOfSprites = value; }
 

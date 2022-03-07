@@ -16,11 +16,12 @@ namespace UI.Views
     {
         private PlayVM playVM;
         private Stopwatch stopwatch;
+        DispatcherTimer dispatcherTimer;
         public Play()
         {
             InitializeComponent();
             playVM = (PlayVM)DataContext;
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer = new DispatcherTimer();
             stopwatch = new Stopwatch();
             stopwatch.Reset();
             stopwatch.Start();
@@ -32,7 +33,7 @@ namespace UI.Views
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
 
-                Window.Current.Content.KeyDown += playVM.determinarMovilidadFantasma;
+         Window.Current.Content.KeyDown += playVM.determinarMovilidadFantasma;
             
         }
 
@@ -48,6 +49,7 @@ namespace UI.Views
             }
             else {
                 stopwatch.Stop();
+                dispatcherTimer.Stop(); 
                 SharedData.CompletionTime = cronometro.Text;
             }
         }

@@ -18,6 +18,7 @@
     <RootPropertyPathName Name="MapList" />
     <RootPropertyPathName Name="RightFilterButtonCommand" />
     <RootPropertyPathName Name="LeftFilterButtonCommand" />
+    <RootPropertyPathName Name="MapSize" />
     <RootPropertyPathName Name="Enemigo4" />
     <RootPropertyPathName Name="X" />
     <RootPropertyPathName Name="Y" />
@@ -387,6 +388,7 @@
     </RootType>
     <RootType FullName="UI.Views.CustomModes" />
     <RootType FullName="UI.ViewModels.PlayVM" />
+    <RootType FullName="UI.ViewModels.Utilities.Converters.ConverterSizeToWidth" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
