@@ -19,7 +19,7 @@ namespace UI.ViewModels
 {
     public class PlayVM : clsVMBase
     {
-
+        #region Attributes
         public int X { get; set; }
         public int Y { get; set; }
 
@@ -43,7 +43,8 @@ namespace UI.ViewModels
         public Enemigo Enemigo3 { get; set; }
         public Enemigo Enemigo4 { get; set; }
         public int MapSize { get; set; }
-
+        #endregion
+        #region Builders
         public PlayVM()
         {
             SharedData.FinPartida = false;
@@ -73,7 +74,14 @@ namespace UI.ViewModels
             prepararDatosJugabilidad(player);
             configurarEnemigos();
         }
-
+        #endregion
+        #region Methods
+        /// <summary>
+        ///     <header>private void prepararDatosPuntos()</header>
+        ///     <description>This method prepare the list of points</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>The list of points is prepared</postcondition>
+        /// </summary>
         private void prepararDatosPuntos()
         {
 
@@ -82,7 +90,12 @@ namespace UI.ViewModels
                                                         select element);
             puntosTotales = elementMapsPuntos.Count;
         }
-
+        /// <summary>
+        ///     <header>private void prepararListaElementos()</header>
+        ///     <description>This methos prepares the list of elements</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>The list of elements is prepared</postcondition>
+        /// </summary>
         private void prepararListaElementos()
         {
             try
@@ -103,7 +116,12 @@ namespace UI.ViewModels
                 Utilidades.mostrarMensajeAsync("Ocurrio un error obtener los datos necesarios para el juego");
             }
         }
-
+        /// <summary>
+        ///     <header>private void configurarEnemigos()</header>
+        ///     <description>This method configures the enemies from the map</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Enemies are configured</postcondition>
+        /// </summary>
         private void configurarEnemigos()
         {
             for (int i = enemies.Count; i > 0; i--)
@@ -129,6 +147,12 @@ namespace UI.ViewModels
                 }
             }
         }
+        /// <summary>
+        ///     <header>private void prepararListaSoloParedes()</header>
+        ///     <description>This method prepares the list of walls in the map</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>The list of walls is prepared</postcondition>
+        /// </summary>
         private void prepararListaSoloParedes()
         {
             Utilidades.ListaParedes = new List<clsElementMap>(from element in ElementMaps
@@ -137,7 +161,13 @@ namespace UI.ViewModels
                                                                                           select elementType.Id).FirstOrDefault()
                                                               select element);
         }
-
+        /// <summary>
+        ///     <header>private void initializeEnemiesList(List<clsElementType> elementTypes)</header>
+        ///     <description>This method initializes the list of elements</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Enemies are intializes</postcondition>
+        /// </summary>
+        /// <param name="elementTypes">List<clsElementType></param>
         private void initializeEnemiesList(List<clsElementType> elementTypes)
         {
             /*(from elements in elementMaps
@@ -156,7 +186,13 @@ namespace UI.ViewModels
                 }
             }
         }
-
+        /// <summary>
+        ///     <header>private void prepararDatosJugabilidad(clsElementMap player)</header>
+        ///     <description>This method prepares the player character to play</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Mian character is prepared</postcondition>
+        /// </summary>
+        /// <param name="player">clsElementMap</param>
         private void prepararDatosJugabilidad(clsElementMap player)
         {
             X = player.AxisX;
@@ -167,7 +203,13 @@ namespace UI.ViewModels
             Enemigo.PlayerPositionX = X;
             Enemigo.PlayerPositionY = Y;
         }
-
+        /// <summary>
+        ///     <header>public async Task moverFantasma()</header>
+        ///     <description>This method controls the movement of the enemies during the play</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>The movement of the enemies is configured</postcondition>
+        /// </summary>
+        /// <returns>Task void</returns>
         public async Task moverFantasma()
         {
             while (!SharedData.FinPartida)
@@ -214,7 +256,14 @@ namespace UI.ViewModels
             }
 
         }
-
+        /// <summary>
+        ///     <header>public async void determinarMovilidadFantasma(object sender, KeyRoutedEventArgs e)</header>
+        ///     <description>This method controls the movement of the main character</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Movement of the main character is controlled</postcondition>
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">KeyRoutedEventArgs</param>
         public async void determinarMovilidadFantasma(object sender, KeyRoutedEventArgs e)
         {
             if (!SharedData.FinPartida)
@@ -275,6 +324,12 @@ namespace UI.ViewModels
                 }
             }
         }
+        /// <summary>
+        ///     <header>private void comprobarRecogerPuntos()</header>
+        ///     <description>This method controls the action of taking the points during the play</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Picking up points is controlled</postcondition>
+        /// </summary>
         private void comprobarRecogerPuntos()
         {
             bool puntoRecogido = false;
@@ -289,6 +344,7 @@ namespace UI.ViewModels
                 }
             }
         }
+        #endregion
     }
 }
 

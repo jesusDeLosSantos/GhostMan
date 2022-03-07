@@ -184,6 +184,12 @@ namespace UI.ViewModels
 
             return elementsList;
         }
+        /// <summary>
+        ///     <header>private void setStartingAxis()</header>
+        ///     <description>this method resets the position of the enemies and the main ghost</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Resets the positions of the characters</postcondition>
+        /// </summary>
         private void setStartingAxis()
         {
             axisXE1 = 50;
@@ -408,6 +414,12 @@ namespace UI.ViewModels
                 }
             }
         }
+        /// <summary>
+        ///     <header>private void addCharacters()</header>
+        ///     <description>This method adds the characters to the full map</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Characters added</postcondition>
+        /// </summary>
         private void addCharacters()
         {
             fullMap.Add(new clsElementMap(16,axisXE1,axisYE1));

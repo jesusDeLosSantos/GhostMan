@@ -79,7 +79,7 @@ namespace UI.ViewModels
             }
             catch (Exception)
             {
-                Utilidades.mostrarMensajeAsync("Ha ocurrido un error desconocido.");
+                showError();
             }
         }
         #endregion
@@ -105,7 +105,12 @@ namespace UI.ViewModels
         {
             get { return leftFilterButtonCommand; }
         }
-
+        /// <summary>
+        ///     <header>private async void LeftFilterButtonCommand_Executed()</header>
+        ///     <description>This command controls the left click to move between pages</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Move to the left</postcondition>
+        /// </summary>
         private async void LeftFilterButtonCommand_Executed()
         {
             posicionUltimoMapa -= 10;
@@ -151,7 +156,13 @@ namespace UI.ViewModels
                 rightFilterButtonCommand.RaiseCanExecuteChanged();
             }
         }
-
+        /// <summary>
+        ///     <header>private bool LeftFilterButtonCommand_CanExecuted()</header>
+        ///     <description>This method makes the left button executable or not, dpends on the maps in the db</description>
+        ///     <precondition>None</precondition>ç
+        ///     <postcondition>Makes the button executable or not</postcondition>
+        /// </summary>
+        /// <returns>bool executable</returns>
         private bool LeftFilterButtonCommand_CanExecuted()
         {
             bool desactivarCommand = true;
@@ -170,7 +181,12 @@ namespace UI.ViewModels
         {
             get { return rightFilterButtonCommand; }
         }
-
+        /// <summary>
+        ///     <header>private async void RightFilterButtonCommand_Executed()</header>
+        ///     <description>This command controls the right click to move between pages</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Move to the right</postcondition>
+        /// </summary>
         private async void RightFilterButtonCommand_Executed()
         {
             posicionUltimoMapa += 10;
@@ -215,6 +231,13 @@ namespace UI.ViewModels
                 leftFilterButtonCommand.RaiseCanExecuteChanged();
             }
         }
+        /// <summary>
+        ///     <header>private bool RightFilterButtonCommand_CanExecuted()</header>
+        ///     <description>This method makes the right button executable or not, dpends on the maps in the db</description>
+        ///     <precondition>None</precondition>ç
+        ///     <postcondition>Makes the button executable or not</postcondition>
+        /// </summary>
+        /// <returns>bool executable</returns>
         private bool RightFilterButtonCommand_CanExecuted()
         {
             bool activarCommand = true;
@@ -229,15 +252,12 @@ namespace UI.ViewModels
 
         #region Methods
         /// <summary>
-        /// Caebecera: private void cargarMapasPosicionEspecificada(int posicion)
-        /// Comentario: Este metodo se encarga de modificar la lista donde estan los mapas que se estan mostrando.
-        /// Entradas: int posicion
-        /// Salidas: Ninguna
-        /// Precondiciones: posicion tiene que ser mayor que 0 
-        /// Postcondiciones: Se actualizara el contenido de la lista de mapas que se muestran actualmente.
-        ///                  Dicha actualizacion se hara cogiendo los 10 mapas siguientes que hay en otra lista.
+        /// <header>private void cargarMapasPosicionEspecificada(int posicion)</header>
+        /// <description> This method changes the list of maps that are showed</description>
+        ///<precondition>position must be bigger than 0</precondition> 
+        /// <postcondition> List of maps is updated.</postcondition>
         /// </summary>
-        /// <param name="posicion"></param>
+        /// <param name="posicion">int</param>
         private void cargarMapasPosicionEspecificada(int posicion)
         {
             int numeroDeSiguientesMapas = 10;
@@ -255,7 +275,14 @@ namespace UI.ViewModels
                 NotifyPropertyChanged("MapSelected");
             }
         }
-
+        /// <summary>
+        ///     <header>private List<clsLeaderboard> getLeaderboardsOfMap(int idMap)</header>
+        ///     <description>This method gets the leaderboard from the db</description>
+        ///     <precondition>None</precondition>
+        ///     <postcondition>Returns the list of leaderboards from a map</postcondition>
+        /// </summary>
+        /// <param name="idMap">int</param>
+        /// <returns>List<clsLeaderboard> leaderboards</returns>
         private List<clsLeaderboard> getLeaderboardsOfMap(int idMap)
         {
             List<clsLeaderboard> leaderboardsOfMap;
