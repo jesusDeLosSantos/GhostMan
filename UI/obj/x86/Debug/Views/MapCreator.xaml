@@ -707,10 +707,10 @@
                     <Image x:ConnectionId='510' Canvas.Left="1350" Canvas.Top="750" Height="50" Width="50"                                   Source="/Assets/Image/Empty_Spot.png"></Image>
                     <Image x:ConnectionId='511' Canvas.Left="1400" Canvas.Top="750" Height="50" Width="50"                                   Source="/Assets/Image/Empty_Spot.png"></Image>
                     <Image x:ConnectionId='512' Canvas.Left="1450" Canvas.Top="750" Height="50" Width="50"                                   Source="/Assets/Image/Empty_Spot.png"></Image>
-                    <Image Canvas.Left="{Binding AxisXE1}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE1}" Source="/Assets/Image/Hard_Mode.png"/>
-                    <Image Canvas.Left="{Binding AxisXE2}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE2}" Source="/Assets/Image/Hard_Mode.png"/>
-                    <Image Canvas.Left="{Binding AxisXE3}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE3}" Source="/Assets/Image/Hard_Mode.png"/>
-                    <Image Canvas.Left="{Binding AxisXE4}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE4}" Source="/Assets/Image/Hard_Mode.png"/>
+                    <Image Canvas.Left="{Binding AxisXE1}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE1}" Source="/Assets/Image/Exorcist_Blue.png"/>
+                    <Image Canvas.Left="{Binding AxisXE2}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE2}" Source="/Assets/Image/Exorcist_Green.png"/>
+                    <Image Canvas.Left="{Binding AxisXE3}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE3}" Source="/Assets/Image/Exorcist_Purple.png"/>
+                    <Image Canvas.Left="{Binding AxisXE4}" Height="50" Width="50"  Canvas.Top="{Binding AxisYE4}" Source="/Assets/Image/Exorcist_Red.png"/>
                     <Image Canvas.Left="{Binding AxisXP}" Height="50" Width="50"  Canvas.Top="{Binding AxisYP}" Source="/Assets/Image/Ghost.png"/>
                 </Canvas>
             </Border>
