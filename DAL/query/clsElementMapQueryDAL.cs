@@ -55,16 +55,20 @@ namespace DAL.query
             return elementsMap;
         }
         /// <summary>
-        ///     <header>public static List<clsElementMap> getElementMapOfDefaultHardMap()</header>
-        ///     <description> This method calls the database and returns a list of clsElementMap of the default hard map</description>
-        ///     <precondition> None </precondition>
-        ///     <postcondition> returns List<clsElementMap> defaultHardElementsMap to the BL </postcondition>
+        ///     <header>public static List<clsElementMap> getElementMapOfDefaultMap(int id)</header>
+        ///     <description> This method calls the database and returns a list of clsElementMap of the default map that you have selected via the id in parameters</description>
+        ///     <precondition> the int id must be between 1-3 depending on which map u want to get elements from:
+        ///     1.-Easy
+        ///     2.-Medium
+        ///     3.-Hard
+        /// </precondition>
+        ///     <postcondition> returns List<clsElementMap> defaultElementsMap to the BL </postcondition>
         /// </summary>
-        /// <returns>returns List<clsElementMap> defaultHardElementsMap</returns>
-        public static List<clsElementMap> getElementMapOfDefaultHardMap()
+        /// <returns>returns List<clsElementMap> defaultElementsMap</returns>
+        public static List<clsElementMap> getElementMapOfDefaultMap(int id)
         {
             conecction.clsConnection myConnection = new conecction.clsConnection();
-            List<clsElementMap> defaultHardElementsMap = new List<clsElementMap>();
+            List<clsElementMap> defaultElementsMap = new List<clsElementMap>();
             SqlConnection connection = null;
             SqlCommand myCommand = new SqlCommand();
             SqlDataReader myReader = null;
@@ -73,7 +77,20 @@ namespace DAL.query
             try
             {
                 connection = myConnection.getConnection();
-                myCommand.CommandText = "SELECT GMEM.idMap, GMEM.idElement, GMEM.axisX, GMEM.axisY FROM GM_ElementMaps AS GMEM INNER JOIN GM_Maps AS GMM ON GMEM.idMap = GMM.id WHERE GMM.nick = 'default' AND GMM.mapName='Hard'";
+                switch (id)
+                {
+                    case 1:
+                        myCommand.CommandText = "SELECT GMEM.idMap, GMEM.idElement, GMEM.axisX, GMEM.axisY FROM GM_ElementMaps AS GMEM INNER JOIN GM_Maps AS GMM ON GMEM.idMap = GMM.id WHERE GMM.nick = 'default' AND GMM.mapName='Easy'";
+
+                        break;
+                    case 2:
+                        myCommand.CommandText = "SELECT GMEM.idMap, GMEM.idElement, GMEM.axisX, GMEM.axisY FROM GM_ElementMaps AS GMEM INNER JOIN GM_Maps AS GMM ON GMEM.idMap = GMM.id WHERE GMM.nick = 'default' AND GMM.mapName='Medium'";
+
+                        break;
+                    case 3:
+                        myCommand.CommandText = "SELECT GMEM.idMap, GMEM.idElement, GMEM.axisX, GMEM.axisY FROM GM_ElementMaps AS GMEM INNER JOIN GM_Maps AS GMM ON GMEM.idMap = GMM.id WHERE GMM.nick = 'default' AND GMM.mapName='Hard'";
+                        break;
+                }
                 myCommand.Connection = connection;
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
@@ -85,7 +102,7 @@ namespace DAL.query
                         oElementMap.IdElement = (int)myReader["idElement"];
                         oElementMap.AxisX = (short)myReader["axisX"];
                         oElementMap.AxisY = (short)myReader["axisY"];
-                        defaultHardElementsMap.Add(oElementMap);
+                        defaultElementsMap.Add(oElementMap);
                     }
                 }
             }
@@ -98,7 +115,7 @@ namespace DAL.query
                 myReader.Close();
                 myConnection.closeConnection(ref connection);
             }
-            return defaultHardElementsMap;
+            return defaultElementsMap;
         }
     }
 }
