@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-07T08:49:11.160</Modified>
+      <Modified>2022-03-07T09:09:08.156</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\UI.exe">
       <PackagePath>entrypoint\UI.exe</PackagePath>
-      <Modified>2022-03-07T08:49:10.607</Modified>
+      <Modified>2022-03-07T09:09:07.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -60,15 +60,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\BL.dll">
       <PackagePath>BL.dll</PackagePath>
-      <Modified>2022-03-07T08:19:37.788</Modified>
+      <Modified>2022-03-07T08:57:13.532</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\Entities\bin\Debug\netstandard2.0\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2022-03-07T07:16:19.893</Modified>
+      <Modified>2022-03-07T08:57:13.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\BL\bin\Debug\netstandard2.0\DAL.dll">
       <PackagePath>DAL.dll</PackagePath>
-      <Modified>2022-03-07T08:12:14.542</Modified>
+      <Modified>2022-03-07T08:57:13.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -398,31 +398,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\App.xbf">
       <PackagePath>Views\App.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.242</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\DefaultModes.xbf">
       <PackagePath>Views\DefaultModes.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.057</Modified>
+      <Modified>2022-03-07T09:09:07.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.243</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\CustomModes.xbf">
       <PackagePath>Views\CustomModes.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.135</Modified>
+      <Modified>2022-03-07T09:09:07.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\Play.xbf">
       <PackagePath>Views\Play.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.196</Modified>
+      <Modified>2022-03-07T09:09:07.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\MapCreator.xbf">
       <PackagePath>Views\MapCreator.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.238</Modified>
+      <Modified>2022-03-07T09:09:07.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Views\PlayMenu.xbf">
       <PackagePath>Views\PlayMenu.xbf</PackagePath>
-      <Modified>2022-03-07T08:49:10.242</Modified>
+      <Modified>2022-03-07T09:09:07.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -434,7 +434,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\GhostMan\UI\bin\x86\Debug\Core\UI.exe">
       <PackagePath>UI.exe</PackagePath>
-      <Modified>2022-03-07T08:49:11.158</Modified>
+      <Modified>2022-03-07T09:09:08.154</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

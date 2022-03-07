@@ -22,14 +22,18 @@ namespace UI.Views
             playVM = (PlayVM)DataContext;
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             stopwatch = new Stopwatch();
+            stopwatch.Reset();
             stopwatch.Start();
             dispatcherTimer.Tick += timer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             dispatcherTimer.Start();
+            
         }
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
-            Window.Current.Content.KeyDown += playVM.determinarMovilidadFantasma;
+
+                Window.Current.Content.KeyDown += playVM.determinarMovilidadFantasma;
+            
         }
 
         private void timer_Tick(object sender, object e)
