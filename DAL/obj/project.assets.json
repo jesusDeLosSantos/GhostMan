@@ -872,41 +872,25 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\aruiz\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\amachio\\.nuget\\packages\\": {},
->>>>>>> Albert
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
       "projectName": "DAL",
       "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\DAL\\obj\\",
-=======
-      "projectUniqueName": "C:\\CositasEpicas\\GitKraken\\GhostMan\\DAL\\DAL.csproj",
-      "projectName": "DAL",
-      "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
-      "outputPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\DAL\\obj\\",
->>>>>>> Albert
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Albert
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -922,13 +906,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
-=======
-            "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj"
->>>>>>> Albert
             }
           }
         }
@@ -964,11 +943,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
->>>>>>> Albert
       }
     }
   }

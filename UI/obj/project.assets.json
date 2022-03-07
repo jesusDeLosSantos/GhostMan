@@ -9176,11 +9176,7 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\aruiz\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\amachio\\.nuget\\packages\\": {},
->>>>>>> Albert
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
@@ -9188,19 +9184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
       "projectName": "UI",
       "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
       "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\obj\\",
-=======
-      "projectUniqueName": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\amachio\\.nuget\\packages\\",
-      "outputPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\UI\\obj\\",
->>>>>>> Albert
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9209,11 +9197,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\amachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Albert
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -9228,19 +9212,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj": {
               "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\BL\\BL.csproj"
             },
             "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\Entities\\Entities.csproj"
-=======
-            "C:\\CositasEpicas\\GitKraken\\GhostMan\\BL\\BL.csproj": {
-              "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\BL\\BL.csproj"
-            },
-            "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\CositasEpicas\\GitKraken\\GhostMan\\Entities\\Entities.csproj"
->>>>>>> Albert
             }
           }
         }

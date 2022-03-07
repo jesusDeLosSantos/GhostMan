@@ -24,7 +24,6 @@
         <Border BorderBrush="#703CB9" BorderThickness="5" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
         <Canvas x:ConnectionId='3' Background="Black"
                  Width="{Binding MapSize, Converter={StaticResource converterSizeToWidth}}" Height="800"                       >
-
             <Image  Source="{Binding ElementMaps[0].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
                    Canvas.Left="{Binding ElementMaps[0].AxisX, Mode=TwoWay}" Canvas.Top="{Binding ElementMaps[0].AxisY, Mode=TwoWay}"/>
             <Image  Source="{Binding ElementMaps[1].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
