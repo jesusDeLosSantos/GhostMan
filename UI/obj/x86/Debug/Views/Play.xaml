@@ -21,9 +21,9 @@
     
     <RelativePanel Background="Black">
         <TextBlock x:ConnectionId='2' Name="cronometro" Text="{Binding CurrentTime, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="100" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="40" Margin="0,40,0,0" Foreground="#703CB9" FontFamily="/Assets/Fonts/dogicapixelbold.ttf#Dogica Pixel"></TextBlock>
-        <Canvas x:ConnectionId='3' Background="Black" RelativePanel.AlignBottomWithPanel="True" 
-                RelativePanel.AlignLeftWithPanel="True" 
-                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="{Binding MapSize, Converter={StaticResource converterSizeToWidth}}" Height="800"                       >
+        <Border BorderBrush="#703CB9" BorderThickness="5" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+        <Canvas x:ConnectionId='3' Background="Black"
+                 Width="{Binding MapSize, Converter={StaticResource converterSizeToWidth}}" Height="800"                       >
 
             <Image  Source="{Binding ElementMaps[0].IdElement, Converter={StaticResource converterIdElementToSourceImage}}" Width="50" Height="50"
                    Canvas.Left="{Binding ElementMaps[0].AxisX, Mode=TwoWay}" Canvas.Top="{Binding ElementMaps[0].AxisY, Mode=TwoWay}"/>
@@ -997,6 +997,7 @@
                    Canvas.Left="{Binding Enemigo4.X, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding Enemigo4.Y, UpdateSourceTrigger=PropertyChanged}"/>
 
         </Canvas>
+        </Border>
     </RelativePanel>
 </Page>
 

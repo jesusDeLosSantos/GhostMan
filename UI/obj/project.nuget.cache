@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DRpqKjxpHa0yMRv6NYED3d4OPY7UgWa6mkMTJ9jGClV9nLEBN3KaRy2/kBi5ymS7+azZmt9S3Mt8YmQpX6NiGg==",
+  "dgSpecHash": "l+ro7wabDg+tgWnlwRn15vxYX5mVeRBS8h0QfBUydGbiT1i23Hg8hljeZgbXusCqGldxmCcISj3gbg7dFMP/pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sforte\\Desktop\\GhostMan\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\GhostMan\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.8\\microsoft.netcore.platforms.3.1.8.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.8\\microsoft.netcore.platforms.3.1.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.12\\microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.10-rel-29722-00\\runtime.win10-arm.microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.sharedlibrary\\2.2.8-rel-29722-00\\runtime.win10-arm.microsoft.net.native.sharedlibrary.2.2.8-rel-29722-00.nupkg.sha512",
@@ -27,11 +27,11 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.sharedlibrary\\2.2.8-rel-29722-00\\runtime.win10-x86.microsoft.net.native.sharedlibrary.2.2.8-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.12\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
-    "C:\\Users\\sforte\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512"
+    "C:\\Users\\aruiz\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
