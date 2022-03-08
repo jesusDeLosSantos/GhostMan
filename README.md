@@ -1,2 +1,2 @@
 # GhostMan
-Juego basado en Pac-Man desarrollado por Jesús de los Santos, Alejandro Ruiz, Pedro Pastor, Sebastián Forte y Albert Machío
+Game based on Pac-Man developed by Alejandro Ruiz, Pedro Pastor, Sebastián Forte, Albert Machío and Jesús de los Santos.
